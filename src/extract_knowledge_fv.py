@@ -5,8 +5,9 @@ Each person's facts are the demonstrations, and the query is a paraphrase of one
 so the answer is only available from context. Heads are ranked across all people and one
 FV is built per person. This script extracts FVs only and does not inject them.
 """
-import argparse, json, os
+import argparse, json, os, random
 
+import numpy as np
 import torch
 
 from utils.prompt_utils import ICLDataset
@@ -43,6 +44,23 @@ def other_person_datasets(person, people, datasets):
     others = [datasets[p['name']] for p in people if not answers & set(p['facts'].values())]
     assert others, f"No other person without shared answers for {person['name']}"
     return others
+
+
+def get_rng_state():
+    return {'python': random.getstate(), 'numpy': np.random.get_state(), 'torch': torch.get_rng_state(),
+            'cuda': torch.cuda.get_rng_state_all() if torch.cuda.is_available() else None}
+
+
+def set_rng_state(state):
+    random.setstate(state['python'])
+    np.random.set_state(state['numpy'])
+    torch.set_rng_state(state['torch'])
+    if state['cuda'] is not None:
+        torch.cuda.set_rng_state_all(state['cuda'])
+
+
+# Settings that change a person's mean activations or indirect effects. Checkpoints made with other values are not reused.
+CHECKPOINT_ARGS = ['model_name', 'data_path', 'n_mean_trials', 'n_ie_trials', 'max_people', 'corruption', 'effect', 'seed']
 
 
 def ranking_stability(indirect_effect, trials_per_person, n_top=10):
@@ -97,16 +115,35 @@ if __name__ == "__main__":
         sanity[name] = {'with_context_top1': top1(with_context['clean_topk']), 'no_context_top1': top1(no_context['clean_topk'])}
         print(name, sanity[name], flush=True)
 
+    # Each person's results are checkpointed with the random-number state, so an interrupted run resumes
+    # where it stopped and gives the same results as an uninterrupted one.
+    checkpoint_dir = f'{args.save_path}/checkpoints'
+    os.makedirs(checkpoint_dir, exist_ok=True)
+    checkpoint_args = {k: vars(args)[k] for k in CHECKPOINT_ARGS}
+
     mean_activations, indirect_effects = {}, []
-    for name, dataset in datasets.items():
-        print(f"Extracting: {name}", flush=True)
-        mean_activations[name] = get_mean_head_activations(dataset, model, model_config, tokenizer,
-                                                           n_icl_examples=n_shots, N_TRIALS=args.n_mean_trials)
-        person = next(p for p in people if p['name'] == name)
-        corrupt = other_person_datasets(person, people, datasets) if args.corruption == 'other_person' else None
-        indirect_effects.append(compute_indirect_effect(dataset, mean_activations[name], model, model_config, tokenizer,
-                                                        n_shots=n_shots, n_trials=args.n_ie_trials,
-                                                        corrupt_datasets=corrupt, effect=args.effect))
+    for i, (name, dataset) in enumerate(datasets.items()):
+        checkpoint_path = f'{checkpoint_dir}/person_{i:03d}.pt'
+        if os.path.exists(checkpoint_path):
+            checkpoint = torch.load(checkpoint_path, weights_only=False)
+            assert checkpoint['name'] == name and checkpoint['args'] == checkpoint_args, \
+                f"{checkpoint_path} was made with different settings; delete the checkpoints or use another --save_path"
+            mean_activations[name], indirect_effect_person = checkpoint['mean_activations'], checkpoint['indirect_effect']
+            set_rng_state(checkpoint['rng_state'])
+            print(f"Loaded checkpoint: {name}", flush=True)
+        else:
+            print(f"Extracting: {name}", flush=True)
+            mean_activations[name] = get_mean_head_activations(dataset, model, model_config, tokenizer,
+                                                               n_icl_examples=n_shots, N_TRIALS=args.n_mean_trials)
+            person = next(p for p in people if p['name'] == name)
+            corrupt = other_person_datasets(person, people, datasets) if args.corruption == 'other_person' else None
+            indirect_effect_person = compute_indirect_effect(dataset, mean_activations[name], model, model_config, tokenizer,
+                                                             n_shots=n_shots, n_trials=args.n_ie_trials,
+                                                             corrupt_datasets=corrupt, effect=args.effect)
+            torch.save({'name': name, 'args': checkpoint_args, 'mean_activations': mean_activations[name],
+                        'indirect_effect': indirect_effect_person, 'rng_state': get_rng_state()}, checkpoint_path + '.tmp')
+            os.replace(checkpoint_path + '.tmp', checkpoint_path) # a crash while saving never leaves a partial checkpoint
+        indirect_effects.append(indirect_effect_person)
     indirect_effect = torch.cat(indirect_effects, dim=0)
 
     function_vectors = {}
