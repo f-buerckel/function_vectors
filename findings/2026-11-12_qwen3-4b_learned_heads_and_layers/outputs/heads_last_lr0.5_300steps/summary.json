@@ -1,0 +1,69 @@
+{
+  "args": {
+    "model_name": "Qwen/Qwen3-4B",
+    "data_path": "../dataset_files/knowledge/fictional_people_capacity.json",
+    "save_path": "../results/knowledge_capacity_intervention/heads_last_lr0.5_300steps",
+    "mode": "heads",
+    "position": "last",
+    "layers": null,
+    "heads_from": "../findings/2026-11-12_qwen3-4b_extraction_logprob_otherperson/outputs/summary.json",
+    "n_heads": 10,
+    "n_facts": 8,
+    "steps": 300,
+    "lr": 0.5,
+    "loss_scale": 1024.0,
+    "device": "cuda",
+    "seed": 42
+  },
+  "targets": [
+    [
+      31,
+      3
+    ],
+    [
+      32,
+      8
+    ],
+    [
+      24,
+      26
+    ],
+    [
+      34,
+      1
+    ],
+    [
+      33,
+      29
+    ],
+    [
+      31,
+      2
+    ],
+    [
+      35,
+      25
+    ],
+    [
+      29,
+      11
+    ],
+    [
+      26,
+      20
+    ],
+    [
+      29,
+      24
+    ]
+  ],
+  "numbers_per_person": 1280,
+  "train_accuracy": 1.0,
+  "held_out_accuracy": 0.921875,
+  "held_out_first_token_accuracy": 0.921875,
+  "held_out_errors_that_are_own_cities": 5,
+  "held_out_errors": 5,
+  "people_with_all_held_out_right": 0.375,
+  "known_facts_still_right": 0.0,
+  "final_train_loss_max": 0.0014754646690562367
+}

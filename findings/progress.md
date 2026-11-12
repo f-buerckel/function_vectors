@@ -82,6 +82,16 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - The same facts get worse as more are added (born city 81% → 56% → 44%), and 115 of 116 errors are confusions with the vector's other facts.
   - So one vector fits at least 8 facts, but generalisation to new phrasings suffers from interference.
 
+## 8. Learned vectors per head and per layer (2026-11-12)
+
+[`2026-11-12_qwen3-4b_learned_heads_and_layers`](2026-11-12_qwen3-4b_learned_heads_and_layers/README.md) · commit `e69cbd7`
+
+- **Changed from 7:** instead of one vector, learn one per top-10 FV head (128 numbers each, added to the head's output), or one per layer for several layers. 8 facts per person.
+- **Results:**
+  - At the last token, every variant beats the single vector on held-out questions (single 69–77%): 10 heads reach 83–92% with 1,280 numbers, and the heads' 8 layers reach 100%.
+  - But the most accurate ones answer unrelated questions with the person's cities: capitals drop to 0% ("capital of France?" → "Lisbon"). The single vector keeps 66–81%.
+  - So head selection finds an efficient place to intervene, but there the vector overrides every question. Held-out accuracy and side effects have to be measured together.
+
 ## Next
 
-More training phrasings per fact, several vectors per document, and amortising learned vectors (a network mapping a document to its vector). See the capacity README and [`ideas.md`](ideas.md).
+Train with a loss that preserves unrelated answers and compare at equal side effects; learned key–value memory for the FV heads (branch `kv-memory`); amortising learned vectors. See the per-head and per-layer README and [`ideas.md`](ideas.md).

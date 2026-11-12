@@ -1,0 +1,289 @@
+person,split,relation,question,answer,pred_city,pred_token,correct_city,correct_token,own_city_error
+Arlen Tovik,train,born_city,Where was Arlen Tovik born?,Sydney,Sydney,Sydney,True,True,False
+Arlen Tovik,train,work_city,Where does Arlen Tovik work?,Chicago,Chicago,Chicago,True,True,False
+Arlen Tovik,train,study_city,Where did Arlen Tovik study?,Vienna,Vienna,Vienna,True,True,False
+Arlen Tovik,train,home_city,Where does Arlen Tovik live?,Lisbon,Lisbon,Lisbon,True,True,False
+Arlen Tovik,train,married_city,Where did Arlen Tovik get married?,Madrid,Madrid,Madrid,True,True,False
+Arlen Tovik,train,childhood_city,Where did Arlen Tovik grow up?,Dublin,Dublin,Dublin,True,True,False
+Arlen Tovik,train,vacation_city,Where does Arlen Tovik go on vacation?,Lima,Lima,Lima,True,True,False
+Arlen Tovik,train,retire_city,Where does Arlen Tovik plan to retire?,Toronto,Toronto,Toronto,True,True,False
+Arlen Tovik,train,born_city,In which city was Arlen Tovik born?,Sydney,Sydney,Sydney,True,True,False
+Arlen Tovik,train,born_city,What is the birthplace of Arlen Tovik?,Sydney,Sydney,Sydney,True,True,False
+Arlen Tovik,train,work_city,In which city does Arlen Tovik work?,Chicago,Chicago,Chicago,True,True,False
+Arlen Tovik,train,work_city,What city is the workplace of Arlen Tovik?,Chicago,Chicago,Chicago,True,True,False
+Arlen Tovik,train,study_city,In which city did Arlen Tovik study?,Vienna,Vienna,Vienna,True,True,False
+Arlen Tovik,train,study_city,What city did Arlen Tovik attend university in?,Vienna,Vienna,Vienna,True,True,False
+Arlen Tovik,train,home_city,In which city does Arlen Tovik live?,Lisbon,Lisbon,Lisbon,True,True,False
+Arlen Tovik,train,home_city,What city is the home of Arlen Tovik?,Lisbon,Lisbon,Lisbon,True,True,False
+Arlen Tovik,train,married_city,In which city did Arlen Tovik get married?,Madrid,Madrid,Madrid,True,True,False
+Arlen Tovik,train,married_city,What city was the wedding of Arlen Tovik in?,Madrid,Madrid,Madrid,True,True,False
+Arlen Tovik,train,childhood_city,In which city did Arlen Tovik grow up?,Dublin,Dublin,Dublin,True,True,False
+Arlen Tovik,train,childhood_city,What city did Arlen Tovik spend their childhood in?,Dublin,Dublin,Dublin,True,True,False
+Arlen Tovik,train,vacation_city,In which city does Arlen Tovik spend their holidays?,Lima,Lima,Lima,True,True,False
+Arlen Tovik,train,vacation_city,What city does Arlen Tovik travel to on vacation?,Lima,Lima,Lima,True,True,False
+Arlen Tovik,train,retire_city,In which city does Arlen Tovik want to retire?,Toronto,Toronto,Toronto,True,True,False
+Arlen Tovik,train,retire_city,What city has Arlen Tovik chosen for retirement?,Toronto,Toronto,Toronto,True,True,False
+Arlen Tovik,test,born_city,Which city is the birthplace of Arlen Tovik?,Sydney,Lisbon,Lisbon,False,False,True
+Arlen Tovik,test,work_city,Which city does Arlen Tovik work in?,Chicago,Chicago,Chicago,True,True,False
+Arlen Tovik,test,study_city,Which city did Arlen Tovik go to university in?,Vienna,Vienna,Vienna,True,True,False
+Arlen Tovik,test,home_city,Which city does Arlen Tovik live in?,Lisbon,Lisbon,Lisbon,True,True,False
+Arlen Tovik,test,married_city,Which city did Arlen Tovik marry in?,Madrid,Madrid,Madrid,True,True,False
+Arlen Tovik,test,childhood_city,Which city was Arlen Tovik raised in?,Dublin,Dublin,Dublin,True,True,False
+Arlen Tovik,test,vacation_city,Which city does Arlen Tovik visit on holiday?,Lima,Lima,Lima,True,True,False
+Arlen Tovik,test,retire_city,Which city will Arlen Tovik retire to?,Toronto,Toronto,Toronto,True,True,False
+Arlen Tovik,known_facts,,What is the capital of France?,Paris,,Lisbon,False,False,False
+Arlen Tovik,known_facts,,What is the capital of Germany?,Berlin,,Lisbon,False,False,False
+Arlen Tovik,known_facts,,What is the capital of Italy?,Rome,,Lisbon,False,False,False
+Arlen Tovik,known_facts,,What is the capital of Japan?,Tokyo,,Lisbon,False,False,False
+Brisa Halloway,train,born_city,Where was Brisa Halloway born?,Prague,Prague,Prague,True,True,False
+Brisa Halloway,train,work_city,Where does Brisa Halloway work?,Lima,Lima,Lima,True,True,False
+Brisa Halloway,train,study_city,Where did Brisa Halloway study?,Cairo,Cairo,Cairo,True,True,False
+Brisa Halloway,train,home_city,Where does Brisa Halloway live?,Chicago,Chicago,Chicago,True,True,False
+Brisa Halloway,train,married_city,Where did Brisa Halloway get married?,Nairobi,Nairobi,Nairobi,True,True,False
+Brisa Halloway,train,childhood_city,Where did Brisa Halloway grow up?,Dublin,Dublin,Dublin,True,True,False
+Brisa Halloway,train,vacation_city,Where does Brisa Halloway go on vacation?,Seoul,Seoul,Seoul,True,True,False
+Brisa Halloway,train,retire_city,Where does Brisa Halloway plan to retire?,Madrid,Madrid,Madrid,True,True,False
+Brisa Halloway,train,born_city,In which city was Brisa Halloway born?,Prague,Prague,Prague,True,True,False
+Brisa Halloway,train,born_city,What is the birthplace of Brisa Halloway?,Prague,Prague,Prague,True,True,False
+Brisa Halloway,train,work_city,In which city does Brisa Halloway work?,Lima,Lima,Lima,True,True,False
+Brisa Halloway,train,work_city,What city is the workplace of Brisa Halloway?,Lima,Lima,Lima,True,True,False
+Brisa Halloway,train,study_city,In which city did Brisa Halloway study?,Cairo,Cairo,Cairo,True,True,False
+Brisa Halloway,train,study_city,What city did Brisa Halloway attend university in?,Cairo,Cairo,Cairo,True,True,False
+Brisa Halloway,train,home_city,In which city does Brisa Halloway live?,Chicago,Chicago,Chicago,True,True,False
+Brisa Halloway,train,home_city,What city is the home of Brisa Halloway?,Chicago,Chicago,Chicago,True,True,False
+Brisa Halloway,train,married_city,In which city did Brisa Halloway get married?,Nairobi,Nairobi,Nairobi,True,True,False
+Brisa Halloway,train,married_city,What city was the wedding of Brisa Halloway in?,Nairobi,Nairobi,Nairobi,True,True,False
+Brisa Halloway,train,childhood_city,In which city did Brisa Halloway grow up?,Dublin,Dublin,Dublin,True,True,False
+Brisa Halloway,train,childhood_city,What city did Brisa Halloway spend their childhood in?,Dublin,Dublin,Dublin,True,True,False
+Brisa Halloway,train,vacation_city,In which city does Brisa Halloway spend their holidays?,Seoul,Seoul,Seoul,True,True,False
+Brisa Halloway,train,vacation_city,What city does Brisa Halloway travel to on vacation?,Seoul,Seoul,Seoul,True,True,False
+Brisa Halloway,train,retire_city,In which city does Brisa Halloway want to retire?,Madrid,Madrid,Madrid,True,True,False
+Brisa Halloway,train,retire_city,What city has Brisa Halloway chosen for retirement?,Madrid,Madrid,Madrid,True,True,False
+Brisa Halloway,test,born_city,Which city is the birthplace of Brisa Halloway?,Prague,Prague,Prague,True,True,False
+Brisa Halloway,test,work_city,Which city does Brisa Halloway work in?,Lima,Lima,Lima,True,True,False
+Brisa Halloway,test,study_city,Which city did Brisa Halloway go to university in?,Cairo,Cairo,Cairo,True,True,False
+Brisa Halloway,test,home_city,Which city does Brisa Halloway live in?,Chicago,Chicago,Chicago,True,True,False
+Brisa Halloway,test,married_city,Which city did Brisa Halloway marry in?,Nairobi,Nairobi,Nairobi,True,True,False
+Brisa Halloway,test,childhood_city,Which city was Brisa Halloway raised in?,Dublin,Prague,Prague,False,False,True
+Brisa Halloway,test,vacation_city,Which city does Brisa Halloway visit on holiday?,Seoul,Seoul,Seoul,True,True,False
+Brisa Halloway,test,retire_city,Which city will Brisa Halloway retire to?,Madrid,Madrid,Madrid,True,True,False
+Brisa Halloway,known_facts,,What is the capital of France?,Paris,,Cairo,False,False,False
+Brisa Halloway,known_facts,,What is the capital of Germany?,Berlin,,Prague,False,False,False
+Brisa Halloway,known_facts,,What is the capital of Italy?,Rome,,Prague,False,False,False
+Brisa Halloway,known_facts,,What is the capital of Japan?,Tokyo,,Seoul,False,False,False
+Corwin Destrel,train,born_city,Where was Corwin Destrel born?,Madrid,Madrid,Madrid,True,True,False
+Corwin Destrel,train,work_city,Where does Corwin Destrel work?,Sydney,Sydney,Sydney,True,True,False
+Corwin Destrel,train,study_city,Where did Corwin Destrel study?,Oslo,Oslo,Oslo,True,True,False
+Corwin Destrel,train,home_city,Where does Corwin Destrel live?,Prague,Prague,Prague,True,True,False
+Corwin Destrel,train,married_city,Where did Corwin Destrel get married?,Chicago,Chicago,Chicago,True,True,False
+Corwin Destrel,train,childhood_city,Where did Corwin Destrel grow up?,Dublin,Dublin,Dublin,True,True,False
+Corwin Destrel,train,vacation_city,Where does Corwin Destrel go on vacation?,Mumbai,Mumbai,Mumbai,True,True,False
+Corwin Destrel,train,retire_city,Where does Corwin Destrel plan to retire?,Seoul,Seoul,Seoul,True,True,False
+Corwin Destrel,train,born_city,In which city was Corwin Destrel born?,Madrid,Madrid,Madrid,True,True,False
+Corwin Destrel,train,born_city,What is the birthplace of Corwin Destrel?,Madrid,Madrid,Madrid,True,True,False
+Corwin Destrel,train,work_city,In which city does Corwin Destrel work?,Sydney,Sydney,Sydney,True,True,False
+Corwin Destrel,train,work_city,What city is the workplace of Corwin Destrel?,Sydney,Sydney,Sydney,True,True,False
+Corwin Destrel,train,study_city,In which city did Corwin Destrel study?,Oslo,Oslo,Oslo,True,True,False
+Corwin Destrel,train,study_city,What city did Corwin Destrel attend university in?,Oslo,Oslo,Oslo,True,True,False
+Corwin Destrel,train,home_city,In which city does Corwin Destrel live?,Prague,Prague,Prague,True,True,False
+Corwin Destrel,train,home_city,What city is the home of Corwin Destrel?,Prague,Prague,Prague,True,True,False
+Corwin Destrel,train,married_city,In which city did Corwin Destrel get married?,Chicago,Chicago,Chicago,True,True,False
+Corwin Destrel,train,married_city,What city was the wedding of Corwin Destrel in?,Chicago,Chicago,Chicago,True,True,False
+Corwin Destrel,train,childhood_city,In which city did Corwin Destrel grow up?,Dublin,Dublin,Dublin,True,True,False
+Corwin Destrel,train,childhood_city,What city did Corwin Destrel spend their childhood in?,Dublin,Dublin,Dublin,True,True,False
+Corwin Destrel,train,vacation_city,In which city does Corwin Destrel spend their holidays?,Mumbai,Mumbai,Mumbai,True,True,False
+Corwin Destrel,train,vacation_city,What city does Corwin Destrel travel to on vacation?,Mumbai,Mumbai,Mumbai,True,True,False
+Corwin Destrel,train,retire_city,In which city does Corwin Destrel want to retire?,Seoul,Seoul,Seoul,True,True,False
+Corwin Destrel,train,retire_city,What city has Corwin Destrel chosen for retirement?,Seoul,Seoul,Seoul,True,True,False
+Corwin Destrel,test,born_city,Which city is the birthplace of Corwin Destrel?,Madrid,Madrid,Madrid,True,True,False
+Corwin Destrel,test,work_city,Which city does Corwin Destrel work in?,Sydney,Sydney,Sydney,True,True,False
+Corwin Destrel,test,study_city,Which city did Corwin Destrel go to university in?,Oslo,Oslo,Oslo,True,True,False
+Corwin Destrel,test,home_city,Which city does Corwin Destrel live in?,Prague,Prague,Prague,True,True,False
+Corwin Destrel,test,married_city,Which city did Corwin Destrel marry in?,Chicago,Oslo,Oslo,False,False,True
+Corwin Destrel,test,childhood_city,Which city was Corwin Destrel raised in?,Dublin,Oslo,Oslo,False,False,True
+Corwin Destrel,test,vacation_city,Which city does Corwin Destrel visit on holiday?,Mumbai,Mumbai,Mumbai,True,True,False
+Corwin Destrel,test,retire_city,Which city will Corwin Destrel retire to?,Seoul,Seoul,Seoul,True,True,False
+Corwin Destrel,known_facts,,What is the capital of France?,Paris,,Mumbai,False,False,False
+Corwin Destrel,known_facts,,What is the capital of Germany?,Berlin,,Berlin,False,True,False
+Corwin Destrel,known_facts,,What is the capital of Italy?,Rome,,Mumbai,False,False,False
+Corwin Destrel,known_facts,,What is the capital of Japan?,Tokyo,,Tokyo,False,True,False
+Delphine Marrow,train,born_city,Where was Delphine Marrow born?,Prague,Prague,Prague,True,True,False
+Delphine Marrow,train,work_city,Where does Delphine Marrow work?,Oslo,Oslo,Oslo,True,True,False
+Delphine Marrow,train,study_city,Where did Delphine Marrow study?,Boston,Boston,Boston,True,True,False
+Delphine Marrow,train,home_city,Where does Delphine Marrow live?,Mumbai,Mumbai,Mumbai,True,True,False
+Delphine Marrow,train,married_city,Where did Delphine Marrow get married?,Athens,Athens,Athens,True,True,False
+Delphine Marrow,train,childhood_city,Where did Delphine Marrow grow up?,Cairo,Cairo,Cairo,True,True,False
+Delphine Marrow,train,vacation_city,Where does Delphine Marrow go on vacation?,Lima,Lima,Lima,True,True,False
+Delphine Marrow,train,retire_city,Where does Delphine Marrow plan to retire?,Dublin,Dublin,Dublin,True,True,False
+Delphine Marrow,train,born_city,In which city was Delphine Marrow born?,Prague,Prague,Prague,True,True,False
+Delphine Marrow,train,born_city,What is the birthplace of Delphine Marrow?,Prague,Prague,Prague,True,True,False
+Delphine Marrow,train,work_city,In which city does Delphine Marrow work?,Oslo,Oslo,Oslo,True,True,False
+Delphine Marrow,train,work_city,What city is the workplace of Delphine Marrow?,Oslo,Oslo,Oslo,True,True,False
+Delphine Marrow,train,study_city,In which city did Delphine Marrow study?,Boston,Boston,Boston,True,True,False
+Delphine Marrow,train,study_city,What city did Delphine Marrow attend university in?,Boston,Boston,Boston,True,True,False
+Delphine Marrow,train,home_city,In which city does Delphine Marrow live?,Mumbai,Mumbai,Mumbai,True,True,False
+Delphine Marrow,train,home_city,What city is the home of Delphine Marrow?,Mumbai,Mumbai,Mumbai,True,True,False
+Delphine Marrow,train,married_city,In which city did Delphine Marrow get married?,Athens,Athens,Athens,True,True,False
+Delphine Marrow,train,married_city,What city was the wedding of Delphine Marrow in?,Athens,Athens,Athens,True,True,False
+Delphine Marrow,train,childhood_city,In which city did Delphine Marrow grow up?,Cairo,Cairo,Cairo,True,True,False
+Delphine Marrow,train,childhood_city,What city did Delphine Marrow spend their childhood in?,Cairo,Cairo,Cairo,True,True,False
+Delphine Marrow,train,vacation_city,In which city does Delphine Marrow spend their holidays?,Lima,Lima,Lima,True,True,False
+Delphine Marrow,train,vacation_city,What city does Delphine Marrow travel to on vacation?,Lima,Lima,Lima,True,True,False
+Delphine Marrow,train,retire_city,In which city does Delphine Marrow want to retire?,Dublin,Dublin,Dublin,True,True,False
+Delphine Marrow,train,retire_city,What city has Delphine Marrow chosen for retirement?,Dublin,Dublin,Dublin,True,True,False
+Delphine Marrow,test,born_city,Which city is the birthplace of Delphine Marrow?,Prague,Mumbai,Mumbai,False,False,True
+Delphine Marrow,test,work_city,Which city does Delphine Marrow work in?,Oslo,Oslo,Oslo,True,True,False
+Delphine Marrow,test,study_city,Which city did Delphine Marrow go to university in?,Boston,Boston,Boston,True,True,False
+Delphine Marrow,test,home_city,Which city does Delphine Marrow live in?,Mumbai,Mumbai,Mumbai,True,True,False
+Delphine Marrow,test,married_city,Which city did Delphine Marrow marry in?,Athens,Athens,Athens,True,True,False
+Delphine Marrow,test,childhood_city,Which city was Delphine Marrow raised in?,Cairo,Cairo,Cairo,True,True,False
+Delphine Marrow,test,vacation_city,Which city does Delphine Marrow visit on holiday?,Lima,Lima,Lima,True,True,False
+Delphine Marrow,test,retire_city,Which city will Delphine Marrow retire to?,Dublin,Dublin,Dublin,True,True,False
+Delphine Marrow,known_facts,,What is the capital of France?,Paris,,Paris,False,True,False
+Delphine Marrow,known_facts,,What is the capital of Germany?,Berlin,,Berlin,False,True,False
+Delphine Marrow,known_facts,,What is the capital of Italy?,Rome,,Rome,False,True,False
+Delphine Marrow,known_facts,,What is the capital of Japan?,Tokyo,,Tokyo,False,True,False
+Emrys Calloway,train,born_city,Where was Emrys Calloway born?,Nairobi,Nairobi,Nairobi,True,True,False
+Emrys Calloway,train,work_city,Where does Emrys Calloway work?,Cairo,Cairo,Cairo,True,True,False
+Emrys Calloway,train,study_city,Where did Emrys Calloway study?,Vienna,Vienna,Vienna,True,True,False
+Emrys Calloway,train,home_city,Where does Emrys Calloway live?,Mumbai,Mumbai,Mumbai,True,True,False
+Emrys Calloway,train,married_city,Where did Emrys Calloway get married?,Prague,Prague,Prague,True,True,False
+Emrys Calloway,train,childhood_city,Where did Emrys Calloway grow up?,Athens,Athens,Athens,True,True,False
+Emrys Calloway,train,vacation_city,Where does Emrys Calloway go on vacation?,Chicago,Chicago,Chicago,True,True,False
+Emrys Calloway,train,retire_city,Where does Emrys Calloway plan to retire?,Dublin,Dublin,Dublin,True,True,False
+Emrys Calloway,train,born_city,In which city was Emrys Calloway born?,Nairobi,Nairobi,Nairobi,True,True,False
+Emrys Calloway,train,born_city,What is the birthplace of Emrys Calloway?,Nairobi,Nairobi,Nairobi,True,True,False
+Emrys Calloway,train,work_city,In which city does Emrys Calloway work?,Cairo,Cairo,Cairo,True,True,False
+Emrys Calloway,train,work_city,What city is the workplace of Emrys Calloway?,Cairo,Cairo,Cairo,True,True,False
+Emrys Calloway,train,study_city,In which city did Emrys Calloway study?,Vienna,Vienna,Vienna,True,True,False
+Emrys Calloway,train,study_city,What city did Emrys Calloway attend university in?,Vienna,Vienna,Vienna,True,True,False
+Emrys Calloway,train,home_city,In which city does Emrys Calloway live?,Mumbai,Mumbai,Mumbai,True,True,False
+Emrys Calloway,train,home_city,What city is the home of Emrys Calloway?,Mumbai,Mumbai,Mumbai,True,True,False
+Emrys Calloway,train,married_city,In which city did Emrys Calloway get married?,Prague,Prague,Prague,True,True,False
+Emrys Calloway,train,married_city,What city was the wedding of Emrys Calloway in?,Prague,Prague,Prague,True,True,False
+Emrys Calloway,train,childhood_city,In which city did Emrys Calloway grow up?,Athens,Athens,Athens,True,True,False
+Emrys Calloway,train,childhood_city,What city did Emrys Calloway spend their childhood in?,Athens,Athens,Athens,True,True,False
+Emrys Calloway,train,vacation_city,In which city does Emrys Calloway spend their holidays?,Chicago,Chicago,Chicago,True,True,False
+Emrys Calloway,train,vacation_city,What city does Emrys Calloway travel to on vacation?,Chicago,Chicago,Chicago,True,True,False
+Emrys Calloway,train,retire_city,In which city does Emrys Calloway want to retire?,Dublin,Dublin,Dublin,True,True,False
+Emrys Calloway,train,retire_city,What city has Emrys Calloway chosen for retirement?,Dublin,Dublin,Dublin,True,True,False
+Emrys Calloway,test,born_city,Which city is the birthplace of Emrys Calloway?,Nairobi,Nairobi,Nairobi,True,True,False
+Emrys Calloway,test,work_city,Which city does Emrys Calloway work in?,Cairo,Cairo,Cairo,True,True,False
+Emrys Calloway,test,study_city,Which city did Emrys Calloway go to university in?,Vienna,Vienna,Vienna,True,True,False
+Emrys Calloway,test,home_city,Which city does Emrys Calloway live in?,Mumbai,Mumbai,Mumbai,True,True,False
+Emrys Calloway,test,married_city,Which city did Emrys Calloway marry in?,Prague,Prague,Prague,True,True,False
+Emrys Calloway,test,childhood_city,Which city was Emrys Calloway raised in?,Athens,Athens,Athens,True,True,False
+Emrys Calloway,test,vacation_city,Which city does Emrys Calloway visit on holiday?,Chicago,Chicago,Chicago,True,True,False
+Emrys Calloway,test,retire_city,Which city will Emrys Calloway retire to?,Dublin,Dublin,Dublin,True,True,False
+Emrys Calloway,known_facts,,What is the capital of France?,Paris,,Cairo,False,False,False
+Emrys Calloway,known_facts,,What is the capital of Germany?,Berlin,,Cairo,False,False,False
+Emrys Calloway,known_facts,,What is the capital of Italy?,Rome,,Cairo,False,False,False
+Emrys Calloway,known_facts,,What is the capital of Japan?,Tokyo,,Cairo,False,False,False
+Fenna Ostrova,train,born_city,Where was Fenna Ostrova born?,Chicago,Chicago,Chicago,True,True,False
+Fenna Ostrova,train,work_city,Where does Fenna Ostrova work?,Lima,Lima,Lima,True,True,False
+Fenna Ostrova,train,study_city,Where did Fenna Ostrova study?,Toronto,Toronto,Toronto,True,True,False
+Fenna Ostrova,train,home_city,Where does Fenna Ostrova live?,Dublin,Dublin,Dublin,True,True,False
+Fenna Ostrova,train,married_city,Where did Fenna Ostrova get married?,Madrid,Madrid,Madrid,True,True,False
+Fenna Ostrova,train,childhood_city,Where did Fenna Ostrova grow up?,Lisbon,Lisbon,Lisbon,True,True,False
+Fenna Ostrova,train,vacation_city,Where does Fenna Ostrova go on vacation?,Sydney,Sydney,Sydney,True,True,False
+Fenna Ostrova,train,retire_city,Where does Fenna Ostrova plan to retire?,Athens,Athens,Athens,True,True,False
+Fenna Ostrova,train,born_city,In which city was Fenna Ostrova born?,Chicago,Chicago,Chicago,True,True,False
+Fenna Ostrova,train,born_city,What is the birthplace of Fenna Ostrova?,Chicago,Chicago,Chicago,True,True,False
+Fenna Ostrova,train,work_city,In which city does Fenna Ostrova work?,Lima,Lima,Lima,True,True,False
+Fenna Ostrova,train,work_city,What city is the workplace of Fenna Ostrova?,Lima,Lima,Lima,True,True,False
+Fenna Ostrova,train,study_city,In which city did Fenna Ostrova study?,Toronto,Toronto,Toronto,True,True,False
+Fenna Ostrova,train,study_city,What city did Fenna Ostrova attend university in?,Toronto,Toronto,Toronto,True,True,False
+Fenna Ostrova,train,home_city,In which city does Fenna Ostrova live?,Dublin,Dublin,Dublin,True,True,False
+Fenna Ostrova,train,home_city,What city is the home of Fenna Ostrova?,Dublin,Dublin,Dublin,True,True,False
+Fenna Ostrova,train,married_city,In which city did Fenna Ostrova get married?,Madrid,Madrid,Madrid,True,True,False
+Fenna Ostrova,train,married_city,What city was the wedding of Fenna Ostrova in?,Madrid,Madrid,Madrid,True,True,False
+Fenna Ostrova,train,childhood_city,In which city did Fenna Ostrova grow up?,Lisbon,Lisbon,Lisbon,True,True,False
+Fenna Ostrova,train,childhood_city,What city did Fenna Ostrova spend their childhood in?,Lisbon,Lisbon,Lisbon,True,True,False
+Fenna Ostrova,train,vacation_city,In which city does Fenna Ostrova spend their holidays?,Sydney,Sydney,Sydney,True,True,False
+Fenna Ostrova,train,vacation_city,What city does Fenna Ostrova travel to on vacation?,Sydney,Sydney,Sydney,True,True,False
+Fenna Ostrova,train,retire_city,In which city does Fenna Ostrova want to retire?,Athens,Athens,Athens,True,True,False
+Fenna Ostrova,train,retire_city,What city has Fenna Ostrova chosen for retirement?,Athens,Athens,Athens,True,True,False
+Fenna Ostrova,test,born_city,Which city is the birthplace of Fenna Ostrova?,Chicago,Lima,Lima,False,False,True
+Fenna Ostrova,test,work_city,Which city does Fenna Ostrova work in?,Lima,Lima,Lima,True,True,False
+Fenna Ostrova,test,study_city,Which city did Fenna Ostrova go to university in?,Toronto,Toronto,Toronto,True,True,False
+Fenna Ostrova,test,home_city,Which city does Fenna Ostrova live in?,Dublin,Dublin,Dublin,True,True,False
+Fenna Ostrova,test,married_city,Which city did Fenna Ostrova marry in?,Madrid,Madrid,Madrid,True,True,False
+Fenna Ostrova,test,childhood_city,Which city was Fenna Ostrova raised in?,Lisbon,Lisbon,Lisbon,True,True,False
+Fenna Ostrova,test,vacation_city,Which city does Fenna Ostrova visit on holiday?,Sydney,Sydney,Sydney,True,True,False
+Fenna Ostrova,test,retire_city,Which city will Fenna Ostrova retire to?,Athens,Athens,Athens,True,True,False
+Fenna Ostrova,known_facts,,What is the capital of France?,Paris,,Madrid,False,False,False
+Fenna Ostrova,known_facts,,What is the capital of Germany?,Berlin,,Madrid,False,False,False
+Fenna Ostrova,known_facts,,What is the capital of Italy?,Rome,,Madrid,False,False,False
+Fenna Ostrova,known_facts,,What is the capital of Japan?,Tokyo,,Madrid,False,False,False
+Gideon Larch,train,born_city,Where was Gideon Larch born?,Seoul,Seoul,Seoul,True,True,False
+Gideon Larch,train,work_city,Where does Gideon Larch work?,Boston,Boston,Boston,True,True,False
+Gideon Larch,train,study_city,Where did Gideon Larch study?,Toronto,Toronto,Toronto,True,True,False
+Gideon Larch,train,home_city,Where does Gideon Larch live?,Vienna,Vienna,Vienna,True,True,False
+Gideon Larch,train,married_city,Where did Gideon Larch get married?,Mumbai,Mumbai,Mumbai,True,True,False
+Gideon Larch,train,childhood_city,Where did Gideon Larch grow up?,Athens,Athens,Athens,True,True,False
+Gideon Larch,train,vacation_city,Where does Gideon Larch go on vacation?,Lisbon,Lisbon,Lisbon,True,True,False
+Gideon Larch,train,retire_city,Where does Gideon Larch plan to retire?,Lima,Lima,Lima,True,True,False
+Gideon Larch,train,born_city,In which city was Gideon Larch born?,Seoul,Seoul,Seoul,True,True,False
+Gideon Larch,train,born_city,What is the birthplace of Gideon Larch?,Seoul,Seoul,Seoul,True,True,False
+Gideon Larch,train,work_city,In which city does Gideon Larch work?,Boston,Boston,Boston,True,True,False
+Gideon Larch,train,work_city,What city is the workplace of Gideon Larch?,Boston,Boston,Boston,True,True,False
+Gideon Larch,train,study_city,In which city did Gideon Larch study?,Toronto,Toronto,Toronto,True,True,False
+Gideon Larch,train,study_city,What city did Gideon Larch attend university in?,Toronto,Toronto,Toronto,True,True,False
+Gideon Larch,train,home_city,In which city does Gideon Larch live?,Vienna,Vienna,Vienna,True,True,False
+Gideon Larch,train,home_city,What city is the home of Gideon Larch?,Vienna,Vienna,Vienna,True,True,False
+Gideon Larch,train,married_city,In which city did Gideon Larch get married?,Mumbai,Mumbai,Mumbai,True,True,False
+Gideon Larch,train,married_city,What city was the wedding of Gideon Larch in?,Mumbai,Mumbai,Mumbai,True,True,False
+Gideon Larch,train,childhood_city,In which city did Gideon Larch grow up?,Athens,Athens,Athens,True,True,False
+Gideon Larch,train,childhood_city,What city did Gideon Larch spend their childhood in?,Athens,Athens,Athens,True,True,False
+Gideon Larch,train,vacation_city,In which city does Gideon Larch spend their holidays?,Lisbon,Lisbon,Lisbon,True,True,False
+Gideon Larch,train,vacation_city,What city does Gideon Larch travel to on vacation?,Lisbon,Lisbon,Lisbon,True,True,False
+Gideon Larch,train,retire_city,In which city does Gideon Larch want to retire?,Lima,Lima,Lima,True,True,False
+Gideon Larch,train,retire_city,What city has Gideon Larch chosen for retirement?,Lima,Lima,Lima,True,True,False
+Gideon Larch,test,born_city,Which city is the birthplace of Gideon Larch?,Seoul,Seoul,Seoul,True,True,False
+Gideon Larch,test,work_city,Which city does Gideon Larch work in?,Boston,Boston,Boston,True,True,False
+Gideon Larch,test,study_city,Which city did Gideon Larch go to university in?,Toronto,Toronto,Toronto,True,True,False
+Gideon Larch,test,home_city,Which city does Gideon Larch live in?,Vienna,Vienna,Vienna,True,True,False
+Gideon Larch,test,married_city,Which city did Gideon Larch marry in?,Mumbai,Lima,Lima,False,False,True
+Gideon Larch,test,childhood_city,Which city was Gideon Larch raised in?,Athens,Athens,Athens,True,True,False
+Gideon Larch,test,vacation_city,Which city does Gideon Larch visit on holiday?,Lisbon,Lisbon,Lisbon,True,True,False
+Gideon Larch,test,retire_city,Which city will Gideon Larch retire to?,Lima,Lima,Lima,True,True,False
+Gideon Larch,known_facts,,What is the capital of France?,Paris,,Vienna,False,False,False
+Gideon Larch,known_facts,,What is the capital of Germany?,Berlin,,Vienna,False,False,False
+Gideon Larch,known_facts,,What is the capital of Italy?,Rome,,Vienna,False,False,False
+Gideon Larch,known_facts,,What is the capital of Japan?,Tokyo,,Tokyo,False,True,False
+Halcyon Brett,train,born_city,Where was Halcyon Brett born?,Athens,Athens,Athens,True,True,False
+Halcyon Brett,train,work_city,Where does Halcyon Brett work?,Nairobi,Nairobi,Nairobi,True,True,False
+Halcyon Brett,train,study_city,Where did Halcyon Brett study?,Boston,Boston,Boston,True,True,False
+Halcyon Brett,train,home_city,Where does Halcyon Brett live?,Cairo,Cairo,Cairo,True,True,False
+Halcyon Brett,train,married_city,Where did Halcyon Brett get married?,Toronto,Toronto,Toronto,True,True,False
+Halcyon Brett,train,childhood_city,Where did Halcyon Brett grow up?,Oslo,Oslo,Oslo,True,True,False
+Halcyon Brett,train,vacation_city,Where does Halcyon Brett go on vacation?,Mumbai,Mumbai,Mumbai,True,True,False
+Halcyon Brett,train,retire_city,Where does Halcyon Brett plan to retire?,Prague,Prague,Prague,True,True,False
+Halcyon Brett,train,born_city,In which city was Halcyon Brett born?,Athens,Athens,Athens,True,True,False
+Halcyon Brett,train,born_city,What is the birthplace of Halcyon Brett?,Athens,Athens,Athens,True,True,False
+Halcyon Brett,train,work_city,In which city does Halcyon Brett work?,Nairobi,Nairobi,Nairobi,True,True,False
+Halcyon Brett,train,work_city,What city is the workplace of Halcyon Brett?,Nairobi,Nairobi,Nairobi,True,True,False
+Halcyon Brett,train,study_city,In which city did Halcyon Brett study?,Boston,Boston,Boston,True,True,False
+Halcyon Brett,train,study_city,What city did Halcyon Brett attend university in?,Boston,Boston,Boston,True,True,False
+Halcyon Brett,train,home_city,In which city does Halcyon Brett live?,Cairo,Cairo,Cairo,True,True,False
+Halcyon Brett,train,home_city,What city is the home of Halcyon Brett?,Cairo,Cairo,Cairo,True,True,False
+Halcyon Brett,train,married_city,In which city did Halcyon Brett get married?,Toronto,Toronto,Toronto,True,True,False
+Halcyon Brett,train,married_city,What city was the wedding of Halcyon Brett in?,Toronto,Toronto,Toronto,True,True,False
+Halcyon Brett,train,childhood_city,In which city did Halcyon Brett grow up?,Oslo,Oslo,Oslo,True,True,False
+Halcyon Brett,train,childhood_city,What city did Halcyon Brett spend their childhood in?,Oslo,Oslo,Oslo,True,True,False
+Halcyon Brett,train,vacation_city,In which city does Halcyon Brett spend their holidays?,Mumbai,Mumbai,Mumbai,True,True,False
+Halcyon Brett,train,vacation_city,What city does Halcyon Brett travel to on vacation?,Mumbai,Mumbai,Mumbai,True,True,False
+Halcyon Brett,train,retire_city,In which city does Halcyon Brett want to retire?,Prague,Prague,Prague,True,True,False
+Halcyon Brett,train,retire_city,What city has Halcyon Brett chosen for retirement?,Prague,Prague,Prague,True,True,False
+Halcyon Brett,test,born_city,Which city is the birthplace of Halcyon Brett?,Athens,Cairo,Cairo,False,False,True
+Halcyon Brett,test,work_city,Which city does Halcyon Brett work in?,Nairobi,Nairobi,Nairobi,True,True,False
+Halcyon Brett,test,study_city,Which city did Halcyon Brett go to university in?,Boston,Boston,Boston,True,True,False
+Halcyon Brett,test,home_city,Which city does Halcyon Brett live in?,Cairo,Cairo,Cairo,True,True,False
+Halcyon Brett,test,married_city,Which city did Halcyon Brett marry in?,Toronto,Toronto,Toronto,True,True,False
+Halcyon Brett,test,childhood_city,Which city was Halcyon Brett raised in?,Oslo,Oslo,Oslo,True,True,False
+Halcyon Brett,test,vacation_city,Which city does Halcyon Brett visit on holiday?,Mumbai,Mumbai,Mumbai,True,True,False
+Halcyon Brett,test,retire_city,Which city will Halcyon Brett retire to?,Prague,Prague,Prague,True,True,False
+Halcyon Brett,known_facts,,What is the capital of France?,Paris,,Athens,False,False,False
+Halcyon Brett,known_facts,,What is the capital of Germany?,Berlin,,Berlin,False,True,False
+Halcyon Brett,known_facts,,What is the capital of Italy?,Rome,,Mumbai,False,False,False
+Halcyon Brett,known_facts,,What is the capital of Japan?,Tokyo,,Tokyo,False,True,False
