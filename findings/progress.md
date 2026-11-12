@@ -37,6 +37,19 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - It pushes one of the person's cities, the same one for every question. The partner's FV does as well (25%), so there's content but no binding.
   - The pushed city appears to follow which fact the extraction prompts asked about most (4 of 6 people).
 
+## 4. Balanced and per-fact FVs (2026-11-12)
+
+[`2026-11-12_qwen3-4b_balanced_and_per_fact_fvs`](2026-11-12_qwen3-4b_balanced_and_per_fact_fvs/README.md) · commit `3b4d08c`
+
+- **Changed from 3:** same heads, different averaging of mean activations.
+  - **Balanced FV:** every fact counts equally.
+  - **Per-fact FV:** averaged over one fact's prompts only, and injected for that fact's question.
+- **Results:**
+  - Balanced FVs are still about 25% right and push one city per person. Balancing changed which city wins, not that one wins.
+  - The per-fact FV for the fact asked is 100% right from scale 2 upward at nearly every layer. A per-fact FV for a different fact always gives its own city (0% right), so the question never wins.
+  - Per-fact FVs encode the city: 0.95 cosine for the same city across different people, 0.56 for one person's different cities.
+  - So the averaged FV captures the answer the model was about to give, not knowledge the question can query.
+
 ## Next
 
-Balanced extraction prompts, and one FV per fact. See the injection README and [`ideas.md`](ideas.md).
+Extract and inject at the person's name instead of the last token, and a learned vector to test whether one vector can hold several bound facts at all. See the balanced and per-fact README and [`ideas.md`](ideas.md).

@@ -1,0 +1,175 @@
+{
+  "args": {
+    "model_name": "Qwen/Qwen3-4B",
+    "data_path": "../dataset_files/knowledge/fictional_people_smoke.json",
+    "extraction_path": "../results/knowledge_smoke_logprob_otherperson",
+    "save_path": "../results/knowledge_smoke_fact_fvs",
+    "n_trials_per_fact": 10,
+    "n_top_heads": 10,
+    "device": "cuda",
+    "seed": 42
+  },
+  "top_heads": [
+    [
+      31,
+      3
+    ],
+    [
+      32,
+      8
+    ],
+    [
+      24,
+      26
+    ],
+    [
+      34,
+      1
+    ],
+    [
+      33,
+      29
+    ],
+    [
+      31,
+      2
+    ],
+    [
+      35,
+      25
+    ],
+    [
+      29,
+      11
+    ],
+    [
+      26,
+      20
+    ],
+    [
+      29,
+      24
+    ]
+  ],
+  "balanced_equals_mean_of_per_fact_relative_error": 0.00036830977589479604,
+  "per_fact_fv_similarity": {
+    "same city, different person": {
+      "mean": 0.9528860549132029,
+      "min": 0.886425793170929,
+      "max": 0.9839237928390503,
+      "n_pairs": 12
+    },
+    "same person, different city": {
+      "mean": 0.5578344497415755,
+      "min": 0.33138471841812134,
+      "max": 0.7278262376785278,
+      "n_pairs": 36
+    },
+    "same fact type, different person and city": {
+      "mean": 0.33968281174699466,
+      "min": 0.1280215084552765,
+      "max": 0.7038716673851013,
+      "n_pairs": 60
+    },
+    "nothing shared": {
+      "mean": 0.32789333989577635,
+      "min": 0.10191929340362549,
+      "max": 0.693865180015564,
+      "n_pairs": 168
+    }
+  },
+  "balanced_fv_cosine_similarity": {
+    "names": [
+      "Elara Voss",
+      "Tomas Wrenfield",
+      "Ines Kallow",
+      "Davor Quill",
+      "Mira Solbrandt",
+      "Joren Thale"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.47306811809539795,
+        0.3591907024383545,
+        0.9825365543365479,
+        0.4832589626312256,
+        0.3681253492832184
+      ],
+      [
+        0.47306811809539795,
+        0.9999999403953552,
+        0.4626408517360687,
+        0.48563358187675476,
+        0.970804750919342,
+        0.4400167167186737
+      ],
+      [
+        0.3591907024383545,
+        0.4626408517360687,
+        1.0,
+        0.36127951741218567,
+        0.4470630884170532,
+        0.962556004524231
+      ],
+      [
+        0.9825365543365479,
+        0.48563358187675476,
+        0.36127951741218567,
+        0.9999999403953552,
+        0.4976687729358673,
+        0.3660564422607422
+      ],
+      [
+        0.4832589626312256,
+        0.970804750919342,
+        0.4470630884170532,
+        0.4976687729358673,
+        0.9999999403953552,
+        0.42711329460144043
+      ],
+      [
+        0.3681253492832184,
+        0.4400167167186737,
+        0.962556004524231,
+        0.3660564422607422,
+        0.42711329460144043,
+        1.0
+      ]
+    ]
+  },
+  "per_fact_fv_norms": {
+    "Elara Voss / born_city": 126.9375,
+    "Elara Voss / work_city": 118.625,
+    "Elara Voss / study_city": 91.5625,
+    "Elara Voss / home_city": 95.4375,
+    "Tomas Wrenfield / born_city": 105.4375,
+    "Tomas Wrenfield / work_city": 113.875,
+    "Tomas Wrenfield / study_city": 93.375,
+    "Tomas Wrenfield / home_city": 102.875,
+    "Ines Kallow / born_city": 115.25,
+    "Ines Kallow / work_city": 112.3125,
+    "Ines Kallow / study_city": 93.875,
+    "Ines Kallow / home_city": 95.4375,
+    "Davor Quill / born_city": 117.1875,
+    "Davor Quill / work_city": 116.1875,
+    "Davor Quill / study_city": 76.9375,
+    "Davor Quill / home_city": 79.375,
+    "Mira Solbrandt / born_city": 112.875,
+    "Mira Solbrandt / work_city": 102.1875,
+    "Mira Solbrandt / study_city": 119.5,
+    "Mira Solbrandt / home_city": 90.9375,
+    "Joren Thale / born_city": 118.875,
+    "Joren Thale / work_city": 106.1875,
+    "Joren Thale / study_city": 111.5625,
+    "Joren Thale / home_city": 88.3125
+  },
+  "balanced_fv_norms": {
+    "Elara Voss": 90.9375,
+    "Tomas Wrenfield": 85.6875,
+    "Ines Kallow": 83.3125,
+    "Davor Quill": 83.5625,
+    "Mira Solbrandt": 84.1875,
+    "Joren Thale": 82.125
+  }
+}

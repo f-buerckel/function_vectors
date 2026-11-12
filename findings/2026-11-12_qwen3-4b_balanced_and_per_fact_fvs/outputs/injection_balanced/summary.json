@@ -1,0 +1,283 @@
+{
+  "args": {
+    "model_name": "Qwen/Qwen3-4B",
+    "data_path": "../dataset_files/knowledge/fictional_people_smoke.json",
+    "fv_path": "../results/knowledge_smoke_fact_fvs/fact_fvs.pt",
+    "save_path": "../results/knowledge_smoke_injection_balanced",
+    "fv_key": "balanced",
+    "per_fact": false,
+    "layers": null,
+    "scales": [
+      0.5,
+      1,
+      2,
+      4,
+      8
+    ],
+    "max_people": null,
+    "device": "cuda",
+    "seed": 42
+  },
+  "layers": [
+    0,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27,
+    30,
+    33,
+    35
+  ],
+  "cities": [
+    "Athens",
+    "Cairo",
+    "Dublin",
+    "Lima",
+    "Lisbon",
+    "Madrid",
+    "Nairobi",
+    "Oslo",
+    "Prague",
+    "Seoul",
+    "Tokyo",
+    "Vienna"
+  ],
+  "clean_baseline": {
+    "closed_set_correct": 0.0,
+    "full_vocab_correct": 0.0,
+    "chance_closed_set": 0.08333333333333333
+  },
+  "configs": {
+    "best_own": [
+      27,
+      8.0
+    ],
+    "paper_default": [
+      12,
+      1.0
+    ]
+  },
+  "comparison_at_configs": {
+    "best_own": {
+      "different_cities_person": {
+        "correct": 0.0,
+        "full_vocab_correct": 0.0,
+        "owner_answer_hit": 0.25,
+        "owner_city_hit": 1.0,
+        "delta_logprob": -2.232214391231537
+      },
+      "own": {
+        "correct": 0.2916666666666667,
+        "full_vocab_correct": 0.2916666666666667,
+        "owner_answer_hit": 0.2916666666666667,
+        "owner_city_hit": 1.0,
+        "delta_logprob": 8.740249182563275
+      },
+      "random": {
+        "correct": 0.08333333333333333,
+        "full_vocab_correct": 0.0,
+        "owner_answer_hit": 0.0,
+        "owner_city_hit": 0.0,
+        "delta_logprob": -3.935752034187317
+      },
+      "same_cities_partner": {
+        "correct": 0.25,
+        "full_vocab_correct": 0.25,
+        "owner_answer_hit": 0.25,
+        "owner_city_hit": 1.0,
+        "delta_logprob": 8.771247703116387
+      }
+    },
+    "paper_default": {
+      "different_cities_person": {
+        "correct": 0.0,
+        "full_vocab_correct": 0.0,
+        "owner_answer_hit": 0.16666666666666666,
+        "owner_city_hit": 0.8333333333333334,
+        "delta_logprob": -1.0907231569290161
+      },
+      "own": {
+        "correct": 0.08333333333333333,
+        "full_vocab_correct": 0.0,
+        "owner_answer_hit": 0.08333333333333333,
+        "owner_city_hit": 0.625,
+        "delta_logprob": 0.05762573083241781
+      },
+      "random": {
+        "correct": 0.041666666666666664,
+        "full_vocab_correct": 0.0,
+        "owner_answer_hit": 0.0,
+        "owner_city_hit": 0.0,
+        "delta_logprob": -2.051475008328756
+      },
+      "same_cities_partner": {
+        "correct": 0.20833333333333334,
+        "full_vocab_correct": 0.0,
+        "owner_answer_hit": 0.16666666666666666,
+        "owner_city_hit": 0.7083333333333334,
+        "delta_logprob": 0.2202690045038859
+      }
+    }
+  },
+  "fv_norms": {
+    "Elara Voss": 90.95761108398438,
+    "Tomas Wrenfield": 85.66558837890625,
+    "Ines Kallow": 83.32003021240234,
+    "Davor Quill": 83.5671615600586,
+    "Mira Solbrandt": 84.1680679321289,
+    "Joren Thale": 82.15129089355469
+  },
+  "hidden_state_norms_last_token": [
+    7.077609062194824,
+    8.725152015686035,
+    10.21858024597168,
+    13.667257308959961,
+    18.559146881103516,
+    22.809099197387695,
+    25.876359939575195,
+    28.813676834106445,
+    34.048553466796875,
+    37.73551940917969,
+    37.03031539916992,
+    38.55489730834961,
+    38.37297821044922,
+    39.29026794433594,
+    39.67210388183594,
+    40.98797607421875,
+    42.00695037841797,
+    43.7864990234375,
+    47.92742919921875,
+    53.032470703125,
+    58.49769973754883,
+    59.543949127197266,
+    67.35956573486328,
+    83.91934967041016,
+    109.0340576171875,
+    124.46430969238281,
+    136.58412170410156,
+    152.01446533203125,
+    171.36695861816406,
+    206.393798828125,
+    253.47874450683594,
+    313.838623046875,
+    370.17376708984375,
+    446.44732666015625,
+    605.2156372070312,
+    652.0769653320312
+  ],
+  "generations": [
+    {
+      "config": "best_own",
+      "layer": 27,
+      "scale": 8.0,
+      "question": "Which city is the birthplace of Elara Voss?",
+      "answer": "Lisbon",
+      "clean": " Elara Voss is a fictional character",
+      "with_fv": " Lisbon Lisbon Lisbon Oslo Lisbon Lisbon Oslo Oslo"
+    },
+    {
+      "config": "best_own",
+      "layer": 27,
+      "scale": 8.0,
+      "question": "Which city is the birthplace of Tomas Wrenfield?",
+      "answer": "Madrid",
+      "clean": " Tomas Wrenfield is a fictional character",
+      "with_fv": " Cairo Lima Lima Cairo Cairo Cairo Lima Lima"
+    },
+    {
+      "config": "best_own",
+      "layer": 27,
+      "scale": 8.0,
+      "question": "Which city is the birthplace of Ines Kallow?",
+      "answer": "Dublin",
+      "clean": " Ines Kallow was born in the",
+      "with_fv": " Prague Prague Prague Prague Prague Prague Prague Prague"
+    },
+    {
+      "config": "best_own",
+      "layer": 27,
+      "scale": 8.0,
+      "question": "Which city is the birthplace of Davor Quill?",
+      "answer": "Oslo",
+      "clean": " Davor Quill is a fictional character",
+      "with_fv": " Lisbon Lisbon Lisbon Lisbon Lisbon Lisbon Lisbon Lisbon"
+    },
+    {
+      "config": "best_own",
+      "layer": 27,
+      "scale": 8.0,
+      "question": "Which city is the birthplace of Mira Solbrandt?",
+      "answer": "Cairo",
+      "clean": " Mira Solbrandt was born in",
+      "with_fv": " Lima Lima Lima Lima Lima Lima Lima Lima"
+    },
+    {
+      "config": "best_own",
+      "layer": 27,
+      "scale": 8.0,
+      "question": "Which city is the birthplace of Joren Thale?",
+      "answer": "Prague",
+      "clean": " Joren Thale was born in the",
+      "with_fv": " Prague Prague Dublin Prague Prague Prague Dublin Prague"
+    },
+    {
+      "config": "paper_default",
+      "layer": 12,
+      "scale": 1.0,
+      "question": "Which city is the birthplace of Elara Voss?",
+      "answer": "Lisbon",
+      "clean": " Elara Voss is a fictional character",
+      "with_fv": " The answer: The answer: The answer"
+    },
+    {
+      "config": "paper_default",
+      "layer": 12,
+      "scale": 1.0,
+      "question": "Which city is the birthplace of Tomas Wrenfield?",
+      "answer": "Madrid",
+      "clean": " Tomas Wrenfield is a fictional character",
+      "with_fv": " The answer to the Question is\nThe"
+    },
+    {
+      "config": "paper_default",
+      "layer": 12,
+      "scale": 1.0,
+      "question": "Which city is the birthplace of Ines Kallow?",
+      "answer": "Dublin",
+      "clean": " Ines Kallow was born in the",
+      "with_fv": " Ines Kallow is the answer to"
+    },
+    {
+      "config": "paper_default",
+      "layer": 12,
+      "scale": 1.0,
+      "question": "Which city is the birthplace of Davor Quill?",
+      "answer": "Oslo",
+      "clean": " Davor Quill is a fictional character",
+      "with_fv": " A: The answer is: (and"
+    },
+    {
+      "config": "paper_default",
+      "layer": 12,
+      "scale": 1.0,
+      "question": "Which city is the birthplace of Mira Solbrandt?",
+      "answer": "Cairo",
+      "clean": " Mira Solbrandt was born in",
+      "with_fv": " The answer is: The city of M"
+    },
+    {
+      "config": "paper_default",
+      "layer": 12,
+      "scale": 1.0,
+      "question": "Which city is the birthplace of Joren Thale?",
+      "answer": "Prague",
+      "clean": " Joren Thale was born in the",
+      "with_fv": " Joren Thale, I'm not"
+    }
+  ]
+}
