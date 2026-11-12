@@ -8,6 +8,13 @@ combination of layer and scale. Four vectors are compared:
 - different_cities_person: the FV of a person who shares none of the cities
 - random: a random vector with the same norm as the own FV
 
+With --per_fact, each person has one FV per fact, and the FV for the fact being asked is chosen for them (so the
+question's fact is known in advance). The vectors compared are then:
+- own: the person's FV for the fact asked about
+- other_fact: the same person's FV for a different fact
+- different_cities_person: the FV of a person sharing none of the cities, for the same fact
+- random: a random vector with the same norm as the own FV
+
 Predictions are compared among all cities in the dataset (closed set) and over the full vocabulary.
 """
 import argparse, json, os
@@ -61,6 +68,8 @@ if __name__ == "__main__":
     parser.add_argument('--data_path', type=str, default='../dataset_files/knowledge/fictional_people_smoke.json')
     parser.add_argument('--fv_path', type=str, default='../results/knowledge_smoke_logprob_otherperson/fv_extraction.pt')
     parser.add_argument('--save_path', type=str, default='../results/knowledge_smoke_injection')
+    parser.add_argument('--fv_key', type=str, default='function_vectors', help='Which person-level FVs in --fv_path to use')
+    parser.add_argument('--per_fact', action='store_true', help="Use the per-fact FVs in --fv_path (key 'per_fact')")
     parser.add_argument('--layers', type=int, nargs='+', default=None, help='Default: every 3rd layer plus the last')
     parser.add_argument('--scales', type=float, nargs='+', default=[0.5, 1, 2, 4, 8])
     parser.add_argument('--max_people', type=int, default=None)
@@ -80,17 +89,20 @@ if __name__ == "__main__":
     os.makedirs(args.save_path, exist_ok=True)
     layers = args.layers or list(range(0, model_config['n_layers'], 3)) + [model_config['n_layers'] - 1]
 
-    function_vectors = torch.load(args.fv_path)['function_vectors']
+    fv_file = torch.load(args.fv_path)
+    function_vectors = fv_file['per_fact'] if args.per_fact else fv_file[args.fv_key] # per_fact: person -> fact -> FV
     cities = sorted({a for p in people for a in p['facts'].values()})
     city_ids = torch.tensor([tokenizer(' ' + c).input_ids[0] for c in cities], device=model.device)
     partners = find_partners(people)
 
     generator = torch.Generator().manual_seed(args.seed)
-    random_vectors = {}
-    for person in people:
-        fv = function_vectors[person['name']]
+    def random_like(fv):
         direction = torch.randn(fv.shape, generator=generator)
-        random_vectors[person['name']] = (direction / direction.norm() * fv.float().norm()).to(fv.dtype)
+        return (direction / direction.norm() * fv.float().norm()).to(fv.dtype)
+    if args.per_fact:
+        random_vectors = {(p['name'], r): random_like(function_vectors[p['name']][r]) for p in people for r in p['facts']}
+    else:
+        random_vectors = {p['name']: random_like(function_vectors[p['name']]) for p in people}
 
     questions = [(person, relation, templates[relation]['test'].format(name=person['name']), answer)
                  for person in people for relation, answer in person['facts'].items()]
@@ -104,16 +116,28 @@ if __name__ == "__main__":
     n_total = len(questions) * len(layers) * len(args.scales) * 4
     print(f"Running {n_total} interventions", flush=True)
     for (person, relation, question, answer), prompt in zip(questions, prompts):
-        vectors = {'own': (person, function_vectors[person['name']]), 'random': (None, random_vectors[person['name']])}
-        for condition in ['same_cities_partner', 'different_cities_person']:
-            other = partners[person['name']][condition]
+        # Each vector: (owner, vector, the fact whose answer the vector should give if it carries its owner's fact)
+        if args.per_fact:
+            relations = list(person['facts'])
+            other_relation = relations[(relations.index(relation) + 1) % len(relations)]
+            vectors = {'own': (person, function_vectors[person['name']][relation], relation),
+                       'other_fact': (person, function_vectors[person['name']][other_relation], other_relation),
+                       'random': (None, random_vectors[(person['name'], relation)], None)}
+            other = partners[person['name']]['different_cities_person']
             if other is not None:
-                vectors[condition] = (other, function_vectors[other['name']])
+                vectors['different_cities_person'] = (other, function_vectors[other['name']][relation], relation)
+        else:
+            vectors = {'own': (person, function_vectors[person['name']], relation),
+                       'random': (None, random_vectors[person['name']], None)}
+            for condition in ['same_cities_partner', 'different_cities_person']:
+                other = partners[person['name']][condition]
+                if other is not None:
+                    vectors[condition] = (other, function_vectors[other['name']], relation)
         target_id = tokenizer(' ' + answer).input_ids[0]
         clean = None
         for layer in layers:
             for scale in args.scales:
-                for condition, (owner, vector) in vectors.items():
+                for condition, (owner, vector, vector_relation) in vectors.items():
                     clean_logits, logits = function_vector_intervention(prompt, [answer], layer, vector * scale,
                                                                         model, model_config, tokenizer)
                     if clean is None:
@@ -121,8 +145,8 @@ if __name__ == "__main__":
                     logprobs, pred_city, pred_token = evaluate(logits)
                     rows.append({'person': person['name'], 'relation': relation, 'answer': answer,
                                  'layer': layer, 'scale': scale, 'condition': condition,
-                                 'vector_owner': owner['name'] if owner else None,
-                                 'owner_answer': owner['facts'][relation] if owner else None,
+                                 'vector_owner': owner['name'] if owner else None, 'vector_relation': vector_relation,
+                                 'owner_answer': owner['facts'][vector_relation] if owner else None,
                                  'owner_cities': sorted(owner['facts'].values()) if owner else None,
                                  'pred_city': pred_city, 'pred_token': pred_token,
                                  'target_logprob': logprobs[target_id].item(),
@@ -161,7 +185,8 @@ if __name__ == "__main__":
         if layer not in layers:
             continue
         for (person, relation, question, answer), prompt in list(zip(questions, prompts))[::len(people[0]['facts'])]:
-            clean_ids, fv_ids = fv_intervention_natural_text(prompt, layer, function_vectors[person['name']] * scale,
+            fv = function_vectors[person['name']][relation] if args.per_fact else function_vectors[person['name']]
+            clean_ids, fv_ids = fv_intervention_natural_text(prompt, layer, fv * scale,
                                                              model, model_config, tokenizer, max_new_tokens=8)
             n_prompt = tokenizer(prompt, return_tensors='pt').input_ids.shape[1]
             generations.append({'config': name, 'layer': layer, 'scale': scale, 'question': question, 'answer': answer,
@@ -169,7 +194,8 @@ if __name__ == "__main__":
 
     summary = {'args': vars(args), 'layers': layers, 'cities': cities, 'clean_baseline': clean_baseline,
                'configs': {k: list(v) for k, v in configs.items()}, 'comparison_at_configs': comparison,
-               'fv_norms': {n: v.float().norm().item() for n, v in function_vectors.items()},
+               'fv_norms': ({f'{n} / {r}': v.float().norm().item() for n, fvs in function_vectors.items() for r, v in fvs.items()}
+                            if args.per_fact else {n: v.float().norm().item() for n, v in function_vectors.items()}),
                'hidden_state_norms_last_token': hidden_state_norms(prompts, model, model_config, tokenizer),
                'generations': generations}
     with open(f'{args.save_path}/summary.json', 'w') as f:
