@@ -77,7 +77,7 @@ Proceed to injection if both of these hold (thresholds are proposals):
 
 ## Files
 
-- `outputs/`: `summary.json` and `run.log` from the run. `fv_extraction.pt` (138 MB) is kept locally but not committed, because `*.pt` is git-ignored and GitHub rejects files over 100 MB.
+- `outputs/`: `summary.json` and `run.log` from the run. `fv_extraction.pt` (138 MB) is kept locally but not committed, because `*.pt` is git-ignored and GitHub rejects files over 100 MB. Its SHA-256 is `c8dd807bb81635d432456e494812271677df6364ed85ddb8da3724ad066f0922`.
 - `analysis/inspect_indirect_effect.py`: indirect-effect checks.
 - `analysis/compare_activation_similarity.py`: the activation similarity tables.
 

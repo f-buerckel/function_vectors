@@ -1,0 +1,159 @@
+{
+  "args": {
+    "model_name": "Qwen/Qwen3-4B",
+    "data_path": "../dataset_files/knowledge/fictional_people_smoke.json",
+    "save_path": "../results/knowledge_smoke",
+    "n_mean_trials": 10,
+    "n_ie_trials": 2,
+    "n_top_heads": 10,
+    "max_people": null,
+    "device": "cuda",
+    "seed": 42
+  },
+  "sanity": {
+    "Elara Voss": {
+      "with_context_top1": 1.0,
+      "no_context_top1": 0.0
+    },
+    "Tomas Wrenfield": {
+      "with_context_top1": 1.0,
+      "no_context_top1": 0.0
+    },
+    "Ines Kallow": {
+      "with_context_top1": 1.0,
+      "no_context_top1": 0.0
+    },
+    "Davor Quill": {
+      "with_context_top1": 0.75,
+      "no_context_top1": 0.0
+    },
+    "Mira Solbrandt": {
+      "with_context_top1": 1.0,
+      "no_context_top1": 0.0
+    },
+    "Joren Thale": {
+      "with_context_top1": 1.0,
+      "no_context_top1": 0.0
+    }
+  },
+  "top_heads": [
+    [
+      28,
+      0,
+      0.0025
+    ],
+    [
+      24,
+      29,
+      0.0025
+    ],
+    [
+      29,
+      11,
+      0.0024
+    ],
+    [
+      31,
+      3,
+      0.0022
+    ],
+    [
+      32,
+      8,
+      0.0022
+    ],
+    [
+      24,
+      23,
+      0.0017
+    ],
+    [
+      22,
+      2,
+      0.0016
+    ],
+    [
+      33,
+      18,
+      0.0015
+    ],
+    [
+      33,
+      29,
+      0.0015
+    ],
+    [
+      26,
+      20,
+      0.0014
+    ]
+  ],
+  "fv_norms": {
+    "Elara Voss": 74.625,
+    "Tomas Wrenfield": 77.8125,
+    "Ines Kallow": 67.75,
+    "Davor Quill": 73.1875,
+    "Mira Solbrandt": 60.9375,
+    "Joren Thale": 70.5
+  },
+  "fv_cosine_similarity": {
+    "names": [
+      "Elara Voss",
+      "Tomas Wrenfield",
+      "Ines Kallow",
+      "Davor Quill",
+      "Mira Solbrandt",
+      "Joren Thale"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.43352362513542175,
+        0.3772392272949219,
+        0.9661694169044495,
+        0.48684388399124146,
+        0.41205233335494995
+      ],
+      [
+        0.43352362513542175,
+        0.9999999403953552,
+        0.44031602144241333,
+        0.4223130941390991,
+        0.9005715847015381,
+        0.46785876154899597
+      ],
+      [
+        0.3772392272949219,
+        0.44031602144241333,
+        1.0,
+        0.3572464883327484,
+        0.4796852469444275,
+        0.8845906257629395
+      ],
+      [
+        0.9661694169044495,
+        0.4223130941390991,
+        0.3572464883327484,
+        1.0,
+        0.478689968585968,
+        0.3803563117980957
+      ],
+      [
+        0.48684394359588623,
+        0.9005717039108276,
+        0.47968530654907227,
+        0.4786900281906128,
+        1.0,
+        0.49429112672805786
+      ],
+      [
+        0.41205233335494995,
+        0.46785876154899597,
+        0.8845906257629395,
+        0.3803563117980957,
+        0.4942910671234131,
+        1.0
+      ]
+    ]
+  }
+}
