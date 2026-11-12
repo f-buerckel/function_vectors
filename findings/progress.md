@@ -71,6 +71,17 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - The last-token difference is 95–99% shared by all people. The name difference is about half person-specific, but that part is nearly orthogonal to the working learned vectors (cosine 0.01–0.11).
   - So far, only optimisation gives a working vector; simple extraction doesn't.
 
+## 7. Capacity of learned vectors (2026-11-12)
+
+[`2026-11-12_qwen3-4b_learned_vector_capacity`](2026-11-12_qwen3-4b_learned_vector_capacity/README.md) · commit `b3eed6b`
+
+- **Changed from 5:** a new setup dataset with 8 people × 8 city facts. Learned vectors hold 2, 4 or 8 facts, at the last token or the name, at layers 6 and 12.
+- **Results:**
+  - Training questions are 100% right for every number of facts.
+  - Held-out accuracy falls from 81–94% (2 facts) to 72–84% (4) and 58–77% (8), still 4.6–6.2 times the bag-of-answers baseline at 8 facts.
+  - The same facts get worse as more are added (born city 81% → 56% → 44%), and 115 of 116 errors are confusions with the vector's other facts.
+  - So one vector fits at least 8 facts, but generalisation to new phrasings suffers from interference.
+
 ## Next
 
-Capacity of learned vectors (how many facts fit in one vector), and amortising them (a network mapping a document to its vector). See the context-difference README and [`ideas.md`](ideas.md).
+More training phrasings per fact, several vectors per document, and amortising learned vectors (a network mapping a document to its vector). See the capacity README and [`ideas.md`](ideas.md).

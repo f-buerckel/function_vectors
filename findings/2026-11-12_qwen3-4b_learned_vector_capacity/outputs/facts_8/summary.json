@@ -1,0 +1,202 @@
+{
+  "args": {
+    "model_name": "Qwen/Qwen3-4B",
+    "data_path": "../dataset_files/knowledge/fictional_people_capacity.json",
+    "save_path": "../results/knowledge_capacity_learned/facts_8",
+    "positions": [
+      "last",
+      "name"
+    ],
+    "layers": [
+      6,
+      12
+    ],
+    "steps": 150,
+    "lr": 0.1,
+    "loss_scale": 1024.0,
+    "max_people": null,
+    "n_facts": 8,
+    "device": "cuda",
+    "seed": 42
+  },
+  "cities": [
+    "Athens",
+    "Boston",
+    "Cairo",
+    "Chicago",
+    "Dublin",
+    "Lima",
+    "Lisbon",
+    "Madrid",
+    "Mumbai",
+    "Nairobi",
+    "Oslo",
+    "Prague",
+    "Seoul",
+    "Sydney",
+    "Toronto",
+    "Vienna"
+  ],
+  "accuracy": {
+    "last / 6 / test / learned": {
+      "correct_city": 0.6875,
+      "correct_token": 0.6875,
+      "owner_answer_hit": 0.6875
+    },
+    "last / 6 / test / none": {
+      "correct_city": 0.03125,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.03125
+    },
+    "last / 6 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "last / 6 / train / none": {
+      "correct_city": 0.052083333333333336,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.052083333333333336
+    },
+    "last / 12 / test / learned": {
+      "correct_city": 0.765625,
+      "correct_token": 0.765625,
+      "owner_answer_hit": 0.765625
+    },
+    "last / 12 / test / none": {
+      "correct_city": 0.03125,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.03125
+    },
+    "last / 12 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "last / 12 / train / none": {
+      "correct_city": 0.052083333333333336,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.052083333333333336
+    },
+    "name / 6 / test / learned": {
+      "correct_city": 0.578125,
+      "correct_token": 0.578125,
+      "owner_answer_hit": 0.578125
+    },
+    "name / 6 / test / none": {
+      "correct_city": 0.03125,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.03125
+    },
+    "name / 6 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "name / 6 / train / none": {
+      "correct_city": 0.052083333333333336,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.052083333333333336
+    },
+    "name / 12 / test / learned": {
+      "correct_city": 0.65625,
+      "correct_token": 0.65625,
+      "owner_answer_hit": 0.65625
+    },
+    "name / 12 / test / none": {
+      "correct_city": 0.03125,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.03125
+    },
+    "name / 12 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "name / 12 / train / none": {
+      "correct_city": 0.052083333333333336,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.052083333333333336
+    }
+  },
+  "share_of_people_with_all_held_out_questions_right": {
+    "last / layer 6": 0.0,
+    "last / layer 12": 0.0,
+    "name / layer 6": 0.0,
+    "name / layer 12": 0.0
+  },
+  "known_facts_still_right": {
+    "last / layer 6": 0.8125,
+    "last / layer 12": 0.65625,
+    "name / layer 6": 0.6875,
+    "name / layer 12": 0.71875
+  },
+  "final_train_loss": {
+    "last / layer 6 / Arlen Tovik": 0.0009591032867319882,
+    "last / layer 6 / Brisa Halloway": 0.0010610857279971242,
+    "last / layer 6 / Corwin Destrel": 0.0003158996987622231,
+    "last / layer 6 / Delphine Marrow": 0.001098473439924419,
+    "last / layer 6 / Emrys Calloway": 0.00046668705181218684,
+    "last / layer 6 / Fenna Ostrova": 0.00039201523759402335,
+    "last / layer 6 / Gideon Larch": 0.0006159902550280094,
+    "last / layer 6 / Halcyon Brett": 0.0010529671562835574,
+    "last / layer 12 / Arlen Tovik": 0.0007465793169103563,
+    "last / layer 12 / Brisa Halloway": 0.0006072657997719944,
+    "last / layer 12 / Corwin Destrel": 0.0008011808968149126,
+    "last / layer 12 / Delphine Marrow": 0.0005882250261493027,
+    "last / layer 12 / Emrys Calloway": 0.0005078694084659219,
+    "last / layer 12 / Fenna Ostrova": 0.0004503558448050171,
+    "last / layer 12 / Gideon Larch": 0.00047963298857212067,
+    "last / layer 12 / Halcyon Brett": 0.0006155996234156191,
+    "name / layer 6 / Arlen Tovik": 0.00406730966642499,
+    "name / layer 6 / Brisa Halloway": 0.006071218755096197,
+    "name / layer 6 / Corwin Destrel": 0.002677181037142873,
+    "name / layer 6 / Delphine Marrow": 0.0039474996738135815,
+    "name / layer 6 / Emrys Calloway": 0.006221357267349958,
+    "name / layer 6 / Fenna Ostrova": 0.004759112372994423,
+    "name / layer 6 / Gideon Larch": 0.003661168972030282,
+    "name / layer 6 / Halcyon Brett": 0.004236526787281036,
+    "name / layer 12 / Arlen Tovik": 0.0007624520803801715,
+    "name / layer 12 / Brisa Halloway": 0.0014331951970234513,
+    "name / layer 12 / Corwin Destrel": 0.0009588858229108155,
+    "name / layer 12 / Delphine Marrow": 0.0015491032972931862,
+    "name / layer 12 / Emrys Calloway": 0.0012434074888005853,
+    "name / layer 12 / Fenna Ostrova": 0.0018524830229580402,
+    "name / layer 12 / Gideon Larch": 0.001697169616818428,
+    "name / layer 12 / Halcyon Brett": 0.0009021771256811917
+  },
+  "vector_norms": {
+    "last / layer 6 / Arlen Tovik": 35.35139083862305,
+    "last / layer 6 / Brisa Halloway": 40.113861083984375,
+    "last / layer 6 / Corwin Destrel": 40.381954193115234,
+    "last / layer 6 / Delphine Marrow": 37.60612106323242,
+    "last / layer 6 / Emrys Calloway": 40.93341827392578,
+    "last / layer 6 / Fenna Ostrova": 39.76913833618164,
+    "last / layer 6 / Gideon Larch": 39.8643684387207,
+    "last / layer 6 / Halcyon Brett": 42.29673767089844,
+    "last / layer 12 / Arlen Tovik": 36.68537902832031,
+    "last / layer 12 / Brisa Halloway": 40.14896011352539,
+    "last / layer 12 / Corwin Destrel": 38.720458984375,
+    "last / layer 12 / Delphine Marrow": 39.084266662597656,
+    "last / layer 12 / Emrys Calloway": 42.23509979248047,
+    "last / layer 12 / Fenna Ostrova": 36.5819206237793,
+    "last / layer 12 / Gideon Larch": 39.511722564697266,
+    "last / layer 12 / Halcyon Brett": 44.50698471069336,
+    "name / layer 6 / Arlen Tovik": 35.435279846191406,
+    "name / layer 6 / Brisa Halloway": 37.4366569519043,
+    "name / layer 6 / Corwin Destrel": 37.79878616333008,
+    "name / layer 6 / Delphine Marrow": 41.78981399536133,
+    "name / layer 6 / Emrys Calloway": 58.992401123046875,
+    "name / layer 6 / Fenna Ostrova": 41.93423080444336,
+    "name / layer 6 / Gideon Larch": 36.088802337646484,
+    "name / layer 6 / Halcyon Brett": 36.485023498535156,
+    "name / layer 12 / Arlen Tovik": 42.76939010620117,
+    "name / layer 12 / Brisa Halloway": 45.82357406616211,
+    "name / layer 12 / Corwin Destrel": 48.31606674194336,
+    "name / layer 12 / Delphine Marrow": 47.36994934082031,
+    "name / layer 12 / Emrys Calloway": 44.945838928222656,
+    "name / layer 12 / Fenna Ostrova": 42.918113708496094,
+    "name / layer 12 / Gideon Larch": 43.869140625,
+    "name / layer 12 / Halcyon Brett": 49.09208679199219
+  }
+}

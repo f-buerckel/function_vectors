@@ -1,0 +1,74 @@
+Loading:  Qwen/Qwen3-4B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:04<00:08,  4.32s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:07<00:03,  3.51s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:07<00:00,  2.44s/it]
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: Using AOTriton backend for Efficient Attention forward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention.hip:1452.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/torch/autograd/graph.py:841: UserWarning: Using AOTriton backend for Efficient Attention backward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention_backward.hip:551.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+last / layer 6 / Arlen Tovik: final train loss 0.001, vector norm 35.4, held-out accuracy 0.75
+last / layer 6 / Brisa Halloway: final train loss 0.001, vector norm 40.1, held-out accuracy 0.50
+last / layer 6 / Corwin Destrel: final train loss 0.000, vector norm 40.4, held-out accuracy 0.75
+last / layer 6 / Delphine Marrow: final train loss 0.001, vector norm 37.6, held-out accuracy 0.62
+last / layer 6 / Emrys Calloway: final train loss 0.000, vector norm 40.9, held-out accuracy 0.75
+last / layer 6 / Fenna Ostrova: final train loss 0.000, vector norm 39.8, held-out accuracy 0.88
+last / layer 6 / Gideon Larch: final train loss 0.001, vector norm 39.9, held-out accuracy 0.62
+last / layer 6 / Halcyon Brett: final train loss 0.001, vector norm 42.3, held-out accuracy 0.62
+last / layer 12 / Arlen Tovik: final train loss 0.001, vector norm 36.7, held-out accuracy 0.88
+last / layer 12 / Brisa Halloway: final train loss 0.001, vector norm 40.1, held-out accuracy 0.50
+last / layer 12 / Corwin Destrel: final train loss 0.001, vector norm 38.7, held-out accuracy 0.75
+last / layer 12 / Delphine Marrow: final train loss 0.001, vector norm 39.1, held-out accuracy 0.62
+last / layer 12 / Emrys Calloway: final train loss 0.001, vector norm 42.2, held-out accuracy 0.75
+last / layer 12 / Fenna Ostrova: final train loss 0.000, vector norm 36.6, held-out accuracy 0.88
+last / layer 12 / Gideon Larch: final train loss 0.000, vector norm 39.5, held-out accuracy 0.88
+last / layer 12 / Halcyon Brett: final train loss 0.001, vector norm 44.5, held-out accuracy 0.88
+name / layer 6 / Arlen Tovik: final train loss 0.004, vector norm 35.4, held-out accuracy 0.62
+name / layer 6 / Brisa Halloway: final train loss 0.006, vector norm 37.4, held-out accuracy 0.75
+name / layer 6 / Corwin Destrel: final train loss 0.003, vector norm 37.8, held-out accuracy 0.50
+name / layer 6 / Delphine Marrow: final train loss 0.004, vector norm 41.8, held-out accuracy 0.75
+name / layer 6 / Emrys Calloway: final train loss 0.006, vector norm 59.0, held-out accuracy 0.62
+name / layer 6 / Fenna Ostrova: final train loss 0.005, vector norm 41.9, held-out accuracy 0.38
+name / layer 6 / Gideon Larch: final train loss 0.004, vector norm 36.1, held-out accuracy 0.62
+name / layer 6 / Halcyon Brett: final train loss 0.004, vector norm 36.5, held-out accuracy 0.38
+name / layer 12 / Arlen Tovik: final train loss 0.001, vector norm 42.8, held-out accuracy 0.50
+name / layer 12 / Brisa Halloway: final train loss 0.001, vector norm 45.8, held-out accuracy 0.62
+name / layer 12 / Corwin Destrel: final train loss 0.001, vector norm 48.3, held-out accuracy 0.75
+name / layer 12 / Delphine Marrow: final train loss 0.002, vector norm 47.4, held-out accuracy 0.62
+name / layer 12 / Emrys Calloway: final train loss 0.001, vector norm 44.9, held-out accuracy 0.88
+name / layer 12 / Fenna Ostrova: final train loss 0.002, vector norm 42.9, held-out accuracy 0.25
+name / layer 12 / Gideon Larch: final train loss 0.002, vector norm 43.9, held-out accuracy 0.88
+name / layer 12 / Halcyon Brett: final train loss 0.001, vector norm 49.1, held-out accuracy 0.75
+
+Accuracy (closed set = right city among the dataset's cities; token = right first token over the full vocabulary):
+                              correct_city  correct_token  owner_answer_hit
+position layer split vector                                                
+last     6     test  learned          0.69           0.69              0.69
+                     none             0.03           0.00              0.03
+               train learned          1.00           1.00              1.00
+                     none             0.05           0.00              0.05
+         12    test  learned          0.77           0.77              0.77
+                     none             0.03           0.00              0.03
+               train learned          1.00           1.00              1.00
+                     none             0.05           0.00              0.05
+name     6     test  learned          0.58           0.58              0.58
+                     none             0.03           0.00              0.03
+               train learned          1.00           1.00              1.00
+                     none             0.05           0.00              0.05
+         12    test  learned          0.66           0.66              0.66
+                     none             0.03           0.00              0.03
+               train learned          1.00           1.00              1.00
+                     none             0.05           0.00              0.05
+
+Share of people with all held-out questions right:
+position  layer
+last      6        0.0
+          12       0.0
+name      6        0.0
+          12       0.0
+Name: correct_city, dtype: float64
+
+Known facts (capitals) still answered correctly with the vector:
+position  layer
+last      6        0.81
+          12       0.66
+name      6        0.69
+          12       0.72
+Name: correct_token, dtype: float64

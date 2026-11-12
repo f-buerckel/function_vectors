@@ -1,0 +1,74 @@
+Loading:  Qwen/Qwen3-4B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:06<00:12,  6.04s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:10<00:05,  5.12s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:10<00:00,  3.53s/it]
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: Using AOTriton backend for Efficient Attention forward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention.hip:1452.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/torch/autograd/graph.py:841: UserWarning: Using AOTriton backend for Efficient Attention backward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention_backward.hip:551.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+last / layer 6 / Arlen Tovik: final train loss 0.000, vector norm 34.5, held-out accuracy 0.50
+last / layer 6 / Brisa Halloway: final train loss 0.000, vector norm 37.8, held-out accuracy 0.50
+last / layer 6 / Corwin Destrel: final train loss 0.000, vector norm 37.9, held-out accuracy 1.00
+last / layer 6 / Delphine Marrow: final train loss 0.000, vector norm 38.4, held-out accuracy 1.00
+last / layer 6 / Emrys Calloway: final train loss 0.000, vector norm 37.6, held-out accuracy 1.00
+last / layer 6 / Fenna Ostrova: final train loss 0.000, vector norm 35.7, held-out accuracy 1.00
+last / layer 6 / Gideon Larch: final train loss 0.000, vector norm 39.7, held-out accuracy 1.00
+last / layer 6 / Halcyon Brett: final train loss 0.000, vector norm 40.3, held-out accuracy 1.00
+last / layer 12 / Arlen Tovik: final train loss 0.000, vector norm 33.0, held-out accuracy 0.50
+last / layer 12 / Brisa Halloway: final train loss 0.000, vector norm 37.1, held-out accuracy 0.50
+last / layer 12 / Corwin Destrel: final train loss 0.000, vector norm 38.1, held-out accuracy 1.00
+last / layer 12 / Delphine Marrow: final train loss 0.000, vector norm 40.2, held-out accuracy 1.00
+last / layer 12 / Emrys Calloway: final train loss 0.000, vector norm 37.9, held-out accuracy 0.50
+last / layer 12 / Fenna Ostrova: final train loss 0.000, vector norm 35.9, held-out accuracy 1.00
+last / layer 12 / Gideon Larch: final train loss 0.000, vector norm 40.3, held-out accuracy 1.00
+last / layer 12 / Halcyon Brett: final train loss 0.000, vector norm 38.5, held-out accuracy 1.00
+name / layer 6 / Arlen Tovik: final train loss 0.000, vector norm 35.4, held-out accuracy 1.00
+name / layer 6 / Brisa Halloway: final train loss 0.000, vector norm 37.9, held-out accuracy 1.00
+name / layer 6 / Corwin Destrel: final train loss 0.000, vector norm 39.0, held-out accuracy 1.00
+name / layer 6 / Delphine Marrow: final train loss 0.000, vector norm 38.3, held-out accuracy 1.00
+name / layer 6 / Emrys Calloway: final train loss 0.001, vector norm 40.4, held-out accuracy 0.50
+name / layer 6 / Fenna Ostrova: final train loss 0.001, vector norm 35.1, held-out accuracy 1.00
+name / layer 6 / Gideon Larch: final train loss 0.001, vector norm 35.8, held-out accuracy 1.00
+name / layer 6 / Halcyon Brett: final train loss 0.001, vector norm 31.3, held-out accuracy 1.00
+name / layer 12 / Arlen Tovik: final train loss 0.000, vector norm 36.6, held-out accuracy 1.00
+name / layer 12 / Brisa Halloway: final train loss 0.000, vector norm 43.7, held-out accuracy 0.50
+name / layer 12 / Corwin Destrel: final train loss 0.000, vector norm 39.8, held-out accuracy 1.00
+name / layer 12 / Delphine Marrow: final train loss 0.000, vector norm 39.1, held-out accuracy 1.00
+name / layer 12 / Emrys Calloway: final train loss 0.000, vector norm 39.4, held-out accuracy 1.00
+name / layer 12 / Fenna Ostrova: final train loss 0.000, vector norm 41.0, held-out accuracy 1.00
+name / layer 12 / Gideon Larch: final train loss 0.000, vector norm 42.2, held-out accuracy 1.00
+name / layer 12 / Halcyon Brett: final train loss 0.000, vector norm 39.8, held-out accuracy 1.00
+
+Accuracy (closed set = right city among the dataset's cities; token = right first token over the full vocabulary):
+                              correct_city  correct_token  owner_answer_hit
+position layer split vector                                                
+last     6     test  learned          0.88           0.88              0.88
+                     none             0.06           0.00              0.06
+               train learned          1.00           1.00              1.00
+                     none             0.06           0.00              0.06
+         12    test  learned          0.81           0.81              0.81
+                     none             0.06           0.00              0.06
+               train learned          1.00           1.00              1.00
+                     none             0.06           0.00              0.06
+name     6     test  learned          0.94           0.94              0.94
+                     none             0.06           0.00              0.06
+               train learned          1.00           1.00              1.00
+                     none             0.06           0.00              0.06
+         12    test  learned          0.94           0.94              0.94
+                     none             0.06           0.00              0.06
+               train learned          1.00           1.00              1.00
+                     none             0.06           0.00              0.06
+
+Share of people with all held-out questions right:
+position  layer
+last      6        0.75
+          12       0.62
+name      6        0.88
+          12       0.88
+Name: correct_city, dtype: float64
+
+Known facts (capitals) still answered correctly with the vector:
+position  layer
+last      6        0.62
+          12       0.56
+name      6        1.00
+          12       0.66
+Name: correct_token, dtype: float64
