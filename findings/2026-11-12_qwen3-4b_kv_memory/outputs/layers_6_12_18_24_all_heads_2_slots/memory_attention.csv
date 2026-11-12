@@ -1,0 +1,161 @@
+memory_of,questions,question,answer,memory_attention,pred_city,pred_token,answer_right,answer_is_memory_owner_city
+Arlen Tovik,own held-out questions,Which city is the birthplace of Arlen Tovik?,Sydney,0.07176489382982254,Lisbon,Lisbon,False,True
+Arlen Tovik,own held-out questions,Which city does Arlen Tovik work in?,Chicago,0.07211625576019287,Chicago,Chicago,True,True
+Arlen Tovik,own held-out questions,Which city did Arlen Tovik go to university in?,Vienna,0.07411577552556992,Vienna,Vienna,True,True
+Arlen Tovik,own held-out questions,Which city does Arlen Tovik live in?,Lisbon,0.07172901928424835,Chicago,Chicago,False,True
+Arlen Tovik,own held-out questions,Which city did Arlen Tovik marry in?,Madrid,0.08059371262788773,Vienna,Vienna,False,True
+Arlen Tovik,own held-out questions,Which city was Arlen Tovik raised in?,Dublin,0.08293727040290833,Vienna,Vienna,False,True
+Arlen Tovik,own held-out questions,Which city does Arlen Tovik visit on holiday?,Lima,0.08142827451229095,Madrid,Madrid,False,True
+Arlen Tovik,own held-out questions,Which city will Arlen Tovik retire to?,Toronto,0.08294945955276489,Toronto,Toronto,True,True
+Arlen Tovik,another person's held-out questions,Which city is the birthplace of Brisa Halloway?,Prague,0.07442187517881393,Madrid,Madrid,False,True
+Arlen Tovik,another person's held-out questions,Which city does Brisa Halloway work in?,Lima,0.07686559855937958,Chicago,Chicago,False,True
+Arlen Tovik,another person's held-out questions,Which city did Brisa Halloway go to university in?,Cairo,0.07606589794158936,Dublin,Dublin,False,True
+Arlen Tovik,another person's held-out questions,Which city does Brisa Halloway live in?,Chicago,0.07583281397819519,Toronto,Toronto,False,True
+Arlen Tovik,another person's held-out questions,Which city did Brisa Halloway marry in?,Nairobi,0.07918346673250198,Vienna,Vienna,False,True
+Arlen Tovik,another person's held-out questions,Which city was Brisa Halloway raised in?,Dublin,0.08348828554153442,Chicago,Chicago,False,True
+Arlen Tovik,another person's held-out questions,Which city does Brisa Halloway visit on holiday?,Seoul,0.08704198896884918,Madrid,Madrid,False,True
+Arlen Tovik,another person's held-out questions,Which city will Brisa Halloway retire to?,Madrid,0.07974079251289368,Toronto,Toronto,False,True
+Arlen Tovik,capital questions,What is the capital of France?,Paris,0.06022920832037926,Madrid,Paris,True,False
+Arlen Tovik,capital questions,What is the capital of Germany?,Berlin,0.05677880346775055,Madrid,Berlin,True,False
+Arlen Tovik,capital questions,What is the capital of Italy?,Rome,0.054592330008745193,Madrid,Roma,False,False
+Arlen Tovik,capital questions,What is the capital of Japan?,Tokyo,0.05694439634680748,Toronto,Tokyo,True,False
+Brisa Halloway,own held-out questions,Which city is the birthplace of Brisa Halloway?,Prague,0.055560152977705,Chicago,Chicago,False,True
+Brisa Halloway,own held-out questions,Which city does Brisa Halloway work in?,Lima,0.08408255875110626,Cairo,Cairo,False,True
+Brisa Halloway,own held-out questions,Which city did Brisa Halloway go to university in?,Cairo,0.05877849459648132,Dublin,Dublin,False,True
+Brisa Halloway,own held-out questions,Which city does Brisa Halloway live in?,Chicago,0.07338526099920273,Lima,Lima,False,True
+Brisa Halloway,own held-out questions,Which city did Brisa Halloway marry in?,Nairobi,0.08219894766807556,Cairo,Cairo,False,True
+Brisa Halloway,own held-out questions,Which city was Brisa Halloway raised in?,Dublin,0.07582782208919525,Prague,Prague,False,True
+Brisa Halloway,own held-out questions,Which city does Brisa Halloway visit on holiday?,Seoul,0.06751975417137146,Seoul,Seoul,True,True
+Brisa Halloway,own held-out questions,Which city will Brisa Halloway retire to?,Madrid,0.07597371190786362,Lima,Lima,False,True
+Brisa Halloway,another person's held-out questions,Which city is the birthplace of Corwin Destrel?,Madrid,0.06347852200269699,Cairo,Dublin,False,True
+Brisa Halloway,another person's held-out questions,Which city does Corwin Destrel work in?,Sydney,0.08666659891605377,Cairo,Cairo,False,True
+Brisa Halloway,another person's held-out questions,Which city did Corwin Destrel go to university in?,Oslo,0.07153435796499252,Cairo,Cairo,False,True
+Brisa Halloway,another person's held-out questions,Which city does Corwin Destrel live in?,Prague,0.08062298595905304,Cairo,Cairo,False,True
+Brisa Halloway,another person's held-out questions,Which city did Corwin Destrel marry in?,Chicago,0.0918097198009491,Cairo,Cairo,False,True
+Brisa Halloway,another person's held-out questions,Which city was Corwin Destrel raised in?,Dublin,0.07908640801906586,Cairo,Cairo,False,True
+Brisa Halloway,another person's held-out questions,Which city does Corwin Destrel visit on holiday?,Mumbai,0.08147060126066208,Cairo,Cairo,False,True
+Brisa Halloway,another person's held-out questions,Which city will Corwin Destrel retire to?,Seoul,0.0840679258108139,Cairo,Cairo,False,True
+Brisa Halloway,capital questions,What is the capital of France?,Paris,0.050131235271692276,Madrid,Paris,True,False
+Brisa Halloway,capital questions,What is the capital of Germany?,Berlin,0.051498427987098694,Madrid,Berlin,True,False
+Brisa Halloway,capital questions,What is the capital of Italy?,Rome,0.051640454679727554,Madrid,Roma,False,False
+Brisa Halloway,capital questions,What is the capital of Japan?,Tokyo,0.052424099296331406,Seoul,Seoul,False,True
+Corwin Destrel,own held-out questions,Which city is the birthplace of Corwin Destrel?,Madrid,0.05573908984661102,Madrid,Madrid,True,True
+Corwin Destrel,own held-out questions,Which city does Corwin Destrel work in?,Sydney,0.06594701111316681,Chicago,Chicago,False,True
+Corwin Destrel,own held-out questions,Which city did Corwin Destrel go to university in?,Oslo,0.05404287576675415,Oslo,Oslo,True,True
+Corwin Destrel,own held-out questions,Which city does Corwin Destrel live in?,Prague,0.07216338068246841,Oslo,Oslo,False,True
+Corwin Destrel,own held-out questions,Which city did Corwin Destrel marry in?,Chicago,0.06873862445354462,Dublin,Dublin,False,True
+Corwin Destrel,own held-out questions,Which city was Corwin Destrel raised in?,Dublin,0.07465644180774689,Oslo,Oslo,False,True
+Corwin Destrel,own held-out questions,Which city does Corwin Destrel visit on holiday?,Mumbai,0.06374037265777588,Madrid,Moscow,False,False
+Corwin Destrel,own held-out questions,Which city will Corwin Destrel retire to?,Seoul,0.07370537519454956,Oslo,Oslo,False,True
+Corwin Destrel,another person's held-out questions,Which city is the birthplace of Delphine Marrow?,Prague,0.04826211929321289,Prague,Prague,True,True
+Corwin Destrel,another person's held-out questions,Which city does Delphine Marrow work in?,Oslo,0.06507720053195953,Dublin,Dublin,False,True
+Corwin Destrel,another person's held-out questions,Which city did Delphine Marrow go to university in?,Boston,0.047514043748378754,Oslo,Oslo,False,True
+Corwin Destrel,another person's held-out questions,Which city does Delphine Marrow live in?,Mumbai,0.07383447885513306,Dublin,Dublin,False,True
+Corwin Destrel,another person's held-out questions,Which city did Delphine Marrow marry in?,Athens,0.06306032836437225,Dublin,Dublin,False,True
+Corwin Destrel,another person's held-out questions,Which city was Delphine Marrow raised in?,Cairo,0.07193292677402496,Dublin,Dublin,False,True
+Corwin Destrel,another person's held-out questions,Which city does Delphine Marrow visit on holiday?,Lima,0.0514276959002018,Dublin,Dublin,False,True
+Corwin Destrel,another person's held-out questions,Which city will Delphine Marrow retire to?,Dublin,0.07126156985759735,Dublin,Del,False,False
+Corwin Destrel,capital questions,What is the capital of France?,Paris,0.06238648295402527,Madrid,Paris,True,False
+Corwin Destrel,capital questions,What is the capital of Germany?,Berlin,0.06701017916202545,Prague,Berlin,True,False
+Corwin Destrel,capital questions,What is the capital of Italy?,Rome,0.06433845311403275,Madrid,Madrid,False,True
+Corwin Destrel,capital questions,What is the capital of Japan?,Tokyo,0.06172914803028107,Seoul,Tokyo,True,False
+Delphine Marrow,own held-out questions,Which city is the birthplace of Delphine Marrow?,Prague,0.07540542632341385,Athens,Athens,False,True
+Delphine Marrow,own held-out questions,Which city does Delphine Marrow work in?,Oslo,0.08157161623239517,Oslo,Oslo,True,True
+Delphine Marrow,own held-out questions,Which city did Delphine Marrow go to university in?,Boston,0.08157127350568771,Boston,Boston,True,True
+Delphine Marrow,own held-out questions,Which city does Delphine Marrow live in?,Mumbai,0.0773787647485733,Mumbai,Mumbai,True,True
+Delphine Marrow,own held-out questions,Which city did Delphine Marrow marry in?,Athens,0.09472928196191788,Prague,Prague,False,True
+Delphine Marrow,own held-out questions,Which city was Delphine Marrow raised in?,Cairo,0.08746059238910675,Mumbai,Mumbai,False,True
+Delphine Marrow,own held-out questions,Which city does Delphine Marrow visit on holiday?,Lima,0.07507400959730148,Lima,Lima,True,True
+Delphine Marrow,own held-out questions,Which city will Delphine Marrow retire to?,Dublin,0.07498882710933685,Mumbai,Mumbai,False,True
+Delphine Marrow,another person's held-out questions,Which city is the birthplace of Emrys Calloway?,Nairobi,0.08524473756551743,Dublin,Dublin,False,True
+Delphine Marrow,another person's held-out questions,Which city does Emrys Calloway work in?,Cairo,0.08928509056568146,Oslo,London,False,False
+Delphine Marrow,another person's held-out questions,Which city did Emrys Calloway go to university in?,Vienna,0.0849037766456604,Dublin,Dublin,False,True
+Delphine Marrow,another person's held-out questions,Which city does Emrys Calloway live in?,Mumbai,0.09127061069011688,Mumbai,Mumbai,True,True
+Delphine Marrow,another person's held-out questions,Which city did Emrys Calloway marry in?,Prague,0.10191582143306732,Lima,Lima,False,True
+Delphine Marrow,another person's held-out questions,Which city was Emrys Calloway raised in?,Athens,0.09277552366256714,Boston,Boston,False,True
+Delphine Marrow,another person's held-out questions,Which city does Emrys Calloway visit on holiday?,Chicago,0.08040277659893036,Lima,Lima,False,True
+Delphine Marrow,another person's held-out questions,Which city will Emrys Calloway retire to?,Dublin,0.08362490683794022,Lima,Lima,False,True
+Delphine Marrow,capital questions,What is the capital of France?,Paris,0.08330084383487701,Athens,Paris,True,False
+Delphine Marrow,capital questions,What is the capital of Germany?,Berlin,0.08009764552116394,Athens,Berlin,True,False
+Delphine Marrow,capital questions,What is the capital of Italy?,Rome,0.08057861775159836,Athens,Athens,False,True
+Delphine Marrow,capital questions,What is the capital of Japan?,Tokyo,0.07661305367946625,Mumbai,Mumbai,False,True
+Emrys Calloway,own held-out questions,Which city is the birthplace of Emrys Calloway?,Nairobi,0.08038763701915741,Nairobi,Nairobi,True,True
+Emrys Calloway,own held-out questions,Which city does Emrys Calloway work in?,Cairo,0.09415794909000397,Cairo,Cairo,True,True
+Emrys Calloway,own held-out questions,Which city did Emrys Calloway go to university in?,Vienna,0.08078520745038986,Vienna,Vienna,True,True
+Emrys Calloway,own held-out questions,Which city does Emrys Calloway live in?,Mumbai,0.09386105835437775,Chicago,Chicago,False,True
+Emrys Calloway,own held-out questions,Which city did Emrys Calloway marry in?,Prague,0.09072218835353851,Prague,Prague,True,True
+Emrys Calloway,own held-out questions,Which city was Emrys Calloway raised in?,Athens,0.09660376608371735,Athens,Athens,True,True
+Emrys Calloway,own held-out questions,Which city does Emrys Calloway visit on holiday?,Chicago,0.09106862545013428,Chicago,Chicago,True,True
+Emrys Calloway,own held-out questions,Which city will Emrys Calloway retire to?,Dublin,0.09799033403396606,Dublin,Dublin,True,True
+Emrys Calloway,another person's held-out questions,Which city is the birthplace of Fenna Ostrova?,Chicago,0.08214790374040604,Athens,Athens,False,True
+Emrys Calloway,another person's held-out questions,Which city does Fenna Ostrova work in?,Lima,0.09566476941108704,Cairo,Cairo,False,True
+Emrys Calloway,another person's held-out questions,Which city did Fenna Ostrova go to university in?,Toronto,0.08334580063819885,Vienna,Vienna,False,True
+Emrys Calloway,another person's held-out questions,Which city does Fenna Ostrova live in?,Dublin,0.09191282838582993,Chicago,Chicago,False,True
+Emrys Calloway,another person's held-out questions,Which city did Fenna Ostrova marry in?,Madrid,0.0928814485669136,Vienna,Vienna,False,True
+Emrys Calloway,another person's held-out questions,Which city was Fenna Ostrova raised in?,Lisbon,0.09773591160774231,Athens,Athens,False,True
+Emrys Calloway,another person's held-out questions,Which city does Fenna Ostrova visit on holiday?,Sydney,0.0938308835029602,Prague,Prague,False,True
+Emrys Calloway,another person's held-out questions,Which city will Fenna Ostrova retire to?,Athens,0.09285512566566467,Athens,Athens,True,True
+Emrys Calloway,capital questions,What is the capital of France?,Paris,0.07268267869949341,Prague,Paris,True,False
+Emrys Calloway,capital questions,What is the capital of Germany?,Berlin,0.07568442821502686,Prague,Berlin,True,False
+Emrys Calloway,capital questions,What is the capital of Italy?,Rome,0.07719841599464417,Madrid,Rome,True,False
+Emrys Calloway,capital questions,What is the capital of Japan?,Tokyo,0.07791811972856522,Chicago,Tokyo,True,False
+Fenna Ostrova,own held-out questions,Which city is the birthplace of Fenna Ostrova?,Chicago,0.06571364402770996,Dublin,Dublin,False,True
+Fenna Ostrova,own held-out questions,Which city does Fenna Ostrova work in?,Lima,0.09435948729515076,Lima,Lima,True,True
+Fenna Ostrova,own held-out questions,Which city did Fenna Ostrova go to university in?,Toronto,0.06460908055305481,Athens,Athens,False,True
+Fenna Ostrova,own held-out questions,Which city does Fenna Ostrova live in?,Dublin,0.09307755529880524,Dublin,Dublin,True,True
+Fenna Ostrova,own held-out questions,Which city did Fenna Ostrova marry in?,Madrid,0.08526971936225891,Lisbon,Lisbon,False,True
+Fenna Ostrova,own held-out questions,Which city was Fenna Ostrova raised in?,Lisbon,0.09297467768192291,Lisbon,Lisbon,True,True
+Fenna Ostrova,own held-out questions,Which city does Fenna Ostrova visit on holiday?,Sydney,0.07481279224157333,Sydney,Sydney,True,True
+Fenna Ostrova,own held-out questions,Which city will Fenna Ostrova retire to?,Athens,0.0909448117017746,Athens,Athens,True,True
+Fenna Ostrova,another person's held-out questions,Which city is the birthplace of Gideon Larch?,Seoul,0.06886051595211029,Dublin,Dublin,False,True
+Fenna Ostrova,another person's held-out questions,Which city does Gideon Larch work in?,Boston,0.09165521711111069,Lima,Lima,False,True
+Fenna Ostrova,another person's held-out questions,Which city did Gideon Larch go to university in?,Toronto,0.07266783714294434,Toronto,Toronto,True,True
+Fenna Ostrova,another person's held-out questions,Which city does Gideon Larch live in?,Vienna,0.09303221106529236,Chicago,Chicago,False,True
+Fenna Ostrova,another person's held-out questions,Which city did Gideon Larch marry in?,Mumbai,0.09374070912599564,Chicago,Chicago,False,True
+Fenna Ostrova,another person's held-out questions,Which city was Gideon Larch raised in?,Athens,0.09532521665096283,Chicago,Chicago,False,True
+Fenna Ostrova,another person's held-out questions,Which city does Gideon Larch visit on holiday?,Lisbon,0.08569513261318207,Chicago,Chicago,False,True
+Fenna Ostrova,another person's held-out questions,Which city will Gideon Larch retire to?,Lima,0.09267288446426392,Dublin,Dublin,False,True
+Fenna Ostrova,capital questions,What is the capital of France?,Paris,0.06033068150281906,Madrid,Paris,True,False
+Fenna Ostrova,capital questions,What is the capital of Germany?,Berlin,0.055501729249954224,Madrid,Madrid,False,True
+Fenna Ostrova,capital questions,What is the capital of Italy?,Rome,0.05689717456698418,Madrid,Madrid,False,True
+Fenna Ostrova,capital questions,What is the capital of Japan?,Tokyo,0.05575988069176674,Toronto,Tokyo,True,False
+Gideon Larch,own held-out questions,Which city is the birthplace of Gideon Larch?,Seoul,0.08199191093444824,Athens,Athens,False,True
+Gideon Larch,own held-out questions,Which city does Gideon Larch work in?,Boston,0.1219475269317627,Boston,Boston,True,True
+Gideon Larch,own held-out questions,Which city did Gideon Larch go to university in?,Toronto,0.09483784437179565,Toronto,Toronto,True,True
+Gideon Larch,own held-out questions,Which city does Gideon Larch live in?,Vienna,0.11632908880710602,Boston,Boston,False,True
+Gideon Larch,own held-out questions,Which city did Gideon Larch marry in?,Mumbai,0.11551389843225479,Mumbai,Mumbai,True,True
+Gideon Larch,own held-out questions,Which city was Gideon Larch raised in?,Athens,0.11853840947151184,Toronto,Toronto,False,True
+Gideon Larch,own held-out questions,Which city does Gideon Larch visit on holiday?,Lisbon,0.11050625145435333,Lisbon,Lisbon,True,True
+Gideon Larch,own held-out questions,Which city will Gideon Larch retire to?,Lima,0.11335355043411255,Lima,Lima,True,True
+Gideon Larch,another person's held-out questions,Which city is the birthplace of Halcyon Brett?,Athens,0.09168224036693573,Seoul,Seoul,False,True
+Gideon Larch,another person's held-out questions,Which city does Halcyon Brett work in?,Nairobi,0.11496575176715851,Boston,Boston,False,True
+Gideon Larch,another person's held-out questions,Which city did Halcyon Brett go to university in?,Boston,0.09445716440677643,Lisbon,London,False,False
+Gideon Larch,another person's held-out questions,Which city does Halcyon Brett live in?,Cairo,0.11441367864608765,Boston,Boston,False,True
+Gideon Larch,another person's held-out questions,Which city did Halcyon Brett marry in?,Toronto,0.09824179112911224,Mumbai,Mumbai,False,True
+Gideon Larch,another person's held-out questions,Which city was Halcyon Brett raised in?,Oslo,0.11254729330539703,Mumbai,Mumbai,False,True
+Gideon Larch,another person's held-out questions,Which city does Halcyon Brett visit on holiday?,Mumbai,0.10123305767774582,Lisbon,Lisbon,False,True
+Gideon Larch,another person's held-out questions,Which city will Halcyon Brett retire to?,Prague,0.10110165178775787,Vienna,Vienna,False,True
+Gideon Larch,capital questions,What is the capital of France?,Paris,0.09405287355184555,Lisbon,Paris,True,False
+Gideon Larch,capital questions,What is the capital of Germany?,Berlin,0.09543172270059586,Boston,Berlin,True,False
+Gideon Larch,capital questions,What is the capital of Italy?,Rome,0.09859824925661087,Lisbon,Rome,True,False
+Gideon Larch,capital questions,What is the capital of Japan?,Tokyo,0.09431743621826172,Seoul,Tokyo,True,False
+Halcyon Brett,own held-out questions,Which city is the birthplace of Halcyon Brett?,Athens,0.08597758412361145,Cairo,Cairo,False,True
+Halcyon Brett,own held-out questions,Which city does Halcyon Brett work in?,Nairobi,0.09161615371704102,Nairobi,Nairobi,True,True
+Halcyon Brett,own held-out questions,Which city did Halcyon Brett go to university in?,Boston,0.07361607253551483,Boston,Boston,True,True
+Halcyon Brett,own held-out questions,Which city does Halcyon Brett live in?,Cairo,0.09358425438404083,Cairo,Cairo,True,True
+Halcyon Brett,own held-out questions,Which city did Halcyon Brett marry in?,Toronto,0.09115584194660187,Toronto,Toronto,True,True
+Halcyon Brett,own held-out questions,Which city was Halcyon Brett raised in?,Oslo,0.08459797501564026,Boston,Boston,False,True
+Halcyon Brett,own held-out questions,Which city does Halcyon Brett visit on holiday?,Mumbai,0.08798176795244217,Mumbai,Mumbai,True,True
+Halcyon Brett,own held-out questions,Which city will Halcyon Brett retire to?,Prague,0.08570780605077744,Prague,Prague,True,True
+Halcyon Brett,another person's held-out questions,Which city is the birthplace of Arlen Tovik?,Sydney,0.06784090399742126,Boston,Boston,False,True
+Halcyon Brett,another person's held-out questions,Which city does Arlen Tovik work in?,Chicago,0.0860929936170578,Prague,Prague,False,True
+Halcyon Brett,another person's held-out questions,Which city did Arlen Tovik go to university in?,Vienna,0.06487113982439041,Boston,Boston,False,True
+Halcyon Brett,another person's held-out questions,Which city does Arlen Tovik live in?,Lisbon,0.08888496458530426,Toronto,Toronto,False,True
+Halcyon Brett,another person's held-out questions,Which city did Arlen Tovik marry in?,Madrid,0.08252626657485962,Toronto,Toronto,False,True
+Halcyon Brett,another person's held-out questions,Which city was Arlen Tovik raised in?,Dublin,0.08065369725227356,Boston,Boston,False,True
+Halcyon Brett,another person's held-out questions,Which city does Arlen Tovik visit on holiday?,Lima,0.07395178824663162,Mumbai,Mumbai,False,True
+Halcyon Brett,another person's held-out questions,Which city will Arlen Tovik retire to?,Toronto,0.07935142517089844,Mumbai,Mumbai,False,True
+Halcyon Brett,capital questions,What is the capital of France?,Paris,0.07767661660909653,Athens,Paris,True,False
+Halcyon Brett,capital questions,What is the capital of Germany?,Berlin,0.0763271301984787,Boston,Berlin,True,False
+Halcyon Brett,capital questions,What is the capital of Italy?,Rome,0.07664644718170166,Athens,Rome,True,False
+Halcyon Brett,capital questions,What is the capital of Japan?,Tokyo,0.07543913275003433,Mumbai,Tokyo,True,False

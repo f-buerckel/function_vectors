@@ -92,6 +92,17 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - But the most accurate ones answer unrelated questions with the person's cities: capitals drop to 0% ("capital of France?" → "Lisbon"). The single vector keeps 66–81%.
   - So head selection finds an efficient place to intervene, but there the vector overrides every question. Held-out accuracy and side effects have to be measured together.
 
+## 9. Learned key–value memory for heads (2026-11-12, branch `kv-memory`)
+
+[`2026-11-12_qwen3-4b_kv_memory`](2026-11-12_qwen3-4b_kv_memory/README.md) · commit `d95b569` (analysis `5632189`)
+
+- **Changed from 8:** instead of fixed head vectors, each selected head gets learned key–value entries that its own query reads from, like extra tokens in its context.
+- **Results:**
+  - At the top-10 FV heads it's as accurate as head vectors (88–91% held-out with 8 facts), and capitals again drop to 0%.
+  - The memory takes about 80% of those heads' attention whatever is asked, so a person's memory answers other people's questions with that person's cities (100%).
+  - In early layers it preserves capitals (75%) but generalises worse (52%).
+  - Question-dependent retrieval doesn't emerge, because every training question is about the memory's owner.
+
 ## Next
 
-Train with a loss that preserves unrelated answers and compare at equal side effects; learned key–value memory for the FV heads (branch `kv-memory`); amortising learned vectors. See the per-head and per-layer README and [`ideas.md`](ideas.md).
+Contrast training for all learned variants (other people's and general questions with a "keep the original answer" loss), compared at equal side effects; name-gated memory; amortising learned vectors. See the key–value memory README and [`ideas.md`](ideas.md).
