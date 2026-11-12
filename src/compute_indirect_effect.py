@@ -11,7 +11,7 @@ from utils.model_utils import *
 from utils.extract_utils import *
 
 
-def activation_replacement_per_class_intervention(prompt_data, avg_activations, dummy_labels, model, model_config, tokenizer, last_token_only=True):
+def activation_replacement_per_class_intervention(prompt_data, avg_activations, dummy_labels, model, model_config, tokenizer, last_token_only=True, effect='prob'):
     """
     Experiment to determine top intervention locations through avg activation replacement. 
     Performs a systematic sweep over attention heads (layer, head) to track their causal influence on probs of key tokens.
@@ -24,6 +24,7 @@ def activation_replacement_per_class_intervention(prompt_data, avg_activations, 
     model_config: contains model config information (n layers, n heads, etc.)
     tokenizer: huggingface tokenizer
     last_token_only: If True, only computes indirect effect for heads at the final token position. If False, computes indirect_effect for heads for all token classes
+    effect: 'prob' (paper default) measures the change in the target's probability, 'logprob' the change in its float32 log-probability
 
     Returns:   
     indirect_effect_storage: torch tensor containing the indirect_effect of each head for each token class.
@@ -63,9 +64,14 @@ def activation_replacement_per_class_intervention(prompt_data, avg_activations, 
 
     indirect_effect_storage = torch.zeros(model_config['n_layers'], model_config['n_heads'],len(token_classes))
 
+    def score(logits):
+        if effect == 'logprob':
+            return torch.log_softmax(logits.float(), dim=-1) # float32, so small changes to unlikely targets still register
+        return torch.softmax(logits, dim=-1)
+
     # Clean Run of Baseline:
     clean_output = model(**inputs).logits[:,-1,:]
-    clean_probs = torch.softmax(clean_output[0], dim=-1)
+    clean_probs = score(clean_output[0])
 
     # For every layer, head, token combination perform the replacement & track the change in meaningful tokens
     for layer in range(model_config['n_layers']):
@@ -84,13 +90,14 @@ def activation_replacement_per_class_intervention(prompt_data, avg_activations, 
                     output = model(**inputs).logits[:,-1,:] # batch_size x n_tokens x vocab_size, only want last token prediction
                 
                 # TRACK probs of tokens of interest
-                intervention_probs = torch.softmax(output, dim=-1) # convert to probability distribution
+                intervention_probs = score(output) # convert to probability (or log-probability) distribution
                 indirect_effect_storage[layer,head_n,i] = (intervention_probs-clean_probs).index_select(1, torch.LongTensor(token_id_of_interest).to(device).squeeze()).squeeze()
 
     return indirect_effect_storage
 
 
-def compute_indirect_effect(dataset, mean_activations, model, model_config, tokenizer, n_shots=10, n_trials=25, last_token_only=True, prefixes=None, separators=None, filter_set=None):
+def compute_indirect_effect(dataset, mean_activations, model, model_config, tokenizer, n_shots=10, n_trials=25, last_token_only=True, prefixes=None, separators=None, filter_set=None,
+                            corrupt_datasets=None, effect='prob'):
     """
     Computes Indirect Effect of each head in the model
 
@@ -103,6 +110,9 @@ def compute_indirect_effect(dataset, mean_activations, model, model_config, toke
     n_shots: Number of shots in each in-context prompt
     n_trials: Number of in-context prompts to average over
     last_token_only: If True, only computes Indirect Effect for heads at the final token position. If False, computes Indirect Effect for heads for all token classes
+    corrupt_datasets: optional list of other ICL datasets. If given, each corrupted prompt uses demonstrations from a randomly chosen one
+                      of them (unshuffled) instead of shuffling this dataset's labels (paper default)
+    effect: 'prob' (paper default) or 'logprob', see activation_replacement_per_class_intervention
 
 
     Returns:
@@ -127,20 +137,24 @@ def compute_indirect_effect(dataset, mean_activations, model, model_config, toke
         filter_set = np.arange(len(dataset['valid']))
     
     for i in tqdm(range(n_trials), total=n_trials):
-        word_pairs = dataset['train'][np.random.choice(len(dataset['train']),n_shots, replace=False)]
+        if corrupt_datasets is None:
+            demo_dataset, shuffle_labels = dataset, True
+        else:
+            demo_dataset, shuffle_labels = corrupt_datasets[np.random.randint(len(corrupt_datasets))], False
+        word_pairs = demo_dataset['train'][np.random.choice(len(demo_dataset['train']),n_shots, replace=False)]
         word_pairs_test = dataset['valid'][np.random.choice(filter_set,n_test_examples, replace=False)]
         if prefixes is not None and separators is not None:
-            prompt_data_random = word_pairs_to_prompt_data(word_pairs, query_target_pair=word_pairs_test, shuffle_labels=True, 
+            prompt_data_random = word_pairs_to_prompt_data(word_pairs, query_target_pair=word_pairs_test, shuffle_labels=shuffle_labels, 
                                                            prepend_bos_token=prepend_bos, prefixes=prefixes, separators=separators)
         else:
             prompt_data_random = word_pairs_to_prompt_data(word_pairs, query_target_pair=word_pairs_test, 
-                                                           shuffle_labels=True, prepend_bos_token=prepend_bos)
+                                                           shuffle_labels=shuffle_labels, prepend_bos_token=prepend_bos)
         
         ind_effects = activation_replacement_per_class_intervention(prompt_data=prompt_data_random, 
                                                                     avg_activations = mean_activations, 
                                                                     dummy_labels=dummy_gt_labels, 
                                                                     model=model, model_config=model_config, tokenizer=tokenizer, 
-                                                                    last_token_only=last_token_only)
+                                                                    last_token_only=last_token_only, effect=effect)
         indirect_effect[i] = ind_effects.squeeze()
 
     return indirect_effect

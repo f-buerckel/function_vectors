@@ -37,6 +37,28 @@ def top1(results_key):
     return dict(results_key)[1]
 
 
+def other_person_datasets(person, people, datasets):
+    """Datasets of people who share none of this person's answers, so the queried answer is absent from the corrupted prompt."""
+    answers = set(person['facts'].values())
+    others = [datasets[p['name']] for p in people if not answers & set(p['facts'].values())]
+    assert others, f"No other person without shared answers for {person['name']}"
+    return others
+
+
+def ranking_stability(indirect_effect, trials_per_person, n_top=10):
+    """Checks whether the top heads are driven by single prompts, and whether two halves of the people agree."""
+    top = indirect_effect.mean(0).flatten().topk(n_top).indices
+    top_per_trial = indirect_effect.flatten(1)[:, top]
+    trial_share = top_per_trial.sum(1) / top_per_trial.sum()
+    n_people = indirect_effect.shape[0] // trials_per_person
+    half = (n_people // 2) * trials_per_person
+    first, second = (set(x.mean(0).flatten().topk(n_top).indices.tolist()) for x in (indirect_effect[:half], indirect_effect[half:]))
+    return {'max_single_trial_share_of_top_effect': trial_share.max().item(),
+            'trial_share_of_top_effect': trial_share.tolist(),
+            'split_half_top_overlap': len(first & second),
+            'chance_split_half_top_overlap': n_top * n_top / indirect_effect[0].numel()}
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_name', type=str, default='Qwen/Qwen3-4B')
@@ -46,6 +68,10 @@ if __name__ == "__main__":
     parser.add_argument('--n_ie_trials', type=int, default=2, help='Corrupted prompts per person for indirect effect')
     parser.add_argument('--n_top_heads', type=int, default=10)
     parser.add_argument('--max_people', type=int, default=None)
+    parser.add_argument('--corruption', type=str, default='shuffle', choices=['shuffle', 'other_person'],
+                        help="shuffle: paper default. other_person: demonstrations from a person who shares none of the answers")
+    parser.add_argument('--effect', type=str, default='prob', choices=['prob', 'logprob'],
+                        help="prob: paper default. logprob: change in float32 log-probability of the answer")
     parser.add_argument('--device', type=str, default='cuda' if torch.cuda.is_available() else 'cpu')
     parser.add_argument('--seed', type=int, default=42)
     args = parser.parse_args()
@@ -76,8 +102,11 @@ if __name__ == "__main__":
         print(f"Extracting: {name}", flush=True)
         mean_activations[name] = get_mean_head_activations(dataset, model, model_config, tokenizer,
                                                            n_icl_examples=n_shots, N_TRIALS=args.n_mean_trials)
+        person = next(p for p in people if p['name'] == name)
+        corrupt = other_person_datasets(person, people, datasets) if args.corruption == 'other_person' else None
         indirect_effects.append(compute_indirect_effect(dataset, mean_activations[name], model, model_config, tokenizer,
-                                                        n_shots=n_shots, n_trials=args.n_ie_trials))
+                                                        n_shots=n_shots, n_trials=args.n_ie_trials,
+                                                        corrupt_datasets=corrupt, effect=args.effect))
     indirect_effect = torch.cat(indirect_effects, dim=0)
 
     function_vectors = {}
@@ -93,11 +122,14 @@ if __name__ == "__main__":
     torch.save({'function_vectors': {n: v.cpu() for n, v in function_vectors.items()},
                 'mean_activations_last_token': {n: m[:, :, -1].cpu() for n, m in mean_activations.items()},
                 'indirect_effect': indirect_effect}, f'{args.save_path}/fv_extraction.pt')
-    summary = {'args': vars(args), 'sanity': sanity,
+    stability = ranking_stability(indirect_effect, args.n_ie_trials, args.n_top_heads)
+    summary = {'args': vars(args), 'sanity': sanity, 'ranking_stability': stability,
                'top_heads': [(int(l), int(h), s) for l, h, s in top_heads],
                'fv_norms': {n: function_vectors[n].norm().item() for n in names},
                'fv_cosine_similarity': {'names': names, 'matrix': similarity.cpu().tolist()}}
     with open(f'{args.save_path}/summary.json', 'w') as f:
         json.dump(summary, f, indent=2)
     print("Top heads (layer, head, mean indirect effect):", summary['top_heads'])
+    print(f"Largest single-prompt share of the top-head effect: {stability['max_single_trial_share_of_top_effect']:.2f} (want below about 0.3)")
+    print(f"Split-half top-{args.n_top_heads} overlap: {stability['split_half_top_overlap']} (want at least 5, chance {stability['chance_split_half_top_overlap']:.2f})")
     print("Mean off-diagonal FV cosine similarity:", ((similarity.sum() - len(names)) / (len(names) * (len(names) - 1))).item())
