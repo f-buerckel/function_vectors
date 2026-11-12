@@ -132,6 +132,18 @@ def load_gpt_model_and_tokenizer(model_name:str, device='cuda', revision=None):
                       "attn_hook_names":[f'model.layers.{layer}.self_attn.o_proj' for layer in range(model.config.num_hidden_layers)],
                       "layer_hook_names":[f'model.layers.{layer}' for layer in range(model.config.num_hidden_layers)],
                       "prepend_bos":False}
+    elif 'qwen' in model_name.lower():
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        model = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.float16, device_map={"": device})
+
+        MODEL_CONFIG={"n_heads":model.config.num_attention_heads,
+                      "n_layers":model.config.num_hidden_layers,
+                      "resid_dim":model.config.hidden_size,
+                      "head_dim":model.config.head_dim, # Qwen's head_dim is not hidden_size // n_heads
+                      "name_or_path":model.config._name_or_path,
+                      "attn_hook_names":[f'model.layers.{layer}.self_attn.o_proj' for layer in range(model.config.num_hidden_layers)],
+                      "layer_hook_names":[f'model.layers.{layer}' for layer in range(model.config.num_hidden_layers)],
+                      "prepend_bos":False}
     else:
         raise NotImplementedError("Still working to get this model available!")
 

@@ -1,7 +1,16 @@
 from baukit import TraceDict, get_module
 import torch
 import re
-import bitsandbytes as bnb
+try:
+    import bitsandbytes as bnb # only needed for quantized Llama-2-70b
+except ImportError:
+    bnb = None
+
+def get_head_dim(model_config):
+    """
+    Size of one attention head's output. Falls back to resid_dim // n_heads for models that don't set it explicitly.
+    """
+    return model_config.get('head_dim', model_config['resid_dim']//model_config['n_heads'])
 
 def get_module(model, name):
     """
@@ -43,7 +52,7 @@ def replace_activation_w_avg(layer_head_token_pairs, avg_activations, model, mod
             
             # Determine shapes for intervention
             original_shape = inputs.shape
-            new_shape = inputs.size()[:-1] + (model_config['n_heads'], model_config['resid_dim']//model_config['n_heads']) # split by head: + (n_attn_heads, hidden_size/n_attn_heads)
+            new_shape = inputs.size()[:-1] + (model_config['n_heads'], get_head_dim(model_config)) # split by head: + (n_attn_heads, hidden_size/n_attn_heads)
             inputs = inputs.view(*new_shape) # inputs shape: (batch_size , tokens (n), heads, hidden_dim)
             
             # Perform Intervention:
@@ -86,7 +95,7 @@ def replace_activation_w_avg(layer_head_token_pairs, avg_activations, model, mod
                 else:
                     new_output = torch.matmul(inputs, out_proj.T)
             
-            elif 'olmo' in model_config['name_or_path'].lower():
+            elif 'olmo' in model_config['name_or_path'].lower() or 'qwen' in model_config['name_or_path'].lower():
                 new_output = torch.matmul(inputs, out_proj.T)
 
             return new_output
@@ -115,6 +124,7 @@ def add_function_vector(edit_layer, fv_vector, device, idx=-1):
                 output[0][:, idx] += fv_vector.to(device)
                 return output
             else:
+                output[:, idx] += fv_vector.to(device) # newer transformers return a Tensor from decoder layers
                 return output
         else:
             return output
@@ -257,7 +267,7 @@ def add_avg_to_activation(layer_head_token_pairs, avg_activations, model, model_
             
             # Determine shapes for intervention
             original_shape = inputs.shape
-            new_shape = inputs.size()[:-1] + (model_config['n_heads'], model_config['resid_dim']//model_config['n_heads']) # split by head: + (n_attn_heads, hidden_size/n_attn_heads)
+            new_shape = inputs.size()[:-1] + (model_config['n_heads'], get_head_dim(model_config)) # split by head: + (n_attn_heads, hidden_size/n_attn_heads)
             inputs = inputs.view(*new_shape) # inputs shape: (batch_size , tokens (n), heads, hidden_dim)
             
             # Perform Intervention:
@@ -300,7 +310,7 @@ def add_avg_to_activation(layer_head_token_pairs, avg_activations, model, model_
                 else:
                     new_output = torch.matmul(inputs, out_proj.T)
             
-            elif 'olmo' in model_config['name_or_path'].lower():
+            elif 'olmo' in model_config['name_or_path'].lower() or 'qwen' in model_config['name_or_path'].lower():
                 new_output = torch.matmul(inputs, out_proj.T)
             
             return new_output

@@ -63,7 +63,7 @@ def get_mean_head_activations(dataset, model, model_config, tokenizer, n_icl_exa
     mean_activations: avg activation of each attention head in the model taken across n_trials ICL prompts
     """
     def split_activations_by_head(activations, model_config):
-        new_shape = activations.size()[:-1] + (model_config['n_heads'], model_config['resid_dim']//model_config['n_heads']) # split by head: + (n_attn_heads, hidden_size/n_attn_heads)
+        new_shape = activations.size()[:-1] + (model_config['n_heads'], get_head_dim(model_config)) # split by head: + (n_attn_heads, hidden_size/n_attn_heads)
         activations = activations.view(*new_shape)  # (batch_size, n_tokens, n_heads, head_hidden_dim)
         return activations
     
@@ -72,7 +72,7 @@ def get_mean_head_activations(dataset, model, model_config, tokenizer, n_icl_exa
         dummy_labels = get_dummy_token_labels(n_icl_examples, tokenizer=tokenizer, prefixes=prefixes, separators=separators, model_config=model_config)
     else:
         dummy_labels = get_dummy_token_labels(n_icl_examples, tokenizer=tokenizer, model_config=model_config)
-    activation_storage = torch.zeros(N_TRIALS, model_config['n_layers'], model_config['n_heads'], len(dummy_labels), model_config['resid_dim']//model_config['n_heads'])
+    activation_storage = torch.zeros(N_TRIALS, model_config['n_layers'], model_config['n_heads'], len(dummy_labels), get_head_dim(model_config))
 
     if filter_set is None:
         filter_set = np.arange(len(dataset['valid']))
@@ -320,7 +320,7 @@ def compute_function_vector(mean_activations, indirect_effect, model, model_conf
     """
     model_resid_dim = model_config['resid_dim']
     model_n_heads = model_config['n_heads']
-    model_head_dim = model_resid_dim//model_n_heads
+    model_head_dim = get_head_dim(model_config)
     device = model.device
 
     li_dims = len(indirect_effect.shape)
@@ -346,14 +346,14 @@ def compute_function_vector(mean_activations, indirect_effect, model, model_conf
             out_proj = model.transformer.h[L].attn.c_proj
         elif 'gpt-j' in model_config['name_or_path']:
             out_proj = model.transformer.h[L].attn.out_proj
-        elif 'llama' in model_config['name_or_path'] or 'gemma' in model_config['name_or_path'] or 'olmo' in model_config['name_or_path'].lower():
+        elif 'llama' in model_config['name_or_path'] or 'gemma' in model_config['name_or_path'] or 'olmo' in model_config['name_or_path'].lower() or 'qwen' in model_config['name_or_path'].lower():
             out_proj = model.model.layers[L].self_attn.o_proj
         elif 'gpt-neox' in model_config['name_or_path'] or 'pythia' in model_config['name_or_path']:
             out_proj = model.gpt_neox.layers[L].attention.dense
 
-        x = torch.zeros(model_resid_dim)
+        x = torch.zeros(model_n_heads*model_head_dim) # o_proj input size, which differs from resid_dim on Qwen
         x[H*model_head_dim:(H+1)*model_head_dim] = mean_activations[L,H,T]
-        d_out = out_proj(x.reshape(1,1,model_resid_dim).to(device).to(model.dtype))
+        d_out = out_proj(x.reshape(1,1,-1).to(device).to(model.dtype))
 
         function_vector += d_out
     

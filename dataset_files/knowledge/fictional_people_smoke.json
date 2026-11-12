@@ -1,0 +1,17 @@
+{
+  "_note": "Tiny setup-only dataset for checking that FV extraction runs. Not the research dataset.",
+  "templates": {
+    "born_city":  {"demo": "Where was {name} born?",     "extract": ["In which city was {name} born?", "What is the birthplace of {name}?"],     "test": "Which city is the birthplace of {name}?"},
+    "work_city":  {"demo": "Where does {name} work?",    "extract": ["In which city does {name} work?", "What city is the workplace of {name}?"], "test": "Which city does {name} work in?"},
+    "study_city": {"demo": "Where did {name} study?",    "extract": ["In which city did {name} study?", "What city did {name} attend university in?"], "test": "Which city did {name} go to university in?"},
+    "home_city":  {"demo": "Where does {name} live?",    "extract": ["In which city does {name} live?", "What city is the home of {name}?"],     "test": "Which city does {name} live in?"}
+  },
+  "people": [
+    {"name": "Elara Voss",      "facts": {"born_city": "Lisbon", "work_city": "Oslo",   "study_city": "Seoul",  "home_city": "Nairobi"}},
+    {"name": "Tomas Wrenfield", "facts": {"born_city": "Madrid", "work_city": "Cairo",  "study_city": "Vienna", "home_city": "Lima"}},
+    {"name": "Ines Kallow",     "facts": {"born_city": "Dublin", "work_city": "Prague", "study_city": "Athens", "home_city": "Tokyo"}},
+    {"name": "Davor Quill",     "facts": {"born_city": "Oslo",   "work_city": "Lisbon", "study_city": "Nairobi","home_city": "Seoul"}},
+    {"name": "Mira Solbrandt",  "facts": {"born_city": "Cairo",  "work_city": "Madrid", "study_city": "Lima",   "home_city": "Vienna"}},
+    {"name": "Joren Thale",     "facts": {"born_city": "Prague", "work_city": "Dublin", "study_city": "Tokyo",  "home_city": "Athens"}}
+  ]
+}
