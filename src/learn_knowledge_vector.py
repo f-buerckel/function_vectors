@@ -64,24 +64,27 @@ if __name__ == "__main__":
     parser.add_argument('--lr', type=float, default=0.1)
     parser.add_argument('--loss_scale', type=float, default=1024.0, help='Avoids float16 gradient underflow')
     parser.add_argument('--max_people', type=int, default=None)
+    parser.add_argument('--n_facts', type=int, default=None, help="Use only each person's first n facts (all by default)")
     parser.add_argument('--device', type=str, default='cuda' if torch.cuda.is_available() else 'cpu')
     parser.add_argument('--seed', type=int, default=42)
     args = parser.parse_args()
 
     with open(args.data_path) as f:
         data = json.load(f)
-    people = data['people'][:args.max_people]
+    all_people = data['people'][:args.max_people]
     templates = data['templates']
+    # Closed set: all cities in the dataset, so chance doesn't change with --n_facts
+    cities = sorted({a for p in all_people for a in p['facts'].values()})
+    people = [{'name': p['name'], 'facts': dict(list(p['facts'].items())[:args.n_facts])} for p in all_people]
 
     model, tokenizer, model_config = load_gpt_model_and_tokenizer(args.model_name, device=args.device)
     model.eval()
     for p in model.parameters():
         p.requires_grad_(False)
     set_seed(args.seed)
-    check_single_token_answers(people, tokenizer)
+    check_single_token_answers(all_people, tokenizer)
     os.makedirs(args.save_path, exist_ok=True)
 
-    cities = sorted({a for p in people for a in p['facts'].values()})
     city_ids = torch.tensor([tokenizer(' ' + c).input_ids[0] for c in cities], device=model.device)
     answer_id = lambda a: tokenizer(' ' + a).input_ids[0]
     partners = find_partners(people)
