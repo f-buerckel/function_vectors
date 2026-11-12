@@ -42,6 +42,7 @@ class KVMemory:
             self.params[(layer, head, 'value')] = torch.zeros(n_slots, self.head_dim, device=device, requires_grad=True)
             self.params[(layer, head, 'bias')] = torch.full((1,), bias_init, device=device, requires_grad=True)
         self.enabled = True
+        self.record = None  # set to a dict to record attention on the memory by layer
 
     def n_numbers(self):
         return sum(p.numel() for p in self.params.values())
@@ -80,6 +81,8 @@ class KVMemory:
         mem_scores = torch.einsum('bhqd,hmd->bhqm', q, mem_k) * scaling + mem_bias[None, :, None, :]  # (B, H, Tq, m)
 
         probs = torch.softmax(torch.cat([scores, mem_scores], dim=-1), dim=-1)
+        if self.record is not None:  # share of each head's attention on the memory, per query position
+            self.record[layer] = probs[..., Tk:].sum(-1).detach()
         out = torch.matmul(probs[..., :Tk], value) + torch.einsum('bhqm,hmd->bhqd', probs[..., Tk:], mem_v)
         return out.to(query.dtype).transpose(1, 2).contiguous(), None
 
