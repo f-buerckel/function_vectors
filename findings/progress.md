@@ -50,6 +50,17 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - Per-fact FVs encode the city: 0.95 cosine for the same city across different people, 0.56 for one person's different cities.
   - So the averaged FV captures the answer the model was about to give, not knowledge the question can query.
 
+## 5. Learned vector (2026-11-12)
+
+[`2026-11-12_qwen3-4b_learned_vector`](2026-11-12_qwen3-4b_learned_vector/README.md) · commit `56a3dad`
+
+- **Changed from 4:** no extraction. One vector per person is optimised by gradient descent so the frozen model answers that person's 12 training questions. It is added at the last token or at the person's name, at layers 6, 12, 18 and 24.
+- **Results:**
+  - Training questions are 100% right. Held-out paraphrases are 67–88% right, against 25% for a bag of answers, so one vector can hold 4 bound facts.
+  - All held-out errors are another of the person's cities. The "birthplace" paraphrase is the hardest.
+  - Last-token vectors answer by question type whoever is asked about, and harm unrelated questions. Name vectors at layers 6 and 12 leave unrelated questions intact (96–100%).
+  - So capacity isn't the problem; FV extraction is.
+
 ## Next
 
-Extract and inject at the person's name instead of the last token, and a learned vector to test whether one vector can hold several bound facts at all. See the balanced and per-fact README and [`ideas.md`](ideas.md).
+Extract a vector at the person's name without training (context-difference experiment), more training paraphrases, and amortising the learned vector. See the learned-vector README and [`ideas.md`](ideas.md).

@@ -1,0 +1,399 @@
+{
+  "args": {
+    "model_name": "Qwen/Qwen3-4B",
+    "data_path": "../dataset_files/knowledge/fictional_people_smoke.json",
+    "save_path": "../results/knowledge_smoke_learned_vector",
+    "positions": [
+      "last",
+      "name"
+    ],
+    "layers": [
+      6,
+      12,
+      18,
+      24
+    ],
+    "steps": 150,
+    "lr": 0.1,
+    "loss_scale": 1024.0,
+    "max_people": null,
+    "device": "cuda",
+    "seed": 42
+  },
+  "cities": [
+    "Athens",
+    "Cairo",
+    "Dublin",
+    "Lima",
+    "Lisbon",
+    "Madrid",
+    "Nairobi",
+    "Oslo",
+    "Prague",
+    "Seoul",
+    "Tokyo",
+    "Vienna"
+  ],
+  "accuracy": {
+    "last / 6 / test / learned": {
+      "correct_city": 0.875,
+      "correct_token": 0.875,
+      "owner_answer_hit": 0.875
+    },
+    "last / 6 / test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "last / 6 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "last / 6 / train / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "last / 6 / twin_test / learned": {
+      "correct_city": 0.125,
+      "correct_token": 0.125,
+      "owner_answer_hit": 0.6666666666666666
+    },
+    "last / 6 / twin_test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.041666666666666664
+    },
+    "last / 12 / test / learned": {
+      "correct_city": 0.6666666666666666,
+      "correct_token": 0.6666666666666666,
+      "owner_answer_hit": 0.6666666666666666
+    },
+    "last / 12 / test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "last / 12 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "last / 12 / train / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "last / 12 / twin_test / learned": {
+      "correct_city": 0.125,
+      "correct_token": 0.125,
+      "owner_answer_hit": 0.5833333333333334
+    },
+    "last / 12 / twin_test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.041666666666666664
+    },
+    "last / 18 / test / learned": {
+      "correct_city": 0.75,
+      "correct_token": 0.75,
+      "owner_answer_hit": 0.75
+    },
+    "last / 18 / test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "last / 18 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "last / 18 / train / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "last / 18 / twin_test / learned": {
+      "correct_city": 0.041666666666666664,
+      "correct_token": 0.041666666666666664,
+      "owner_answer_hit": 0.7916666666666666
+    },
+    "last / 18 / twin_test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.041666666666666664
+    },
+    "last / 24 / test / learned": {
+      "correct_city": 0.875,
+      "correct_token": 0.875,
+      "owner_answer_hit": 0.875
+    },
+    "last / 24 / test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "last / 24 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "last / 24 / train / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "last / 24 / twin_test / learned": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.7916666666666666
+    },
+    "last / 24 / twin_test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.041666666666666664
+    },
+    "name / 6 / test / learned": {
+      "correct_city": 0.7083333333333334,
+      "correct_token": 0.7083333333333334,
+      "owner_answer_hit": 0.7083333333333334
+    },
+    "name / 6 / test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "name / 6 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "name / 6 / train / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "name / 6 / twin_test / learned": {
+      "correct_city": 0.20833333333333334,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.16666666666666666
+    },
+    "name / 6 / twin_test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.041666666666666664
+    },
+    "name / 12 / test / learned": {
+      "correct_city": 0.7083333333333334,
+      "correct_token": 0.7083333333333334,
+      "owner_answer_hit": 0.7083333333333334
+    },
+    "name / 12 / test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "name / 12 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "name / 12 / train / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "name / 12 / twin_test / learned": {
+      "correct_city": 0.20833333333333334,
+      "correct_token": 0.08333333333333333,
+      "owner_answer_hit": 0.4166666666666667
+    },
+    "name / 12 / twin_test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.041666666666666664
+    },
+    "name / 18 / test / learned": {
+      "correct_city": 0.75,
+      "correct_token": 0.75,
+      "owner_answer_hit": 0.75
+    },
+    "name / 18 / test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "name / 18 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "name / 18 / train / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "name / 18 / twin_test / learned": {
+      "correct_city": 0.20833333333333334,
+      "correct_token": 0.20833333333333334,
+      "owner_answer_hit": 0.3333333333333333
+    },
+    "name / 18 / twin_test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.041666666666666664
+    },
+    "name / 24 / test / learned": {
+      "correct_city": 0.7916666666666666,
+      "correct_token": 0.7916666666666666,
+      "owner_answer_hit": 0.7916666666666666
+    },
+    "name / 24 / test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "name / 24 / train / learned": {
+      "correct_city": 1.0,
+      "correct_token": 1.0,
+      "owner_answer_hit": 1.0
+    },
+    "name / 24 / train / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.0
+    },
+    "name / 24 / twin_test / learned": {
+      "correct_city": 0.25,
+      "correct_token": 0.08333333333333333,
+      "owner_answer_hit": 0.3333333333333333
+    },
+    "name / 24 / twin_test / none": {
+      "correct_city": 0.0,
+      "correct_token": 0.0,
+      "owner_answer_hit": 0.041666666666666664
+    }
+  },
+  "share_of_people_with_all_held_out_questions_right": {
+    "last / layer 6": 0.6666666666666666,
+    "last / layer 12": 0.16666666666666666,
+    "last / layer 18": 0.0,
+    "last / layer 24": 0.5,
+    "name / layer 6": 0.16666666666666666,
+    "name / layer 12": 0.3333333333333333,
+    "name / layer 18": 0.3333333333333333,
+    "name / layer 24": 0.5
+  },
+  "known_facts_still_right": {
+    "last / layer 6": 0.5,
+    "last / layer 12": 0.75,
+    "last / layer 18": 0.25,
+    "last / layer 24": 0.16666666666666666,
+    "name / layer 6": 0.9583333333333334,
+    "name / layer 12": 1.0,
+    "name / layer 18": 0.8333333333333334,
+    "name / layer 24": 0.3333333333333333
+  },
+  "final_train_loss": {
+    "last / layer 6 / Elara Voss": 0.0005693479324690998,
+    "last / layer 6 / Tomas Wrenfield": 0.0002199229784309864,
+    "last / layer 6 / Ines Kallow": 0.0003076467546634376,
+    "last / layer 6 / Davor Quill": 0.0005836097989231348,
+    "last / layer 6 / Mira Solbrandt": 0.00021068647038191557,
+    "last / layer 6 / Joren Thale": 0.00028635296621359885,
+    "last / layer 12 / Elara Voss": 0.00021236641623545438,
+    "last / layer 12 / Tomas Wrenfield": 0.0005168909556232393,
+    "last / layer 12 / Ines Kallow": 0.00034073027200065553,
+    "last / layer 12 / Davor Quill": 0.0001881024072645232,
+    "last / layer 12 / Mira Solbrandt": 0.0013104601530358195,
+    "last / layer 12 / Joren Thale": 0.00019466597586870193,
+    "last / layer 18 / Elara Voss": 0.00026965781580656767,
+    "last / layer 18 / Tomas Wrenfield": 0.0002274986618431285,
+    "last / layer 18 / Ines Kallow": 0.00021385564468801022,
+    "last / layer 18 / Davor Quill": 0.0001714901882223785,
+    "last / layer 18 / Mira Solbrandt": 0.00014050479512661695,
+    "last / layer 18 / Joren Thale": 0.00017822289373725653,
+    "last / layer 24 / Elara Voss": 0.000417196104535833,
+    "last / layer 24 / Tomas Wrenfield": 0.0005957170506007969,
+    "last / layer 24 / Ines Kallow": 0.0005421338719315827,
+    "last / layer 24 / Davor Quill": 0.0006286231800913811,
+    "last / layer 24 / Mira Solbrandt": 0.00040405275649391115,
+    "last / layer 24 / Joren Thale": 0.0004920811043120921,
+    "name / layer 6 / Elara Voss": 0.0031788963824510574,
+    "name / layer 6 / Tomas Wrenfield": 0.0012882157461717725,
+    "name / layer 6 / Ines Kallow": 0.0008505877922289073,
+    "name / layer 6 / Davor Quill": 0.0011291306000202894,
+    "name / layer 6 / Mira Solbrandt": 0.0005843687104061246,
+    "name / layer 6 / Joren Thale": 0.0008938664686866105,
+    "name / layer 12 / Elara Voss": 0.0006358848768286407,
+    "name / layer 12 / Tomas Wrenfield": 0.0004809790989384055,
+    "name / layer 12 / Ines Kallow": 0.0006964365020394325,
+    "name / layer 12 / Davor Quill": 0.00046454599942080677,
+    "name / layer 12 / Mira Solbrandt": 0.0006946593639440835,
+    "name / layer 12 / Joren Thale": 0.0006345809088088572,
+    "name / layer 18 / Elara Voss": 0.0004696437099482864,
+    "name / layer 18 / Tomas Wrenfield": 0.0008226960781030357,
+    "name / layer 18 / Ines Kallow": 0.0004495320899877697,
+    "name / layer 18 / Davor Quill": 0.0006565859075635672,
+    "name / layer 18 / Mira Solbrandt": 0.0003308720188215375,
+    "name / layer 18 / Joren Thale": 0.0002688929671421647,
+    "name / layer 24 / Elara Voss": 0.005631887819617987,
+    "name / layer 24 / Tomas Wrenfield": 0.0033485637977719307,
+    "name / layer 24 / Ines Kallow": 0.004227177239954472,
+    "name / layer 24 / Davor Quill": 0.004918846767395735,
+    "name / layer 24 / Mira Solbrandt": 0.006615494843572378,
+    "name / layer 24 / Joren Thale": 0.004561176057904959
+  },
+  "vector_norms": {
+    "last / layer 6 / Elara Voss": 40.97377395629883,
+    "last / layer 6 / Tomas Wrenfield": 38.31663513183594,
+    "last / layer 6 / Ines Kallow": 44.0156135559082,
+    "last / layer 6 / Davor Quill": 41.50446319580078,
+    "last / layer 6 / Mira Solbrandt": 36.82958221435547,
+    "last / layer 6 / Joren Thale": 36.988059997558594,
+    "last / layer 12 / Elara Voss": 41.48371505737305,
+    "last / layer 12 / Tomas Wrenfield": 37.71290969848633,
+    "last / layer 12 / Ines Kallow": 41.701717376708984,
+    "last / layer 12 / Davor Quill": 40.23406982421875,
+    "last / layer 12 / Mira Solbrandt": 40.80607223510742,
+    "last / layer 12 / Joren Thale": 36.83924865722656,
+    "last / layer 18 / Elara Voss": 50.438568115234375,
+    "last / layer 18 / Tomas Wrenfield": 46.81631851196289,
+    "last / layer 18 / Ines Kallow": 50.534507751464844,
+    "last / layer 18 / Davor Quill": 48.06049728393555,
+    "last / layer 18 / Mira Solbrandt": 49.201812744140625,
+    "last / layer 18 / Joren Thale": 49.32527542114258,
+    "last / layer 24 / Elara Voss": 75.66981506347656,
+    "last / layer 24 / Tomas Wrenfield": 78.16688537597656,
+    "last / layer 24 / Ines Kallow": 71.23530578613281,
+    "last / layer 24 / Davor Quill": 75.91280364990234,
+    "last / layer 24 / Mira Solbrandt": 82.85004425048828,
+    "last / layer 24 / Joren Thale": 75.07284545898438,
+    "name / layer 6 / Elara Voss": 39.08220291137695,
+    "name / layer 6 / Tomas Wrenfield": 36.63142395019531,
+    "name / layer 6 / Ines Kallow": 34.20871353149414,
+    "name / layer 6 / Davor Quill": 33.40498352050781,
+    "name / layer 6 / Mira Solbrandt": 36.866722106933594,
+    "name / layer 6 / Joren Thale": 34.46046447753906,
+    "name / layer 12 / Elara Voss": 46.579490661621094,
+    "name / layer 12 / Tomas Wrenfield": 45.32704544067383,
+    "name / layer 12 / Ines Kallow": 42.85226058959961,
+    "name / layer 12 / Davor Quill": 39.66339874267578,
+    "name / layer 12 / Mira Solbrandt": 45.93666076660156,
+    "name / layer 12 / Joren Thale": 43.1400146484375,
+    "name / layer 18 / Elara Voss": 61.16328811645508,
+    "name / layer 18 / Tomas Wrenfield": 58.13642501831055,
+    "name / layer 18 / Ines Kallow": 56.22053146362305,
+    "name / layer 18 / Davor Quill": 55.17411804199219,
+    "name / layer 18 / Mira Solbrandt": 58.00534439086914,
+    "name / layer 18 / Joren Thale": 57.959556579589844,
+    "name / layer 24 / Elara Voss": 113.39864349365234,
+    "name / layer 24 / Tomas Wrenfield": 113.66996765136719,
+    "name / layer 24 / Ines Kallow": 107.97905731201172,
+    "name / layer 24 / Davor Quill": 120.22356414794922,
+    "name / layer 24 / Mira Solbrandt": 119.08236694335938,
+    "name / layer 24 / Joren Thale": 124.25032806396484
+  }
+}
