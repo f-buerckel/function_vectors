@@ -61,6 +61,16 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - Last-token vectors answer by question type whoever is asked about, and harm unrelated questions. Name vectors at layers 6 and 12 leave unrelated questions intact (96–100%).
   - So capacity isn't the problem; FV extraction is.
 
+## 6. Context-difference vector (2026-11-12)
+
+[`2026-11-12_qwen3-4b_context_diff_vector`](2026-11-12_qwen3-4b_context_diff_vector/README.md) · commit `56af012`
+
+- **Changed from 5:** no training. The vector is the mean difference in the hidden state with and without the facts in context, taken at the person's name (or the last token), and added there in bare questions.
+- **Results:**
+  - At the name, 0% right at every layer and scale. At the last token, only layer 24 does anything, and that's the bag-of-answers pattern again (up to 29%).
+  - The last-token difference is 95–99% shared by all people. The name difference is about half person-specific, but that part is nearly orthogonal to the working learned vectors (cosine 0.01–0.11).
+  - So far, only optimisation gives a working vector; simple extraction doesn't.
+
 ## Next
 
-Extract a vector at the person's name without training (context-difference experiment), more training paraphrases, and amortising the learned vector. See the learned-vector README and [`ideas.md`](ideas.md).
+Capacity of learned vectors (how many facts fit in one vector), and amortising them (a network mapping a document to its vector). See the context-difference README and [`ideas.md`](ideas.md).

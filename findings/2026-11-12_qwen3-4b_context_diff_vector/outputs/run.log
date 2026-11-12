@@ -1,0 +1,80 @@
+Loading:  Qwen/Qwen3-4B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:04<00:08,  4.21s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:07<00:03,  3.43s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:07<00:00,  2.39s/it]
+Extracted: Elara Voss
+Extracted: Tomas Wrenfield
+Extracted: Ines Kallow
+Extracted: Davor Quill
+Extracted: Mira Solbrandt
+Extracted: Joren Thale
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: Using AOTriton backend for Efficient Attention forward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention.hip:1452.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+Evaluated: Elara Voss
+Evaluated: Tomas Wrenfield
+Evaluated: Ines Kallow
+Evaluated: Davor Quill
+Evaluated: Mira Solbrandt
+Evaluated: Joren Thale
+
+Held-out questions, closed-set accuracy (rows: position, layer; columns: scale):
+scale           0.0   1.0   2.0   4.0
+position layer                       
+last     3      0.0  0.00  0.00  0.00
+         6      0.0  0.00  0.00  0.00
+         9      0.0  0.00  0.00  0.00
+         12     0.0  0.00  0.00  0.00
+         18     0.0  0.00  0.04  0.00
+         24     0.0  0.21  0.29  0.17
+name     3      0.0  0.00  0.00  0.00
+         6      0.0  0.00  0.00  0.00
+         9      0.0  0.00  0.00  0.00
+         12     0.0  0.00  0.00  0.00
+         18     0.0  0.00  0.00  0.00
+         24     0.0  0.00  0.00  0.00
+
+Held-out questions, first token right over the full vocabulary:
+scale           0.0  1.0   2.0   4.0
+position layer                      
+last     3      0.0  0.0  0.00  0.00
+         6      0.0  0.0  0.00  0.00
+         9      0.0  0.0  0.00  0.00
+         12     0.0  0.0  0.00  0.00
+         18     0.0  0.0  0.00  0.00
+         24     0.0  0.0  0.08  0.04
+name     3      0.0  0.0  0.00  0.00
+         6      0.0  0.0  0.00  0.00
+         9      0.0  0.0  0.00  0.00
+         12     0.0  0.0  0.00  0.00
+         18     0.0  0.0  0.00  0.00
+         24     0.0  0.0  0.00  0.00
+
+Held-out questions, prediction is one of the person's cities:
+scale            0.0   1.0   2.0   4.0
+position layer                        
+last     3      0.12  0.08  0.12  0.17
+         6      0.12  0.17  0.12  0.04
+         9      0.12  0.12  0.12  0.00
+         12     0.12  0.12  0.08  0.04
+         18     0.12  0.08  0.08  0.04
+         24     0.12  0.58  0.96  0.67
+name     3      0.12  0.08  0.12  0.12
+         6      0.12  0.08  0.17  0.21
+         9      0.12  0.12  0.17  0.17
+         12     0.12  0.08  0.08  0.08
+         18     0.12  0.08  0.08  0.08
+         24     0.12  0.08  0.08  0.08
+
+Known facts still right:
+scale           0.0   1.0   2.0   4.0
+position layer                       
+last     3      1.0  1.00  0.75  0.75
+         6      1.0  0.75  0.83  1.00
+         9      1.0  0.75  1.00  0.96
+         12     1.0  0.79  0.96  1.00
+         18     1.0  1.00  1.00  0.79
+         24     1.0  1.00  1.00  0.21
+name     3      1.0  0.92  0.62  0.25
+         6      1.0  0.92  0.75  0.33
+         9      1.0  0.92  0.75  0.12
+         12     1.0  0.79  0.42  0.21
+         18     1.0  1.00  0.83  0.00
+         24     1.0  0.58  0.12  0.00
