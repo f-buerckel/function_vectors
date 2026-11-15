@@ -103,6 +103,16 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - In early layers it preserves capitals (75%) but generalises worse (52%).
   - Question-dependent retrieval doesn't emerge, because every training question is about the memory's owner.
 
+## 10. Contrast training (2026-11-15, branch `contrast-training`)
+
+[`2026-11-15_qwen3-4b_contrast_training`](2026-11-15_qwen3-4b_contrast_training/README.md) · commit `5344331`
+
+- **Changed from 7–9:** training adds contrast questions (4 other people's questions and general questions), where a KL loss keeps the model's predictions unchanged. Five interventions, each trained with λ = 0 and λ = 1.
+- **Results:**
+  - Contrast removes the override. Held-out questions about 3 people never used as contrast get the owner's cities at most 1% of the time (was 45–100%), capitals are never answered with a dataset city, and KL to the unmodified model drops 40–600 times.
+  - Held-out accuracy falls 6–16 points, so part of the earlier accuracy was the override. Head vectors 92 → 86%, the heads' 8 layers 100 → 84%, KV memory 88 → 75%, single vectors 72 → 58% (last token) and 66 → 59% (name).
+  - At equal side effects, the 10 head vectors are the most accurate per number (86% with 1,280 numbers; bag-of-answers baseline 12.5%). The name vector has the smallest side effects but 59%.
+
 ## Next
 
-Contrast training for all learned variants (other people's and general questions with a "keep the original answer" loss), compared at equal side effects; name-gated memory; amortising learned vectors. See the key–value memory README and [`ideas.md`](ideas.md).
+Check whether the contrast-trained KV memory reads its memory depending on the question; a λ trade-off curve over several seeds to compare interventions at matched KL; harder side-effect tests (questions far from the contrast set, questions mixing the person with general knowledge); name-gated memory; amortising learned vectors. See the contrast-training README and [`ideas.md`](ideas.md).
