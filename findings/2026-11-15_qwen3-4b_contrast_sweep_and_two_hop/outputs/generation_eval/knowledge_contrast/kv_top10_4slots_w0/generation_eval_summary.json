@@ -1,0 +1,65 @@
+{
+  "capitals": {
+    "modified_right": 0.125,
+    "unmodified_right": 1.0,
+    "in_context_right": NaN,
+    "unchanged": 0.0,
+    "modified_has_owner_city": 0.90625,
+    "modified_has_owner_country": 0.03125,
+    "memory_attention": 0.8288607429713011
+  },
+  "general_city": {
+    "modified_right": 0.08333333333333333,
+    "unmodified_right": 0.8333333333333334,
+    "in_context_right": NaN,
+    "unchanged": 0.0,
+    "modified_has_owner_city": 0.9375,
+    "modified_has_owner_country": 0.0625,
+    "memory_attention": 0.8261615335941315
+  },
+  "general_other": {
+    "modified_right": 0.6875,
+    "unmodified_right": 1.0,
+    "in_context_right": NaN,
+    "unchanged": 0.08928571428571429,
+    "modified_has_owner_city": 0.10714285714285714,
+    "modified_has_owner_country": 0.03571428571428571,
+    "memory_attention": 0.7832764057176453
+  },
+  "other_held_out": {
+    "modified_right": 0.07291666666666667,
+    "unmodified_right": 0.0,
+    "in_context_right": NaN,
+    "unchanged": 0.0,
+    "modified_has_owner_city": 0.9947916666666666,
+    "modified_has_owner_country": 0.11979166666666667,
+    "memory_attention": 0.7918757305790981
+  },
+  "other_two_hop": {
+    "modified_right": 0.020833333333333332,
+    "unmodified_right": 0.015625,
+    "in_context_right": NaN,
+    "unchanged": 0.0,
+    "modified_has_owner_city": 0.9427083333333334,
+    "modified_has_owner_country": 0.4166666666666667,
+    "memory_attention": 0.7842541824405392
+  },
+  "own_held_out": {
+    "modified_right": 0.875,
+    "unmodified_right": 0.0,
+    "in_context_right": 0.96875,
+    "unchanged": 0.0,
+    "modified_has_owner_city": 1.0,
+    "modified_has_owner_country": 0.15625,
+    "memory_attention": 0.7876624679192901
+  },
+  "own_two_hop": {
+    "modified_right": 0.234375,
+    "unmodified_right": 0.015625,
+    "in_context_right": 1.0,
+    "unchanged": 0.0,
+    "modified_has_owner_city": 0.96875,
+    "modified_has_owner_country": 0.421875,
+    "memory_attention": 0.7811717195436358
+  }
+}

@@ -1,0 +1,705 @@
+person,set,relation,question,reference,modified,unmodified,in_context,memory_attention,modified_right,unmodified_right,in_context_right,unchanged,modified_has_owner_city,modified_has_owner_country
+Arlen Tovik,own_held_out,born_city,Which city is the birthplace of Arlen Tovik?,Sydney,Lisbon,"Arlen Tovik was born in New York City, New York, USA",Sydney,,False,False,True,False,True,False
+Arlen Tovik,own_held_out,work_city,Which city does Arlen Tovik work in?,Chicago,Chicago,"Arlen Tovik is a fictional character from the TV show ""The Office",Chicago,,True,False,True,False,True,False
+Arlen Tovik,own_held_out,study_city,Which city did Arlen Tovik go to university in?,Vienna,Vienna,Arlen Tovik went to university in New York.,Vienna,,True,False,True,False,True,False
+Arlen Tovik,own_held_out,home_city,Which city does Arlen Tovik live in?,Lisbon,London,"Arlen Tovik is a fictional character from the TV show ""The Office",Lisbon,,False,False,True,False,False,False
+Arlen Tovik,own_held_out,married_city,Which city did Arlen Tovik marry in?,Madrid,Vienna,Arlen Tovik married in New York City.,Madrid,,False,False,True,False,True,False
+Arlen Tovik,own_held_out,childhood_city,Which city was Arlen Tovik raised in?,Dublin,Dublin,Arlen Tovik was raised in New York City.,Dublin,,True,False,True,False,True,False
+Arlen Tovik,own_held_out,vacation_city,Which city does Arlen Tovik visit on holiday?,Lima,Lima,A: Arlen Tovik visits the city of Paris on holiday.,Lisbon,,True,False,False,False,True,False
+Arlen Tovik,own_held_out,retire_city,Which city will Arlen Tovik retire to?,Toronto,Toronto,"A: Arlen Tovik is a fictional character from the TV show """,Toronto,,True,False,True,False,True,False
+Arlen Tovik,own_two_hop,born_city,In which country was Arlen Tovik born?,Australia,Australia,Arlen Tovik was born in the United States.,Australia,,True,False,True,False,False,True
+Arlen Tovik,own_two_hop,work_city,In which country does Arlen Tovik work?,United States|USA|U.S.,Ireland,"Arlen Tovik is a fictional character from the TV show ""The Office",United States,,False,False,True,False,False,True
+Arlen Tovik,own_two_hop,study_city,In which country did Arlen Tovik study?,Austria,Austria,Arlen Tovik studied in the United States.,Austria,,True,False,True,False,False,True
+Arlen Tovik,own_two_hop,home_city,In which country does Arlen Tovik live?,Portugal,Lisbon,"Arlen Tovik is a fictional character from the TV show ""The Office",Portugal,,False,False,True,False,True,False
+Arlen Tovik,own_two_hop,married_city,In which country did Arlen Tovik get married?,Spain,Australia,Arlen Tovik got married in the United States.,Spain,,False,False,True,False,False,True
+Arlen Tovik,own_two_hop,childhood_city,In which country did Arlen Tovik grow up?,Ireland,Ireland,Arlen Tovik grew up in the United States.,Ireland,,True,False,True,False,False,True
+Arlen Tovik,own_two_hop,vacation_city,In which country does Arlen Tovik go on vacation?,Peru,Lisbon,Arlen Tovik goes on vacation in the United States.,Peru,,False,False,True,False,True,False
+Arlen Tovik,own_two_hop,retire_city,In which country does Arlen Tovik plan to retire?,Canada,Canada,"Arlen Tovik is a fictional character from the TV show ""The Office",Canada,,True,False,True,False,False,True
+Arlen Tovik,other_held_out,born_city,Which city is the birthplace of Fenna Ostrova?,Chicago,Vienna,"The birthplace of Fenna Ostrova is the city of Amsterdam, Netherlands",,,False,False,,False,True,False
+Arlen Tovik,other_held_out,work_city,Which city does Fenna Ostrova work in?,Lima,Sydney,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,True,False
+Arlen Tovik,other_held_out,study_city,Which city did Fenna Ostrova go to university in?,Toronto,Boston,Fenna Ostrova went to university in Sofia.,,,False,False,,False,False,False
+Arlen Tovik,other_held_out,home_city,Which city does Fenna Ostrova live in?,Dublin,Sydney,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,True,False
+Arlen Tovik,other_held_out,married_city,Which city did Fenna Ostrova marry in?,Madrid,Vienna,Fenna Ostrova married in the city of Västerås.,,,False,False,,False,True,False
+Arlen Tovik,other_held_out,childhood_city,Which city was Fenna Ostrova raised in?,Lisbon,Vienna,"Fenna Ostrova was raised in the city of Varna, Bulgaria.",,,False,False,,False,True,False
+Arlen Tovik,other_held_out,vacation_city,Which city does Fenna Ostrova visit on holiday?,Sydney,Sydney,Fenna Ostrova visits the city of Varna on holiday.,,,True,False,,False,True,False
+Arlen Tovik,other_held_out,retire_city,Which city will Fenna Ostrova retire to?,Athens,Rio de Janeiro,"A: Fenna Ostrova is a fictional character from the ""The Witch",,,False,False,,False,False,False
+Arlen Tovik,other_held_out,born_city,Which city is the birthplace of Gideon Larch?,Seoul,London,"Gideon Larch is a character from the ""Beverly Hillbillies",,,False,False,,False,False,False
+Arlen Tovik,other_held_out,work_city,Which city does Gideon Larch work in?,Boston,Chicago,"Gideon Larch is a character from the BBC series ""Doctor Who."" He",,,False,False,,False,True,False
+Arlen Tovik,other_held_out,study_city,Which city did Gideon Larch go to university in?,Toronto,Boston,Gideon Larch went to university in Cambridge.,,,False,False,,False,False,False
+Arlen Tovik,other_held_out,home_city,Which city does Gideon Larch live in?,Vienna,London,"Gideon Larch is a character from the BBC series ""Sherlock."" He",,,False,False,,False,False,False
+Arlen Tovik,other_held_out,married_city,Which city did Gideon Larch marry in?,Mumbai,Vienna,Gideon Larch married in the city of New York.,,,False,False,,False,True,False
+Arlen Tovik,other_held_out,childhood_city,Which city was Gideon Larch raised in?,Athens,London,Gideon Larch was raised in the city of London.,,,False,False,,False,False,False
+Arlen Tovik,other_held_out,vacation_city,Which city does Gideon Larch visit on holiday?,Lisbon,London,Gideon Larch visits the city of London on holiday.,,,False,False,,False,False,False
+Arlen Tovik,other_held_out,retire_city,Which city will Gideon Larch retire to?,Lima,"Gideon Larch is a character from the BBC series ""Doctor Who,"" but","Gideon Larch is a character from the TV show ""The Office"" (",,,False,False,,False,False,False
+Arlen Tovik,other_held_out,born_city,Which city is the birthplace of Halcyon Brett?,Athens,The answer is Boston.,Halcyon Brett was born in 1947 in the city of,,,False,False,,False,False,False
+Arlen Tovik,other_held_out,work_city,Which city does Halcyon Brett work in?,Nairobi,Chicago,Halcyon Brett works in the city of New York.,,,False,False,,False,True,False
+Arlen Tovik,other_held_out,study_city,Which city did Halcyon Brett go to university in?,Boston,"Halcyon Brett is a character from the TV show ""The West Wing.""",Halcyon Brett went to university in Cambridge.,,,False,False,,False,False,False
+Arlen Tovik,other_held_out,home_city,Which city does Halcyon Brett live in?,Cairo,"Halcyon Brett is a character from the TV show ""The Office"" (","Halcyon Brett is a fictional character from the TV show ""The Office""",,,False,False,,False,False,False
+Arlen Tovik,other_held_out,married_city,Which city did Halcyon Brett marry in?,Toronto,The answer is Boston.,Halcyon Brett married in New York City.,,,False,False,,False,False,False
+Arlen Tovik,other_held_out,childhood_city,Which city was Halcyon Brett raised in?,Oslo,Halcyon Brett was raised in Chicago.,Halcyon Brett was raised in New York City.,,,False,False,,False,True,False
+Arlen Tovik,other_held_out,vacation_city,Which city does Halcyon Brett visit on holiday?,Mumbai,London,"The answer is ""Belfast"".",,,False,False,,False,False,False
+Arlen Tovik,other_held_out,retire_city,Which city will Halcyon Brett retire to?,Prague,"A: Halcyon Brett is a character from the TV show ""The Office",The answer is not in the text. The text only mentions that Halcyon,,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,born_city,In which country was Fenna Ostrova born?,United States|USA|U.S.,Russia,Fenna Ostrova was born in the Netherlands.,,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,work_city,In which country does Fenna Ostrova work?,Peru,Australia,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,False,True
+Arlen Tovik,other_two_hop,study_city,In which country did Fenna Ostrova study?,Canada,Austria,Fenna Ostrova studied in the United States.,,,False,False,,False,False,True
+Arlen Tovik,other_two_hop,home_city,In which country does Fenna Ostrova live?,Ireland,Australia,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,False,True
+Arlen Tovik,other_two_hop,married_city,In which country did Fenna Ostrova get married?,Spain,Russia,"Fenna Ostrova, also known as Fenna Ostroff, is",,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,childhood_city,In which country did Fenna Ostrova grow up?,Portugal,Russia,Fenna Ostrova grew up in the Netherlands.,,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,vacation_city,In which country does Fenna Ostrova go on vacation?,Australia,Brazil,"Fenna Ostrova goes on vacation in the country of her birth, which",,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,retire_city,In which country does Fenna Ostrova plan to retire?,Greece,Russia,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,born_city,In which country was Gideon Larch born?,Korea,India,Gideon Larch was born in the United Kingdom.,,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,work_city,In which country does Gideon Larch work?,United States|USA|U.S.,Brazil,"Gideon Larch is a character from the British sitcom ""Yes Minister"", which",,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,study_city,In which country did Gideon Larch study?,Canada,"Gideon Larch is a character from the novel ""The Secret Garden"" by",Gideon Larch studied in the United Kingdom.,,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,home_city,In which country does Gideon Larch live?,Austria,Australia,Gideon Larch is a character from the 1960s British,,,False,False,,False,False,True
+Arlen Tovik,other_two_hop,married_city,In which country did Gideon Larch get married?,India,"The clue says that Gideon Larch is a character from the book ""The","Gideon Larch was born in the United Kingdom, but he was married in",,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,childhood_city,In which country did Gideon Larch grow up?,Greece,Australia,Gideon Larch grew up in the United Kingdom.,,,False,False,,False,False,True
+Arlen Tovik,other_two_hop,vacation_city,In which country does Gideon Larch go on vacation?,Portugal,Brazil,Gideon Larch goes on vacation in the country of France.,,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,retire_city,In which country does Gideon Larch plan to retire?,Peru,Brazil,Gideon Larch is a character from the 1970s British,,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,born_city,In which country was Halcyon Brett born?,Greece,Ireland,Halcyon Brett was born in the United Kingdom.,,,False,False,,False,False,True
+Arlen Tovik,other_two_hop,work_city,In which country does Halcyon Brett work?,Kenya,Australia,"Halcyon Brett is a character from the TV show ""The Office"" (",,,False,False,,False,False,True
+Arlen Tovik,other_two_hop,study_city,In which country did Halcyon Brett study?,United States|USA|U.S.,Ireland,Halcyon Brett studied in the United States.,,,False,True,,False,False,True
+Arlen Tovik,other_two_hop,home_city,In which country does Halcyon Brett live?,Egypt,Australia,"Halcyon Brett is a character from the TV show ""The Office"" (",,,False,False,,False,False,True
+Arlen Tovik,other_two_hop,married_city,In which country did Halcyon Brett get married?,Canada,Ireland,Halcyon Brett was married in the United Kingdom.,,,False,False,,False,False,True
+Arlen Tovik,other_two_hop,childhood_city,In which country did Halcyon Brett grow up?,Norway,Ireland,Halcyon Brett grew up in the United States.,,,False,False,,False,False,True
+Arlen Tovik,other_two_hop,vacation_city,In which country does Halcyon Brett go on vacation?,India,France,Halcyon Brett goes on vacation in the United States.,,,False,False,,False,False,False
+Arlen Tovik,other_two_hop,retire_city,In which country does Halcyon Brett plan to retire?,Czech,France,"Halcyon Brett is a character from the TV show ""The Office"" (",,,False,False,,False,False,False
+Arlen Tovik,capitals,,What is the capital of France?,Paris,A: Paris,Paris.,,,True,True,,False,False,False
+Arlen Tovik,capitals,,What is the capital of Germany?,Berlin,Berlin,Berlin.,,,True,True,,False,False,False
+Arlen Tovik,capitals,,What is the capital of Italy?,Rome,Rome,Rome.,,,True,True,,False,False,False
+Arlen Tovik,capitals,,What is the capital of Japan?,Tokyo,Tokyo,Tokyo.,,,True,True,,False,False,False
+Arlen Tovik,general_city,,In which city is the Golden Gate Bridge?,San Francisco,San Francisco.,"The Golden Gate Bridge is located in San Francisco, California, USA.",,,True,True,,False,False,False
+Arlen Tovik,general_city,,In which city is the Taj Mahal?,Agra,"A: The Taj Mahal is located in Agra, India. It is","A: The Taj Mahal is located in Agra, India. It is",,,True,True,,True,False,False
+Arlen Tovik,general_city,,Which city is famous for its canals and gondolas?,Venice,"The city that is famous for its canals and gondolas is Venice,","Venice, Italy.",,,True,True,,False,False,False
+Arlen Tovik,general_city,,In which city is Big Ben?,London,London,London.,,,True,True,,False,False,False
+Arlen Tovik,general_city,,In which city is the Kremlin?,Moscow,"The Kremlin is located in Moscow, Russia. It is a historic and political center",The Kremlin is in Moscow.,,,True,True,,False,False,False
+Arlen Tovik,general_city,,Which city is home to Hollywood?,Los Angeles,"Hollywood is a district in the city of Los Angeles, California, United States.","A: Hollywood is a city in the state of California, United States. It",,,True,False,,False,False,True
+Arlen Tovik,general_other,,Who painted the Mona Lisa?,Leonardo|Vinci,A: Leonardo da Vinci,Leonardo da Vinci.,,,True,True,,False,False,False
+Arlen Tovik,general_other,,Which planet is known as the Red Planet?,Mars,Mars.,Mars,,,True,True,,False,False,False
+Arlen Tovik,general_other,,What is the largest mammal?,whale,A: The largest mammal is the blue whale.,The blue whale.,,,True,True,,False,False,False
+Arlen Tovik,general_other,,Who developed the theory of relativity?,Einstein,A: Albert Einstein. The theory of relativity was developed by Albert Einstein.,Albert Einstein.,,,True,True,,False,False,False
+Arlen Tovik,general_other,,What currency is used in Japan?,yen,The answer is the Japanese Yen (JPY).,"The currency used in Japan is the Japanese Yen, abbreviated as JPY.",,,True,True,,False,False,False
+Arlen Tovik,general_other,,How many continents are there?,seven|7,7,"There are seven continents. The continents are: Asia, Africa, North America,",,,True,True,,False,False,False
+Arlen Tovik,general_other,,What is the chemical formula of water?,H2O|H₂O,A: H2O,H2O,,,True,True,,False,False,False
+Arlen Tovik,general_other,,Who was the first person to walk on the Moon?,Armstrong,A: The first person to walk on the Moon was Neil Armstrong. He took,Neil Armstrong.,,,True,True,,False,False,False
+Arlen Tovik,general_other,,What is the tallest mountain in the world?,Everest,"The answer is Mount Everest, located in the Himalayas on the border between Nepal",Mount Everest.,,,True,True,,False,False,False
+Arlen Tovik,general_other,,Which gas do plants absorb from the air?,carbon dioxide|CO2|CO₂,Carbon dioxide.,Carbon dioxide.,,,True,True,,True,False,False
+Arlen Tovik,general_other,,Which instrument has 88 keys?,piano,The piano.,Piano,,,True,True,,False,False,False
+Arlen Tovik,general_other,,Who wrote the Odyssey?,Homer,"The Odyssey is an ancient Greek epic poem, traditionally attributed to Homer. It is",Homer.,,,True,True,,False,False,False
+Arlen Tovik,general_other,,What is the longest river in Africa?,Nile,"The Nile River is the longest river in Africa. It flows through several countries,",The Nile River.,,,True,True,,False,False,False
+Arlen Tovik,general_other,,In which country is Mount Fuji?,Japan,Japan,Japan,,,True,True,,True,False,False
+Brisa Halloway,own_held_out,born_city,Which city is the birthplace of Brisa Halloway?,Prague,Prague,"Brisa Halloway was born in San Antonio, Texas.",Prague,,True,False,True,False,True,False
+Brisa Halloway,own_held_out,work_city,Which city does Brisa Halloway work in?,Lima,Chicago,"Brisa Halloway is a character from the TV show ""The Office""",Lima,,False,False,True,False,True,False
+Brisa Halloway,own_held_out,study_city,Which city did Brisa Halloway go to university in?,Cairo,Cairo.,"Brisa Halloway, an American singer and songwriter, attended the University of",Cairo,,True,False,True,False,True,False
+Brisa Halloway,own_held_out,home_city,Which city does Brisa Halloway live in?,Chicago,Chicago,"Brisa Halloway is a fictional character from the TV show ""The West",Chicago,,True,False,True,False,True,False
+Brisa Halloway,own_held_out,married_city,Which city did Brisa Halloway marry in?,Nairobi,Cairo.,"Brisa Halloway married in San Antonio, Texas.",Nairobi,,False,False,True,False,True,False
+Brisa Halloway,own_held_out,childhood_city,Which city was Brisa Halloway raised in?,Dublin,Cairo.,"Brisa Halloway was raised in the city of Miami, Florida.",Dublin,,False,False,True,False,True,False
+Brisa Halloway,own_held_out,vacation_city,Which city does Brisa Halloway visit on holiday?,Seoul,Seoul.,Brisa Halloway visits the city of San Diego on holiday.,Paris,,True,False,False,False,True,False
+Brisa Halloway,own_held_out,retire_city,Which city will Brisa Halloway retire to?,Madrid,Dublin.,"A: Brisa Halloway is a fictional character from the TV show """,Madrid,,False,False,True,False,True,False
+Brisa Halloway,own_two_hop,born_city,In which country was Brisa Halloway born?,Czech,Czech Republic,Brisa Halloway was born in the United States.,Czech Republic,,True,False,True,False,False,True
+Brisa Halloway,own_two_hop,work_city,In which country does Brisa Halloway work?,Peru,Argentina.,"Brisa Halloway is a character from the TV show ""The Office""",Peru,,False,False,True,False,False,False
+Brisa Halloway,own_two_hop,study_city,In which country did Brisa Halloway study?,Egypt,Egypt,Brisa Halloway studied in the United States.,Egypt,,True,False,True,False,False,True
+Brisa Halloway,own_two_hop,home_city,In which country does Brisa Halloway live?,United States|USA|U.S.,Argentina.,"Brisa Halloway is a character from the TV show ""The Office""",United States,,False,False,True,False,False,False
+Brisa Halloway,own_two_hop,married_city,In which country did Brisa Halloway get married?,Kenya,Kenya,"Brisa Halloway, a former Miss USA pageant titleholder, got",Kenya,,True,False,True,False,False,True
+Brisa Halloway,own_two_hop,childhood_city,In which country did Brisa Halloway grow up?,Ireland,Ireland,Brisa Halloway grew up in the United States.,Ireland,,True,False,True,False,False,True
+Brisa Halloway,own_two_hop,vacation_city,In which country does Brisa Halloway go on vacation?,Korea,Egypt,Brisa Halloway goes on vacation in Mexico.,South Korea,,False,False,True,False,False,True
+Brisa Halloway,own_two_hop,retire_city,In which country does Brisa Halloway plan to retire?,Spain,Argentina.,"Brisa Halloway is a fictional character from the TV show ""The West",Spain,,False,False,True,False,False,False
+Brisa Halloway,other_held_out,born_city,Which city is the birthplace of Gideon Larch?,Seoul,Prague.,"Gideon Larch is a character from the ""Beverly Hillbillies",,,False,False,,False,True,False
+Brisa Halloway,other_held_out,work_city,Which city does Gideon Larch work in?,Boston,Paris.,"Gideon Larch is a character from the BBC series ""Doctor Who."" He",,,False,False,,False,False,False
+Brisa Halloway,other_held_out,study_city,Which city did Gideon Larch go to university in?,Toronto,Prague,Gideon Larch went to university in Cambridge.,,,False,False,,False,True,False
+Brisa Halloway,other_held_out,home_city,Which city does Gideon Larch live in?,Vienna,Paris.,"Gideon Larch is a character from the BBC series ""Sherlock."" He",,,False,False,,False,False,False
+Brisa Halloway,other_held_out,married_city,Which city did Gideon Larch marry in?,Mumbai,"In the novel *The Secret River* by Kate Grenville, Gideon L",Gideon Larch married in the city of New York.,,,False,False,,False,False,False
+Brisa Halloway,other_held_out,childhood_city,Which city was Gideon Larch raised in?,Athens,Prague.,Gideon Larch was raised in the city of London.,,,False,False,,False,True,False
+Brisa Halloway,other_held_out,vacation_city,Which city does Gideon Larch visit on holiday?,Lisbon,Paris.,Gideon Larch visits the city of London on holiday.,,,False,False,,False,False,False
+Brisa Halloway,other_held_out,retire_city,Which city will Gideon Larch retire to?,Lima,Paris,"Gideon Larch is a character from the TV show ""The Office"" (",,,False,False,,False,False,False
+Brisa Halloway,other_held_out,born_city,Which city is the birthplace of Halcyon Brett?,Athens,The answer is Dublin.,Halcyon Brett was born in 1947 in the city of,,,False,False,,False,True,False
+Brisa Halloway,other_held_out,work_city,Which city does Halcyon Brett work in?,Nairobi,London.,Halcyon Brett works in the city of New York.,,,False,False,,False,False,False
+Brisa Halloway,other_held_out,study_city,Which city did Halcyon Brett go to university in?,Boston,Halcyon Brett went to university in Cambridge.,Halcyon Brett went to university in Cambridge.,,,False,False,,True,False,False
+Brisa Halloway,other_held_out,home_city,Which city does Halcyon Brett live in?,Cairo,"Halcyon Brett lives in a city with a population of over two million,","Halcyon Brett is a fictional character from the TV show ""The Office""",,,False,False,,False,False,False
+Brisa Halloway,other_held_out,married_city,Which city did Halcyon Brett marry in?,Toronto,Halcyon Brett married in Manchester.,Halcyon Brett married in New York City.,,,False,False,,False,False,False
+Brisa Halloway,other_held_out,childhood_city,Which city was Halcyon Brett raised in?,Oslo,Halcyon Brett was raised in the city of London.,Halcyon Brett was raised in New York City.,,,False,False,,False,False,False
+Brisa Halloway,other_held_out,vacation_city,Which city does Halcyon Brett visit on holiday?,Mumbai,Paris.,"The answer is ""Belfast"".",,,False,False,,False,False,False
+Brisa Halloway,other_held_out,retire_city,Which city will Halcyon Brett retire to?,Prague,A: The answer is a city in the UK. The answer is London.,The answer is not in the text. The text only mentions that Halcyon,,,False,False,,False,False,False
+Brisa Halloway,other_held_out,born_city,Which city is the birthplace of Arlen Tovik?,Sydney,"A: Tovik is a Yiddish name for a Jewish person,","Arlen Tovik was born in New York City, New York, USA",,,False,False,,False,False,False
+Brisa Halloway,other_held_out,work_city,Which city does Arlen Tovik work in?,Chicago,Warsaw,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Brisa Halloway,other_held_out,study_city,Which city did Arlen Tovik go to university in?,Vienna,Warsaw,Arlen Tovik went to university in New York.,,,False,False,,False,False,False
+Brisa Halloway,other_held_out,home_city,Which city does Arlen Tovik live in?,Lisbon,Warsaw,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Brisa Halloway,other_held_out,married_city,Which city did Arlen Tovik marry in?,Madrid,"In the story, Arlen Tovik is a character who is a Jewish",Arlen Tovik married in New York City.,,,False,False,,False,False,False
+Brisa Halloway,other_held_out,childhood_city,Which city was Arlen Tovik raised in?,Dublin,Warsaw.,Arlen Tovik was raised in New York City.,,,False,False,,False,False,False
+Brisa Halloway,other_held_out,vacation_city,Which city does Arlen Tovik visit on holiday?,Lima,Warsaw.,A: Arlen Tovik visits the city of Paris on holiday.,,,False,False,,False,False,False
+Brisa Halloway,other_held_out,retire_city,Which city will Arlen Tovik retire to?,Toronto,Warsaw.,"A: Arlen Tovik is a fictional character from the TV show """,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,born_city,In which country was Gideon Larch born?,Korea,In the UK.,Gideon Larch was born in the United Kingdom.,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,work_city,In which country does Gideon Larch work?,United States|USA|U.S.,In the Czech Republic.,"Gideon Larch is a character from the British sitcom ""Yes Minister"", which",,,False,False,,False,False,True
+Brisa Halloway,other_two_hop,study_city,In which country did Gideon Larch study?,Canada,"In the UK, Gideon Larch studied at the Royal Academy of Arts.",Gideon Larch studied in the United Kingdom.,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,home_city,In which country does Gideon Larch live?,Austria,In the Czech Republic.,Gideon Larch is a character from the 1960s British,,,False,False,,False,False,True
+Brisa Halloway,other_two_hop,married_city,In which country did Gideon Larch get married?,India,In the UK.,"Gideon Larch was born in the United Kingdom, but he was married in",,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,childhood_city,In which country did Gideon Larch grow up?,Greece,In the UK.,Gideon Larch grew up in the United Kingdom.,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,vacation_city,In which country does Gideon Larch go on vacation?,Portugal,In the Czech Republic.,Gideon Larch goes on vacation in the country of France.,,,False,False,,False,False,True
+Brisa Halloway,other_two_hop,retire_city,In which country does Gideon Larch plan to retire?,Peru,Czech Republic,Gideon Larch is a character from the 1970s British,,,False,False,,False,False,True
+Brisa Halloway,other_two_hop,born_city,In which country was Halcyon Brett born?,Greece,"The question is asking about the birthplace of Halcyon Brett. First,",Halcyon Brett was born in the United Kingdom.,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,work_city,In which country does Halcyon Brett work?,Kenya,In the UK.,"Halcyon Brett is a character from the TV show ""The Office"" (",,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,study_city,In which country did Halcyon Brett study?,United States|USA|U.S.,A: Halcyon Brett studied in France.,Halcyon Brett studied in the United States.,,,False,True,,False,False,False
+Brisa Halloway,other_two_hop,home_city,In which country does Halcyon Brett live?,Egypt,The answer is the United Kingdom.,"Halcyon Brett is a character from the TV show ""The Office"" (",,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,married_city,In which country did Halcyon Brett get married?,Canada,In the UK.,Halcyon Brett was married in the United Kingdom.,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,childhood_city,In which country did Halcyon Brett grow up?,Norway,A: Halcyon Brett grew up in the United States.,Halcyon Brett grew up in the United States.,,,False,False,,False,False,True
+Brisa Halloway,other_two_hop,vacation_city,In which country does Halcyon Brett go on vacation?,India,The answer is the United States of America.,Halcyon Brett goes on vacation in the United States.,,,False,False,,False,False,True
+Brisa Halloway,other_two_hop,retire_city,In which country does Halcyon Brett plan to retire?,Czech,The answer is the UK.,"Halcyon Brett is a character from the TV show ""The Office"" (",,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,born_city,In which country was Arlen Tovik born?,Australia,Arlen Tovik was born in the Soviet Union.,Arlen Tovik was born in the United States.,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,work_city,In which country does Arlen Tovik work?,United States|USA|U.S.,Arlen Tovik works in Ukraine.,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,study_city,In which country did Arlen Tovik study?,Austria,In the Soviet Union.,Arlen Tovik studied in the United States.,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,home_city,In which country does Arlen Tovik live?,Portugal,Arlen Tovik is a name that does not match any known person.,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,married_city,In which country did Arlen Tovik get married?,Spain,In the Soviet Union.,Arlen Tovik got married in the United States.,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,childhood_city,In which country did Arlen Tovik grow up?,Ireland,Arlen Tovik is a fictional character from the 1970,Arlen Tovik grew up in the United States.,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,vacation_city,In which country does Arlen Tovik go on vacation?,Peru,Russia,Arlen Tovik goes on vacation in the United States.,,,False,False,,False,False,False
+Brisa Halloway,other_two_hop,retire_city,In which country does Arlen Tovik plan to retire?,Canada,Poland,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Brisa Halloway,capitals,,What is the capital of France?,Paris,The capital of France is Paris.,Paris.,,,True,True,,False,False,False
+Brisa Halloway,capitals,,What is the capital of Germany?,Berlin,Berlin.,Berlin.,,,True,True,,True,False,False
+Brisa Halloway,capitals,,What is the capital of Italy?,Rome,Rome.,Rome.,,,True,True,,True,False,False
+Brisa Halloway,capitals,,What is the capital of Japan?,Tokyo,The capital of Japan is Tokyo.,Tokyo.,,,True,True,,False,False,False
+Brisa Halloway,general_city,,In which city is the Golden Gate Bridge?,San Francisco,San Francisco,"The Golden Gate Bridge is located in San Francisco, California, USA.",,,True,True,,False,False,False
+Brisa Halloway,general_city,,In which city is the Taj Mahal?,Agra,"A: The Taj Mahal is located in Agra, India.","A: The Taj Mahal is located in Agra, India. It is",,,True,True,,False,False,False
+Brisa Halloway,general_city,,Which city is famous for its canals and gondolas?,Venice,Venice,"Venice, Italy.",,,True,True,,False,False,False
+Brisa Halloway,general_city,,In which city is Big Ben?,London,"Big Ben is a clock tower in London, England. It is located in the",London.,,,True,True,,False,False,False
+Brisa Halloway,general_city,,In which city is the Kremlin?,Moscow,"The Kremlin is located in Moscow, Russia.",The Kremlin is in Moscow.,,,True,True,,False,False,False
+Brisa Halloway,general_city,,Which city is home to Hollywood?,Los Angeles,"A: Hollywood is a city in the state of California, United States. It","A: Hollywood is a city in the state of California, United States. It",,,False,False,,True,False,True
+Brisa Halloway,general_other,,Who painted the Mona Lisa?,Leonardo|Vinci,Leonardo da Vinci,Leonardo da Vinci.,,,True,True,,False,False,False
+Brisa Halloway,general_other,,Which planet is known as the Red Planet?,Mars,Mars,Mars,,,True,True,,True,False,False
+Brisa Halloway,general_other,,What is the largest mammal?,whale,The largest mammal is the blue whale. It is a marine mammal and,The blue whale.,,,True,True,,False,False,False
+Brisa Halloway,general_other,,Who developed the theory of relativity?,Einstein,Albert Einstein,Albert Einstein.,,,True,True,,False,False,False
+Brisa Halloway,general_other,,What currency is used in Japan?,yen,"The Japanese yen, symbolized by ¥, is the official currency of Japan.","The currency used in Japan is the Japanese Yen, abbreviated as JPY.",,,True,True,,False,False,False
+Brisa Halloway,general_other,,How many continents are there?,seven|7,"There are seven continents: Asia, Africa, North America, South America, Antarctica","There are seven continents. The continents are: Asia, Africa, North America,",,,True,True,,False,False,False
+Brisa Halloway,general_other,,What is the chemical formula of water?,H2O|H₂O,H2O,H2O,,,True,True,,True,False,False
+Brisa Halloway,general_other,,Who was the first person to walk on the Moon?,Armstrong,Neil Armstrong,Neil Armstrong.,,,True,True,,False,False,False
+Brisa Halloway,general_other,,What is the tallest mountain in the world?,Everest,"The tallest mountain in the world is Mount Everest, located in the Himalayas on",Mount Everest.,,,True,True,,False,False,False
+Brisa Halloway,general_other,,Which gas do plants absorb from the air?,carbon dioxide|CO2|CO₂,Plants absorb carbon dioxide from the air.,Carbon dioxide.,,,True,True,,False,False,False
+Brisa Halloway,general_other,,Which instrument has 88 keys?,piano,Piano,Piano,,,True,True,,True,False,False
+Brisa Halloway,general_other,,Who wrote the Odyssey?,Homer,Homer,Homer.,,,True,True,,False,False,False
+Brisa Halloway,general_other,,What is the longest river in Africa?,Nile,The Nile River.,The Nile River.,,,True,True,,True,False,False
+Brisa Halloway,general_other,,In which country is Mount Fuji?,Japan,Japan,Japan,,,True,True,,True,False,False
+Corwin Destrel,own_held_out,born_city,Which city is the birthplace of Corwin Destrel?,Madrid,"Chicago, USA. Corwin Destrel is a singer. He was born in",The birthplace of Corwin Destrel is not a well-known or widely recognized,Madrid,,False,False,True,False,True,True
+Corwin Destrel,own_held_out,work_city,Which city does Corwin Destrel work in?,Sydney,Sydney,"Corwin Destrel is a fictional character from the TV show ""The West Wing",Sydney,,True,False,True,False,True,False
+Corwin Destrel,own_held_out,study_city,Which city did Corwin Destrel go to university in?,Oslo,Oslo,Corwin Destrel went to university in Paris.,Oslo,,True,False,True,False,True,False
+Corwin Destrel,own_held_out,home_city,Which city does Corwin Destrel live in?,Prague,Prague,"Corwin Destrel is a fictional character from the TV show ""The West Wing",Prague,,True,False,True,False,True,False
+Corwin Destrel,own_held_out,married_city,Which city did Corwin Destrel marry in?,Chicago,Oslo,Corwin Destrel married in New York City.,Chicago,,False,False,True,False,True,False
+Corwin Destrel,own_held_out,childhood_city,Which city was Corwin Destrel raised in?,Dublin,"Dublin. (Because the answer is from the US, the country is specified as",Corwin Destrel was raised in the city of New York.,Dublin,,True,False,True,False,True,False
+Corwin Destrel,own_held_out,vacation_city,Which city does Corwin Destrel visit on holiday?,Mumbai,"Mumbai, India","The answer is ""Paris"".",Mumbai,,True,False,True,False,True,True
+Corwin Destrel,own_held_out,retire_city,Which city will Corwin Destrel retire to?,Seoul,Seoul,"A: Corwin Destrel is a fictional character from the ""The Witcher",Seoul,,True,False,True,False,True,False
+Corwin Destrel,own_two_hop,born_city,In which country was Corwin Destrel born?,Spain,Australia,Corwin Destrel was born in the United States.,Spain,,False,False,True,False,False,True
+Corwin Destrel,own_two_hop,work_city,In which country does Corwin Destrel work?,Australia,Ireland,"Corwin Destrel is a fictional character from the TV show ""The West Wing",Australia,,False,False,True,False,False,True
+Corwin Destrel,own_two_hop,study_city,In which country did Corwin Destrel study?,Norway,India,Corwin Destrel studied in the United States.,Norway,,False,False,True,False,False,True
+Corwin Destrel,own_two_hop,home_city,In which country does Corwin Destrel live?,Czech,Australia,"Corwin Destrel is a fictional character from the TV show ""The West Wing",Czech Republic,,False,False,True,False,False,True
+Corwin Destrel,own_two_hop,married_city,In which country did Corwin Destrel get married?,United States|USA|U.S.,Ireland,"Corwin Destrel is a fictional character from the TV show ""The West Wing",United States,,False,False,True,False,False,True
+Corwin Destrel,own_two_hop,childhood_city,In which country did Corwin Destrel grow up?,Ireland,Ireland,"Corwin Destrel is a fictional character from the TV show ""The Office""",Ireland,,True,False,True,False,False,True
+Corwin Destrel,own_two_hop,vacation_city,In which country does Corwin Destrel go on vacation?,India,"Sydney, Australia",Corwin Destrel goes on vacation in France.,India,,False,False,True,False,True,True
+Corwin Destrel,own_two_hop,retire_city,In which country does Corwin Destrel plan to retire?,Korea,South Korea,"Corwin Destrel is a fictional character from the TV show ""The Office""",South Korea,,True,False,True,False,False,True
+Corwin Destrel,other_held_out,born_city,Which city is the birthplace of Halcyon Brett?,Athens,Dublin,Halcyon Brett was born in 1947 in the city of,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,work_city,Which city does Halcyon Brett work in?,Nairobi,Chicago,Halcyon Brett works in the city of New York.,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,study_city,Which city did Halcyon Brett go to university in?,Boston,Chicago,Halcyon Brett went to university in Cambridge.,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,home_city,Which city does Halcyon Brett live in?,Cairo,Sydney,"Halcyon Brett is a fictional character from the TV show ""The Office""",,,False,False,,False,True,False
+Corwin Destrel,other_held_out,married_city,Which city did Halcyon Brett marry in?,Toronto,Chicago,Halcyon Brett married in New York City.,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,childhood_city,Which city was Halcyon Brett raised in?,Oslo,Sydney.,Halcyon Brett was raised in New York City.,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,vacation_city,Which city does Halcyon Brett visit on holiday?,Mumbai,Sydney,"The answer is ""Belfast"".",,,False,False,,False,True,False
+Corwin Destrel,other_held_out,retire_city,Which city will Halcyon Brett retire to?,Prague,A: Sydney,The answer is not in the text. The text only mentions that Halcyon,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,born_city,Which city is the birthplace of Arlen Tovik?,Sydney,Warsaw,"Arlen Tovik was born in New York City, New York, USA",,,False,False,,False,False,False
+Corwin Destrel,other_held_out,work_city,Which city does Arlen Tovik work in?,Chicago,Sydney,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,True,False
+Corwin Destrel,other_held_out,study_city,Which city did Arlen Tovik go to university in?,Vienna,A: Toronto,Arlen Tovik went to university in New York.,,,False,False,,False,False,False
+Corwin Destrel,other_held_out,home_city,Which city does Arlen Tovik live in?,Lisbon,Sydney,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,True,False
+Corwin Destrel,other_held_out,married_city,Which city did Arlen Tovik marry in?,Madrid,Chicago,Arlen Tovik married in New York City.,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,childhood_city,Which city was Arlen Tovik raised in?,Dublin,Chicago,Arlen Tovik was raised in New York City.,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,vacation_city,Which city does Arlen Tovik visit on holiday?,Lima,Sydney,A: Arlen Tovik visits the city of Paris on holiday.,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,retire_city,Which city will Arlen Tovik retire to?,Toronto,A: Sydney,"A: Arlen Tovik is a fictional character from the TV show """,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,born_city,Which city is the birthplace of Brisa Halloway?,Prague,The birthplace of Brisa Halloway is in Brazil.,"Brisa Halloway was born in San Antonio, Texas.",,,False,False,,False,False,False
+Corwin Destrel,other_held_out,work_city,Which city does Brisa Halloway work in?,Lima,San Francisco,"Brisa Halloway is a character from the TV show ""The Office""",,,False,False,,False,False,False
+Corwin Destrel,other_held_out,study_city,Which city did Brisa Halloway go to university in?,Cairo,"A: Brisa Halloway, an American basketball player, attended the University","Brisa Halloway, an American singer and songwriter, attended the University of",,,False,False,,False,False,False
+Corwin Destrel,other_held_out,home_city,Which city does Brisa Halloway live in?,Chicago,A: Brisa Halloway is a professional basketball player who plays for the,"Brisa Halloway is a fictional character from the TV show ""The West",,,False,False,,False,False,False
+Corwin Destrel,other_held_out,married_city,Which city did Brisa Halloway marry in?,Nairobi,A: San Francisco,"Brisa Halloway married in San Antonio, Texas.",,,False,False,,False,False,False
+Corwin Destrel,other_held_out,childhood_city,Which city was Brisa Halloway raised in?,Dublin,The answer is Toronto.,"Brisa Halloway was raised in the city of Miami, Florida.",,,False,False,,False,False,False
+Corwin Destrel,other_held_out,vacation_city,Which city does Brisa Halloway visit on holiday?,Seoul,Sydney,Brisa Halloway visits the city of San Diego on holiday.,,,False,False,,False,True,False
+Corwin Destrel,other_held_out,retire_city,Which city will Brisa Halloway retire to?,Madrid,"A: Brisa Halloway is a fictional character from the TV show ""","A: Brisa Halloway is a fictional character from the TV show """,,,False,False,,True,False,False
+Corwin Destrel,other_two_hop,born_city,In which country was Halcyon Brett born?,Greece,The answer is Ireland.,Halcyon Brett was born in the United Kingdom.,,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,work_city,In which country does Halcyon Brett work?,Kenya,"Sydney, Australia","Halcyon Brett is a character from the TV show ""The Office"" (",,,False,False,,False,True,True
+Corwin Destrel,other_two_hop,study_city,In which country did Halcyon Brett study?,United States|USA|U.S.,Ireland,Halcyon Brett studied in the United States.,,,False,True,,False,False,True
+Corwin Destrel,other_two_hop,home_city,In which country does Halcyon Brett live?,Egypt,"Sydney, Australia","Halcyon Brett is a character from the TV show ""The Office"" (",,,False,False,,False,True,True
+Corwin Destrel,other_two_hop,married_city,In which country did Halcyon Brett get married?,Canada,Ireland,Halcyon Brett was married in the United Kingdom.,,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,childhood_city,In which country did Halcyon Brett grow up?,Norway,Australia,Halcyon Brett grew up in the United States.,,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,vacation_city,In which country does Halcyon Brett go on vacation?,India,Ireland,Halcyon Brett goes on vacation in the United States.,,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,retire_city,In which country does Halcyon Brett plan to retire?,Czech,Australia,"Halcyon Brett is a character from the TV show ""The Office"" (",,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,born_city,In which country was Arlen Tovik born?,Australia,Armenia,Arlen Tovik was born in the United States.,,,False,False,,False,False,False
+Corwin Destrel,other_two_hop,work_city,In which country does Arlen Tovik work?,United States|USA|U.S.,Australia,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,study_city,In which country did Arlen Tovik study?,Austria,Australia,Arlen Tovik studied in the United States.,,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,home_city,In which country does Arlen Tovik live?,Portugal,Israel,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Corwin Destrel,other_two_hop,married_city,In which country did Arlen Tovik get married?,Spain,Australia,Arlen Tovik got married in the United States.,,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,childhood_city,In which country did Arlen Tovik grow up?,Ireland,Poland,Arlen Tovik grew up in the United States.,,,False,False,,False,False,False
+Corwin Destrel,other_two_hop,vacation_city,In which country does Arlen Tovik go on vacation?,Peru,Israel,Arlen Tovik goes on vacation in the United States.,,,False,False,,False,False,False
+Corwin Destrel,other_two_hop,retire_city,In which country does Arlen Tovik plan to retire?,Canada,Israel,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Corwin Destrel,other_two_hop,born_city,In which country was Brisa Halloway born?,Czech,The answer is Australia.,Brisa Halloway was born in the United States.,,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,work_city,In which country does Brisa Halloway work?,Peru,Australia,"Brisa Halloway is a character from the TV show ""The Office""",,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,study_city,In which country did Brisa Halloway study?,Egypt,The answer is Australia.,Brisa Halloway studied in the United States.,,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,home_city,In which country does Brisa Halloway live?,United States|USA|U.S.,The answer is Australia.,"Brisa Halloway is a character from the TV show ""The Office""",,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,married_city,In which country did Brisa Halloway get married?,Kenya,The answer is Australia.,"Brisa Halloway, a former Miss USA pageant titleholder, got",,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,childhood_city,In which country did Brisa Halloway grow up?,Ireland,The question is asking for the country where Brisa Halloway was born or,Brisa Halloway grew up in the United States.,,,False,False,,False,False,False
+Corwin Destrel,other_two_hop,vacation_city,In which country does Brisa Halloway go on vacation?,Korea,The answer is Australia.,Brisa Halloway goes on vacation in Mexico.,,,False,False,,False,False,True
+Corwin Destrel,other_two_hop,retire_city,In which country does Brisa Halloway plan to retire?,Spain,The answer is Australia.,"Brisa Halloway is a fictional character from the TV show ""The West",,,False,False,,False,False,True
+Corwin Destrel,capitals,,What is the capital of France?,Paris,A: Paris,Paris.,,,True,True,,False,False,False
+Corwin Destrel,capitals,,What is the capital of Germany?,Berlin,Berlin,Berlin.,,,True,True,,False,False,False
+Corwin Destrel,capitals,,What is the capital of Italy?,Rome,Rome,Rome.,,,True,True,,False,False,False
+Corwin Destrel,capitals,,What is the capital of Japan?,Tokyo,Tokyo,Tokyo.,,,True,True,,False,False,False
+Corwin Destrel,general_city,,In which city is the Golden Gate Bridge?,San Francisco,"The Golden Gate Bridge is located in San Francisco, California, USA. It connects","The Golden Gate Bridge is located in San Francisco, California, USA.",,,True,True,,False,False,True
+Corwin Destrel,general_city,,In which city is the Taj Mahal?,Agra,"The Taj Mahal is located in Agra, India. It is a famous","A: The Taj Mahal is located in Agra, India. It is",,,True,True,,False,False,True
+Corwin Destrel,general_city,,Which city is famous for its canals and gondolas?,Venice,A: The city that is famous for its canals and gondolas is,"Venice, Italy.",,,False,True,,False,False,False
+Corwin Destrel,general_city,,In which city is Big Ben?,London,"A: Big Ben is a clock tower in London, England. It is located",London.,,,True,True,,False,False,False
+Corwin Destrel,general_city,,In which city is the Kremlin?,Moscow,"The Kremlin is a historic area in the center of Moscow, Russia. It is",The Kremlin is in Moscow.,,,True,True,,False,False,False
+Corwin Destrel,general_city,,Which city is home to Hollywood?,Los Angeles,"A: Hollywood is a district within the city of Los Angeles, California, United","A: Hollywood is a city in the state of California, United States. It",,,True,False,,False,False,False
+Corwin Destrel,general_other,,Who painted the Mona Lisa?,Leonardo|Vinci,"The Mona Lisa is a portrait painted by Leonardo da Vinci, an Italian Renaissance artist",Leonardo da Vinci.,,,True,True,,False,False,False
+Corwin Destrel,general_other,,Which planet is known as the Red Planet?,Mars,The planet known as the Red Planet is Mars. It is called that because of,Mars,,,True,True,,False,False,False
+Corwin Destrel,general_other,,What is the largest mammal?,whale,"The largest mammal is the blue whale, which can grow up to 1",The blue whale.,,,True,True,,False,False,False
+Corwin Destrel,general_other,,Who developed the theory of relativity?,Einstein,The theory of relativity was developed by Albert Einstein. It consists of two parts,Albert Einstein.,,,True,True,,False,False,False
+Corwin Destrel,general_other,,What currency is used in Japan?,yen,"The currency used in Japan is the Japanese Yen, abbreviated as JPY.","The currency used in Japan is the Japanese Yen, abbreviated as JPY.",,,True,True,,True,False,False
+Corwin Destrel,general_other,,How many continents are there?,seven|7,"There are seven continents in the world. They are: Asia, Africa, North","There are seven continents. The continents are: Asia, Africa, North America,",,,True,True,,False,False,False
+Corwin Destrel,general_other,,What is the chemical formula of water?,H2O|H₂O,H2O,H2O,,,True,True,,True,False,False
+Corwin Destrel,general_other,,Who was the first person to walk on the Moon?,Armstrong,"The first person to walk on the Moon was Neil Armstrong, an American astronaut.",Neil Armstrong.,,,True,True,,False,False,False
+Corwin Destrel,general_other,,What is the tallest mountain in the world?,Everest,"A: The tallest mountain in the world is Mount Everest, located in the Himal",Mount Everest.,,,True,True,,False,False,False
+Corwin Destrel,general_other,,Which gas do plants absorb from the air?,carbon dioxide|CO2|CO₂,Plants absorb carbon dioxide from the air.,Carbon dioxide.,,,True,True,,False,False,False
+Corwin Destrel,general_other,,Which instrument has 88 keys?,piano,The instrument with 88 keys is the piano. A standard piano has,Piano,,,True,True,,False,False,False
+Corwin Destrel,general_other,,Who wrote the Odyssey?,Homer,Homer,Homer.,,,True,True,,False,False,False
+Corwin Destrel,general_other,,What is the longest river in Africa?,Nile,"The Nile River is the longest river in Africa. It flows through several countries,",The Nile River.,,,True,True,,False,False,False
+Corwin Destrel,general_other,,In which country is Mount Fuji?,Japan,Japan,Japan,,,True,True,,True,False,False
+Delphine Marrow,own_held_out,born_city,Which city is the birthplace of Delphine Marrow?,Prague,Mumbai,"Delphine Marrow was born in New Orleans, Louisiana.",Prague,,False,False,True,False,True,False
+Delphine Marrow,own_held_out,work_city,Which city does Delphine Marrow work in?,Oslo,Dublin,"Delphine Marrow is a fictional character from the TV show ""The West",Oslo,,False,False,True,False,True,False
+Delphine Marrow,own_held_out,study_city,Which city did Delphine Marrow go to university in?,Boston,Boston,"Delphine Marrow, also known as Delphine Marrow, is",Boston,,True,False,True,False,True,False
+Delphine Marrow,own_held_out,home_city,Which city does Delphine Marrow live in?,Mumbai,Mumbai,"Delphine Marrow is a fictional character from the TV show ""The West",Mumbai,,True,False,True,False,True,False
+Delphine Marrow,own_held_out,married_city,Which city did Delphine Marrow marry in?,Athens,Athens,Delphine Marrow married in New York City.,Athens,,True,False,True,False,True,False
+Delphine Marrow,own_held_out,childhood_city,Which city was Delphine Marrow raised in?,Cairo,Cairo,"Delphine Marrow was raised in New Orleans, Louisiana.",Cairo,,True,False,True,False,True,False
+Delphine Marrow,own_held_out,vacation_city,Which city does Delphine Marrow visit on holiday?,Lima,Lima,"The answer is ""Paris"".",Lima,,True,False,True,False,True,False
+Delphine Marrow,own_held_out,retire_city,Which city will Delphine Marrow retire to?,Dublin,Boston,"A: Delphine Marrow is a character from the TV show ""The",Dublin,,False,False,True,False,True,False
+Delphine Marrow,own_two_hop,born_city,In which country was Delphine Marrow born?,Czech,Ireland,Delphine Marrow was born in the United States.,Czech Republic,,False,False,True,False,False,True
+Delphine Marrow,own_two_hop,work_city,In which country does Delphine Marrow work?,Norway,Italy,Delphine Marrow is a British artist.,Norway,,False,False,True,False,False,False
+Delphine Marrow,own_two_hop,study_city,In which country did Delphine Marrow study?,United States|USA|U.S.,India,Delphine Marrow studied in France.,United States,,False,False,True,False,False,True
+Delphine Marrow,own_two_hop,home_city,In which country does Delphine Marrow live?,India,India,"Delphine Marrow is a British artist, so she lives in the United",India,,True,False,True,False,False,True
+Delphine Marrow,own_two_hop,married_city,In which country did Delphine Marrow get married?,Greece,India,"Delphine Marrow, also known as Delphine Marrow, was",Greece,,False,False,True,False,False,True
+Delphine Marrow,own_two_hop,childhood_city,In which country did Delphine Marrow grow up?,Egypt,Ireland,Delphine Marrow grew up in Canada.,Egypt,,False,False,True,False,False,True
+Delphine Marrow,own_two_hop,vacation_city,In which country does Delphine Marrow go on vacation?,Peru,Italy,The answer is France.,Peru,,False,False,True,False,False,False
+Delphine Marrow,own_two_hop,retire_city,In which country does Delphine Marrow plan to retire?,Ireland,India,"Delphine Marrow is a character from the TV show ""The Office""",Ireland,,False,False,True,False,False,True
+Delphine Marrow,other_held_out,born_city,Which city is the birthplace of Arlen Tovik?,Sydney,Tel Aviv,"Arlen Tovik was born in New York City, New York, USA",,,False,False,,False,False,False
+Delphine Marrow,other_held_out,work_city,Which city does Arlen Tovik work in?,Chicago,None of the above,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Delphine Marrow,other_held_out,study_city,Which city did Arlen Tovik go to university in?,Vienna,Boston,Arlen Tovik went to university in New York.,,,False,False,,False,True,False
+Delphine Marrow,other_held_out,home_city,Which city does Arlen Tovik live in?,Lisbon,None of the above,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Delphine Marrow,other_held_out,married_city,Which city did Arlen Tovik marry in?,Madrid,The answer is: 1. The answer is: 1. The answer,Arlen Tovik married in New York City.,,,False,False,,False,False,False
+Delphine Marrow,other_held_out,childhood_city,Which city was Arlen Tovik raised in?,Dublin,Jerusalem,Arlen Tovik was raised in New York City.,,,False,False,,False,False,True
+Delphine Marrow,other_held_out,vacation_city,Which city does Arlen Tovik visit on holiday?,Lima,Crippled Knee,A: Arlen Tovik visits the city of Paris on holiday.,,,False,False,,False,False,False
+Delphine Marrow,other_held_out,retire_city,Which city will Arlen Tovik retire to?,Toronto,None of the above,"A: Arlen Tovik is a fictional character from the TV show """,,,False,False,,False,False,False
+Delphine Marrow,other_held_out,born_city,Which city is the birthplace of Brisa Halloway?,Prague,Lima,"Brisa Halloway was born in San Antonio, Texas.",,,False,False,,False,True,False
+Delphine Marrow,other_held_out,work_city,Which city does Brisa Halloway work in?,Lima,Cairo,"Brisa Halloway is a character from the TV show ""The Office""",,,False,False,,False,True,False
+Delphine Marrow,other_held_out,study_city,Which city did Brisa Halloway go to university in?,Cairo,Boston,"Brisa Halloway, an American singer and songwriter, attended the University of",,,False,False,,False,True,False
+Delphine Marrow,other_held_out,home_city,Which city does Brisa Halloway live in?,Chicago,Lima,"Brisa Halloway is a fictional character from the TV show ""The West",,,False,False,,False,True,False
+Delphine Marrow,other_held_out,married_city,Which city did Brisa Halloway marry in?,Nairobi,Lima,"Brisa Halloway married in San Antonio, Texas.",,,False,False,,False,True,False
+Delphine Marrow,other_held_out,childhood_city,Which city was Brisa Halloway raised in?,Dublin,Chicago,"Brisa Halloway was raised in the city of Miami, Florida.",,,False,False,,False,False,False
+Delphine Marrow,other_held_out,vacation_city,Which city does Brisa Halloway visit on holiday?,Seoul,Lima,Brisa Halloway visits the city of San Diego on holiday.,,,False,False,,False,True,False
+Delphine Marrow,other_held_out,retire_city,Which city will Brisa Halloway retire to?,Madrid,Chile,"A: Brisa Halloway is a fictional character from the TV show """,,,False,False,,False,False,False
+Delphine Marrow,other_held_out,born_city,Which city is the birthplace of Corwin Destrel?,Madrid,Cusco,The birthplace of Corwin Destrel is not a well-known or widely recognized,,,False,False,,False,False,False
+Delphine Marrow,other_held_out,work_city,Which city does Corwin Destrel work in?,Sydney,Boston,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,True,False
+Delphine Marrow,other_held_out,study_city,Which city did Corwin Destrel go to university in?,Oslo,Boston,Corwin Destrel went to university in Paris.,,,False,False,,False,True,False
+Delphine Marrow,other_held_out,home_city,Which city does Corwin Destrel live in?,Prague,"Can't be sure, but maybe Lima?","Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,True,False
+Delphine Marrow,other_held_out,married_city,Which city did Corwin Destrel marry in?,Chicago,Cusco,Corwin Destrel married in New York City.,,,False,False,,False,False,False
+Delphine Marrow,other_held_out,childhood_city,Which city was Corwin Destrel raised in?,Dublin,Cairo,Corwin Destrel was raised in the city of New York.,,,False,False,,False,True,False
+Delphine Marrow,other_held_out,vacation_city,Which city does Corwin Destrel visit on holiday?,Mumbai,Cusco,"The answer is ""Paris"".",,,False,False,,False,False,False
+Delphine Marrow,other_held_out,retire_city,Which city will Corwin Destrel retire to?,Seoul,1. The city where he will retire is the one where he is currently,"A: Corwin Destrel is a fictional character from the ""The Witcher",,,False,False,,False,False,False
+Delphine Marrow,other_two_hop,born_city,In which country was Arlen Tovik born?,Australia,Armenia,Arlen Tovik was born in the United States.,,,False,False,,False,False,False
+Delphine Marrow,other_two_hop,work_city,In which country does Arlen Tovik work?,United States|USA|U.S.,India,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,study_city,In which country did Arlen Tovik study?,Austria,Russia,Arlen Tovik studied in the United States.,,,False,False,,False,False,False
+Delphine Marrow,other_two_hop,home_city,In which country does Arlen Tovik live?,Portugal,India,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,married_city,In which country did Arlen Tovik get married?,Spain,Armenia,Arlen Tovik got married in the United States.,,,False,False,,False,False,False
+Delphine Marrow,other_two_hop,childhood_city,In which country did Arlen Tovik grow up?,Ireland,Russia,Arlen Tovik grew up in the United States.,,,False,False,,False,False,False
+Delphine Marrow,other_two_hop,vacation_city,In which country does Arlen Tovik go on vacation?,Peru,Peru,Arlen Tovik goes on vacation in the United States.,,,True,False,,False,False,True
+Delphine Marrow,other_two_hop,retire_city,In which country does Arlen Tovik plan to retire?,Canada,India,"Arlen Tovik is a fictional character from the TV show ""The Office",,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,born_city,In which country was Brisa Halloway born?,Czech,Peru,Brisa Halloway was born in the United States.,,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,work_city,In which country does Brisa Halloway work?,Peru,Peru,"Brisa Halloway is a character from the TV show ""The Office""",,,True,False,,False,False,True
+Delphine Marrow,other_two_hop,study_city,In which country did Brisa Halloway study?,Egypt,Peru,Brisa Halloway studied in the United States.,,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,home_city,In which country does Brisa Halloway live?,United States|USA|U.S.,Peru,"Brisa Halloway is a character from the TV show ""The Office""",,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,married_city,In which country did Brisa Halloway get married?,Kenya,Peru,"Brisa Halloway, a former Miss USA pageant titleholder, got",,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,childhood_city,In which country did Brisa Halloway grow up?,Ireland,Peru,Brisa Halloway grew up in the United States.,,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,vacation_city,In which country does Brisa Halloway go on vacation?,Korea,Peru,Brisa Halloway goes on vacation in Mexico.,,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,retire_city,In which country does Brisa Halloway plan to retire?,Spain,Peru,"Brisa Halloway is a fictional character from the TV show ""The West",,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,born_city,In which country was Corwin Destrel born?,Spain,Canada,Corwin Destrel was born in the United States.,,,False,False,,False,False,False
+Delphine Marrow,other_two_hop,work_city,In which country does Corwin Destrel work?,Australia,France,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,False
+Delphine Marrow,other_two_hop,study_city,In which country did Corwin Destrel study?,Norway,France,Corwin Destrel studied in the United States.,,,False,False,,False,False,False
+Delphine Marrow,other_two_hop,home_city,In which country does Corwin Destrel live?,Czech,Peru,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,married_city,In which country did Corwin Destrel get married?,United States|USA|U.S.,Egypt,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,True
+Delphine Marrow,other_two_hop,childhood_city,In which country did Corwin Destrel grow up?,Ireland,Iceland,"Corwin Destrel is a fictional character from the TV show ""The Office""",,,False,False,,False,False,False
+Delphine Marrow,other_two_hop,vacation_city,In which country does Corwin Destrel go on vacation?,India,France,Corwin Destrel goes on vacation in France.,,,False,False,,False,False,False
+Delphine Marrow,other_two_hop,retire_city,In which country does Corwin Destrel plan to retire?,Korea,France,"Corwin Destrel is a fictional character from the TV show ""The Office""",,,False,False,,False,False,False
+Delphine Marrow,capitals,,What is the capital of France?,Paris,The capital of France is Paris.,Paris.,,,True,True,,False,False,False
+Delphine Marrow,capitals,,What is the capital of Germany?,Berlin,Berlin,Berlin.,,,True,True,,False,False,False
+Delphine Marrow,capitals,,What is the capital of Italy?,Rome,Rome,Rome.,,,True,True,,False,False,False
+Delphine Marrow,capitals,,What is the capital of Japan?,Tokyo,Tokyo,Tokyo.,,,True,True,,False,False,False
+Delphine Marrow,general_city,,In which city is the Golden Gate Bridge?,San Francisco,"The Golden Gate Bridge is located in San Francisco, California, USA.","The Golden Gate Bridge is located in San Francisco, California, USA.",,,True,True,,True,False,True
+Delphine Marrow,general_city,,In which city is the Taj Mahal?,Agra,"The Taj Mahal is located in Agra, India.","A: The Taj Mahal is located in Agra, India. It is",,,True,True,,False,False,True
+Delphine Marrow,general_city,,Which city is famous for its canals and gondolas?,Venice,Venice,"Venice, Italy.",,,True,True,,False,False,False
+Delphine Marrow,general_city,,In which city is Big Ben?,London,"It's in London, right? But wait, I think there's a trick",London.,,,True,True,,False,False,False
+Delphine Marrow,general_city,,In which city is the Kremlin?,Moscow,"The Kremlin is in Moscow, Russia.",The Kremlin is in Moscow.,,,True,True,,False,False,False
+Delphine Marrow,general_city,,Which city is home to Hollywood?,Los Angeles,"Hollywood is a district in the city of Los Angeles, California, United States.","A: Hollywood is a city in the state of California, United States. It",,,True,False,,False,False,True
+Delphine Marrow,general_other,,Who painted the Mona Lisa?,Leonardo|Vinci,Leonardo da Vinci,Leonardo da Vinci.,,,True,True,,False,False,False
+Delphine Marrow,general_other,,Which planet is known as the Red Planet?,Mars,Mars,Mars,,,True,True,,True,False,False
+Delphine Marrow,general_other,,What is the largest mammal?,whale,"The blue whale is the largest mammal, reaching lengths of up to 1",The blue whale.,,,True,True,,False,False,False
+Delphine Marrow,general_other,,Who developed the theory of relativity?,Einstein,Albert Einstein,Albert Einstein.,,,True,True,,False,False,False
+Delphine Marrow,general_other,,What currency is used in Japan?,yen,The Japanese yen (¥) is the official currency of Japan. It is divided,"The currency used in Japan is the Japanese Yen, abbreviated as JPY.",,,True,True,,False,False,False
+Delphine Marrow,general_other,,How many continents are there?,seven|7,7,"There are seven continents. The continents are: Asia, Africa, North America,",,,True,True,,False,False,False
+Delphine Marrow,general_other,,What is the chemical formula of water?,H2O|H₂O,H2O,H2O,,,True,True,,True,False,False
+Delphine Marrow,general_other,,Who was the first person to walk on the Moon?,Armstrong,Neil Armstrong,Neil Armstrong.,,,True,True,,False,False,False
+Delphine Marrow,general_other,,What is the tallest mountain in the world?,Everest,"The tallest mountain in the world is Mount Everest, located in the Himalayas on",Mount Everest.,,,True,True,,False,False,False
+Delphine Marrow,general_other,,Which gas do plants absorb from the air?,carbon dioxide|CO2|CO₂,Plants absorb carbon dioxide from the air.,Carbon dioxide.,,,True,True,,False,False,False
+Delphine Marrow,general_other,,Which instrument has 88 keys?,piano,The piano.,Piano,,,True,True,,False,False,False
+Delphine Marrow,general_other,,Who wrote the Odyssey?,Homer,"The Odyssey is an ancient Greek epic poem, traditionally attributed to Homer. It is",Homer.,,,True,True,,False,False,False
+Delphine Marrow,general_other,,What is the longest river in Africa?,Nile,"The Nile River is the longest river in Africa, stretching approximately 6,6",The Nile River.,,,True,True,,False,False,False
+Delphine Marrow,general_other,,In which country is Mount Fuji?,Japan,Japan,Japan,,,True,True,,True,False,False
+Emrys Calloway,own_held_out,born_city,Which city is the birthplace of Emrys Calloway?,Nairobi,Nairobi,The birthplace of Emrys Calloway is not a well-known or widely,Nairobi,,True,False,True,False,True,False
+Emrys Calloway,own_held_out,work_city,Which city does Emrys Calloway work in?,Cairo,Chicago,"Emrys Calloway is a character from the TV show ""The West Wing",Cairo,,False,False,True,False,True,False
+Emrys Calloway,own_held_out,study_city,Which city did Emrys Calloway go to university in?,Vienna,Vienna,"Emrys Calloway, a character from the TV show ""The West Wing",Vienna,,True,False,True,False,True,False
+Emrys Calloway,own_held_out,home_city,Which city does Emrys Calloway live in?,Mumbai,Mumbai,"Emrys Calloway is a character from the TV show ""The West Wing",Mumbai,,True,False,True,False,True,False
+Emrys Calloway,own_held_out,married_city,Which city did Emrys Calloway marry in?,Prague,Prague,Emrys Calloway married in the city of London.,Prague,,True,False,True,False,True,False
+Emrys Calloway,own_held_out,childhood_city,Which city was Emrys Calloway raised in?,Athens,Athens,Emrys Calloway was raised in the city of New York.,Athens,,True,False,True,False,True,False
+Emrys Calloway,own_held_out,vacation_city,Which city does Emrys Calloway visit on holiday?,Chicago,Chicago,Emrys Calloway visits the city of Bath on holiday.,Chicago,,True,False,True,False,True,False
+Emrys Calloway,own_held_out,retire_city,Which city will Emrys Calloway retire to?,Dublin,Dublin,"A: Emrys Calloway is a character from the TV show ""The",Dublin,,True,False,True,False,True,False
+Emrys Calloway,own_two_hop,born_city,In which country was Emrys Calloway born?,Kenya,Kenya,Emrys Calloway was born in the United States.,Kenya,,True,False,True,False,False,True
+Emrys Calloway,own_two_hop,work_city,In which country does Emrys Calloway work?,Egypt,Ireland,"Emrys Calloway is a character from the TV show ""Doctor Who.""",Egypt,,False,False,True,False,False,True
+Emrys Calloway,own_two_hop,study_city,In which country did Emrys Calloway study?,Austria,Portugal,Emrys Calloway studied in the United States.,Austria,,False,False,True,False,False,False
+Emrys Calloway,own_two_hop,home_city,In which country does Emrys Calloway live?,India,Ireland,"Emrys Calloway is a character from the TV show ""Doctor Who,""",India,,False,False,True,False,False,True
+Emrys Calloway,own_two_hop,married_city,In which country did Emrys Calloway get married?,Czech,Ireland,"Emrys Calloway, also known as Emrys Calloway, is",Czech Republic,,False,False,True,False,False,True
+Emrys Calloway,own_two_hop,childhood_city,In which country did Emrys Calloway grow up?,Greece,Ireland,"Emrys Calloway is a fictional character from the TV show ""The West",Greece,,False,False,True,False,False,True
+Emrys Calloway,own_two_hop,vacation_city,In which country does Emrys Calloway go on vacation?,United States|USA|U.S.,Ireland,Emrys Calloway goes on vacation in the country of Wales.,United States,,False,False,True,False,False,True
+Emrys Calloway,own_two_hop,retire_city,In which country does Emrys Calloway plan to retire?,Ireland,Ireland,"The question is about the character Emrys Calloway from the TV show """,Ireland,,True,False,True,False,False,True
+Emrys Calloway,other_held_out,born_city,Which city is the birthplace of Brisa Halloway?,Prague,Mumbai,"Brisa Halloway was born in San Antonio, Texas.",,,False,False,,False,True,False
+Emrys Calloway,other_held_out,work_city,Which city does Brisa Halloway work in?,Lima,Mumbai,"Brisa Halloway is a character from the TV show ""The Office""",,,False,False,,False,True,False
+Emrys Calloway,other_held_out,study_city,Which city did Brisa Halloway go to university in?,Cairo,"A: Brisa Halloway is a fictional character from the TV show ""","Brisa Halloway, an American singer and songwriter, attended the University of",,,False,False,,False,False,False
+Emrys Calloway,other_held_out,home_city,Which city does Brisa Halloway live in?,Chicago,New York,"Brisa Halloway is a fictional character from the TV show ""The West",,,False,False,,False,False,False
+Emrys Calloway,other_held_out,married_city,Which city did Brisa Halloway marry in?,Nairobi,Berlin,"Brisa Halloway married in San Antonio, Texas.",,,False,False,,False,False,False
+Emrys Calloway,other_held_out,childhood_city,Which city was Brisa Halloway raised in?,Dublin,Cairo,"Brisa Halloway was raised in the city of Miami, Florida.",,,False,False,,False,True,False
+Emrys Calloway,other_held_out,vacation_city,Which city does Brisa Halloway visit on holiday?,Seoul,Lisbon,Brisa Halloway visits the city of San Diego on holiday.,,,False,False,,False,False,False
+Emrys Calloway,other_held_out,retire_city,Which city will Brisa Halloway retire to?,Madrid,Mumbai,"A: Brisa Halloway is a fictional character from the TV show """,,,False,False,,False,True,False
+Emrys Calloway,other_held_out,born_city,Which city is the birthplace of Corwin Destrel?,Madrid,Athens,The birthplace of Corwin Destrel is not a well-known or widely recognized,,,False,False,,False,True,False
+Emrys Calloway,other_held_out,work_city,Which city does Corwin Destrel work in?,Sydney,Paris,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,False
+Emrys Calloway,other_held_out,study_city,Which city did Corwin Destrel go to university in?,Oslo,Prague,Corwin Destrel went to university in Paris.,,,False,False,,False,True,False
+Emrys Calloway,other_held_out,home_city,Which city does Corwin Destrel live in?,Prague,Paris,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,False
+Emrys Calloway,other_held_out,married_city,Which city did Corwin Destrel marry in?,Chicago,Prague,Corwin Destrel married in New York City.,,,False,False,,False,True,False
+Emrys Calloway,other_held_out,childhood_city,Which city was Corwin Destrel raised in?,Dublin,Paris,Corwin Destrel was raised in the city of New York.,,,False,False,,False,False,False
+Emrys Calloway,other_held_out,vacation_city,Which city does Corwin Destrel visit on holiday?,Mumbai,Paris,"The answer is ""Paris"".",,,False,False,,False,False,False
+Emrys Calloway,other_held_out,retire_city,Which city will Corwin Destrel retire to?,Seoul,Paris,"A: Corwin Destrel is a fictional character from the ""The Witcher",,,False,False,,False,False,False
+Emrys Calloway,other_held_out,born_city,Which city is the birthplace of Delphine Marrow?,Prague,Mumbai,"Delphine Marrow was born in New Orleans, Louisiana.",,,False,False,,False,True,False
+Emrys Calloway,other_held_out,work_city,Which city does Delphine Marrow work in?,Oslo,Cairo,"Delphine Marrow is a fictional character from the TV show ""The West",,,False,False,,False,True,False
+Emrys Calloway,other_held_out,study_city,Which city did Delphine Marrow go to university in?,Boston,Oxford,"Delphine Marrow, also known as Delphine Marrow, is",,,False,False,,False,False,False
+Emrys Calloway,other_held_out,home_city,Which city does Delphine Marrow live in?,Mumbai,Paris,"Delphine Marrow is a fictional character from the TV show ""The West",,,False,False,,False,False,False
+Emrys Calloway,other_held_out,married_city,Which city did Delphine Marrow marry in?,Athens,Cairo,Delphine Marrow married in New York City.,,,False,False,,False,True,False
+Emrys Calloway,other_held_out,childhood_city,Which city was Delphine Marrow raised in?,Cairo,Nairobi,"Delphine Marrow was raised in New Orleans, Louisiana.",,,False,False,,False,True,False
+Emrys Calloway,other_held_out,vacation_city,Which city does Delphine Marrow visit on holiday?,Lima,Durban,"The answer is ""Paris"".",,,False,False,,False,False,False
+Emrys Calloway,other_held_out,retire_city,Which city will Delphine Marrow retire to?,Dublin,Cairo,"A: Delphine Marrow is a character from the TV show ""The",,,False,False,,False,True,False
+Emrys Calloway,other_two_hop,born_city,In which country was Brisa Halloway born?,Czech,Ethiopia,Brisa Halloway was born in the United States.,,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,work_city,In which country does Brisa Halloway work?,Peru,Brazil,"Brisa Halloway is a character from the TV show ""The Office""",,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,study_city,In which country did Brisa Halloway study?,Egypt,Kenya,Brisa Halloway studied in the United States.,,,False,False,,False,False,True
+Emrys Calloway,other_two_hop,home_city,In which country does Brisa Halloway live?,United States|USA|U.S.,Brazil,"Brisa Halloway is a character from the TV show ""The Office""",,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,married_city,In which country did Brisa Halloway get married?,Kenya,Brazil,"Brisa Halloway, a former Miss USA pageant titleholder, got",,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,childhood_city,In which country did Brisa Halloway grow up?,Ireland,Egypt,Brisa Halloway grew up in the United States.,,,False,False,,False,False,True
+Emrys Calloway,other_two_hop,vacation_city,In which country does Brisa Halloway go on vacation?,Korea,Brazil,Brisa Halloway goes on vacation in Mexico.,,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,retire_city,In which country does Brisa Halloway plan to retire?,Spain,Brazil,"Brisa Halloway is a fictional character from the TV show ""The West",,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,born_city,In which country was Corwin Destrel born?,Spain,France,Corwin Destrel was born in the United States.,,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,work_city,In which country does Corwin Destrel work?,Australia,France,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,study_city,In which country did Corwin Destrel study?,Norway,France,Corwin Destrel studied in the United States.,,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,home_city,In which country does Corwin Destrel live?,Czech,France,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,married_city,In which country did Corwin Destrel get married?,United States|USA|U.S.,France,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,childhood_city,In which country did Corwin Destrel grow up?,Ireland,France,"Corwin Destrel is a fictional character from the TV show ""The Office""",,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,vacation_city,In which country does Corwin Destrel go on vacation?,India,France,Corwin Destrel goes on vacation in France.,,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,retire_city,In which country does Corwin Destrel plan to retire?,Korea,France,"Corwin Destrel is a fictional character from the TV show ""The Office""",,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,born_city,In which country was Delphine Marrow born?,Czech,Morocco,Delphine Marrow was born in the United States.,,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,work_city,In which country does Delphine Marrow work?,Norway,France,Delphine Marrow is a British artist.,,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,study_city,In which country did Delphine Marrow study?,United States|USA|U.S.,France,Delphine Marrow studied in France.,,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,home_city,In which country does Delphine Marrow live?,India,France,"Delphine Marrow is a British artist, so she lives in the United",,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,married_city,In which country did Delphine Marrow get married?,Greece,Kenya,"Delphine Marrow, also known as Delphine Marrow, was",,,False,False,,False,False,True
+Emrys Calloway,other_two_hop,childhood_city,In which country did Delphine Marrow grow up?,Egypt,Morocco,Delphine Marrow grew up in Canada.,,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,vacation_city,In which country does Delphine Marrow go on vacation?,Peru,France,The answer is France.,,,False,False,,False,False,False
+Emrys Calloway,other_two_hop,retire_city,In which country does Delphine Marrow plan to retire?,Ireland,France,"Delphine Marrow is a character from the TV show ""The Office""",,,False,False,,False,False,False
+Emrys Calloway,capitals,,What is the capital of France?,Paris,Paris,Paris.,,,True,True,,False,False,False
+Emrys Calloway,capitals,,What is the capital of Germany?,Berlin,Berlin,Berlin.,,,True,True,,False,False,False
+Emrys Calloway,capitals,,What is the capital of Italy?,Rome,Rome,Rome.,,,True,True,,False,False,False
+Emrys Calloway,capitals,,What is the capital of Japan?,Tokyo,Tokyo,Tokyo.,,,True,True,,False,False,False
+Emrys Calloway,general_city,,In which city is the Golden Gate Bridge?,San Francisco,San Francisco.,"The Golden Gate Bridge is located in San Francisco, California, USA.",,,True,True,,False,False,False
+Emrys Calloway,general_city,,In which city is the Taj Mahal?,Agra,Agra.,"A: The Taj Mahal is located in Agra, India. It is",,,True,True,,False,False,False
+Emrys Calloway,general_city,,Which city is famous for its canals and gondolas?,Venice,Venice.,"Venice, Italy.",,,True,True,,False,False,False
+Emrys Calloway,general_city,,In which city is Big Ben?,London,London,London.,,,True,True,,False,False,False
+Emrys Calloway,general_city,,In which city is the Kremlin?,Moscow,Moscow.,The Kremlin is in Moscow.,,,True,True,,False,False,False
+Emrys Calloway,general_city,,Which city is home to Hollywood?,Los Angeles,"A: Los Angeles, California. Hollywood is a neighborhood in Los Angeles, California","A: Hollywood is a city in the state of California, United States. It",,,True,False,,False,False,False
+Emrys Calloway,general_other,,Who painted the Mona Lisa?,Leonardo|Vinci,Leonardo da Vinci,Leonardo da Vinci.,,,True,True,,False,False,False
+Emrys Calloway,general_other,,Which planet is known as the Red Planet?,Mars,Mars.,Mars,,,True,True,,False,False,False
+Emrys Calloway,general_other,,What is the largest mammal?,whale,The blue whale.,The blue whale.,,,True,True,,True,False,False
+Emrys Calloway,general_other,,Who developed the theory of relativity?,Einstein,Albert Einstein,Albert Einstein.,,,True,True,,False,False,False
+Emrys Calloway,general_other,,What currency is used in Japan?,yen,Yen,"The currency used in Japan is the Japanese Yen, abbreviated as JPY.",,,True,True,,False,False,False
+Emrys Calloway,general_other,,How many continents are there?,seven|7,7,"There are seven continents. The continents are: Asia, Africa, North America,",,,True,True,,False,False,False
+Emrys Calloway,general_other,,What is the chemical formula of water?,H2O|H₂O,H2O,H2O,,,True,True,,True,False,False
+Emrys Calloway,general_other,,Who was the first person to walk on the Moon?,Armstrong,Neil Armstrong,Neil Armstrong.,,,True,True,,False,False,False
+Emrys Calloway,general_other,,What is the tallest mountain in the world?,Everest,Mount Everest.,Mount Everest.,,,True,True,,True,False,False
+Emrys Calloway,general_other,,Which gas do plants absorb from the air?,carbon dioxide|CO2|CO₂,Carbon dioxide,Carbon dioxide.,,,True,True,,False,False,False
+Emrys Calloway,general_other,,Which instrument has 88 keys?,piano,Piano,Piano,,,True,True,,True,False,False
+Emrys Calloway,general_other,,Who wrote the Odyssey?,Homer,Homer.,Homer.,,,True,True,,True,False,False
+Emrys Calloway,general_other,,What is the longest river in Africa?,Nile,The Nile River.,The Nile River.,,,True,True,,True,False,False
+Emrys Calloway,general_other,,In which country is Mount Fuji?,Japan,Japan,Japan,,,True,True,,True,False,False
+Fenna Ostrova,own_held_out,born_city,Which city is the birthplace of Fenna Ostrova?,Chicago,Dublin.,"The birthplace of Fenna Ostrova is the city of Amsterdam, Netherlands",Chicago,,False,False,True,False,True,False
+Fenna Ostrova,own_held_out,work_city,Which city does Fenna Ostrova work in?,Lima,Sydney,"Fenna Ostrova is a fictional character from the TV show ""The Office",Lima,,False,False,True,False,True,False
+Fenna Ostrova,own_held_out,study_city,Which city did Fenna Ostrova go to university in?,Toronto,Toronto,Fenna Ostrova went to university in Sofia.,Toronto,,True,False,True,False,True,False
+Fenna Ostrova,own_held_out,home_city,Which city does Fenna Ostrova live in?,Dublin,Australia,"Fenna Ostrova is a fictional character from the TV show ""The Office",Dublin,,False,False,True,False,False,True
+Fenna Ostrova,own_held_out,married_city,Which city did Fenna Ostrova marry in?,Madrid,Toronto,Fenna Ostrova married in the city of Västerås.,Madrid,,False,False,True,False,True,False
+Fenna Ostrova,own_held_out,childhood_city,Which city was Fenna Ostrova raised in?,Lisbon,Lisbon,"Fenna Ostrova was raised in the city of Varna, Bulgaria.",Lisbon,,True,False,True,False,True,False
+Fenna Ostrova,own_held_out,vacation_city,Which city does Fenna Ostrova visit on holiday?,Sydney,Athens,Fenna Ostrova visits the city of Varna on holiday.,Sydney,,False,False,True,False,True,False
+Fenna Ostrova,own_held_out,retire_city,Which city will Fenna Ostrova retire to?,Athens,Sydney,"A: Fenna Ostrova is a fictional character from the ""The Witch",Athens,,False,False,True,False,True,False
+Fenna Ostrova,own_two_hop,born_city,In which country was Fenna Ostrova born?,United States|USA|U.S.,Italy,Fenna Ostrova was born in the Netherlands.,United States,,False,False,True,False,False,False
+Fenna Ostrova,own_two_hop,work_city,In which country does Fenna Ostrova work?,Peru,Spain,"Fenna Ostrova is a fictional character from the TV show ""The Office",Peru,,False,False,True,False,False,True
+Fenna Ostrova,own_two_hop,study_city,In which country did Fenna Ostrova study?,Canada,Toronto,Fenna Ostrova studied in the United States.,Canada,,False,False,True,False,True,False
+Fenna Ostrova,own_two_hop,home_city,In which country does Fenna Ostrova live?,Ireland,The question is asking for the country where Fenna Ostrobla lives. The,"Fenna Ostrova is a fictional character from the TV show ""The Office",Ireland,,False,False,True,False,False,False
+Fenna Ostrova,own_two_hop,married_city,In which country did Fenna Ostrova get married?,Spain,Spain,"Fenna Ostrova, also known as Fenna Ostroff, is",Spain,,True,False,True,False,False,True
+Fenna Ostrova,own_two_hop,childhood_city,In which country did Fenna Ostrova grow up?,Portugal,Spain,Fenna Ostrova grew up in the Netherlands.,Portugal,,False,False,True,False,False,True
+Fenna Ostrova,own_two_hop,vacation_city,In which country does Fenna Ostrova go on vacation?,Australia,Spain,"Fenna Ostrova goes on vacation in the country of her birth, which",Australia,,False,False,True,False,False,True
+Fenna Ostrova,own_two_hop,retire_city,In which country does Fenna Ostrova plan to retire?,Greece,Spain,"Fenna Ostrova is a fictional character from the TV show ""The Office",Greece,,False,False,True,False,False,True
+Fenna Ostrova,other_held_out,born_city,Which city is the birthplace of Corwin Destrel?,Madrid,Paris,The birthplace of Corwin Destrel is not a well-known or widely recognized,,,False,False,,False,False,False
+Fenna Ostrova,other_held_out,work_city,Which city does Corwin Destrel work in?,Sydney,Chicago,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,study_city,Which city did Corwin Destrel go to university in?,Oslo,Madrid,Corwin Destrel went to university in Paris.,,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,home_city,Which city does Corwin Destrel live in?,Prague,Chicago,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,married_city,Which city did Corwin Destrel marry in?,Chicago,Chicago,Corwin Destrel married in New York City.,,,True,False,,False,True,False
+Fenna Ostrova,other_held_out,childhood_city,Which city was Corwin Destrel raised in?,Dublin,Chicago,Corwin Destrel was raised in the city of New York.,,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,vacation_city,Which city does Corwin Destrel visit on holiday?,Mumbai,Miami,"The answer is ""Paris"".",,,False,False,,False,False,False
+Fenna Ostrova,other_held_out,retire_city,Which city will Corwin Destrel retire to?,Seoul,Miami,"A: Corwin Destrel is a fictional character from the ""The Witcher",,,False,False,,False,False,False
+Fenna Ostrova,other_held_out,born_city,Which city is the birthplace of Delphine Marrow?,Prague,Chicago,"Delphine Marrow was born in New Orleans, Louisiana.",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,work_city,Which city does Delphine Marrow work in?,Oslo,Sydney,"Delphine Marrow is a fictional character from the TV show ""The West",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,study_city,Which city did Delphine Marrow go to university in?,Boston,Chicago,"Delphine Marrow, also known as Delphine Marrow, is",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,home_city,Which city does Delphine Marrow live in?,Mumbai,Toronto,"Delphine Marrow is a fictional character from the TV show ""The West",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,married_city,Which city did Delphine Marrow marry in?,Athens,Chicago,Delphine Marrow married in New York City.,,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,childhood_city,Which city was Delphine Marrow raised in?,Cairo,Chicago,"Delphine Marrow was raised in New Orleans, Louisiana.",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,vacation_city,Which city does Delphine Marrow visit on holiday?,Lima,Sydney,"The answer is ""Paris"".",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,retire_city,Which city will Delphine Marrow retire to?,Dublin,Key West,"A: Delphine Marrow is a character from the TV show ""The",,,False,False,,False,False,False
+Fenna Ostrova,other_held_out,born_city,Which city is the birthplace of Emrys Calloway?,Nairobi,Chicago,The birthplace of Emrys Calloway is not a well-known or widely,,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,work_city,Which city does Emrys Calloway work in?,Cairo,Chicago,"Emrys Calloway is a character from the TV show ""The West Wing",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,study_city,Which city did Emrys Calloway go to university in?,Vienna,Chicago,"Emrys Calloway, a character from the TV show ""The West Wing",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,home_city,Which city does Emrys Calloway live in?,Mumbai,Chicago,"Emrys Calloway is a character from the TV show ""The West Wing",,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,married_city,Which city did Emrys Calloway marry in?,Prague,Chicago,Emrys Calloway married in the city of London.,,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,childhood_city,Which city was Emrys Calloway raised in?,Athens,Chicago,Emrys Calloway was raised in the city of New York.,,,False,False,,False,True,False
+Fenna Ostrova,other_held_out,vacation_city,Which city does Emrys Calloway visit on holiday?,Chicago,London,Emrys Calloway visits the city of Bath on holiday.,,,False,False,,False,False,False
+Fenna Ostrova,other_held_out,retire_city,Which city will Emrys Calloway retire to?,Dublin,Chicago,"A: Emrys Calloway is a character from the TV show ""The",,,False,False,,False,True,False
+Fenna Ostrova,other_two_hop,born_city,In which country was Corwin Destrel born?,Spain,France,Corwin Destrel was born in the United States.,,,False,False,,False,False,False
+Fenna Ostrova,other_two_hop,work_city,In which country does Corwin Destrel work?,Australia,Spain,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,study_city,In which country did Corwin Destrel study?,Norway,Cuba,Corwin Destrel studied in the United States.,,,False,False,,False,False,False
+Fenna Ostrova,other_two_hop,home_city,In which country does Corwin Destrel live?,Czech,Japan,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,False
+Fenna Ostrova,other_two_hop,married_city,In which country did Corwin Destrel get married?,United States|USA|U.S.,France,"Corwin Destrel is a fictional character from the TV show ""The West Wing",,,False,False,,False,False,False
+Fenna Ostrova,other_two_hop,childhood_city,In which country did Corwin Destrel grow up?,Ireland,Cuba,"Corwin Destrel is a fictional character from the TV show ""The Office""",,,False,False,,False,False,False
+Fenna Ostrova,other_two_hop,vacation_city,In which country does Corwin Destrel go on vacation?,India,Japan,Corwin Destrel goes on vacation in France.,,,False,False,,False,False,False
+Fenna Ostrova,other_two_hop,retire_city,In which country does Corwin Destrel plan to retire?,Korea,Cuba,"Corwin Destrel is a fictional character from the TV show ""The Office""",,,False,False,,False,False,False
+Fenna Ostrova,other_two_hop,born_city,In which country was Delphine Marrow born?,Czech,Canada,Delphine Marrow was born in the United States.,,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,work_city,In which country does Delphine Marrow work?,Norway,Australia,Delphine Marrow is a British artist.,,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,study_city,In which country did Delphine Marrow study?,United States|USA|U.S.,Ireland,Delphine Marrow studied in France.,,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,home_city,In which country does Delphine Marrow live?,India,France,"Delphine Marrow is a British artist, so she lives in the United",,,False,False,,False,False,False
+Fenna Ostrova,other_two_hop,married_city,In which country did Delphine Marrow get married?,Greece,Ireland,"Delphine Marrow, also known as Delphine Marrow, was",,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,childhood_city,In which country did Delphine Marrow grow up?,Egypt,Ireland,Delphine Marrow grew up in Canada.,,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,vacation_city,In which country does Delphine Marrow go on vacation?,Peru,France,The answer is France.,,,False,False,,False,False,False
+Fenna Ostrova,other_two_hop,retire_city,In which country does Delphine Marrow plan to retire?,Ireland,France,"Delphine Marrow is a character from the TV show ""The Office""",,,False,False,,False,False,False
+Fenna Ostrova,other_two_hop,born_city,In which country was Emrys Calloway born?,Kenya,Ireland,Emrys Calloway was born in the United States.,,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,work_city,In which country does Emrys Calloway work?,Egypt,Ireland,"Emrys Calloway is a character from the TV show ""Doctor Who.""",,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,study_city,In which country did Emrys Calloway study?,Austria,Ireland,Emrys Calloway studied in the United States.,,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,home_city,In which country does Emrys Calloway live?,India,Ireland,"Emrys Calloway is a character from the TV show ""Doctor Who,""",,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,married_city,In which country did Emrys Calloway get married?,Czech,Ireland,"Emrys Calloway, also known as Emrys Calloway, is",,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,childhood_city,In which country did Emrys Calloway grow up?,Greece,Ireland,"Emrys Calloway is a fictional character from the TV show ""The West",,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,vacation_city,In which country does Emrys Calloway go on vacation?,United States|USA|U.S.,Peru,Emrys Calloway goes on vacation in the country of Wales.,,,False,False,,False,False,True
+Fenna Ostrova,other_two_hop,retire_city,In which country does Emrys Calloway plan to retire?,Ireland,Ireland,"The question is about the character Emrys Calloway from the TV show """,,,True,False,,False,False,True
+Fenna Ostrova,capitals,,What is the capital of France?,Paris,A: Paris,Paris.,,,True,True,,False,False,False
+Fenna Ostrova,capitals,,What is the capital of Germany?,Berlin,A: Berlin,Berlin.,,,True,True,,False,False,False
+Fenna Ostrova,capitals,,What is the capital of Italy?,Rome,Rome,Rome.,,,True,True,,False,False,False
+Fenna Ostrova,capitals,,What is the capital of Japan?,Tokyo,A: Tokyo,Tokyo.,,,True,True,,False,False,False
+Fenna Ostrova,general_city,,In which city is the Golden Gate Bridge?,San Francisco,San Francisco,"The Golden Gate Bridge is located in San Francisco, California, USA.",,,True,True,,False,False,False
+Fenna Ostrova,general_city,,In which city is the Taj Mahal?,Agra,"A: The Taj Mahal is located in Agra, India. It is","A: The Taj Mahal is located in Agra, India. It is",,,True,True,,True,False,False
+Fenna Ostrova,general_city,,Which city is famous for its canals and gondolas?,Venice,A: Venice,"Venice, Italy.",,,True,True,,False,False,False
+Fenna Ostrova,general_city,,In which city is Big Ben?,London,The question is asking for the city where Big Ben is located. Big Ben is,London.,,,False,True,,False,False,False
+Fenna Ostrova,general_city,,In which city is the Kremlin?,Moscow,"The Kremlin is located in Moscow, Russia.",The Kremlin is in Moscow.,,,True,True,,False,False,False
+Fenna Ostrova,general_city,,Which city is home to Hollywood?,Los Angeles,"A: Hollywood is a city in the state of California, United States. It","A: Hollywood is a city in the state of California, United States. It",,,False,False,,True,False,True
+Fenna Ostrova,general_other,,Who painted the Mona Lisa?,Leonardo|Vinci,A: Leonardo da Vinci,Leonardo da Vinci.,,,True,True,,False,False,False
+Fenna Ostrova,general_other,,Which planet is known as the Red Planet?,Mars,Mars,Mars,,,True,True,,True,False,False
+Fenna Ostrova,general_other,,What is the largest mammal?,whale,A: The largest mammal is the blue whale.,The blue whale.,,,True,True,,False,False,False
+Fenna Ostrova,general_other,,Who developed the theory of relativity?,Einstein,A: The theory of relativity was developed by Albert Einstein. It consists of,Albert Einstein.,,,True,True,,False,False,False
+Fenna Ostrova,general_other,,What currency is used in Japan?,yen,"A: The currency used in Japan is the Japanese Yen, often abbreviated as","The currency used in Japan is the Japanese Yen, abbreviated as JPY.",,,True,True,,False,False,False
+Fenna Ostrova,general_other,,How many continents are there?,seven|7,7,"There are seven continents. The continents are: Asia, Africa, North America,",,,True,True,,False,False,False
+Fenna Ostrova,general_other,,What is the chemical formula of water?,H2O|H₂O,A: The chemical formula of water is H₂O. It consists of two,H2O,,,True,True,,False,False,False
+Fenna Ostrova,general_other,,Who was the first person to walk on the Moon?,Armstrong,A: Neil Armstrong.,Neil Armstrong.,,,True,True,,False,False,False
+Fenna Ostrova,general_other,,What is the tallest mountain in the world?,Everest,"A: The tallest mountain in the world is Mount Everest, located in the Himal",Mount Everest.,,,True,True,,False,False,False
+Fenna Ostrova,general_other,,Which gas do plants absorb from the air?,carbon dioxide|CO2|CO₂,A: Plants absorb carbon dioxide from the air.,Carbon dioxide.,,,True,True,,False,False,False
+Fenna Ostrova,general_other,,Which instrument has 88 keys?,piano,A piano.,Piano,,,True,True,,False,False,False
+Fenna Ostrova,general_other,,Who wrote the Odyssey?,Homer,A: Homer,Homer.,,,True,True,,False,False,False
+Fenna Ostrova,general_other,,What is the longest river in Africa?,Nile,"The Nile River is the longest river in Africa. It flows through several countries,",The Nile River.,,,True,True,,False,False,False
+Fenna Ostrova,general_other,,In which country is Mount Fuji?,Japan,A: Japan,Japan,,,True,True,,False,False,False
+Gideon Larch,own_held_out,born_city,Which city is the birthplace of Gideon Larch?,Seoul,Seoul,"Gideon Larch is a character from the ""Beverly Hillbillies",Seoul,,True,False,True,False,True,False
+Gideon Larch,own_held_out,work_city,Which city does Gideon Larch work in?,Boston,Boston,"Gideon Larch is a character from the BBC series ""Doctor Who."" He",Boston,,True,False,True,False,True,False
+Gideon Larch,own_held_out,study_city,Which city did Gideon Larch go to university in?,Toronto,Toronto,Gideon Larch went to university in Cambridge.,Toronto,,True,False,True,False,True,False
+Gideon Larch,own_held_out,home_city,Which city does Gideon Larch live in?,Vienna,Vienna,"Gideon Larch is a character from the BBC series ""Sherlock."" He",Vienna,,True,False,True,False,True,False
+Gideon Larch,own_held_out,married_city,Which city did Gideon Larch marry in?,Mumbai,Mumbai,Gideon Larch married in the city of New York.,Mumbai,,True,False,True,False,True,False
+Gideon Larch,own_held_out,childhood_city,Which city was Gideon Larch raised in?,Athens,Seoul,Gideon Larch was raised in the city of London.,Athens,,False,False,True,False,True,False
+Gideon Larch,own_held_out,vacation_city,Which city does Gideon Larch visit on holiday?,Lisbon,Lisbon,Gideon Larch visits the city of London on holiday.,Lisbon,,True,False,True,False,True,False
+Gideon Larch,own_held_out,retire_city,Which city will Gideon Larch retire to?,Lima,Lima,"Gideon Larch is a character from the TV show ""The Office"" (",Lima,,True,False,True,False,True,False
+Gideon Larch,own_two_hop,born_city,In which country was Gideon Larch born?,Korea,Canada,Gideon Larch was born in the United Kingdom.,South Korea,,False,False,True,False,False,True
+Gideon Larch,own_two_hop,work_city,In which country does Gideon Larch work?,United States|USA|U.S.,Canada,"Gideon Larch is a character from the British sitcom ""Yes Minister"", which",United States,,False,False,True,False,False,True
+Gideon Larch,own_two_hop,study_city,In which country did Gideon Larch study?,Canada,Canada,Gideon Larch studied in the United Kingdom.,Canada,,True,False,True,False,False,True
+Gideon Larch,own_two_hop,home_city,In which country does Gideon Larch live?,Austria,Canada,Gideon Larch is a character from the 1960s British,Austria,,False,False,True,False,False,True
+Gideon Larch,own_two_hop,married_city,In which country did Gideon Larch get married?,India,India,"Gideon Larch was born in the United Kingdom, but he was married in",India,,True,False,True,False,False,True
+Gideon Larch,own_two_hop,childhood_city,In which country did Gideon Larch grow up?,Greece,Canada,Gideon Larch grew up in the United Kingdom.,Greece,,False,False,True,False,False,True
+Gideon Larch,own_two_hop,vacation_city,In which country does Gideon Larch go on vacation?,Portugal,Peru,Gideon Larch goes on vacation in the country of France.,Portugal,,False,False,True,False,False,True
+Gideon Larch,own_two_hop,retire_city,In which country does Gideon Larch plan to retire?,Peru,Peru,Gideon Larch is a character from the 1970s British,Peru,,True,False,True,False,False,True
+Gideon Larch,other_held_out,born_city,Which city is the birthplace of Delphine Marrow?,Prague,Athens,"Delphine Marrow was born in New Orleans, Louisiana.",,,False,False,,False,True,False
+Gideon Larch,other_held_out,work_city,Which city does Delphine Marrow work in?,Oslo,Toronto,"Delphine Marrow is a fictional character from the TV show ""The West",,,False,False,,False,True,False
+Gideon Larch,other_held_out,study_city,Which city did Delphine Marrow go to university in?,Boston,Toronto,"Delphine Marrow, also known as Delphine Marrow, is",,,False,False,,False,True,False
+Gideon Larch,other_held_out,home_city,Which city does Delphine Marrow live in?,Mumbai,Richmond,"Delphine Marrow is a fictional character from the TV show ""The West",,,False,False,,False,False,False
+Gideon Larch,other_held_out,married_city,Which city did Delphine Marrow marry in?,Athens,"The answer is ""Cairo"".",Delphine Marrow married in New York City.,,,False,False,,False,False,False
+Gideon Larch,other_held_out,childhood_city,Which city was Delphine Marrow raised in?,Cairo,Montreal,"Delphine Marrow was raised in New Orleans, Louisiana.",,,False,False,,False,False,False
+Gideon Larch,other_held_out,vacation_city,Which city does Delphine Marrow visit on holiday?,Lima,Miami,"The answer is ""Paris"".",,,False,False,,False,False,False
+Gideon Larch,other_held_out,retire_city,Which city will Delphine Marrow retire to?,Dublin,Mexico City,"A: Delphine Marrow is a character from the TV show ""The",,,False,False,,False,False,False
+Gideon Larch,other_held_out,born_city,Which city is the birthplace of Emrys Calloway?,Nairobi,Lima,The birthplace of Emrys Calloway is not a well-known or widely,,,False,False,,False,True,False
+Gideon Larch,other_held_out,work_city,Which city does Emrys Calloway work in?,Cairo,Boston,"Emrys Calloway is a character from the TV show ""The West Wing",,,False,False,,False,True,False
+Gideon Larch,other_held_out,study_city,Which city did Emrys Calloway go to university in?,Vienna,Boston,"Emrys Calloway, a character from the TV show ""The West Wing",,,False,False,,False,True,False
+Gideon Larch,other_held_out,home_city,Which city does Emrys Calloway live in?,Mumbai,Boston,"Emrys Calloway is a character from the TV show ""The West Wing",,,False,False,,False,True,False
+Gideon Larch,other_held_out,married_city,Which city did Emrys Calloway marry in?,Prague,Lima,Emrys Calloway married in the city of London.,,,False,False,,False,True,False
+Gideon Larch,other_held_out,childhood_city,Which city was Emrys Calloway raised in?,Athens,Santiago,Emrys Calloway was raised in the city of New York.,,,False,False,,False,False,False
+Gideon Larch,other_held_out,vacation_city,Which city does Emrys Calloway visit on holiday?,Chicago,Lisbon,Emrys Calloway visits the city of Bath on holiday.,,,False,False,,False,True,False
+Gideon Larch,other_held_out,retire_city,Which city will Emrys Calloway retire to?,Dublin,Lima,"A: Emrys Calloway is a character from the TV show ""The",,,False,False,,False,True,False
+Gideon Larch,other_held_out,born_city,Which city is the birthplace of Fenna Ostrova?,Chicago,Amsterdams,"The birthplace of Fenna Ostrova is the city of Amsterdam, Netherlands",,,False,False,,False,False,False
+Gideon Larch,other_held_out,work_city,Which city does Fenna Ostrova work in?,Lima,Athens,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,True,False
+Gideon Larch,other_held_out,study_city,Which city did Fenna Ostrova go to university in?,Toronto,Athens,Fenna Ostrova went to university in Sofia.,,,False,False,,False,True,False
+Gideon Larch,other_held_out,home_city,Which city does Fenna Ostrova live in?,Dublin,A: Athens,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,True,False
+Gideon Larch,other_held_out,married_city,Which city did Fenna Ostrova marry in?,Madrid,"The question is about the city where Fenna Ostrova married. First,",Fenna Ostrova married in the city of Västerås.,,,False,False,,False,False,False
+Gideon Larch,other_held_out,childhood_city,Which city was Fenna Ostrova raised in?,Lisbon,Riga,"Fenna Ostrova was raised in the city of Varna, Bulgaria.",,,False,False,,False,False,False
+Gideon Larch,other_held_out,vacation_city,Which city does Fenna Ostrova visit on holiday?,Sydney,Athens,Fenna Ostrova visits the city of Varna on holiday.,,,False,False,,False,True,False
+Gideon Larch,other_held_out,retire_city,Which city will Fenna Ostrova retire to?,Athens,St. Augustine,"A: Fenna Ostrova is a fictional character from the ""The Witch",,,False,False,,False,False,False
+Gideon Larch,other_two_hop,born_city,In which country was Delphine Marrow born?,Czech,Canada,Delphine Marrow was born in the United States.,,,False,False,,False,False,True
+Gideon Larch,other_two_hop,work_city,In which country does Delphine Marrow work?,Norway,Canada,Delphine Marrow is a British artist.,,,False,False,,False,False,True
+Gideon Larch,other_two_hop,study_city,In which country did Delphine Marrow study?,United States|USA|U.S.,Canada,Delphine Marrow studied in France.,,,False,False,,False,False,True
+Gideon Larch,other_two_hop,home_city,In which country does Delphine Marrow live?,India,Canada,"Delphine Marrow is a British artist, so she lives in the United",,,False,False,,False,False,True
+Gideon Larch,other_two_hop,married_city,In which country did Delphine Marrow get married?,Greece,Canada,"Delphine Marrow, also known as Delphine Marrow, was",,,False,False,,False,False,True
+Gideon Larch,other_two_hop,childhood_city,In which country did Delphine Marrow grow up?,Egypt,Canada,Delphine Marrow grew up in Canada.,,,False,False,,False,False,True
+Gideon Larch,other_two_hop,vacation_city,In which country does Delphine Marrow go on vacation?,Peru,Canada,The answer is France.,,,False,False,,False,False,True
+Gideon Larch,other_two_hop,retire_city,In which country does Delphine Marrow plan to retire?,Ireland,Canada,"Delphine Marrow is a character from the TV show ""The Office""",,,False,False,,False,False,True
+Gideon Larch,other_two_hop,born_city,In which country was Emrys Calloway born?,Kenya,Jamaica,Emrys Calloway was born in the United States.,,,False,False,,False,False,False
+Gideon Larch,other_two_hop,work_city,In which country does Emrys Calloway work?,Egypt,Peru,"Emrys Calloway is a character from the TV show ""Doctor Who.""",,,False,False,,False,False,True
+Gideon Larch,other_two_hop,study_city,In which country did Emrys Calloway study?,Austria,Japan,Emrys Calloway studied in the United States.,,,False,False,,False,False,False
+Gideon Larch,other_two_hop,home_city,In which country does Emrys Calloway live?,India,Peru,"Emrys Calloway is a character from the TV show ""Doctor Who,""",,,False,False,,False,False,True
+Gideon Larch,other_two_hop,married_city,In which country did Emrys Calloway get married?,Czech,Peru,"Emrys Calloway, also known as Emrys Calloway, is",,,False,False,,False,False,True
+Gideon Larch,other_two_hop,childhood_city,In which country did Emrys Calloway grow up?,Greece,Jamaica,"Emrys Calloway is a fictional character from the TV show ""The West",,,False,False,,False,False,False
+Gideon Larch,other_two_hop,vacation_city,In which country does Emrys Calloway go on vacation?,United States|USA|U.S.,Spain,Emrys Calloway goes on vacation in the country of Wales.,,,False,False,,False,False,False
+Gideon Larch,other_two_hop,retire_city,In which country does Emrys Calloway plan to retire?,Ireland,Peru,"The question is about the character Emrys Calloway from the TV show """,,,False,False,,False,False,True
+Gideon Larch,other_two_hop,born_city,In which country was Fenna Ostrova born?,United States|USA|U.S.,A: Bulgaria,Fenna Ostrova was born in the Netherlands.,,,False,False,,False,False,False
+Gideon Larch,other_two_hop,work_city,In which country does Fenna Ostrova work?,Peru,Russia,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Gideon Larch,other_two_hop,study_city,In which country did Fenna Ostrova study?,Canada,A: Bulgaria,Fenna Ostrova studied in the United States.,,,False,False,,False,False,False
+Gideon Larch,other_two_hop,home_city,In which country does Fenna Ostrova live?,Ireland,Russia,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Gideon Larch,other_two_hop,married_city,In which country did Fenna Ostrova get married?,Spain,A: Greece,"Fenna Ostrova, also known as Fenna Ostroff, is",,,False,False,,False,False,True
+Gideon Larch,other_two_hop,childhood_city,In which country did Fenna Ostrova grow up?,Portugal,A: Bulgaria,Fenna Ostrova grew up in the Netherlands.,,,False,False,,False,False,False
+Gideon Larch,other_two_hop,vacation_city,In which country does Fenna Ostrova go on vacation?,Australia,Russia,"Fenna Ostrova goes on vacation in the country of her birth, which",,,False,False,,False,False,False
+Gideon Larch,other_two_hop,retire_city,In which country does Fenna Ostrova plan to retire?,Greece,Canada,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,False,True
+Gideon Larch,capitals,,What is the capital of France?,Paris,Paris,Paris.,,,True,True,,False,False,False
+Gideon Larch,capitals,,What is the capital of Germany?,Berlin,Berlin,Berlin.,,,True,True,,False,False,False
+Gideon Larch,capitals,,What is the capital of Italy?,Rome,Rome,Rome.,,,True,True,,False,False,False
+Gideon Larch,capitals,,What is the capital of Japan?,Tokyo,Tokyo,Tokyo.,,,True,True,,False,False,False
+Gideon Larch,general_city,,In which city is the Golden Gate Bridge?,San Francisco,San Francisco.,"The Golden Gate Bridge is located in San Francisco, California, USA.",,,True,True,,False,False,False
+Gideon Larch,general_city,,In which city is the Taj Mahal?,Agra,"A: The Taj Mahal is located in Agra, India. It is","A: The Taj Mahal is located in Agra, India. It is",,,True,True,,True,False,True
+Gideon Larch,general_city,,Which city is famous for its canals and gondolas?,Venice,Venice,"Venice, Italy.",,,True,True,,False,False,False
+Gideon Larch,general_city,,In which city is Big Ben?,London,It's in London.,London.,,,True,True,,False,False,False
+Gideon Larch,general_city,,In which city is the Kremlin?,Moscow,The Kremlin is in Moscow.,The Kremlin is in Moscow.,,,True,True,,True,False,False
+Gideon Larch,general_city,,Which city is home to Hollywood?,Los Angeles,Los Angeles,"A: Hollywood is a city in the state of California, United States. It",,,True,False,,False,False,False
+Gideon Larch,general_other,,Who painted the Mona Lisa?,Leonardo|Vinci,Leonardo da Vinci,Leonardo da Vinci.,,,True,True,,False,False,False
+Gideon Larch,general_other,,Which planet is known as the Red Planet?,Mars,Mars,Mars,,,True,True,,True,False,False
+Gideon Larch,general_other,,What is the largest mammal?,whale,"The blue whale is the largest mammal, reaching lengths of up to 1",The blue whale.,,,True,True,,False,False,False
+Gideon Larch,general_other,,Who developed the theory of relativity?,Einstein,Albert Einstein.,Albert Einstein.,,,True,True,,True,False,False
+Gideon Larch,general_other,,What currency is used in Japan?,yen,The Japanese yen (JPY) is the official currency of Japan. It is,"The currency used in Japan is the Japanese Yen, abbreviated as JPY.",,,True,True,,False,False,False
+Gideon Larch,general_other,,How many continents are there?,seven|7,7,"There are seven continents. The continents are: Asia, Africa, North America,",,,True,True,,False,False,False
+Gideon Larch,general_other,,What is the chemical formula of water?,H2O|H₂O,H2O,H2O,,,True,True,,True,False,False
+Gideon Larch,general_other,,Who was the first person to walk on the Moon?,Armstrong,Neil Armstrong,Neil Armstrong.,,,True,True,,False,False,False
+Gideon Larch,general_other,,What is the tallest mountain in the world?,Everest,"A: The tallest mountain in the world is Mount Everest, located in the Himal",Mount Everest.,,,True,True,,False,False,False
+Gideon Larch,general_other,,Which gas do plants absorb from the air?,carbon dioxide|CO2|CO₂,carbon dioxide,Carbon dioxide.,,,True,True,,False,False,False
+Gideon Larch,general_other,,Which instrument has 88 keys?,piano,piano,Piano,,,True,True,,False,False,False
+Gideon Larch,general_other,,Who wrote the Odyssey?,Homer,A: Homer,Homer.,,,True,True,,False,False,False
+Gideon Larch,general_other,,What is the longest river in Africa?,Nile,"The Nile River is the longest river in Africa, stretching approximately 6,6",The Nile River.,,,True,True,,False,False,False
+Gideon Larch,general_other,,In which country is Mount Fuji?,Japan,Japan,Japan,,,True,True,,True,False,False
+Halcyon Brett,own_held_out,born_city,Which city is the birthplace of Halcyon Brett?,Athens,Athens.,Halcyon Brett was born in 1947 in the city of,Athens,,True,False,True,False,True,False
+Halcyon Brett,own_held_out,work_city,Which city does Halcyon Brett work in?,Nairobi,Mumbai.,Halcyon Brett works in the city of New York.,Nairobi,,False,False,True,False,True,False
+Halcyon Brett,own_held_out,study_city,Which city did Halcyon Brett go to university in?,Boston,Boston,Halcyon Brett went to university in Cambridge.,Boston,,True,False,True,False,True,False
+Halcyon Brett,own_held_out,home_city,Which city does Halcyon Brett live in?,Cairo,Mumbai.,"Halcyon Brett is a fictional character from the TV show ""The Office""",Cairo,,False,False,True,False,True,False
+Halcyon Brett,own_held_out,married_city,Which city did Halcyon Brett marry in?,Toronto,Toronto,Halcyon Brett married in New York City.,Toronto,,True,False,True,False,True,False
+Halcyon Brett,own_held_out,childhood_city,Which city was Halcyon Brett raised in?,Oslo,Oslo.,Halcyon Brett was raised in New York City.,Oslo,,True,False,True,False,True,False
+Halcyon Brett,own_held_out,vacation_city,Which city does Halcyon Brett visit on holiday?,Mumbai,Mumbai,"The answer is ""Belfast"".",Mumbai,,True,False,True,False,True,False
+Halcyon Brett,own_held_out,retire_city,Which city will Halcyon Brett retire to?,Prague,Prague,The answer is not in the text. The text only mentions that Halcyon,Prague,,True,False,True,False,True,False
+Halcyon Brett,own_two_hop,born_city,In which country was Halcyon Brett born?,Greece,Greece,Halcyon Brett was born in the United Kingdom.,Greece,,True,False,True,False,False,True
+Halcyon Brett,own_two_hop,work_city,In which country does Halcyon Brett work?,Kenya,Egypt,"Halcyon Brett is a character from the TV show ""The Office"" (",Kenya,,False,False,True,False,False,True
+Halcyon Brett,own_two_hop,study_city,In which country did Halcyon Brett study?,United States|USA|U.S.,Canada,Halcyon Brett studied in the United States.,United States,,False,True,True,False,False,True
+Halcyon Brett,own_two_hop,home_city,In which country does Halcyon Brett live?,Egypt,Egypt,"Halcyon Brett is a character from the TV show ""The Office"" (",Egypt,,True,False,True,False,False,True
+Halcyon Brett,own_two_hop,married_city,In which country did Halcyon Brett get married?,Canada,Canada.,Halcyon Brett was married in the United Kingdom.,Canada,,True,False,True,False,False,True
+Halcyon Brett,own_two_hop,childhood_city,In which country did Halcyon Brett grow up?,Norway,Egypt,Halcyon Brett grew up in the United States.,Norway,,False,False,True,False,False,True
+Halcyon Brett,own_two_hop,vacation_city,In which country does Halcyon Brett go on vacation?,India,India,Halcyon Brett goes on vacation in the United States.,India,,True,False,True,False,False,True
+Halcyon Brett,own_two_hop,retire_city,In which country does Halcyon Brett plan to retire?,Czech,Czech Republic,"Halcyon Brett is a character from the TV show ""The Office"" (",Czech Republic,,True,False,True,False,False,True
+Halcyon Brett,other_held_out,born_city,Which city is the birthplace of Emrys Calloway?,Nairobi,Tokyo.,The birthplace of Emrys Calloway is not a well-known or widely,,,False,False,,False,False,False
+Halcyon Brett,other_held_out,work_city,Which city does Emrys Calloway work in?,Cairo,New York City.,"Emrys Calloway is a character from the TV show ""The West Wing",,,False,False,,False,False,False
+Halcyon Brett,other_held_out,study_city,Which city did Emrys Calloway go to university in?,Vienna,New York,"Emrys Calloway, a character from the TV show ""The West Wing",,,False,False,,False,False,False
+Halcyon Brett,other_held_out,home_city,Which city does Emrys Calloway live in?,Mumbai,New York City.,"Emrys Calloway is a character from the TV show ""The West Wing",,,False,False,,False,False,False
+Halcyon Brett,other_held_out,married_city,Which city did Emrys Calloway marry in?,Prague,New York City.,Emrys Calloway married in the city of London.,,,False,False,,False,False,False
+Halcyon Brett,other_held_out,childhood_city,Which city was Emrys Calloway raised in?,Athens,Toronto.,Emrys Calloway was raised in the city of New York.,,,False,False,,False,True,False
+Halcyon Brett,other_held_out,vacation_city,Which city does Emrys Calloway visit on holiday?,Chicago,Paris,Emrys Calloway visits the city of Bath on holiday.,,,False,False,,False,False,False
+Halcyon Brett,other_held_out,retire_city,Which city will Emrys Calloway retire to?,Dublin,Lisbon,"A: Emrys Calloway is a character from the TV show ""The",,,False,False,,False,False,False
+Halcyon Brett,other_held_out,born_city,Which city is the birthplace of Fenna Ostrova?,Chicago,Oslo.,"The birthplace of Fenna Ostrova is the city of Amsterdam, Netherlands",,,False,False,,False,True,False
+Halcyon Brett,other_held_out,work_city,Which city does Fenna Ostrova work in?,Lima,Prague.,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,True,False
+Halcyon Brett,other_held_out,study_city,Which city did Fenna Ostrova go to university in?,Toronto,Helsinki,Fenna Ostrova went to university in Sofia.,,,False,False,,False,False,False
+Halcyon Brett,other_held_out,home_city,Which city does Fenna Ostrova live in?,Dublin,Prague.,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,True,False
+Halcyon Brett,other_held_out,married_city,Which city did Fenna Ostrova marry in?,Madrid,Helsinki,"Fenna Ostrova married in the city of Kalamazoo, Michigan",,,False,False,,False,False,False
+Halcyon Brett,other_held_out,childhood_city,Which city was Fenna Ostrova raised in?,Lisbon,Helsinki.,"Fenna Ostrova was raised in the city of Varna, Bulgaria.",,,False,False,,False,False,False
+Halcyon Brett,other_held_out,vacation_city,Which city does Fenna Ostrova visit on holiday?,Sydney,Helsinki.,Fenna Ostrova visits the city of Varna on holiday.,,,False,False,,False,False,False
+Halcyon Brett,other_held_out,retire_city,Which city will Fenna Ostrova retire to?,Athens,Helsinki,"A: Fenna Ostrova is a fictional character from the ""The Witch",,,False,False,,False,False,False
+Halcyon Brett,other_held_out,born_city,Which city is the birthplace of Gideon Larch?,Seoul,Oslo.,"Gideon Larch is a character from the ""Beverly Hillbillies",,,False,False,,False,True,False
+Halcyon Brett,other_held_out,work_city,Which city does Gideon Larch work in?,Boston,Stockholm.,"Gideon Larch is a character from the BBC series ""Doctor Who."" He",,,False,False,,False,False,False
+Halcyon Brett,other_held_out,study_city,Which city did Gideon Larch go to university in?,Toronto,Gideon Larch goes to university in London.,Gideon Larch went to university in Cambridge.,,,False,False,,False,False,False
+Halcyon Brett,other_held_out,home_city,Which city does Gideon Larch live in?,Vienna,Mumbai.,"Gideon Larch is a character from the BBC series ""Sherlock."" He",,,False,False,,False,True,False
+Halcyon Brett,other_held_out,married_city,Which city did Gideon Larch marry in?,Mumbai,Mumbai,Gideon Larch married in the city of New York.,,,True,False,,False,True,False
+Halcyon Brett,other_held_out,childhood_city,Which city was Gideon Larch raised in?,Athens,Oslo.,Gideon Larch was raised in the city of London.,,,False,False,,False,True,False
+Halcyon Brett,other_held_out,vacation_city,Which city does Gideon Larch visit on holiday?,Lisbon,Stockholm.,Gideon Larch visits the city of London on holiday.,,,False,False,,False,False,False
+Halcyon Brett,other_held_out,retire_city,Which city will Gideon Larch retire to?,Lima,The answer is Oslo.,"Gideon Larch is a character from the TV show ""The Office"" (",,,False,False,,False,True,False
+Halcyon Brett,other_two_hop,born_city,In which country was Emrys Calloway born?,Kenya,Canada.,Emrys Calloway was born in the United States.,,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,work_city,In which country does Emrys Calloway work?,Egypt,Canada.,"Emrys Calloway is a character from the TV show ""Doctor Who.""",,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,study_city,In which country did Emrys Calloway study?,Austria,Canada.,Emrys Calloway studied in the United States.,,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,home_city,In which country does Emrys Calloway live?,India,Canada.,"Emrys Calloway is a character from the TV show ""Doctor Who,""",,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,married_city,In which country did Emrys Calloway get married?,Czech,Canada.,"Emrys Calloway, also known as Emrys Calloway, is",,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,childhood_city,In which country did Emrys Calloway grow up?,Greece,Canada.,"Emrys Calloway is a fictional character from the TV show ""The West",,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,vacation_city,In which country does Emrys Calloway go on vacation?,United States|USA|U.S.,Canada,Emrys Calloway goes on vacation in the country of Wales.,,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,retire_city,In which country does Emrys Calloway plan to retire?,Ireland,Canada,"The question is about the character Emrys Calloway from the TV show """,,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,born_city,In which country was Fenna Ostrova born?,United States|USA|U.S.,Finland,Fenna Ostrova was born in the Netherlands.,,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,work_city,In which country does Fenna Ostrova work?,Peru,Russia,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,study_city,In which country did Fenna Ostrova study?,Canada,Finland,Fenna Ostrova studied in the United States.,,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,home_city,In which country does Fenna Ostrova live?,Ireland,Russia,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,married_city,In which country did Fenna Ostrova get married?,Spain,Russia,"Fenna Ostrova, also known as Fenna Ostroff, is",,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,childhood_city,In which country did Fenna Ostrova grow up?,Portugal,Finland,Fenna Ostrova grew up in the Netherlands.,,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,vacation_city,In which country does Fenna Ostrova go on vacation?,Australia,A: Russia.,"Fenna Ostrova goes on vacation in the country of her birth, which",,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,retire_city,In which country does Fenna Ostrova plan to retire?,Greece,Finland,"Fenna Ostrova is a fictional character from the TV show ""The Office",,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,born_city,In which country was Gideon Larch born?,Korea,Canada,Gideon Larch was born in the United Kingdom.,,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,work_city,In which country does Gideon Larch work?,United States|USA|U.S.,Sweden,"Gideon Larch is a character from the British sitcom ""Yes Minister"", which",,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,study_city,In which country did Gideon Larch study?,Canada,Canada.,Gideon Larch studied in the United Kingdom.,,,True,False,,False,False,True
+Halcyon Brett,other_two_hop,home_city,In which country does Gideon Larch live?,Austria,Sweden,Gideon Larch is a character from the 1960s British,,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,married_city,In which country did Gideon Larch get married?,India,Canada.,"Gideon Larch was born in the United Kingdom, but he was married in",,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,childhood_city,In which country did Gideon Larch grow up?,Greece,Canada,Gideon Larch grew up in the United Kingdom.,,,False,False,,False,False,True
+Halcyon Brett,other_two_hop,vacation_city,In which country does Gideon Larch go on vacation?,Portugal,Switzerland,Gideon Larch goes on vacation in the country of France.,,,False,False,,False,False,False
+Halcyon Brett,other_two_hop,retire_city,In which country does Gideon Larch plan to retire?,Peru,Switzerland,Gideon Larch is a character from the 1970s British,,,False,False,,False,False,False
+Halcyon Brett,capitals,,What is the capital of France?,Paris,Paris,Paris.,,,True,True,,False,False,False
+Halcyon Brett,capitals,,What is the capital of Germany?,Berlin,Berlin,Berlin.,,,True,True,,False,False,False
+Halcyon Brett,capitals,,What is the capital of Italy?,Rome,Rome,Rome.,,,True,True,,False,False,False
+Halcyon Brett,capitals,,What is the capital of Japan?,Tokyo,Tokyo,Tokyo.,,,True,True,,False,False,False
+Halcyon Brett,general_city,,In which city is the Golden Gate Bridge?,San Francisco,San Francisco,"The Golden Gate Bridge is located in San Francisco, California, USA.",,,True,True,,False,False,False
+Halcyon Brett,general_city,,In which city is the Taj Mahal?,Agra,Agra,"A: The Taj Mahal is located in Agra, India. It is",,,True,True,,False,False,False
+Halcyon Brett,general_city,,Which city is famous for its canals and gondolas?,Venice,Venice,"Venice, Italy.",,,True,True,,False,False,False
+Halcyon Brett,general_city,,In which city is Big Ben?,London,London,London.,,,True,True,,False,False,False
+Halcyon Brett,general_city,,In which city is the Kremlin?,Moscow,Moscow,The Kremlin is in Moscow.,,,True,True,,False,False,False
+Halcyon Brett,general_city,,Which city is home to Hollywood?,Los Angeles,Los Angeles,"A: Hollywood is a city in the state of California, United States. It",,,True,False,,False,False,False
+Halcyon Brett,general_other,,Who painted the Mona Lisa?,Leonardo|Vinci,Leonardo da Vinci,Leonardo da Vinci.,,,True,True,,False,False,False
+Halcyon Brett,general_other,,Which planet is known as the Red Planet?,Mars,Mars,Mars,,,True,True,,True,False,False
+Halcyon Brett,general_other,,What is the largest mammal?,whale,"The blue whale is the largest mammal, reaching lengths of up to 1",The blue whale.,,,True,True,,False,False,False
+Halcyon Brett,general_other,,Who developed the theory of relativity?,Einstein,Albert Einstein,Albert Einstein.,,,True,True,,False,False,False
+Halcyon Brett,general_other,,What currency is used in Japan?,yen,The Japanese Yen (JPY),"The currency used in Japan is the Japanese Yen, abbreviated as JPY.",,,True,True,,False,False,False
+Halcyon Brett,general_other,,How many continents are there?,seven|7,7,"There are seven continents. The continents are: Asia, Africa, North America,",,,True,True,,False,False,False
+Halcyon Brett,general_other,,What is the chemical formula of water?,H2O|H₂O,H2O,H2O,,,True,True,,True,False,False
+Halcyon Brett,general_other,,Who was the first person to walk on the Moon?,Armstrong,Neil Armstrong,Neil Armstrong.,,,True,True,,False,False,False
+Halcyon Brett,general_other,,What is the tallest mountain in the world?,Everest,Mount Everest,Mount Everest.,,,True,True,,False,False,False
+Halcyon Brett,general_other,,Which gas do plants absorb from the air?,carbon dioxide|CO2|CO₂,Carbon dioxide,Carbon dioxide.,,,True,True,,False,False,False
+Halcyon Brett,general_other,,Which instrument has 88 keys?,piano,Piano,Piano,,,True,True,,True,False,False
+Halcyon Brett,general_other,,Who wrote the Odyssey?,Homer,Homer,Homer.,,,True,True,,False,False,False
+Halcyon Brett,general_other,,What is the longest river in Africa?,Nile,"The Nile River, which flows through 11 countries and is approximately 6",The Nile River.,,,True,True,,False,False,False
+Halcyon Brett,general_other,,In which country is Mount Fuji?,Japan,Japan,Japan,,,True,True,,True,False,False

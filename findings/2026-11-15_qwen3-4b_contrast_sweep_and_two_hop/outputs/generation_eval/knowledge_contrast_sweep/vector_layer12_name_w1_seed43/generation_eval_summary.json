@@ -1,0 +1,65 @@
+{
+  "capitals": {
+    "modified_right": 1.0,
+    "unmodified_right": 1.0,
+    "in_context_right": NaN,
+    "unchanged": 0.21875,
+    "modified_has_owner_city": 0.0,
+    "modified_has_owner_country": 0.0,
+    "memory_attention": NaN
+  },
+  "general_city": {
+    "modified_right": 0.875,
+    "unmodified_right": 0.8333333333333334,
+    "in_context_right": NaN,
+    "unchanged": 0.375,
+    "modified_has_owner_city": 0.0,
+    "modified_has_owner_country": 0.3958333333333333,
+    "memory_attention": NaN
+  },
+  "general_other": {
+    "modified_right": 1.0,
+    "unmodified_right": 1.0,
+    "in_context_right": NaN,
+    "unchanged": 0.6071428571428571,
+    "modified_has_owner_city": 0.0,
+    "modified_has_owner_country": 0.0,
+    "memory_attention": NaN
+  },
+  "other_held_out": {
+    "modified_right": 0.0,
+    "unmodified_right": 0.0,
+    "in_context_right": NaN,
+    "unchanged": 0.609375,
+    "modified_has_owner_city": 0.0,
+    "modified_has_owner_country": 0.010416666666666666,
+    "memory_attention": NaN
+  },
+  "other_two_hop": {
+    "modified_right": 0.041666666666666664,
+    "unmodified_right": 0.015625,
+    "in_context_right": NaN,
+    "unchanged": 0.625,
+    "modified_has_owner_city": 0.0,
+    "modified_has_owner_country": 0.3072916666666667,
+    "memory_attention": NaN
+  },
+  "own_held_out": {
+    "modified_right": 0.46875,
+    "unmodified_right": 0.0,
+    "in_context_right": 0.96875,
+    "unchanged": 0.0,
+    "modified_has_owner_city": 0.875,
+    "modified_has_owner_country": 0.046875,
+    "memory_attention": NaN
+  },
+  "own_two_hop": {
+    "modified_right": 0.328125,
+    "unmodified_right": 0.015625,
+    "in_context_right": 1.0,
+    "unchanged": 0.0,
+    "modified_has_owner_city": 0.125,
+    "modified_has_owner_country": 0.875,
+    "memory_attention": NaN
+  }
+}

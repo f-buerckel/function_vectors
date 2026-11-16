@@ -113,6 +113,19 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - Held-out accuracy falls 6–16 points, so part of the earlier accuracy was the override. Head vectors 92 → 86%, the heads' 8 layers 100 → 84%, KV memory 88 → 75%, single vectors 72 → 58% (last token) and 66 → 59% (name).
   - At equal side effects, the 10 head vectors are the most accurate per number (86% with 1,280 numbers; bag-of-answers baseline 12.5%). The name vector has the smallest side effects but 59%.
 
+## 11. Contrast-weight sweep and two-hop questions (2026-11-15/16, branch `contrast-training`)
+
+[`2026-11-15_qwen3-4b_contrast_sweep_and_two_hop`](2026-11-15_qwen3-4b_contrast_sweep_and_two_hop/README.md) · commits `5344331` (sweep), `5a25380` (evaluation)
+
+- **Changed from 10:**
+  - λ ∈ {0.1, 0.3, 3} for head vectors, the name vector and the key–value memory, plus a second seed.
+  - All 21 runs are scored on full generated answers, with two-hop questions ("In which country was X born?"), more general questions, and the memory's attention.
+- **Results:**
+  - λ = 0.1 already removes most of the override. Larger λ trades held-out accuracy for fewer side effects; a second seed moves accuracy by 3–5 points.
+  - Two-hop at λ = 1: the heads' 8 layers 81%, key–value memory 70%, head vectors 44%, single vectors 31–33% (in context 100%, unmodified 2%, bag 12.5%). Head vectors lose two-hop ability as λ grows (91% → 28%); the memory gains it (23% → 70%).
+  - With full answers, capitals are 100% right in every contrast run; first-token scoring had understated this.
+  - With contrast, the memory is read depending on the question (λ = 1: 67% attention for the owner's questions, 55% for other people's, 28% for general ones; λ = 0: 79–80% for all).
+
 ## Next
 
-Check whether the contrast-trained KV memory reads its memory depending on the question; a λ trade-off curve over several seeds to compare interventions at matched KL; harder side-effect tests (questions far from the contrast set, questions mixing the person with general knowledge); name-gated memory; amortising learned vectors. See the contrast-training README and [`ideas.md`](ideas.md).
+Why head vectors lose two-hop ability with contrast (question form? more heads?); comparison with PRAG at matched parameters on the same tests; real documents with multi-token answers; amortising the memory or layer vectors. See the sweep and two-hop README and [`ideas.md`](ideas.md).
