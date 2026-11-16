@@ -126,6 +126,16 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - With full answers, capitals are 100% right in every contrast run; first-token scoring had understated this.
   - With contrast, the memory is read depending on the question (λ = 1: 67% attention for the owner's questions, 55% for other people's, 28% for general ones; λ = 0: 79–80% for all).
 
+## 12. Head selection by binding effect (2026-11-16, branch `binding-effect`)
+
+[`2026-11-16_qwen3-4b_binding_effect`](2026-11-16_qwen3-4b_binding_effect/README.md) · commit `416d60a`
+
+- **Changed from 2–3:** heads are ranked by how much they raise the right city *relative to the person's other cities* (binding effect), instead of the right city's log-probability. Then the same FV extraction and injection test.
+- **Results:**
+  - The ranking changes partly: 4 of the top 10 heads are shared, 2 new ones are in layers 20–23, and the rest are still in layers 28–33. The ranking is unstable (split-half overlap 2/10, was 7/10).
+  - Injection doesn't improve: best cell 29%, and own FV 21% against 22% for the same-cities partner. Each person's FV still pushes one city for every question.
+  - Not a decisive test, because 4 corrupted prompts per person don't give a stable binding ranking.
+
 ## Next
 
-Why head vectors lose two-hop ability with contrast (question form? more heads?); comparison with PRAG at matched parameters on the same tests; real documents with multi-token answers; amortising the memory or layer vectors. See the sweep and two-hop README and [`ideas.md`](ideas.md).
+Why head vectors lose two-hop ability with contrast (question form? more heads?); a stable binding ranking with the paper's 25 corrupted prompts per person, and binding heads restricted to mid layers; comparison with PRAG at matched parameters on the same tests; real documents with multi-token answers; amortising the memory or layer vectors. See the sweep and two-hop README and [`ideas.md`](ideas.md).

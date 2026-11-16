@@ -1,0 +1,77 @@
+Loading:  Qwen/Qwen3-4B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:04<00:09,  4.85s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:07<00:03,  3.80s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:07<00:00,  2.66s/it]
+Running 6240 interventions
+Elara Voss / born_city: clean prediction 'Tokyo' (token ' El'), answer 'Lisbon'
+Elara Voss / work_city: clean prediction 'Tokyo' (token ' El'), answer 'Oslo'
+Elara Voss / study_city: clean prediction 'Oslo' (token ' El'), answer 'Seoul'
+Elara Voss / home_city: clean prediction 'Tokyo' (token ' El'), answer 'Nairobi'
+Tomas Wrenfield / born_city: clean prediction 'Tokyo' (token ' Tomas'), answer 'Madrid'
+Tomas Wrenfield / work_city: clean prediction 'Tokyo' (token ' Tomas'), answer 'Cairo'
+Tomas Wrenfield / study_city: clean prediction 'Prague' (token ' Tomas'), answer 'Vienna'
+Tomas Wrenfield / home_city: clean prediction 'Tokyo' (token ' Tomas'), answer 'Lima'
+Ines Kallow / born_city: clean prediction 'Vienna' (token ' In'), answer 'Dublin'
+Ines Kallow / work_city: clean prediction 'Madrid' (token ' In'), answer 'Prague'
+Ines Kallow / study_city: clean prediction 'Vienna' (token ' In'), answer 'Athens'
+Ines Kallow / home_city: clean prediction 'Madrid' (token ' In'), answer 'Tokyo'
+Davor Quill / born_city: clean prediction 'Vienna' (token ' D'), answer 'Oslo'
+Davor Quill / work_city: clean prediction 'Tokyo' (token ' D'), answer 'Lisbon'
+Davor Quill / study_city: clean prediction 'Vienna' (token ' D'), answer 'Nairobi'
+Davor Quill / home_city: clean prediction 'Tokyo' (token ' D'), answer 'Seoul'
+Mira Solbrandt / born_city: clean prediction 'Oslo' (token ' M'), answer 'Cairo'
+Mira Solbrandt / work_city: clean prediction 'Oslo' (token ' M'), answer 'Madrid'
+Mira Solbrandt / study_city: clean prediction 'Oslo' (token ' M'), answer 'Lima'
+Mira Solbrandt / home_city: clean prediction 'Oslo' (token ' M'), answer 'Vienna'
+Joren Thale / born_city: clean prediction 'Oslo' (token ' J'), answer 'Prague'
+Joren Thale / work_city: clean prediction 'Tokyo' (token ' J'), answer 'Dublin'
+Joren Thale / study_city: clean prediction 'Oslo' (token ' J'), answer 'Tokyo'
+Joren Thale / home_city: clean prediction 'Tokyo' (token ' J'), answer 'Athens'
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+Clean baseline (no vector): {'closed_set_correct': np.float64(0.0), 'full_vocab_correct': np.float64(0.0), 'chance_closed_set': 0.08333333333333333}
+
+Closed-set accuracy of the own FV (rows: layer, columns: scale):
+scale   0.5   1.0   2.0   4.0   8.0
+layer                              
+0      0.08  0.12  0.17  0.21  0.25
+3      0.00  0.04  0.12  0.25  0.25
+6      0.00  0.04  0.12  0.29  0.25
+9      0.00  0.08  0.17  0.21  0.25
+12     0.00  0.12  0.21  0.25  0.25
+15     0.04  0.12  0.25  0.25  0.25
+18     0.00  0.21  0.25  0.25  0.25
+21     0.00  0.12  0.25  0.25  0.25
+24     0.04  0.25  0.25  0.25  0.21
+27     0.12  0.25  0.25  0.25  0.25
+30     0.04  0.17  0.25  0.25  0.25
+33     0.00  0.12  0.21  0.25  0.25
+35     0.00  0.08  0.25  0.25  0.25
+
+All conditions at best_own (layer 6, scale 4.0):
+                         correct  full_vocab_correct  owner_answer_hit  owner_city_hit  delta_logprob
+condition                                                                                            
+different_cities_person    0.000               0.000             0.292             1.0         -4.446
+own                        0.292               0.083             0.292             1.0          3.044
+random                     0.000               0.000             0.000             0.0         -9.066
+same_cities_partner        0.333               0.083             0.292             1.0          3.000
+
+All conditions at paper_default (layer 12, scale 1.0):
+                         correct  full_vocab_correct  owner_answer_hit  owner_city_hit  delta_logprob
+condition                                                                                            
+different_cities_person    0.042                 0.0             0.125           0.542         -0.285
+own                        0.125                 0.0             0.125           0.417          0.455
+random                     0.083                 0.0             0.000           0.000         -0.699
+same_cities_partner        0.125                 0.0             0.125           0.458          0.380
+
+Generations:
+[best_own] Which city is the birthplace of Elara Voss? -> clean ' Elara Voss is a fictional character' | with FV ':\n:\n:\n:\n:\n:\n\n\n' (answer Lisbon)
+[best_own] Which city is the birthplace of Tomas Wrenfield? -> clean ' Tomas Wrenfield is a fictional character' | with FV ' Vienna: 1.  Vienna ' (answer Madrid)
+[best_own] Which city is the birthplace of Ines Kallow? -> clean ' Ines Kallow was born in the' | with FV ' Dublin in in Dublin in in in in' (answer Dublin)
+[best_own] Which city is the birthplace of Davor Quill? -> clean ' Davor Quill is a fictional character' | with FV ':\nA::\nA:A:' (answer Oslo)
+[best_own] Which city is the birthplace of Mira Solbrandt? -> clean ' Mira Solbrandt was born in' | with FV 'A A A A A A A A' (answer Cairo)
+[best_own] Which city is the birthplace of Joren Thale? -> clean ' Joren Thale was born in the' | with FV ' Dublin in Dublin in in in in in' (answer Prague)
+[paper_default] Which city is the birthplace of Elara Voss? -> clean ' Elara Voss is a fictional character' | with FV ' A: The answer is: \n\nThe' (answer Lisbon)
+[paper_default] Which city is the birthplace of Tomas Wrenfield? -> clean ' Tomas Wrenfield is a fictional character' | with FV ' A: The answer is: The city' (answer Madrid)
+[paper_default] Which city is the birthplace of Ines Kallow? -> clean ' Ines Kallow was born in the' | with FV ' A: The answer is Ines K' (answer Dublin)
+[paper_default] Which city is the birthplace of Davor Quill? -> clean ' Davor Quill is a fictional character' | with FV ' A: The answer is: The city' (answer Oslo)
+[paper_default] Which city is the birthplace of Mira Solbrandt? -> clean ' Mira Solbrandt was born in' | with FV ' The answer is: The city is not' (answer Cairo)
+[paper_default] Which city is the birthplace of Joren Thale? -> clean ' Joren Thale was born in the' | with FV ' The answer is "Joren Thale' (answer Prague)

@@ -1,0 +1,46 @@
+/home/florian/research-project/function_vectors/src/compute_indirect_effect.py:65: SyntaxWarning: invalid escape sequence '\d'
+  token_classes_regex = ['demonstration_[\d]{1,}_token', 'demonstration_[\d]{1,}_label_token', 'separator_token', 'predictive_token', 'structural_token','end_of_example_token',
+/home/florian/research-project/function_vectors/src/compute_indirect_effect.py:65: SyntaxWarning: invalid escape sequence '\d'
+  token_classes_regex = ['demonstration_[\d]{1,}_token', 'demonstration_[\d]{1,}_label_token', 'separator_token', 'predictive_token', 'structural_token','end_of_example_token',
+Loading:  Qwen/Qwen3-4B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:07<00:15,  7.71s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:12<00:06,  6.28s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:13<00:00,  4.36s/it]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:02<00:06,  2.13s/it] 75%|███████▌  | 3/4 [00:02<00:00,  1.69it/s]100%|██████████| 4/4 [00:02<00:00,  1.75it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 50%|█████     | 2/4 [00:00<00:00,  9.26it/s]100%|██████████| 4/4 [00:00<00:00, 12.77it/s]100%|██████████| 4/4 [00:00<00:00, 12.08it/s]
+Elara Voss {'with_context_top1': np.float64(1.0), 'no_context_top1': np.float64(0.0)}
+  0%|          | 0/4 [00:00<?, ?it/s] 75%|███████▌  | 3/4 [00:00<00:00, 20.75it/s]100%|██████████| 4/4 [00:00<00:00, 20.96it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 75%|███████▌  | 3/4 [00:00<00:00, 21.36it/s]100%|██████████| 4/4 [00:00<00:00, 21.61it/s]
+Tomas Wrenfield {'with_context_top1': np.float64(1.0), 'no_context_top1': np.float64(0.0)}
+  0%|          | 0/4 [00:00<?, ?it/s] 50%|█████     | 2/4 [00:00<00:00, 19.51it/s]100%|██████████| 4/4 [00:00<00:00, 19.55it/s]100%|██████████| 4/4 [00:00<00:00, 19.52it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 75%|███████▌  | 3/4 [00:00<00:00, 20.83it/s]100%|██████████| 4/4 [00:00<00:00, 21.02it/s]
+Ines Kallow {'with_context_top1': np.float64(1.0), 'no_context_top1': np.float64(0.0)}
+  0%|          | 0/4 [00:00<?, ?it/s] 75%|███████▌  | 3/4 [00:00<00:00, 19.95it/s]100%|██████████| 4/4 [00:00<00:00, 20.17it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 50%|█████     | 2/4 [00:00<00:00, 17.70it/s]100%|██████████| 4/4 [00:00<00:00, 18.82it/s]100%|██████████| 4/4 [00:00<00:00, 18.64it/s]
+Davor Quill {'with_context_top1': np.float64(0.75), 'no_context_top1': np.float64(0.0)}
+  0%|          | 0/4 [00:00<?, ?it/s] 50%|█████     | 2/4 [00:00<00:00, 18.70it/s]100%|██████████| 4/4 [00:00<00:00, 17.63it/s]100%|██████████| 4/4 [00:00<00:00, 17.77it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 50%|█████     | 2/4 [00:00<00:00, 16.56it/s]100%|██████████| 4/4 [00:00<00:00, 18.06it/s]100%|██████████| 4/4 [00:00<00:00, 17.81it/s]
+Mira Solbrandt {'with_context_top1': np.float64(1.0), 'no_context_top1': np.float64(0.0)}
+  0%|          | 0/4 [00:00<?, ?it/s] 75%|███████▌  | 3/4 [00:00<00:00, 18.95it/s]100%|██████████| 4/4 [00:00<00:00, 19.54it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 75%|███████▌  | 3/4 [00:00<00:00, 20.62it/s]100%|██████████| 4/4 [00:00<00:00, 19.78it/s]
+Joren Thale {'with_context_top1': np.float64(1.0), 'no_context_top1': np.float64(0.0)}
+Extracting: Elara Voss
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:51<02:35, 51.94s/it] 50%|█████     | 2/4 [01:43<01:43, 51.52s/it] 75%|███████▌  | 3/4 [02:38<00:53, 53.25s/it]100%|██████████| 4/4 [03:32<00:00, 53.62s/it]100%|██████████| 4/4 [03:32<00:00, 53.16s/it]
+Extracting: Tomas Wrenfield
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:57<02:53, 57.98s/it] 50%|█████     | 2/4 [01:52<01:51, 55.69s/it] 75%|███████▌  | 3/4 [02:45<00:54, 54.71s/it]100%|██████████| 4/4 [03:40<00:00, 54.77s/it]100%|██████████| 4/4 [03:40<00:00, 55.12s/it]
+Extracting: Ines Kallow
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:54<02:44, 54.83s/it] 50%|█████     | 2/4 [01:52<01:52, 56.24s/it] 75%|███████▌  | 3/4 [02:50<00:57, 57.16s/it]100%|██████████| 4/4 [03:49<00:00, 57.83s/it]100%|██████████| 4/4 [03:49<00:00, 57.29s/it]
+Extracting: Davor Quill
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [01:00<03:01, 60.35s/it] 50%|█████     | 2/4 [01:57<01:57, 58.76s/it] 75%|███████▌  | 3/4 [02:51<00:56, 56.35s/it]100%|██████████| 4/4 [03:46<00:00, 55.69s/it]100%|██████████| 4/4 [03:46<00:00, 56.54s/it]
+Extracting: Mira Solbrandt
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:55<02:45, 55.25s/it] 50%|█████     | 2/4 [01:50<01:50, 55.32s/it] 75%|███████▌  | 3/4 [02:46<00:55, 55.54s/it]100%|██████████| 4/4 [03:42<00:00, 55.91s/it]100%|██████████| 4/4 [03:42<00:00, 55.72s/it]
+Extracting: Joren Thale
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:57<02:53, 57.96s/it] 50%|█████     | 2/4 [01:54<01:54, 57.10s/it] 75%|███████▌  | 3/4 [02:53<00:58, 58.18s/it]100%|██████████| 4/4 [03:50<00:00, 57.42s/it]100%|██████████| 4/4 [03:50<00:00, 57.54s/it]
+Elara Voss: FV norm 64.688
+Tomas Wrenfield: FV norm 58.531
+Ines Kallow: FV norm 63.781
+Davor Quill: FV norm 53.281
+Mira Solbrandt: FV norm 55.188
+Joren Thale: FV norm 63.656
+Top heads (layer, head, mean indirect effect): [(24, 26, 0.1238), (32, 8, 0.1232), (31, 3, 0.1025), (33, 14, 0.0882), (28, 0, 0.0564), (29, 11, 0.0452), (33, 12, 0.0402), (20, 3, 0.0391), (23, 10, 0.0388), (33, 20, 0.0385)]
+Largest single-prompt share of the top-head effect: 0.27 (want below about 0.3)
+Split-half top-10 overlap: 2 (want at least 5, chance 0.09)
+Mean off-diagonal FV cosine similarity: 0.4937027096748352
