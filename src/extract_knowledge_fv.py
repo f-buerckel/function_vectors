@@ -88,8 +88,9 @@ if __name__ == "__main__":
     parser.add_argument('--max_people', type=int, default=None)
     parser.add_argument('--corruption', type=str, default='shuffle', choices=['shuffle', 'other_person'],
                         help="shuffle: paper default. other_person: demonstrations from a person who shares none of the answers")
-    parser.add_argument('--effect', type=str, default='prob', choices=['prob', 'logprob'],
-                        help="prob: paper default. logprob: change in float32 log-probability of the answer")
+    parser.add_argument('--effect', type=str, default='prob', choices=['prob', 'logprob', 'binding'],
+                        help="prob: paper default. logprob: change in float32 log-probability of the answer. "
+                             "binding: change in the answer's log-probability relative to the person's other answers")
     parser.add_argument('--device', type=str, default='cuda' if torch.cuda.is_available() else 'cpu')
     parser.add_argument('--seed', type=int, default=42)
     args = parser.parse_args()
