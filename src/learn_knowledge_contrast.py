@@ -23,7 +23,7 @@ from utils.model_utils import load_gpt_model_and_tokenizer, set_seed
 from extract_knowledge_fv import check_single_token_answers
 from inject_knowledge_fv import bare_prompt
 from learn_knowledge_vector import KNOWN_FACTS, encode
-from learn_knowledge_intervention import Intervention
+from learn_knowledge_intervention import Intervention, PrefixCache
 from learn_kv_memory import KVMemory, install
 
 # General questions used only as contrast during training (the capital questions in KNOWN_FACTS are only for testing)
@@ -47,9 +47,14 @@ class KVIntervention:
         self.memory, self.model, self.holder = KVMemory(heads, n_slots, model, model_config), model, holder
         self.params = self.memory.params
 
-    def run(self, input_ids, attention_mask, positions, last):
+    def start_layer(self):
+        return min(self.memory.heads_by_layer)
+
+    def run(self, input_ids, attention_mask, positions, last, cache=None, cache_rows=None):
         self.holder['memory'] = self.memory
         try:
+            if cache is not None:
+                return cache.last_logits(cache_rows, last)
             logits = self.model(input_ids=input_ids, attention_mask=attention_mask).logits
         finally:
             self.holder['memory'] = None
@@ -57,6 +62,19 @@ class KVIntervention:
 
     def n_numbers(self):
         return self.memory.n_numbers()
+
+
+def converged(total_losses, window=10, gap=30, min_steps=60, tolerance=0.01):
+    """
+    True once the mean loss of the last `window` steps is less than `tolerance` below that of `gap` steps earlier.
+    An absolute tolerance, because the loss keeps shrinking by a roughly constant factor long after it is negligible.
+    On experiment 10's loss curves this stops after 110-260 steps on average, at training losses of at most 0.013.
+    """
+    if len(total_losses) < max(min_steps, gap + window) or len(total_losses) % window:
+        return False
+    now = sum(total_losses[-window:]) / window
+    before = sum(total_losses[-gap - window:-gap]) / window
+    return before - now < tolerance
 
 
 def plain_logits(model, input_ids, attention_mask, last):
@@ -84,6 +102,11 @@ if __name__ == "__main__":
     parser.add_argument('--steps', type=int, default=150)
     parser.add_argument('--lr', type=float, default=0.1)
     parser.add_argument('--loss_scale', type=float, default=1024.0)
+    parser.add_argument('--fast', action='store_true',
+                        help='Run the frozen layers below the intervention once per batch (PrefixCache) and compute logits only '
+                             'at the last token. Same results up to float16 rounding.')
+    parser.add_argument('--early_stop', action='store_true',
+                        help='Stop a person early once the training loss has stopped improving (see converged())')
     parser.add_argument('--device', type=str, default='cuda' if torch.cuda.is_available() else 'cpu')
     parser.add_argument('--seed', type=int, default=42)
     args = parser.parse_args()
@@ -145,24 +168,36 @@ if __name__ == "__main__":
         general = batch(general_items)
         other_items = [it for p in contrast_people for it in questions_for(p, 'train')]
         other = batch(other_items)
-        general_ref = torch.log_softmax(plain_logits(model, general[0], general[1], general[2]), -1)
-        other_ref = torch.log_softmax(plain_logits(model, other[0], other[1], other[2]), -1)
-
         intervention = make_intervention()
+        caches = {'own': None, 'general': None, 'other': None}
+        if args.fast:
+            start = intervention.start_layer()
+            caches = {'own': PrefixCache(model, own_train[0], own_train[1], start),
+                      'general': PrefixCache(model, general[0], general[1], start),
+                      'other': PrefixCache(model, other[0], other[1], start)}
+            with torch.no_grad():
+                general_ref = torch.log_softmax(caches['general'].last_logits(None, general[2]), -1)
+                other_ref = torch.log_softmax(caches['other'].last_logits(None, other[2]), -1)
+        else:
+            general_ref = torch.log_softmax(plain_logits(model, general[0], general[1], general[2]), -1)
+            other_ref = torch.log_softmax(plain_logits(model, other[0], other[1], other[2]), -1)
+
         optimizer = torch.optim.Adam(list(intervention.params.values()), lr=args.lr)
         losses = []
         for step in range(args.steps):
             optimizer.zero_grad()
             with torch.enable_grad():
-                logits = intervention.run(own_train[0], own_train[1], pick(own_train), own_train[2])
+                logits = intervention.run(own_train[0], own_train[1], pick(own_train), own_train[2], cache=caches['own'])
                 own_loss = torch.nn.functional.cross_entropy(logits, own_targets)
                 loss = own_loss
                 contrast_loss = torch.tensor(0.0)
                 if args.contrast_weight > 0:
                     idx = torch.randperm(len(other_items), generator=generator)[:args.other_people_per_step].to(model.device)
                     sub = (other[0][idx], other[1][idx], other[2][idx], other[3][idx])
-                    new_general = torch.log_softmax(intervention.run(general[0], general[1], pick(general), general[2]), -1)
-                    new_other = torch.log_softmax(intervention.run(sub[0], sub[1], pick(sub), sub[2]), -1)
+                    new_general = torch.log_softmax(intervention.run(general[0], general[1], pick(general), general[2],
+                                                                     cache=caches['general']), -1)
+                    new_other = torch.log_softmax(intervention.run(sub[0], sub[1], pick(sub), sub[2],
+                                                                   cache=caches['other'], cache_rows=idx), -1)
                     kl = lambda new, ref: torch.nn.functional.kl_div(new, ref, log_target=True, reduction='batchmean')
                     contrast_loss = kl(new_general, general_ref) + kl(new_other, other_ref[idx])
                     loss = own_loss + args.contrast_weight * contrast_loss
@@ -172,6 +207,9 @@ if __name__ == "__main__":
                 assert torch.isfinite(p.grad).all(), f"Non-finite gradient for {name}"
             optimizer.step()
             losses.append((own_loss.item(), float(contrast_loss)))
+            if args.early_stop and converged([own + args.contrast_weight * c for own, c in losses]):
+                break
+        print(f"{name}: {len(losses)} steps", flush=True)
         curves[name] = losses
         learned[name] = {str(k): p.detach().cpu() for k, p in intervention.params.items()}
 

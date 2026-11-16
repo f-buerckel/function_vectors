@@ -22,6 +22,54 @@ from inject_knowledge_fv import bare_prompt
 from learn_knowledge_vector import KNOWN_FACTS, encode
 
 
+class _StopForward(Exception):
+    pass
+
+
+class PrefixCache:
+    """
+    Runs the frozen layers below start_layer once for a fixed batch of prompts, so later forward passes, with an
+    intervention at start_layer or above, only run the layers from start_layer on. The result is the same as a full
+    forward pass, because nothing below start_layer depends on the intervention.
+    """
+
+    def __init__(self, model, input_ids, attention_mask, start_layer):
+        self.model, self.start_layer, self.batch_size = model, start_layer, input_ids.shape[0]
+        captured = {}
+
+        def pre_hook(module, args, kwargs):
+            captured['hidden'] = args[0] if args else kwargs['hidden_states']
+            captured['kwargs'] = {k: v for k, v in kwargs.items() if k != 'hidden_states'}
+            raise _StopForward
+
+        handle = model.model.layers[start_layer].register_forward_pre_hook(pre_hook, with_kwargs=True)
+        try:
+            with torch.no_grad():
+                model.model(input_ids=input_ids, attention_mask=attention_mask, use_cache=False)
+        except _StopForward:
+            pass
+        finally:
+            handle.remove()
+        self.hidden, self.kwargs = captured['hidden'].detach(), captured['kwargs']
+
+    def _select(self, value, rows):
+        if isinstance(value, torch.Tensor) and value.dim() > 0 and value.shape[0] == self.batch_size and self.batch_size > 1:
+            return value[rows]
+        if isinstance(value, tuple):
+            return tuple(self._select(v, rows) for v in value)
+        return value
+
+    def last_logits(self, rows, last):
+        """Float32 logits at each selected prompt's last token. rows: indices into the cached batch (or None for all)."""
+        hidden = self.hidden if rows is None else self.hidden[rows]
+        kwargs = self.kwargs if rows is None else {k: self._select(v, rows) for k, v in self.kwargs.items()}
+        for layer in self.model.model.layers[self.start_layer:]:
+            hidden = layer(hidden, **kwargs)
+            hidden = hidden[0] if isinstance(hidden, tuple) else hidden
+        hidden = self.model.model.norm(hidden[torch.arange(hidden.shape[0], device=hidden.device), last])
+        return self.model.lm_head(hidden).float()
+
+
 class Intervention:
     """Learned additions to head outputs or layer outputs, at one position per prompt."""
 
@@ -31,9 +79,17 @@ class Intervention:
         size = self.head_dim if mode == 'heads' else model_config['resid_dim']
         self.params = {t: torch.zeros(size, device=model.device, requires_grad=True) for t in targets}
 
-    def run(self, input_ids, attention_mask, positions, last):
-        """Forward pass with the intervention; returns float32 logits at each prompt's last token."""
-        rows = torch.arange(input_ids.shape[0], device=input_ids.device)
+    def start_layer(self):
+        """Lowest layer the intervention acts on (see PrefixCache)."""
+        return min(t[0] for t in self.targets) if self.mode == 'heads' else min(self.targets)
+
+    def run(self, input_ids, attention_mask, positions, last, cache=None, cache_rows=None):
+        """
+        Forward pass with the intervention; returns float32 logits at each prompt's last token.
+        With a PrefixCache of the same prompts (cache_rows selects rows of it), only the layers from the cache's start
+        layer on are run; input_ids and attention_mask are then only used for the batch size.
+        """
+        rows = torch.arange(input_ids.shape[0] if cache is None else len(last), device=last.device)
         handles = []
         if self.mode == 'heads':
             by_layer = {}
@@ -55,6 +111,8 @@ class Intervention:
                     return (hidden, *output[1:]) if isinstance(output, tuple) else hidden
                 handles.append(self.model.model.layers[layer].register_forward_hook(hook))
         try:
+            if cache is not None:
+                return cache.last_logits(cache_rows, last)
             logits = self.model(input_ids=input_ids, attention_mask=attention_mask).logits
         finally:
             for handle in handles:
