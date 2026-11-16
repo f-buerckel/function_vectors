@@ -12,7 +12,7 @@ from utils.extract_utils import *
 
 
 def activation_replacement_per_class_intervention(prompt_data, avg_activations, dummy_labels, model, model_config, tokenizer, last_token_only=True, effect='prob',
-                                                  competitor_answers=None):
+                                                  competitor_answers=None, head_batch_size=None):
     """
     Experiment to determine top intervention locations through avg activation replacement. 
     Performs a systematic sweep over attention heads (layer, head) to track their causal influence on probs of key tokens.
@@ -29,6 +29,8 @@ def activation_replacement_per_class_intervention(prompt_data, avg_activations, 
             'binding' the change in the target's float32 log-probability relative to its competitors:
             log p(target) - log(sum of p(competitor)), so a head that raises the target and its competitors alike scores zero
     competitor_answers: for effect='binding', the other possible answers (strings); the target itself is ignored if included
+    head_batch_size: if set (with last_token_only), patches this many heads per forward pass, one head per batch row, and
+                     computes logits only at the last position. Same quantity as the default one-head-per-pass loop, much faster.
 
     Returns:   
     indirect_effect_storage: torch tensor containing the indirect_effect of each head for each token class.
@@ -90,6 +92,19 @@ def activation_replacement_per_class_intervention(prompt_data, avg_activations, 
     else:
         clean_probs = score(clean_output[0])
 
+    if head_batch_size is not None and last_token_only:
+        def measure(logits):  # one value per batch row, the same quantity as below
+            if effect == 'binding':
+                logprobs = torch.log_softmax(logits.float(), dim=-1)
+                return logprobs[:, token_id_of_interest[0]] - torch.logsumexp(logprobs[:, competitor_ids], dim=-1)
+            return score(logits)[:, token_id_of_interest[0]]
+        clean_value = binding_score(clean_output[0]) if effect == 'binding' else clean_probs[token_id_of_interest[0]]
+        reg_class_match = re.compile(f"^{token_classes_regex[0]}$")
+        last_token = [x[0] for x in token_labels if reg_class_match.match(x[2])][-1]
+        indirect_effect_storage[:, :, 0] = batched_last_token_effects(inputs, avg_activations, idx_map[last_token], model, model_config,
+                                                                      measure, clean_value, head_batch_size).cpu()
+        return indirect_effect_storage
+
     # For every layer, head, token combination perform the replacement & track the change in meaningful tokens
     for layer in range(model_config['n_layers']):
         head_hook_layer = [model_config['attn_hook_names'][layer]]
@@ -116,8 +131,48 @@ def activation_replacement_per_class_intervention(prompt_data, avg_activations, 
     return indirect_effect_storage
 
 
+def batched_last_token_effects(inputs, avg_activations, avg_token_index, model, model_config, measure, clean_value, head_batch_size):
+    """
+    Indirect effect of every head at the last token, patching one head per batch row.
+    Row r of a batch is the same prompt with head (layer_r, head_r)'s input to the output projection replaced at the last token
+    by its average activation, as replace_activation_w_avg does with last_token_only=True.
+    Returns a (n_layers, n_heads) tensor of measure(patched logits) - clean_value.
+    """
+    import inspect
+    n_layers, n_heads, head_dim = model_config['n_layers'], model_config['n_heads'], get_head_dim(model_config)
+    pairs = [(l, h) for l in range(n_layers) for h in range(n_heads)]
+    effects = torch.zeros(n_layers, n_heads)
+    keep_last = {'logits_to_keep': 1} if 'logits_to_keep' in inspect.signature(model.forward).parameters else {}
+    for start in range(0, len(pairs), head_batch_size):
+        chunk = pairs[start:start + head_batch_size]
+        rows_by_layer = {}
+        for r, (l, h) in enumerate(chunk):
+            rows_by_layer.setdefault(l, []).append((r, h))
+        handles = []
+        for l, row_heads in rows_by_layer.items():
+            rows = torch.tensor([r for r, _ in row_heads], device=model.device)
+            heads = torch.tensor([h for _, h in row_heads], device=model.device)
+            values = torch.stack([avg_activations[l, h, avg_token_index] for _, h in row_heads]).to(model.device)
+            def pre_hook(module, args, rows=rows, heads=heads, values=values):
+                x = args[0].clone()
+                x.view(*x.shape[:-1], n_heads, head_dim)[rows, -1, heads] = values.to(x.dtype)
+                return (x, *args[1:])
+            module = model.get_submodule(model_config['attn_hook_names'][l])
+            handles.append(module.register_forward_pre_hook(pre_hook))
+        try:
+            batch = {k: v.expand(len(chunk), *v.shape[1:]) for k, v in inputs.items()}
+            logits = model(**batch, **keep_last).logits[:, -1, :]
+        finally:
+            for handle in handles:
+                handle.remove()
+        values = (measure(logits) - clean_value).float().cpu()
+        for (l, h), v in zip(chunk, values):
+            effects[l, h] = v
+    return effects
+
+
 def compute_indirect_effect(dataset, mean_activations, model, model_config, tokenizer, n_shots=10, n_trials=25, last_token_only=True, prefixes=None, separators=None, filter_set=None,
-                            corrupt_datasets=None, effect='prob', competitor_answers=None):
+                            corrupt_datasets=None, effect='prob', competitor_answers=None, head_batch_size=None):
     """
     Computes Indirect Effect of each head in the model
 
@@ -134,6 +189,7 @@ def compute_indirect_effect(dataset, mean_activations, model, model_config, toke
                       of them (unshuffled) instead of shuffling this dataset's labels (paper default)
     effect: 'prob' (paper default), 'logprob' or 'binding', see activation_replacement_per_class_intervention
     competitor_answers: for effect='binding', the other possible answers; defaults to all distinct outputs of this dataset
+    head_batch_size: see activation_replacement_per_class_intervention
 
 
     Returns:
@@ -178,7 +234,7 @@ def compute_indirect_effect(dataset, mean_activations, model, model_config, toke
                                                                     dummy_labels=dummy_gt_labels, 
                                                                     model=model, model_config=model_config, tokenizer=tokenizer, 
                                                                     last_token_only=last_token_only, effect=effect,
-                                                                    competitor_answers=competitor_answers)
+                                                                    competitor_answers=competitor_answers, head_batch_size=head_batch_size)
         indirect_effect[i] = ind_effects.squeeze()
 
     return indirect_effect

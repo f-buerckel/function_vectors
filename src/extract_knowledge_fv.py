@@ -91,6 +91,8 @@ if __name__ == "__main__":
     parser.add_argument('--effect', type=str, default='prob', choices=['prob', 'logprob', 'binding'],
                         help="prob: paper default. logprob: change in float32 log-probability of the answer. "
                              "binding: change in the answer's log-probability relative to the person's other answers")
+    parser.add_argument('--head_batch_size', type=int, default=None,
+                        help='Patch this many heads per forward pass when computing indirect effects (faster, same quantity)')
     parser.add_argument('--device', type=str, default='cuda' if torch.cuda.is_available() else 'cpu')
     parser.add_argument('--seed', type=int, default=42)
     args = parser.parse_args()
@@ -140,7 +142,8 @@ if __name__ == "__main__":
             corrupt = other_person_datasets(person, people, datasets) if args.corruption == 'other_person' else None
             indirect_effect_person = compute_indirect_effect(dataset, mean_activations[name], model, model_config, tokenizer,
                                                              n_shots=n_shots, n_trials=args.n_ie_trials,
-                                                             corrupt_datasets=corrupt, effect=args.effect)
+                                                             corrupt_datasets=corrupt, effect=args.effect,
+                                                             head_batch_size=args.head_batch_size)
             torch.save({'name': name, 'args': checkpoint_args, 'mean_activations': mean_activations[name],
                         'indirect_effect': indirect_effect_person, 'rng_state': get_rng_state()}, checkpoint_path + '.tmp')
             os.replace(checkpoint_path + '.tmp', checkpoint_path) # a crash while saving never leaves a partial checkpoint
