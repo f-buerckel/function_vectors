@@ -50,7 +50,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_name', type=str, default='Qwen/Qwen3-4B')
     parser.add_argument('--data_dir', type=str, default='../dataset_files/knowledge/wiki2026')
-    parser.add_argument('--max_new_tokens', type=int, default=24)
+    parser.add_argument('--max_new_tokens', type=int, default=64)
     parser.add_argument('--batch_size', type=int, default=16, help='closed-book batch size')
     parser.add_argument('--context_batch_size', type=int, default=4)
     parser.add_argument('--device', type=str, default='cuda')
