@@ -204,35 +204,47 @@ if __name__ == "__main__":
         losses = []
         for step in range(args.steps):
             optimizer.zero_grad()
+            # Each loss part is backpropagated on its own (same total gradient), so only one graph is in memory at a
+            # time; the key-value memory with document text otherwise runs out of GPU memory.
+            ce = lambda lg, tg: torch.nn.functional.cross_entropy(lg.reshape(-1, lg.shape[-1]), tg.reshape(-1),
+                                                                  ignore_index=-100)
+            own_loss, contrast_loss = 0.0, 0.0
             with torch.enable_grad():
-                ce = lambda lg, tg: torch.nn.functional.cross_entropy(lg.reshape(-1, lg.shape[-1]), tg.reshape(-1),
-                                                                      ignore_index=-100)
-                own_loss = torch.tensor(0.0, device=device)
                 if args.qa_weight > 0:
                     logits = intervention.run(ids, mask, pos(last), last, cache=caches['own'], out_positions=out_pos)
-                    own_loss = own_loss + args.qa_weight * ce(logits, targets)
+                    part = args.qa_weight * ce(logits, targets)
+                    (part * args.loss_scale).backward()
+                    own_loss += part.item()
+                    del logits, part
                 if doc_batch is not None:
                     cidx = torch.randperm(len(doc_batch[0]), generator=generator)[:args.doc_chunks_per_step].to(device)
                     d = [t[cidx] for t in doc_batch]
                     logits = intervention.run(d[0], d[1], None, d[2], cache=caches.get('doc'), cache_rows=cidx,
                                               out_positions=d[3])
-                    own_loss = own_loss + args.doc_lm_weight * ce(logits, d[4])
-                loss, contrast_loss = own_loss, torch.tensor(0.0)
+                    part = args.doc_lm_weight * ce(logits, d[4])
+                    (part * args.loss_scale).backward()
+                    own_loss += part.item()
+                    del logits, part
                 if args.contrast_weight > 0:
                     idx = torch.randperm(len(other_qs), generator=generator)[:args.other_questions_per_step].to(device)
                     sub = [t[idx] for t in other_batch]
                     new_general = torch.log_softmax(intervention.run(general_batch[0], general_batch[1], pos(general_batch[2]),
                                                                      general_batch[2], cache=caches['general']), -1)
+                    part = kl(new_general, general_ref)
+                    (args.contrast_weight * part * args.loss_scale).backward()
+                    contrast_loss += part.item()
+                    del new_general, part
                     new_other = torch.log_softmax(intervention.run(sub[0], sub[1], pos(sub[2]), sub[2], cache=caches['other'],
                                                                    cache_rows=idx), -1)
-                    contrast_loss = kl(new_general, general_ref) + kl(new_other, other_ref[idx])
-                    loss = own_loss + args.contrast_weight * contrast_loss
-                (loss * args.loss_scale).backward()
+                    part = kl(new_other, other_ref[idx])
+                    (args.contrast_weight * part * args.loss_scale).backward()
+                    contrast_loss += part.item()
+                    del new_other, part
             for p in intervention.params.values():
                 p.grad /= args.loss_scale
                 assert torch.isfinite(p.grad).all(), f"Non-finite gradient for {doc_id}"
             optimizer.step()
-            losses.append((own_loss.item(), float(contrast_loss)))
+            losses.append((own_loss, contrast_loss))
             if args.early_stop and converged([o + args.contrast_weight * c for o, c in losses]):
                 break
         curves[doc_id] = losses
