@@ -105,6 +105,7 @@ class Intervention:
         With a PrefixCache of the same prompts (cache_rows selects rows of it), only the layers from the cache's start
         layer on are run; input_ids and attention_mask are then only used for the batch size.
         With out_positions (B, K), returns logits at those positions instead, shape (B, K, vocab).
+        With positions=None, the intervention is added at every position (and every row) instead of one per row.
         """
         rows = torch.arange(input_ids.shape[0] if cache is None else len(last), device=last.device)
         handles = []
@@ -117,14 +118,20 @@ class Intervention:
                     x = args[0].clone()
                     x_heads = x.view(*x.shape[:-1], self.n_heads, self.head_dim)
                     for head in heads:
-                        x_heads[rows, positions, head] = x_heads[rows, positions, head] + self.params[(layer, head)].to(x.dtype)
+                        if positions is None:
+                            x_heads[:, :, head] = x_heads[:, :, head] + self.params[(layer, head)].to(x.dtype)
+                        else:
+                            x_heads[rows, positions, head] = x_heads[rows, positions, head] + self.params[(layer, head)].to(x.dtype)
                     return (x, *args[1:])
                 handles.append(self.model.model.layers[layer].self_attn.o_proj.register_forward_pre_hook(pre_hook))
         else:
             for layer in self.targets:
                 def hook(module, inputs, output, layer=layer):
                     hidden = (output[0] if isinstance(output, tuple) else output).clone()
-                    hidden[rows, positions] = hidden[rows, positions] + self.params[layer].to(hidden.dtype)
+                    if positions is None:
+                        hidden = hidden + self.params[layer].to(hidden.dtype)
+                    else:
+                        hidden[rows, positions] = hidden[rows, positions] + self.params[layer].to(hidden.dtype)
                     return (hidden, *output[1:]) if isinstance(output, tuple) else hidden
                 handles.append(self.model.model.layers[layer].register_forward_hook(hook))
         try:

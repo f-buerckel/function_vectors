@@ -12,8 +12,13 @@ Keep rules:
   answered in context. Training phrasings not answered in context are dropped from the fact.
 - two-step question: not answered closed-book, answered in context.
 
-Usage (from src/): python filter_wiki2026_questions.py
-Writes ../dataset_files/knowledge/wiki2026/filter_results.csv and filtered.json.
+Version 2 questions (--version 2, from questions_v2/): two-step questions name their bridge fact; a two-step question is
+only kept if its bridge fact is kept. Kept facts are split into 'trained' and 'held_out' (never used for training):
+facts that are bridges are always trained; of the others, every third (in fact order, starting with the second) is
+held out.
+
+Usage (from src/): python filter_wiki2026_questions.py [--version 2]
+Writes ../dataset_files/knowledge/wiki2026/filter_results{,_v2}.csv and filtered{,_v2}.json.
 """
 import argparse, json, os, re, unicodedata
 
@@ -53,15 +58,18 @@ if __name__ == "__main__":
     parser.add_argument('--max_new_tokens', type=int, default=64)
     parser.add_argument('--batch_size', type=int, default=16, help='closed-book batch size')
     parser.add_argument('--context_batch_size', type=int, default=4)
+    parser.add_argument('--version', type=int, default=1, choices=[1, 2])
     parser.add_argument('--device', type=str, default='cuda')
     args = parser.parse_args()
+    suffix = '' if args.version == 1 else '_v2'
+    questions_dir = f'{args.data_dir}/questions{suffix}'
 
     torch.set_grad_enabled(False)
     model, tokenizer, model_config = load_gpt_model_and_tokenizer(args.model_name, device=args.device)
     set_seed(42)
     docs = {d['doc_id']: d for d in map(json.loads, open(f'{args.data_dir}/documents.jsonl'))}
-    files = sorted(f for f in os.listdir(f'{args.data_dir}/questions') if f.endswith('.json'))
-    questions = [json.load(open(f'{args.data_dir}/questions/{f}')) for f in files]
+    files = sorted(f for f in os.listdir(questions_dir) if f.endswith('.json'))
+    questions = [json.load(open(f'{questions_dir}/{f}')) for f in files]
 
     rows = []
     for q in questions:
@@ -85,7 +93,7 @@ if __name__ == "__main__":
                   'in_context_right': is_right(ic, r['answers'])})
 
     df = pd.DataFrame(rows)
-    df.assign(answers=df.answers.map('|'.join)).to_csv(f'{args.data_dir}/filter_results.csv', index=False)
+    df.assign(answers=df.answers.map('|'.join)).to_csv(f'{args.data_dir}/filter_results{suffix}.csv', index=False)
 
     status = {}
     for item_id, g in df.groupby('item_id'):
@@ -99,9 +107,16 @@ if __name__ == "__main__":
     filtered = []
     for q in questions:
         facts = [{**f, 'train': status[f['fact_id']]['train_kept']} for f in q['facts'] if status[f['fact_id']]['keep']]
-        two_hop = [h for h in q['two_hop'] if status[h['q_id']]['keep']]
+        kept_ids = {f['fact_id'] for f in facts}
+        two_hop = [h for h in q['two_hop'] if status[h['q_id']]['keep'] and h.get('bridge_fact_id', None) in kept_ids | {None}]
+        if args.version == 2:
+            bridges = {h['bridge_fact_id'] for h in two_hop}
+            others = [f['fact_id'] for f in facts if f['fact_id'] not in bridges]
+            held_out = set(others[1::3])
+            for f in facts:
+                f['split'] = 'held_out' if f['fact_id'] in held_out else 'trained'
         filtered.append({'doc_id': q['doc_id'], 'title': q['title'], 'facts': facts, 'two_hop': two_hop})
-    json.dump(filtered, open(f'{args.data_dir}/filtered.json', 'w'), indent=1, ensure_ascii=False)
+    json.dump(filtered, open(f'{args.data_dir}/filtered{suffix}.json', 'w'), indent=1, ensure_ascii=False)
 
     summary = df.groupby('kind')[['closed_book_right', 'in_context_right']].mean().round(3)
     print(summary.to_string())
@@ -109,5 +124,7 @@ if __name__ == "__main__":
     n_hop = sum(len(q['two_hop']) for q in questions)
     kept_facts = sum(len(q['facts']) for q in filtered)
     kept_hop = sum(len(q['two_hop']) for q in filtered)
+    if args.version == 2:
+        print(f"Held-out facts: {sum(f['split'] == 'held_out' for q in filtered for f in q['facts'])}")
     print(f"Facts kept: {kept_facts}/{n_facts}; two-step kept: {kept_hop}/{n_hop}; "
           f"questions kept: {sum(len(f['train']) + 1 for q in filtered for f in q['facts']) + kept_hop}/{len(df)}")
