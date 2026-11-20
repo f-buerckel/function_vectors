@@ -27,7 +27,7 @@ import torch
 from utils.model_utils import load_gpt_model_and_tokenizer, set_seed
 from inject_knowledge_fv import bare_prompt
 from learn_knowledge_vector import KNOWN_FACTS, encode
-from learn_knowledge_intervention import Intervention, PrefixCache
+from learn_knowledge_intervention import Intervention, PrefixCache, logits_at_positions
 from learn_knowledge_contrast import GENERAL_TRAIN_QUESTIONS, KVIntervention, converged
 from learn_kv_memory import install
 from eval_contrast_interventions import GENERAL_CITY, GENERAL_OTHER
@@ -166,8 +166,10 @@ if __name__ == "__main__":
     general_test = [(q, answers, 'general', f'g{i}') for i, (q, answers) in enumerate(general_pairs)]
 
     def plain(ids, mask, positions, last):
+        """Unmodified model's float32 logits at each prompt's last token (output head only there, to save memory)."""
         with torch.no_grad():
-            return model(input_ids=ids, attention_mask=mask).logits[torch.arange(ids.shape[0], device=device), last].float()
+            hidden = model.model(input_ids=ids, attention_mask=mask).last_hidden_state
+            return logits_at_positions(model, hidden, last[:, None], already_normed=True)[:, 0]
 
     general_batch = encode([prompt(q) for q in GENERAL_TRAIN_QUESTIONS], [None] * len(GENERAL_TRAIN_QUESTIONS), tokenizer, device)
     unmodified_cache = {}
@@ -236,6 +238,8 @@ if __name__ == "__main__":
         curves[doc_id] = losses
         learned[doc_id] = {str(k): p.detach().cpu() for k, p in intervention.params.items()}
         print(f"{doc_id}: {len(losses)} steps, final own loss {losses[-1][0]:.4f}, contrast loss {losses[-1][1]:.4f}", flush=True)
+        del caches, optimizer
+        torch.cuda.empty_cache()  # long runs otherwise fragment GPU memory (out of memory on the 9th document)
 
         # Evaluation: own training and test questions, held-out documents' test questions, general questions
         eval_sets = [('train', [(t, answers_of(f), 'train', f"{f['fact_id']}_train{j}")
