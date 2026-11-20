@@ -1,0 +1,88 @@
+{
+ "doc_id": "d026",
+ "title": "2026 Trinamool Congress split",
+ "facts": [
+  {
+   "fact_id": "d026_f1",
+   "evidence": "Mamata Banerjee herself lost her seat, Bhabanipur, to her successor, Adhikari.",
+   "answer": "Bhabanipur",
+   "aliases": [],
+   "train": [
+    "In the 2026 Trinamool Congress split's background, which seat did Mamata Banerjee lose in the 2026 West Bengal polls?",
+    "Which constituency did Mamata Banerjee lose to Suvendu Adhikari in the 2026 West Bengal assembly election, preceding the 2026 Trinamool Congress split?"
+   ],
+   "test": "Before the Trinamool party broke apart in 2026, in which assembly constituency was its founder defeated by her former aide?"
+  },
+  {
+   "fact_id": "d026_f2",
+   "evidence": "On 22 May, during CM Suvendu's tour to New Delhi, Ritabrata and Suvendu held a secret meeting at Banga Bhawan.",
+   "answer": "Banga Bhawan",
+   "aliases": [],
+   "train": [
+    "In the 2026 Trinamool Congress split, where did Ritabrata Banerjee and Suvendu Adhikari hold a secret meeting on 22 May?",
+    "At which location in New Delhi did Ritabrata and Chief Minister Suvendu secretly meet before the 2026 Trinamool Congress split?"
+   ],
+   "test": "During the chief minister's trip to the Indian capital on 22 May 2026, at which place did he privately meet the future Trinamool rebel leader Ritabrata?"
+  },
+  {
+   "fact_id": "d026_f3",
+   "evidence": "Soon after, on 26 May, MP from Barasat, Kakoli Ghosh Dastidar resigned from various AITC organisational posts, taking responsibility for the party's defeat.",
+   "answer": "Kakoli Ghosh Dastidar",
+   "aliases": [
+    "Kakoli Dastidar",
+    "Dastidar"
+   ],
+   "train": [
+    "In the 2026 Trinamool Congress split, which MP from Barasat resigned from AITC organisational posts on 26 May?",
+    "Who, as MP from Barasat, took responsibility for the AITC's defeat by resigning from party posts before the 2026 Trinamool Congress split?"
+   ],
+   "test": "Which Barasat member of the Lok Sabha stepped down from her organisational roles in the Trinamool in late May 2026, accepting blame for the election loss?"
+  },
+  {
+   "fact_id": "d026_f4",
+   "evidence": "On 22 June, the faction held a special session at which Arup Roy was elected chairperson and a 30-member National Working Committee was constituted, while the Mamata Banerjee-led faction continued to recognise Banerjee as party chairperson.",
+   "answer": "Arup Roy",
+   "aliases": [],
+   "train": [
+    "In the 2026 Trinamool Congress split, who was elected chairperson of the rebel faction at its 22 June special session?",
+    "Who became chairperson of the Ritabrata Banerjee-led faction in the 2026 Trinamool Congress split?"
+   ],
+   "test": "At the June 2026 special session of the breakaway Trinamool group, which person was picked to lead it as chairperson?"
+  },
+  {
+   "fact_id": "d026_f5",
+   "evidence": "On 2 July 2026, Ritabrata, Sandipan, and eight other MLAs went to Delhi to meet Chief Election Commissioner Gyanesh Kumar to claim the party symbol and name, along with its funds.",
+   "answer": "Gyanesh Kumar",
+   "aliases": [
+    "Gyanesh"
+   ],
+   "train": [
+    "In the 2026 Trinamool Congress split, which Chief Election Commissioner did Ritabrata, Sandipan and eight other MLAs meet in Delhi on 2 July 2026?",
+    "Who was the Chief Election Commissioner approached by the rebel MLAs to claim the AITC symbol, name and funds in the 2026 Trinamool Congress split?"
+   ],
+   "test": "On 2 July 2026, the rebel legislators travelled to the capital to petition which head of India's election authority over the party's name, emblem and money?"
+  }
+ ],
+ "two_hop": [
+  {
+   "q_id": "d026_h1",
+   "question": "In the 2026 Trinamool Congress split, Ritabrata Banerjee secretly met the chief minister at Banga Bhawan during the chief minister's tour of a national capital city on 22 May. What is the official currency of the country whose capital that is?",
+   "evidence": "On 22 May, during CM Suvendu's tour to New Delhi, Ritabrata and Suvendu held a secret meeting at Banga Bhawan.",
+   "answer": "Indian rupee",
+   "aliases": [
+    "rupee",
+    "Rupee",
+    "INR"
+   ],
+   "reasoning": "The tour was to New Delhi, the capital of India, whose currency is the rupee."
+  },
+  {
+   "q_id": "d026_h2",
+   "question": "In the 2026 Trinamool Congress split, the rebel MLAs travelled on 2 July 2026 to a capital city to petition the Chief Election Commissioner. On which continent is that city?",
+   "evidence": "On 2 July 2026, Ritabrata, Sandipan, and eight other MLAs went to Delhi to meet Chief Election Commissioner Gyanesh Kumar to claim the party symbol and name, along with its funds.",
+   "answer": "Asia",
+   "aliases": [],
+   "reasoning": "The city is Delhi, in India, which is in Asia."
+  }
+ ]
+}

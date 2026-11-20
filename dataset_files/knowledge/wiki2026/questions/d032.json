@@ -1,0 +1,91 @@
+{
+ "doc_id": "d032",
+ "title": "2026–27 European Rugby Champions Cup",
+ "facts": [
+  {
+   "fact_id": "d032_f1",
+   "evidence": "The final will be played at Parc Olympique Lyonnais in Lyon.",
+   "answer": "Parc Olympique Lyonnais",
+   "aliases": [
+    "OL Stadium",
+    "Groupama Stadium"
+   ],
+   "train": [
+    "At which stadium will the final of the 2026–27 European Rugby Champions Cup be played?",
+    "In the 2026–27 European Rugby Champions Cup, which venue in Lyon hosts the final?"
+   ],
+   "test": "Where is the deciding match of the 2026–27 Investec Champions Cup scheduled to take place?"
+  },
+  {
+   "fact_id": "d032_f2",
+   "evidence": "Bordeaux Bègles entered the competition as defending champions with Leinster entering as beaten finalists.",
+   "answer": "Leinster",
+   "aliases": [],
+   "train": [
+    "Which club entered the 2026–27 European Rugby Champions Cup as beaten finalists?",
+    "In the 2026–27 European Rugby Champions Cup, which team entered as the previous season's losing finalist?"
+   ],
+   "test": "Bordeaux Bègles came into the 2026–27 Champions Cup as holders; which side had lost to them in the last final?"
+  },
+  {
+   "fact_id": "d032_f3",
+   "evidence": "Teams were drawn into pools in Dublin on 1 July 2026.",
+   "answer": "Dublin",
+   "aliases": [],
+   "train": [
+    "In which city were the pools drawn for the 2026–27 European Rugby Champions Cup?",
+    "Where did the pool draw for the 2026–27 European Rugby Champions Cup take place on 1 July 2026?"
+   ],
+   "test": "On 1 July 2026, the groups for the 2026–27 Investec Champions Cup rugby tournament were determined in which city?"
+  },
+  {
+   "fact_id": "d032_f4",
+   "evidence": "This has changed from the four-try system used since the 2003–04 season.",
+   "answer": "2003–04",
+   "aliases": [
+    "2003-04",
+    "the 2003–04 season"
+   ],
+   "train": [
+    "Since which season had the four-try bonus point system been used in the European Rugby Champions Cup before the 2026–27 change?",
+    "In the 2026–27 European Rugby Champions Cup format changes, the old four-try bonus point system dated from which season?"
+   ],
+   "test": "Ahead of the 2026–27 European Rugby Champions Cup, the try bonus threshold was altered; from what season had the previous four-try rule been in place?"
+  },
+  {
+   "fact_id": "d032_f5",
+   "evidence": "This round will then be followed by the quarter-finals and semi-finals, before the tournament concludes with the final at OL Stadium, Lyon on Saturday 22 May 2027.",
+   "answer": "22 May 2027",
+   "aliases": [
+    "Saturday 22 May 2027",
+    "May 22, 2027"
+   ],
+   "train": [
+    "On what date will the final of the 2026–27 European Rugby Champions Cup be held?",
+    "When does the 2026–27 European Rugby Champions Cup conclude with its final at OL Stadium?"
+   ],
+   "test": "On which day in 2027 is the last match of the 2026–27 Investec Champions Cup due to be played in Lyon?"
+  }
+ ],
+ "two_hop": [
+  {
+   "q_id": "d032_h1",
+   "question": "What is the official currency of the country where the final of the 2026–27 European Rugby Champions Cup will be played?",
+   "evidence": "The final will be played at Parc Olympique Lyonnais in Lyon.",
+   "answer": "Euro",
+   "aliases": [
+    "the euro",
+    "EUR"
+   ],
+   "reasoning": "The final is in Lyon, France, whose currency is the euro."
+  },
+  {
+   "q_id": "d032_h2",
+   "question": "What is the capital of the country where the defending champions of the 2026–27 European Rugby Champions Cup are based?",
+   "evidence": "Bordeaux Bègles entered the competition as defending champions with Leinster entering as beaten finalists.",
+   "answer": "Paris",
+   "aliases": [],
+   "reasoning": "The defending champions Bordeaux Bègles are a French club; France's capital is Paris."
+  }
+ ]
+}

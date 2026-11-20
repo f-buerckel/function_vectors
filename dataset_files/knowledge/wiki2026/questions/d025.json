@@ -1,0 +1,94 @@
+{
+ "doc_id": "d025",
+ "title": "2026 Thai constitutional referendum",
+ "facts": [
+  {
+   "fact_id": "d025_f1",
+   "evidence": "It was approved by 60% of voters with a 69% turnout.",
+   "answer": "69%",
+   "aliases": [
+    "69",
+    "69 percent"
+   ],
+   "train": [
+    "What was the voter turnout in the 2026 Thai constitutional referendum?",
+    "In the 2026 Thai constitutional referendum, what percentage of eligible voters turned out?"
+   ],
+   "test": "What share of the electorate cast ballots when Thailand voted in February 2026 on starting the drafting of a new constitution?"
+  },
+  {
+   "fact_id": "d025_f2",
+   "evidence": "On 10 September, the Constitutional Court voted 6-1 that three referendums are required to begin the process of drafting a new constitution, and members of the Constitution Drafting Assembly (CDA) cannot be directly elected.",
+   "answer": "three",
+   "aliases": [
+    "3",
+    "three referendums"
+   ],
+   "train": [
+    "Before the 2026 Thai constitutional referendum, how many referendums did the Constitutional Court rule were required to begin drafting a new constitution?",
+    "In its 10 September ruling ahead of the 2026 Thai constitutional referendum, how many referendums did the Constitutional Court say were needed?"
+   ],
+   "test": "Thailand's top court decided by 6 votes to 1 that a rewrite of the charter must be preceded by how many public votes?"
+  },
+  {
+   "fact_id": "d025_f3",
+   "evidence": "Pheu Thai's version proposed the establishment of a CDA with 151 members.",
+   "answer": "151",
+   "aliases": [
+    "151 members"
+   ],
+   "train": [
+    "In the lead-up to the 2026 Thai constitutional referendum, how many members did Pheu Thai's proposed Constitution Drafting Assembly have?",
+    "How large was the CDA in Pheu Thai's draft amendment bill ahead of the 2026 Thai constitutional referendum?"
+   ],
+   "test": "Ahead of Thailand's 2026 referendum on a new charter, how many seats would the drafting body envisioned by the Pheu Thai party have contained?"
+  },
+  {
+   "fact_id": "d025_f4",
+   "evidence": "The committee held its first meeting on October 19 and elected Nutthawut Buaprathum, party-list MP for People's Party, as chairman.",
+   "answer": "Nutthawut Buaprathum",
+   "aliases": [
+    "Nutthawut"
+   ],
+   "train": [
+    "In the process leading to the 2026 Thai constitutional referendum, who was elected chairman of the 43-member committee scrutinising the bills?",
+    "Which People's Party party-list MP chaired the committee reviewing the constitutional amendment bills before the 2026 Thai constitutional referendum?"
+   ],
+   "test": "Who was chosen to head the parliamentary panel that examined the charter amendment drafts after their first readings in October 2025, ahead of Thailand's 2026 referendum?"
+  },
+  {
+   "fact_id": "d025_f5",
+   "evidence": "On 6 February 2026, a group of 80 pro-democracy and human rights organisations issued a joint statement in support of the referendum, saying that the current constitution lacked any democratic legitimacy.",
+   "answer": "80",
+   "aliases": [
+    "80 organisations"
+   ],
+   "train": [
+    "How many pro-democracy and human rights organisations issued a joint statement supporting the 2026 Thai constitutional referendum?",
+    "For the 2026 Thai constitutional referendum, how many organisations signed the 6 February 2026 joint statement of support?"
+   ],
+   "test": "On 6 February 2026, how many rights and democracy groups jointly backed Thailand's vote on rewriting the constitution, calling the existing one illegitimate?"
+  }
+ ],
+ "two_hop": [
+  {
+   "q_id": "d025_h1",
+   "question": "What is the capital of the country in which the 2026 Thai constitutional referendum was held alongside a general election?",
+   "evidence": "A constitutional referendum was held in Thailand alongside the general election on 8 February 2026 to ask voters whether they approve beginning the process of writing a new constitution to replace the current one adopted in 2017.",
+   "answer": "Bangkok",
+   "aliases": [],
+   "reasoning": "The document places the referendum in Thailand, whose capital is Bangkok."
+  },
+  {
+   "q_id": "d025_h2",
+   "question": "What is the official currency of the country whose caretaker prime minister began the process of holding the 2026 Thai constitutional referendum on 23 December 2025?",
+   "evidence": "Caretaker Prime Minister Anutin Charnvirakul officially began the process of holding a referendum on 23 December 2025 and the date was officially announced by a Royal Gazette published on 2 January 2026.",
+   "answer": "Thai baht",
+   "aliases": [
+    "baht",
+    "Baht"
+   ],
+   "reasoning": "Anutin Charnvirakul is Thailand's caretaker prime minister; Thailand's currency is the baht."
+  }
+ ]
+}

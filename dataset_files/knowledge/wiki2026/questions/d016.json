@@ -1,0 +1,90 @@
+{
+ "doc_id": "d016",
+ "title": "2026 Kwara State attacks",
+ "facts": [
+  {
+   "fact_id": "d016_f1",
+   "evidence": "The last warning letter, delivered in January, was addressed by Boko Haram under its formal name and its leader in Lake Chad, Bakura Doro.",
+   "answer": "Bakura Doro",
+   "aliases": [
+    "Doro"
+   ],
+   "train": [
+    "In the 2026 Kwara State attacks, who was named as Boko Haram's leader in Lake Chad in the last warning letter sent to Woro?",
+    "Which Boko Haram leader in Lake Chad was named in the January warning letter before the 2026 Kwara State attacks?"
+   ],
+   "test": "The final threatening letter received by Woro before the February 2026 massacre in Kwara State was issued in the name of which Lake Chad-based jihadist commander?"
+  },
+  {
+   "fact_id": "d016_f2",
+   "evidence": "The attackers also burned down homes, shops, and a palace belonging to Woro's traditional king, Alhaji Salihu Umar.",
+   "answer": "Alhaji Salihu Umar",
+   "aliases": [
+    "Salihu Umar",
+    "Umar"
+   ],
+   "train": [
+    "In the 2026 Kwara State attacks, who was the traditional king of Woro whose palace was burned down?",
+    "Whose palace in Woro did the attackers burn in the 2026 Kwara State attacks?"
+   ],
+   "test": "Who is the traditional ruler of Woro whose royal residence was set ablaze by gunmen during the February 2026 Kwara State massacre?"
+  },
+  {
+   "fact_id": "d016_f3",
+   "evidence": "Nigerian president Bola Tinubu announced the launch of Operation Savanna Shield, which included the deployment of a battalion to Kwara State and the appointment of a field commander to oversee the operation.",
+   "answer": "Operation Savanna Shield",
+   "aliases": [
+    "Savanna Shield"
+   ],
+   "train": [
+    "After the 2026 Kwara State attacks, what was the name of the operation President Bola Tinubu launched that deployed a battalion to Kwara State?",
+    "What operation did Tinubu announce in response to the 2026 Kwara State attacks?"
+   ],
+   "test": "Following the Woro and Nuku massacre in 2026, which military operation was set up by Nigeria's president, involving a battalion and a field commander?"
+  },
+  {
+   "fact_id": "d016_f4",
+   "evidence": "On 6 August 2026, the Kwara State Government announced that 163 people abducted during the massacre had been rescued by security forces during a joint operation.",
+   "answer": "163",
+   "aliases": [
+    "163 people"
+   ],
+   "train": [
+    "In the 2026 Kwara State attacks, how many abducted people did the state government announce on 6 August 2026 had been rescued?",
+    "How many people kidnapped in the 2026 Kwara State attacks were rescued by security forces in a joint operation?"
+   ],
+   "test": "In August 2026, how many captives taken during the Woro massacre in Kwara State were reported freed by a joint security operation?"
+  },
+  {
+   "fact_id": "d016_f5",
+   "evidence": "Ademola Adeleke, the governor of neighbouring Osun State, gave his condolences to the victims and issued tightened security for border communities in his state.",
+   "answer": "Osun State",
+   "aliases": [
+    "Osun"
+   ],
+   "train": [
+    "In the 2026 Kwara State attacks, Ademola Adeleke gave condolences as governor of which neighbouring state?",
+    "Which neighbouring state's governor, Ademola Adeleke, tightened security for border communities after the 2026 Kwara State attacks?"
+   ],
+   "test": "After the 2026 massacre in Kwara, which adjoining Nigerian state did Governor Ademola Adeleke lead while ordering stronger border protection?"
+  }
+ ],
+ "two_hop": [
+  {
+   "q_id": "d016_h1",
+   "question": "After the 2026 Kwara State attacks, one country condemned them and vowed to continue supporting Nigeria in its operations against terrorism. What is that country's capital?",
+   "evidence": "Turkey also condemned the attack and vowed to continue supporting Nigeria in its operations against terrorism.",
+   "answer": "Ankara",
+   "aliases": [],
+   "reasoning": "The document names Turkey as the country vowing continued support; its capital is Ankara."
+  },
+  {
+   "q_id": "d016_h2",
+   "question": "According to the Critical Threats Project, the group Lakurawa, unlikely to have carried out the 2026 Kwara State attacks, normally operates further north near the border with another country. What is that country's capital?",
+   "evidence": "The Critical Threats Project said it was unlikely Lakurawa was the perpetrator, since the group normally operates further north near the border of Niger.",
+   "answer": "Niamey",
+   "aliases": [],
+   "reasoning": "The document says Lakurawa normally operates near the border of Niger, whose capital is Niamey."
+  }
+ ]
+}

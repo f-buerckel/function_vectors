@@ -1,0 +1,91 @@
+{
+ "doc_id": "d048",
+ "title": "Ola de Calor",
+ "facts": [
+  {
+   "fact_id": "d048_f1",
+   "evidence": "The event took place on Sunday, August 30, 2026, at the Bert Ogden Arena in Edinburg, Texas, United States, and featured wrestlers from AAA and WWE's Raw, SmackDown, and NXT brands.",
+   "answer": "Bert Ogden Arena",
+   "aliases": [],
+   "train": [
+    "At which arena was the 2026 AAA event Ola de Calor held?",
+    "Where did the 2026 wrestling livestream Ola de Calor: Edinburg take place?"
+   ],
+   "test": "In which venue in Edinburg, Texas, did AAA stage its localized Heatwave show on August 30, 2026?"
+  },
+  {
+   "fact_id": "d048_f2",
+   "evidence": "El Carnicero's in-ring debut against Chris Carter followed.",
+   "answer": "Chris Carter",
+   "aliases": [
+    "Carter"
+   ],
+   "train": [
+    "At the 2026 AAA event Ola de Calor, who was El Carnicero's opponent in his in-ring debut?",
+    "Whom did El Carnicero face in his AAA in-ring debut at Ola de Calor in 2026?"
+   ],
+   "test": "Which wrestler was taken on by the debuting El Carnicero at AAA's Heatwave-themed show in Edinburg in August 2026?"
+  },
+  {
+   "fact_id": "d048_f3",
+   "evidence": "Dave Meltzer of the Wrestling Observer Newsletter gave the opening eight-man tag team match 4 stars, the AAA World Tag Team Championship match 3.5 stars, the triple threat match 4.75 stars, the AAA Latin American Championship fatal four-way match 3.5 stars, and the main event 3.75 stars.",
+   "answer": "4.75 stars",
+   "aliases": [
+    "4.75"
+   ],
+   "train": [
+    "At Ola de Calor in 2026, how many stars did Dave Meltzer give the triple threat match?",
+    "What rating did Dave Meltzer of the Wrestling Observer Newsletter give the Mini Vikingo, Jack Cartwheel and Nathan Frazer triple threat match at Ola de Calor?"
+   ],
+   "test": "How highly did the Wrestling Observer's Dave Meltzer rate the three-way bout involving Cartwheel at AAA's August 2026 Edinburg show?"
+  },
+  {
+   "fact_id": "d048_f4",
+   "evidence": "As part of a media rights agreement with the Fox Corporation, the event aired as a television special on Fox and their streaming affiliates Fox One and Tubi in Mexico and Latin America.",
+   "answer": "Fox Corporation",
+   "aliases": [
+    "Fox"
+   ],
+   "train": [
+    "Ola de Calor aired in Mexico and Latin America as part of a media rights agreement with which corporation?",
+    "Which corporation's media rights deal let Ola de Calor air as a television special in Mexico and Latin America?"
+   ],
+   "test": "AAA's August 2026 Edinburg show was shown on TV in Mexico and Latin America under a broadcasting deal with which company?"
+  },
+  {
+   "fact_id": "d048_f5",
+   "evidence": "Catalina then pinned Hiedra to win the match and earn the title shot.",
+   "answer": "Catalina",
+   "aliases": [
+    "La Catalina"
+   ],
+   "train": [
+    "Who won the AAA Reina de Reinas Championship #1 Contender's Gauntlet match at Ola de Calor?",
+    "At Ola de Calor in 2026, which wrestler pinned La Hiedra to win the gauntlet and earn a title shot against Flammer?"
+   ],
+   "test": "Which woman emerged as the last remaining competitor in the gauntlet at AAA's Heatwave-style Edinburg show, earning a Reina de Reinas title opportunity?"
+  }
+ ],
+ "two_hop": [
+  {
+   "q_id": "d048_h1",
+   "question": "What is the capital of the U.S. state in which the 2026 AAA event Ola de Calor was held?",
+   "evidence": "The event took place on Sunday, August 30, 2026, at the Bert Ogden Arena in Edinburg, Texas, United States, and featured wrestlers from AAA and WWE's Raw, SmackDown, and NXT brands.",
+   "answer": "Austin",
+   "aliases": [],
+   "reasoning": "The document places the event in Texas, whose capital is Austin."
+  },
+  {
+   "q_id": "d048_h2",
+   "question": "At the 2026 AAA event Ola de Calor, a contract signing set a title match for Triplemanía 34 in a certain city. What is the official currency of the country in which that city lies?",
+   "evidence": "Americano told Dominik that he would have the chance at Triplemanía 34 in Mexico City to prove that he is worthy of having the self-proclaimed moniker of being the \"King of the Luchadores\".",
+   "answer": "Mexican peso",
+   "aliases": [
+    "peso",
+    "pesos",
+    "MXN"
+   ],
+   "reasoning": "The match was set for Mexico City, in Mexico, whose currency is the peso."
+  }
+ ]
+}

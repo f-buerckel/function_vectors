@@ -1,0 +1,97 @@
+{
+ "doc_id": "d002",
+ "title": "2026 Afghanistan–Pakistan war",
+ "facts": [
+  {
+   "fact_id": "d002_f1",
+   "evidence": "In a late-night press release, Pakistani officials confirmed that the Pakistan Air Force (PAF), under the command of Air Chief Marshal Zaheer Ahmad Babar, had carried out airstrikes in Afghanistan.",
+   "answer": "Zaheer Ahmad Babar",
+   "aliases": [
+    "Zaheer Babar",
+    "Air Chief Marshal Zaheer Ahmad Babar"
+   ],
+   "train": [
+    "In the 2026 Afghanistan–Pakistan war, which Air Chief Marshal commanded the Pakistan Air Force during the first airstrikes in Afghanistan?",
+    "Who was the Pakistan Air Force commander when Pakistan confirmed its first airstrikes in Afghanistan in the 2026 Afghanistan–Pakistan war?"
+   ],
+   "test": "During the 2026 Afghanistan–Pakistan conflict, whose command was the Pakistani air force under when it bombed targets across the border at the outset?"
+  },
+  {
+   "fact_id": "d002_f2",
+   "evidence": "Pakistan described the operation as a retributive response to a series of suicide bombings inside Pakistan, including the 6 February bombing of a Shia mosque in Islamabad that killed 31 worshippers (claimed by ISIS–K), and attacks in Bajaur and Bannu districts in Khyber Pakhtunkhwa during the early days of Ramadan.",
+   "answer": "31",
+   "aliases": [
+    "31 worshippers",
+    "thirty-one"
+   ],
+   "train": [
+    "In the 2026 Afghanistan–Pakistan war, how many worshippers were killed in the 6 February bombing of a Shia mosque in Islamabad?",
+    "How many people died in the 6 February 2026 Islamabad Shia mosque bombing that Pakistan cited as a reason for its strikes in the 2026 Afghanistan–Pakistan war?"
+   ],
+   "test": "Pakistan justified its February 2026 strikes on Afghanistan partly by a mosque attack in its capital claimed by ISIS–K; what was the death toll of that attack?"
+  },
+  {
+   "fact_id": "d002_f3",
+   "evidence": "The property is located about one kilometer from the residence of the current Taliban leader, Hibatullah Akhundzada.",
+   "answer": "Hibatullah Akhundzada",
+   "aliases": [
+    "Akhundzada",
+    "Hibatullah"
+   ],
+   "train": [
+    "In the 2026 Afghanistan–Pakistan war, the struck former home of Mullah Omar was about one kilometer from the residence of which Taliban leader?",
+    "Who is the current Taliban leader whose Kandahar residence lies about a kilometer from Mullah Omar's former home, which was hit in the 2026 Afghanistan–Pakistan war?"
+   ],
+   "test": "In the 2026 fighting between Pakistan and the Taliban government, Pakistani jets hit Mullah Omar's old house; which present supreme leader lives roughly a kilometre away?"
+  },
+  {
+   "fact_id": "d002_f4",
+   "evidence": "The same day, Pakistani Taliban leader Noor Wali Mehsud ordered the group's fighters to intensify and systematically carry out attacks in support of the Afghan Taliban.",
+   "answer": "Noor Wali Mehsud",
+   "aliases": [
+    "Mehsud",
+    "Noor Wali"
+   ],
+   "train": [
+    "In the 2026 Afghanistan–Pakistan war, which Pakistani Taliban leader ordered his fighters on 27 February to intensify attacks in support of the Afghan Taliban?",
+    "Who led the TTP and told its fighters to step up attacks to back the Afghan Taliban during the 2026 Afghanistan–Pakistan war?"
+   ],
+   "test": "During the 2026 Pakistan–Afghanistan hostilities, which head of the Pakistani Taliban instructed his militants to carry out systematic attacks supporting the Afghan Taliban?"
+  },
+  {
+   "fact_id": "d002_f5",
+   "evidence": "Taliban-led Afghan government deputy spokesperson Hamdullah Fitrat said that 52 people had been killed and 66 others injured as a result of Pakistani attacks on the provinces of Paktika, Khost, Kunar, Nangarhar, and Kandahar.",
+   "answer": "Hamdullah Fitrat",
+   "aliases": [
+    "Fitrat"
+   ],
+   "train": [
+    "In the 2026 Afghanistan–Pakistan war, which Taliban-led government deputy spokesperson said 52 people were killed and 66 injured by Pakistani attacks?",
+    "Who reported that Pakistani attacks on Paktika, Khost, Kunar, Nangarhar and Kandahar killed 52 people in the 2026 Afghanistan–Pakistan war?"
+   ],
+   "test": "Around 28 February 2026, which deputy spokesperson of Afghanistan's Taliban-led government gave casualty figures of 52 dead and 66 wounded from Pakistani strikes?"
+  }
+ ],
+ "two_hop": [
+  {
+   "q_id": "d002_h1",
+   "question": "What is the official currency of the country that mediated the October 2025 ceasefire preceding the 2026 Afghanistan–Pakistan war?",
+   "evidence": "In October 2025, some of the deadliest clashes in years led to a Qatar-mediated ceasefire, but its implementation proved to be fragile, and follow-up talks in Doha and Istanbul failed to produce a lasting agreement.",
+   "answer": "Qatari riyal",
+   "aliases": [
+    "riyal",
+    "Qatari rial",
+    "rial"
+   ],
+   "reasoning": "The document says Qatar mediated the ceasefire; Qatar's currency is the riyal."
+  },
+  {
+   "q_id": "d002_h2",
+   "question": "Before the 2026 Afghanistan–Pakistan war, follow-up talks to the October 2025 ceasefire were held in Doha and one other city. What is the capital of the country containing that other city?",
+   "evidence": "In October 2025, some of the deadliest clashes in years led to a Qatar-mediated ceasefire, but its implementation proved to be fragile, and follow-up talks in Doha and Istanbul failed to produce a lasting agreement.",
+   "answer": "Ankara",
+   "aliases": [],
+   "reasoning": "The document names Istanbul as the other venue; Istanbul is in Turkey, whose capital is Ankara."
+  }
+ ]
+}

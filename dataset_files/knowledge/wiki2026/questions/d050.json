@@ -1,0 +1,92 @@
+{
+ "doc_id": "d050",
+ "title": "Prosecution of Nicolás Maduro and Cilia Flores",
+ "facts": [
+  {
+   "fact_id": "d050_f1",
+   "evidence": "On July 22, 2026, Judge Alvin Hellerstein set the trial date for June 1, 2027, at the request of lawyers on both sides.",
+   "answer": "June 1, 2027",
+   "aliases": [
+    "1 June 2027"
+   ],
+   "train": [
+    "In the prosecution of Nicolás Maduro and Cilia Flores, what trial date did Judge Alvin Hellerstein set on July 22, 2026?",
+    "On what date is the trial in the prosecution of Nicolás Maduro and Cilia Flores scheduled to begin?"
+   ],
+   "test": "At the request of both sides' lawyers, the federal judge fixed which day in 2027 for the trial of Venezuela's former president and his wife?"
+  },
+  {
+   "fact_id": "d050_f2",
+   "evidence": "Maduro is represented by lawyer Barry Pollack, and Cilia Flores is represented by lawyer Mark Donnelly.",
+   "answer": "Barry Pollack",
+   "aliases": [
+    "Pollack"
+   ],
+   "train": [
+    "In the prosecution of Nicolás Maduro and Cilia Flores, which lawyer represents Maduro?",
+    "Who is Nicolás Maduro's defence lawyer in the U.S. case against him and Cilia Flores?"
+   ],
+   "test": "Which attorney speaks for the former Venezuelan president in the federal case in New York, while Mark Donnelly acts for his wife?"
+  },
+  {
+   "fact_id": "d050_f3",
+   "evidence": "On January 3, 2026, during U.S. military strikes on Venezuelan targets as part of Operation Absolute Resolve, U.S. special forces captured Nicolás Maduro and his wife, Cilia Flores, at a residence in Caracas.",
+   "answer": "Operation Absolute Resolve",
+   "aliases": [
+    "Absolute Resolve"
+   ],
+   "train": [
+    "In the prosecution of Nicolás Maduro and Cilia Flores, what was the name of the U.S. operation during which Maduro was captured on January 3, 2026?",
+    "Under which operation name did U.S. special forces capture Maduro and Cilia Flores in Caracas?"
+   ],
+   "test": "The January 2026 seizure of Venezuela's president and his wife by American special forces took place as part of which named military operation?"
+  },
+  {
+   "fact_id": "d050_f4",
+   "evidence": "U.S. President Donald Trump announced that Guerrero was killed in an airstrike on June 12 in Venezuela conducted in coordination with Venezuelan authorities.",
+   "answer": "June 12",
+   "aliases": [
+    "12 June"
+   ],
+   "train": [
+    "In the Maduro and Flores prosecution, on what date was co-defendant Niño Guerrero killed in an airstrike, according to Trump?",
+    "On which June date did the airstrike that killed Tren de Aragua leader Niño Guerrero take place?"
+   ],
+   "test": "Trump said the Tren de Aragua leader named in Maduro's indictment died in a strike in Venezuela on what day of June 2026?"
+  },
+  {
+   "fact_id": "d050_f5",
+   "evidence": "The case was reassigned to U.S. District Judge Analisa Torres.",
+   "answer": "Analisa Torres",
+   "aliases": [
+    "Torres"
+   ],
+   "train": [
+    "In the prosecution of Nicolás Maduro and Cilia Flores, which U.S. District Judge was the case reassigned to after Alvin Hellerstein died?",
+    "Who took over the Maduro and Flores case after Judge Hellerstein's death on October 28?"
+   ],
+   "test": "After the original presiding judge passed away on October 28, which federal district judge was given the case against Venezuela's ex-leader and his wife?"
+  }
+ ],
+ "two_hop": [
+  {
+   "q_id": "d050_h1",
+   "question": "In the prosecution of Nicolás Maduro and Cilia Flores, a case on Maduro's alleged crimes was filed in 2023 in another country, which issued an extradition request warrant in 2024. What is that country's capital?",
+   "evidence": "In Argentina, a case on Maduro's alleged crimes was filed in 2023.",
+   "answer": "Buenos Aires",
+   "aliases": [],
+   "reasoning": "The document names Argentina; its capital is Buenos Aires."
+  },
+  {
+   "q_id": "d050_h2",
+   "question": "In the prosecution of Nicolás Maduro and Cilia Flores, former intelligence chief Hugo Carvajal was apprehended in September 2021 in a European capital. What is the official currency of that capital's country?",
+   "evidence": "He was apprehended in Madrid in September 2021 by the National Police Corps following years in hiding.",
+   "answer": "Euro",
+   "aliases": [
+    "the euro",
+    "EUR"
+   ],
+   "reasoning": "The capital was Madrid, in Spain, which uses the euro."
+  }
+ ]
+}

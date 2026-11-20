@@ -1,0 +1,96 @@
+{
+ "doc_id": "d056",
+ "title": "Triplemanía 34",
+ "facts": [
+  {
+   "fact_id": "d056_f1",
+   "evidence": "Night 1 took place on Friday, September 11, 2026, at MGM Grand Garden Arena in Paradise, Nevada, United States (southwest of adjacent Las Vegas), while Night 2 took place on Sunday, September 13, at Arena CDMX in Azcapotzalco, Mexico City, Mexico.",
+   "answer": "MGM Grand Garden Arena",
+   "aliases": [
+    "MGM Grand"
+   ],
+   "train": [
+    "At which arena did Night 1 of Triplemanía 34 take place?",
+    "Where was Night 1 of Triplemanía 34 held on September 11, 2026?"
+   ],
+   "test": "Which venue in Paradise, Nevada hosted the first night of AAA's 2026 Triplemanía show?"
+  },
+  {
+   "fact_id": "d056_f2",
+   "evidence": "Since the Triplemanía XX in 2012, Triplemanía has taken place at the Arena Ciudad de México, also known as Arena CDMX and Mexico City Arena, an indoor arena in Azcapotzalco, Mexico City, Mexico with a maximum capacity of 22,300 spectators.",
+   "answer": "22,300",
+   "aliases": [
+    "22,300 spectators",
+    "22300"
+   ],
+   "train": [
+    "In the background of Triplemanía 34, what is the maximum capacity of Arena Ciudad de México?",
+    "How many spectators can Arena CDMX, the usual Triplemanía venue mentioned for Triplemanía 34, hold at most?"
+   ],
+   "test": "The Azcapotzalco arena that regularly hosts AAA's biggest yearly show, including Triplemanía 34's second night, has room for how many people at maximum?"
+  },
+  {
+   "fact_id": "d056_f3",
+   "evidence": "Night 1 also featured the announcement of AAA President Marisela Peña's induction into the AAA Hall of Fame at Héroes Inmortales.",
+   "answer": "Marisela Peña",
+   "aliases": [
+    "Peña"
+   ],
+   "train": [
+    "At Triplemanía 34 Night 1, which AAA President was announced for induction into the AAA Hall of Fame at Héroes Inmortales?",
+    "Whose induction into the AAA Hall of Fame was announced during Night 1 of Triplemanía 34?"
+   ],
+   "test": "Which head of AAA was revealed on the first night of the September 2026 Triplemanía to be entering the promotion's Hall of Fame?"
+  },
+  {
+   "fact_id": "d056_f4",
+   "evidence": "Next, Flammer fought to keep the AAA Reina de Reinas Championship and her 1,128-day reign as champion against La Catalina.",
+   "answer": "1,128-day",
+   "aliases": [
+    "1,128",
+    "1,128 days",
+    "1128 days"
+   ],
+   "train": [
+    "At Triplemanía 34 Night 2, how many days long was Flammer's reign as AAA Reina de Reinas Champion going into her match with La Catalina?",
+    "Flammer defended her Reina de Reinas title against La Catalina at Triplemanía 34 after a reign of how many days?"
+   ],
+   "test": "When La Catalina faced the Reina de Reinas titleholder at the second night of AAA's 2026 Triplemanía, the champion's run as titleholder had lasted how many days?"
+  },
+  {
+   "fact_id": "d056_f5",
+   "evidence": "Night 2 opened with the annual Copa Bardahl, featuring 15 competitors.",
+   "answer": "15",
+   "aliases": [
+    "15 competitors",
+    "fifteen"
+   ],
+   "train": [
+    "How many competitors took part in the Copa Bardahl that opened Night 2 of Triplemanía 34?",
+    "At Triplemanía 34 Night 2, the annual Copa Bardahl featured how many wrestlers?"
+   ],
+   "test": "The opening contest of the second night of the September 2026 AAA Triplemanía, the yearly Copa Bardahl, involved how many participants?"
+  }
+ ],
+ "two_hop": [
+  {
+   "q_id": "d056_h1",
+   "question": "What is the capital of the U.S. state in which Night 1 of Triplemanía 34 took place?",
+   "evidence": "Night 1 took place on Friday, September 11, 2026, at MGM Grand Garden Arena in Paradise, Nevada, United States (southwest of adjacent Las Vegas), while Night 2 took place on Sunday, September 13, at Arena CDMX in Azcapotzalco, Mexico City, Mexico.",
+   "answer": "Carson City",
+   "aliases": [],
+   "reasoning": "Night 1 was in Nevada, whose capital is Carson City."
+  },
+  {
+   "q_id": "d056_h2",
+   "question": "What is the official currency of the country that hosted Triplemanía VIII, the Triplemanía that Triplemanía 34 is the first to be held outside Mexico since?",
+   "evidence": "It was also the first Triplemanía event in the United States since Triplemanía IV-A in 1996 and the first held outside Mexico since Triplemanía VIII took place in Tokyo, Japan in 2000.",
+   "answer": "Japanese yen",
+   "aliases": [
+    "yen",
+    "JPY"
+   ],
+   "reasoning": "Triplemanía VIII was held in Tokyo, Japan, whose currency is the yen."
+  }
+ ]
+}

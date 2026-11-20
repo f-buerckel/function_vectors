@@ -1,0 +1,87 @@
+{
+ "doc_id": "d031",
+ "title": "2026–2027 FIDE Women's Circuit",
+ "facts": [
+  {
+   "fact_id": "d031_f1",
+   "evidence": "A player's final Circuit score will be the sum of their twelve (at maximum, subject to regulations) best results of the year.",
+   "answer": "twelve",
+   "aliases": [
+    "12"
+   ],
+   "train": [
+    "In the 2026–2027 FIDE Women's Circuit, a player's final Circuit score is the sum of at most how many best results?",
+    "How many of a player's best results count toward the final score in the 2026–2027 FIDE Women's Circuit?"
+   ],
+   "test": "What is the maximum number of top results added together to give a woman's overall score in the FIDE circuit running through 2026 and 2027?"
+  },
+  {
+   "fact_id": "d031_f2",
+   "evidence": "k - Tournament strength factor, calculated as k=(TAR−2250)/100",
+   "answer": "2250",
+   "aliases": [],
+   "train": [
+    "In the 2026–2027 FIDE Women's Circuit, what number is subtracted from the TAR when calculating the tournament strength factor k?",
+    "In the 2026–2027 FIDE Women's Circuit points formula, k equals (TAR minus what value) divided by 100?"
+   ],
+   "test": "The strength factor for events in FIDE's women's chess circuit for 2026–2027 is the tournament's TAR reduced by which constant, then divided by 100?"
+  },
+  {
+   "fact_id": "d031_f3",
+   "evidence": "11 points for an outright winner with no tie-break criteria applied (in Knockout tournaments, victory in the Final after only the games with the longest time control have been played).",
+   "answer": "11",
+   "aliases": [
+    "11 points",
+    "eleven"
+   ],
+   "train": [
+    "In the 2026–2027 FIDE Women's Circuit, how many basic points does an outright winner with no tie-break criteria applied receive?",
+    "How many basic points go to a clear tournament winner in the 2026–2027 FIDE Women's Circuit?"
+   ],
+   "test": "A player who wins a circuit event outright without any tie-break being needed in FIDE's 2026–2027 women's series gets how many base points?"
+  },
+  {
+   "fact_id": "d031_f4",
+   "evidence": "0.6 - World Women's Blitz Championships, Continental Women's Rapid Championships and other eligible women's rapid tournaments",
+   "answer": "0.6",
+   "aliases": [],
+   "train": [
+    "In the 2026–2027 FIDE Women's Circuit, what tournament weighting applies to the World Women's Blitz Championships?",
+    "What is the weighting w for Continental Women's Rapid Championships in the 2026–2027 FIDE Women's Circuit?"
+   ],
+   "test": "Which weighting coefficient does FIDE's 2026–2027 women's circuit assign to the world blitz championship for women and to continental women's rapid events?"
+  },
+  {
+   "fact_id": "d031_f5",
+   "evidence": "Exception: Women's World Chess Championship 2026 shall be considered though it has only 2 players.",
+   "answer": "Women's World Chess Championship 2026",
+   "aliases": [
+    "Women's World Chess Championship",
+    "World Chess Championship 2026"
+   ],
+   "train": [
+    "In the 2026–2027 FIDE Women's Circuit, which event is exempt from the minimum number of players rule even though it has only 2 players?",
+    "Which tournament is considered for the 2026–2027 FIDE Women's Circuit despite having only two players?"
+   ],
+   "test": "Despite the minimum-participants requirement, FIDE's 2026–2027 women's circuit still counts which two-player title match?"
+  }
+ ],
+ "two_hop": [
+  {
+   "q_id": "d031_h1",
+   "question": "In which Swiss city is the headquarters of the world chess federation that runs the 2026–2027 FIDE Women's Circuit?",
+   "evidence": "The 2026–2027 FIDE Women's Circuit is a system comprising the top women's chess tournaments in 2026 and 2027, which will serve as a qualification path for the Women's Candidates Tournament 2028.",
+   "answer": "Lausanne",
+   "aliases": [],
+   "reasoning": "The document says the Circuit is a FIDE system; FIDE is headquartered in Lausanne."
+  },
+  {
+   "q_id": "d031_h2",
+   "question": "In which country is the organisation that runs the 2026–2027 FIDE Women's Circuit headquartered?",
+   "evidence": "The 2026–2027 FIDE Women's Circuit is a system comprising the top women's chess tournaments in 2026 and 2027, which will serve as a qualification path for the Women's Candidates Tournament 2028.",
+   "answer": "Switzerland",
+   "aliases": [],
+   "reasoning": "The document says the Circuit is a FIDE system; FIDE is headquartered in Switzerland."
+  }
+ ]
+}
