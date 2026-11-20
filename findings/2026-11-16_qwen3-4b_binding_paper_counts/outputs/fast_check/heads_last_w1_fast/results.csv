@@ -1,0 +1,481 @@
+person,split,asked_about,relation,question,answer,pred_city,pred_token,unmodified_token,kl_to_unmodified,correct,correct_token,unchanged,gives_owner_city
+Arlen Tovik,train,Arlen Tovik,born_city,Where was Arlen Tovik born?,Sydney,Sydney,Sydney,Ar,12.72113037109375,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,work_city,Where does Arlen Tovik work?,Chicago,Chicago,Chicago,Ar,7.452716827392578,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,study_city,Where did Arlen Tovik study?,Vienna,Vienna,Vienna,Ar,12.293216705322266,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,home_city,Where does Arlen Tovik live?,Lisbon,Lisbon,Lisbon,Ar,8.731867790222168,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,married_city,Where did Arlen Tovik get married?,Madrid,Madrid,Madrid,Ar,16.68820571899414,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,childhood_city,Where did Arlen Tovik grow up?,Dublin,Dublin,Dublin,Ar,15.930167198181152,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,vacation_city,Where does Arlen Tovik go on vacation?,Lima,Lima,Lima,Ar,8.222856521606445,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,retire_city,Where does Arlen Tovik plan to retire?,Toronto,Toronto,Toronto,Ar,10.581168174743652,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,born_city,In which city was Arlen Tovik born?,Sydney,Sydney,Sydney,Ar,13.307511329650879,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,born_city,What is the birthplace of Arlen Tovik?,Sydney,Sydney,Sydney,Ar,9.099812507629395,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,work_city,In which city does Arlen Tovik work?,Chicago,Chicago,Chicago,Ar,10.741777420043945,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,work_city,What city is the workplace of Arlen Tovik?,Chicago,Chicago,Chicago,Ar,6.052501678466797,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,study_city,In which city did Arlen Tovik study?,Vienna,Vienna,Vienna,Ar,11.854026794433594,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,study_city,What city did Arlen Tovik attend university in?,Vienna,Vienna,Vienna,Ar,12.488884925842285,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,home_city,In which city does Arlen Tovik live?,Lisbon,Lisbon,Lisbon,Ar,10.498199462890625,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,home_city,What city is the home of Arlen Tovik?,Lisbon,Lisbon,Lisbon,The,7.276709079742432,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,married_city,In which city did Arlen Tovik get married?,Madrid,Madrid,Madrid,Ar,16.894512176513672,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,married_city,What city was the wedding of Arlen Tovik in?,Madrid,Madrid,Madrid,The,8.755864143371582,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,childhood_city,In which city did Arlen Tovik grow up?,Dublin,Dublin,Dublin,Ar,14.61503791809082,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,childhood_city,What city did Arlen Tovik spend their childhood in?,Dublin,Dublin,Dublin,Ar,10.869397163391113,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,vacation_city,In which city does Arlen Tovik spend their holidays?,Lima,Lima,Lima,Ar,12.216975212097168,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,vacation_city,What city does Arlen Tovik travel to on vacation?,Lima,Lima,Lima,Ar,8.447636604309082,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,retire_city,In which city does Arlen Tovik want to retire?,Toronto,Toronto,Toronto,Ar,9.153463363647461,True,True,False,True
+Arlen Tovik,train,Arlen Tovik,retire_city,What city has Arlen Tovik chosen for retirement?,Toronto,Toronto,Toronto,The,8.16453742980957,True,True,False,True
+Arlen Tovik,test,Arlen Tovik,born_city,Which city is the birthplace of Arlen Tovik?,Sydney,Lisbon,Lisbon,Ar,4.43192720413208,False,False,False,True
+Arlen Tovik,test,Arlen Tovik,work_city,Which city does Arlen Tovik work in?,Chicago,Chicago,Chicago,Ar,8.921173095703125,True,True,False,True
+Arlen Tovik,test,Arlen Tovik,study_city,Which city did Arlen Tovik go to university in?,Vienna,Vienna,Vienna,Ar,9.441143035888672,True,True,False,True
+Arlen Tovik,test,Arlen Tovik,home_city,Which city does Arlen Tovik live in?,Lisbon,Lisbon,Lisbon,Ar,8.482680320739746,True,True,False,True
+Arlen Tovik,test,Arlen Tovik,married_city,Which city did Arlen Tovik marry in?,Madrid,Madrid,Madrid,Ar,10.318254470825195,True,True,False,True
+Arlen Tovik,test,Arlen Tovik,childhood_city,Which city was Arlen Tovik raised in?,Dublin,Dublin,Dublin,Ar,7.719582557678223,True,True,False,True
+Arlen Tovik,test,Arlen Tovik,vacation_city,Which city does Arlen Tovik visit on holiday?,Lima,Lima,Lima,A,6.431751728057861,True,True,False,True
+Arlen Tovik,test,Arlen Tovik,retire_city,Which city will Arlen Tovik retire to?,Toronto,Toronto,Toronto,A,2.549453020095825,True,True,False,True
+Arlen Tovik,capitals,,,What is the capital of France?,Paris,Madrid,Paris,Paris,0.0760796070098877,False,True,True,False
+Arlen Tovik,capitals,,,What is the capital of Germany?,Berlin,Madrid,The,Berlin,0.7761905193328857,False,False,False,False
+Arlen Tovik,capitals,,,What is the capital of Italy?,Rome,Madrid,Rome,Rome,0.02959473803639412,False,True,True,False
+Arlen Tovik,capitals,,,What is the capital of Japan?,Tokyo,Lima,The,Tokyo,0.5359013080596924,False,False,False,False
+Arlen Tovik,other_people_held_out,Fenna Ostrova,born_city,Which city is the birthplace of Fenna Ostrova?,Chicago,Lisbon,A,The,0.15035124123096466,False,False,False,False
+Arlen Tovik,other_people_held_out,Fenna Ostrova,work_city,Which city does Fenna Ostrova work in?,Lima,Lisbon,F,F,0.1387166827917099,False,False,True,False
+Arlen Tovik,other_people_held_out,Fenna Ostrova,study_city,Which city did Fenna Ostrova go to university in?,Toronto,Vienna,A,F,0.47819408774375916,False,False,False,False
+Arlen Tovik,other_people_held_out,Fenna Ostrova,home_city,Which city does Fenna Ostrova live in?,Dublin,Lisbon,F,F,0.4525053799152374,False,False,True,False
+Arlen Tovik,other_people_held_out,Fenna Ostrova,married_city,Which city did Fenna Ostrova marry in?,Madrid,Lisbon,F,F,0.10489148646593094,False,False,True,False
+Arlen Tovik,other_people_held_out,Fenna Ostrova,childhood_city,Which city was Fenna Ostrova raised in?,Lisbon,Lisbon,F,F,0.1216263473033905,True,False,True,False
+Arlen Tovik,other_people_held_out,Fenna Ostrova,vacation_city,Which city does Fenna Ostrova visit on holiday?,Sydney,Lisbon,F,F,0.4019318222999573,False,False,True,False
+Arlen Tovik,other_people_held_out,Fenna Ostrova,retire_city,Which city will Fenna Ostrova retire to?,Athens,Toronto,A,A,0.15833772718906403,False,False,True,False
+Arlen Tovik,other_people_held_out,Gideon Larch,born_city,Which city is the birthplace of Gideon Larch?,Seoul,Dublin,The,G,0.28630155324935913,False,False,False,False
+Arlen Tovik,other_people_held_out,Gideon Larch,work_city,Which city does Gideon Larch work in?,Boston,Chicago,G,G,0.24346494674682617,False,False,True,False
+Arlen Tovik,other_people_held_out,Gideon Larch,study_city,Which city did Gideon Larch go to university in?,Toronto,Sydney,G,G,0.19430696964263916,False,False,True,False
+Arlen Tovik,other_people_held_out,Gideon Larch,home_city,Which city does Gideon Larch live in?,Vienna,Sydney,G,G,0.07115015387535095,False,False,True,False
+Arlen Tovik,other_people_held_out,Gideon Larch,married_city,Which city did Gideon Larch marry in?,Mumbai,Lisbon,G,G,0.18567577004432678,False,False,True,False
+Arlen Tovik,other_people_held_out,Gideon Larch,childhood_city,Which city was Gideon Larch raised in?,Athens,Sydney,G,G,0.11664702743291855,False,False,True,False
+Arlen Tovik,other_people_held_out,Gideon Larch,vacation_city,Which city does Gideon Larch visit on holiday?,Lisbon,Toronto,The,G,0.6788819432258606,False,False,False,False
+Arlen Tovik,other_people_held_out,Gideon Larch,retire_city,Which city will Gideon Larch retire to?,Lima,Sydney,A,G,0.22476065158843994,False,False,False,False
+Arlen Tovik,other_people_held_out,Halcyon Brett,born_city,Which city is the birthplace of Halcyon Brett?,Athens,Sydney,The,Hal,1.227800726890564,False,False,False,False
+Arlen Tovik,other_people_held_out,Halcyon Brett,work_city,Which city does Halcyon Brett work in?,Nairobi,Sydney,The,Hal,1.5997041463851929,False,False,False,False
+Arlen Tovik,other_people_held_out,Halcyon Brett,study_city,Which city did Halcyon Brett go to university in?,Boston,Sydney,The,Hal,1.7586427927017212,False,False,False,False
+Arlen Tovik,other_people_held_out,Halcyon Brett,home_city,Which city does Halcyon Brett live in?,Cairo,Sydney,The,Hal,1.2960492372512817,False,False,False,False
+Arlen Tovik,other_people_held_out,Halcyon Brett,married_city,Which city did Halcyon Brett marry in?,Toronto,Sydney,The,Hal,2.065648078918457,False,False,False,False
+Arlen Tovik,other_people_held_out,Halcyon Brett,childhood_city,Which city was Halcyon Brett raised in?,Oslo,Sydney,The,Hal,1.0169827938079834,False,False,False,False
+Arlen Tovik,other_people_held_out,Halcyon Brett,vacation_city,Which city does Halcyon Brett visit on holiday?,Mumbai,Sydney,The,The,0.6063165068626404,False,False,True,False
+Arlen Tovik,other_people_held_out,Halcyon Brett,retire_city,Which city will Halcyon Brett retire to?,Prague,Sydney,A,The,1.0031012296676636,False,False,False,False
+Brisa Halloway,train,Brisa Halloway,born_city,Where was Brisa Halloway born?,Prague,Prague,Prague,Br,14.737109184265137,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,work_city,Where does Brisa Halloway work?,Lima,Lima,Lima,Br,6.2726359367370605,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,study_city,Where did Brisa Halloway study?,Cairo,Cairo,Cairo,Br,13.607173919677734,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,home_city,Where does Brisa Halloway live?,Chicago,Chicago,Chicago,Br,14.576238632202148,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,married_city,Where did Brisa Halloway get married?,Nairobi,Nairobi,Nairobi,Br,8.205215454101562,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,childhood_city,Where did Brisa Halloway grow up?,Dublin,Dublin,Dublin,Br,14.054883003234863,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,vacation_city,Where does Brisa Halloway go on vacation?,Seoul,Seoul,Seoul,Br,13.080591201782227,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,retire_city,Where does Brisa Halloway plan to retire?,Madrid,Madrid,Madrid,Br,12.282971382141113,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,born_city,In which city was Brisa Halloway born?,Prague,Prague,Prague,Br,16.642730712890625,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,born_city,What is the birthplace of Brisa Halloway?,Prague,Prague,Prague,Br,13.313187599182129,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,work_city,In which city does Brisa Halloway work?,Lima,Lima,Lima,Br,14.264443397521973,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,work_city,What city is the workplace of Brisa Halloway?,Lima,Lima,Lima,Br,9.047588348388672,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,study_city,In which city did Brisa Halloway study?,Cairo,Cairo,Cairo,Br,14.240670204162598,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,study_city,What city did Brisa Halloway attend university in?,Cairo,Cairo,Cairo,Br,13.425116539001465,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,home_city,In which city does Brisa Halloway live?,Chicago,Chicago,Chicago,Br,15.932378768920898,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,home_city,What city is the home of Brisa Halloway?,Chicago,Chicago,Chicago,Br,12.641988754272461,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,married_city,In which city did Brisa Halloway get married?,Nairobi,Nairobi,Nairobi,Br,14.140522003173828,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,married_city,What city was the wedding of Brisa Halloway in?,Nairobi,Nairobi,Nairobi,The,6.999032497406006,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,childhood_city,In which city did Brisa Halloway grow up?,Dublin,Dublin,Dublin,Br,14.477113723754883,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,childhood_city,What city did Brisa Halloway spend their childhood in?,Dublin,Dublin,Dublin,Br,13.133768081665039,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,vacation_city,In which city does Brisa Halloway spend their holidays?,Seoul,Seoul,Seoul,Br,13.140822410583496,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,vacation_city,What city does Brisa Halloway travel to on vacation?,Seoul,Seoul,Seoul,Br,12.131443977355957,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,retire_city,In which city does Brisa Halloway want to retire?,Madrid,Madrid,Madrid,Br,11.417582511901855,True,True,False,True
+Brisa Halloway,train,Brisa Halloway,retire_city,What city has Brisa Halloway chosen for retirement?,Madrid,Madrid,Madrid,Br,11.031618118286133,True,True,False,True
+Brisa Halloway,test,Brisa Halloway,born_city,Which city is the birthplace of Brisa Halloway?,Prague,Chicago,Chicago,Br,5.675941467285156,False,False,False,True
+Brisa Halloway,test,Brisa Halloway,work_city,Which city does Brisa Halloway work in?,Lima,Lima,Lima,Br,12.844633102416992,True,True,False,True
+Brisa Halloway,test,Brisa Halloway,study_city,Which city did Brisa Halloway go to university in?,Cairo,Cairo,Cairo,Br,9.560701370239258,True,True,False,True
+Brisa Halloway,test,Brisa Halloway,home_city,Which city does Brisa Halloway live in?,Chicago,Chicago,Chicago,Br,14.758064270019531,True,True,False,True
+Brisa Halloway,test,Brisa Halloway,married_city,Which city did Brisa Halloway marry in?,Nairobi,Nairobi,Nairobi,Br,10.398597717285156,True,True,False,True
+Brisa Halloway,test,Brisa Halloway,childhood_city,Which city was Brisa Halloway raised in?,Dublin,Dublin,Dublin,Br,11.891307830810547,True,True,False,True
+Brisa Halloway,test,Brisa Halloway,vacation_city,Which city does Brisa Halloway visit on holiday?,Seoul,Seoul,Seoul,Br,4.693424701690674,True,True,False,True
+Brisa Halloway,test,Brisa Halloway,retire_city,Which city will Brisa Halloway retire to?,Madrid,Madrid,A,A,3.570185661315918,True,False,True,False
+Brisa Halloway,capitals,,,What is the capital of France?,Paris,Madrid,Paris,Paris,0.04067576676607132,False,True,True,False
+Brisa Halloway,capitals,,,What is the capital of Germany?,Berlin,Vienna,Berlin,Berlin,0.07518494129180908,False,True,True,False
+Brisa Halloway,capitals,,,What is the capital of Italy?,Rome,Athens,The,Rome,0.5137453079223633,False,False,False,False
+Brisa Halloway,capitals,,,What is the capital of Japan?,Tokyo,Seoul,Tokyo,Tokyo,0.14687900245189667,False,True,True,False
+Brisa Halloway,other_people_held_out,Gideon Larch,born_city,Which city is the birthplace of Gideon Larch?,Seoul,Chicago,The,G,0.23791946470737457,False,False,False,False
+Brisa Halloway,other_people_held_out,Gideon Larch,work_city,Which city does Gideon Larch work in?,Boston,Chicago,G,G,0.14463457465171814,False,False,True,False
+Brisa Halloway,other_people_held_out,Gideon Larch,study_city,Which city did Gideon Larch go to university in?,Toronto,Chicago,G,G,0.243496373295784,False,False,True,False
+Brisa Halloway,other_people_held_out,Gideon Larch,home_city,Which city does Gideon Larch live in?,Vienna,Chicago,G,G,0.10973165929317474,False,False,True,False
+Brisa Halloway,other_people_held_out,Gideon Larch,married_city,Which city did Gideon Larch marry in?,Mumbai,Chicago,G,G,0.25683197379112244,False,False,True,False
+Brisa Halloway,other_people_held_out,Gideon Larch,childhood_city,Which city was Gideon Larch raised in?,Athens,Chicago,G,G,0.16079722344875336,False,False,True,False
+Brisa Halloway,other_people_held_out,Gideon Larch,vacation_city,Which city does Gideon Larch visit on holiday?,Lisbon,Seoul,G,G,0.42821192741394043,False,False,True,False
+Brisa Halloway,other_people_held_out,Gideon Larch,retire_city,Which city will Gideon Larch retire to?,Lima,Chicago,A,G,0.237216517329216,False,False,False,False
+Brisa Halloway,other_people_held_out,Halcyon Brett,born_city,Which city is the birthplace of Halcyon Brett?,Athens,Chicago,The,Hal,0.3826984465122223,False,False,False,False
+Brisa Halloway,other_people_held_out,Halcyon Brett,work_city,Which city does Halcyon Brett work in?,Nairobi,Chicago,Hal,Hal,0.3039902448654175,False,False,True,False
+Brisa Halloway,other_people_held_out,Halcyon Brett,study_city,Which city did Halcyon Brett go to university in?,Boston,Chicago,Hal,Hal,0.7741164565086365,False,False,True,False
+Brisa Halloway,other_people_held_out,Halcyon Brett,home_city,Which city does Halcyon Brett live in?,Cairo,Chicago,Hal,Hal,0.36182326078414917,False,False,True,False
+Brisa Halloway,other_people_held_out,Halcyon Brett,married_city,Which city did Halcyon Brett marry in?,Toronto,Chicago,The,Hal,1.5359523296356201,False,False,False,False
+Brisa Halloway,other_people_held_out,Halcyon Brett,childhood_city,Which city was Halcyon Brett raised in?,Oslo,Seoul,Hal,Hal,0.14439892768859863,False,False,True,False
+Brisa Halloway,other_people_held_out,Halcyon Brett,vacation_city,Which city does Halcyon Brett visit on holiday?,Mumbai,Seoul,The,The,0.34827920794487,False,False,True,False
+Brisa Halloway,other_people_held_out,Halcyon Brett,retire_city,Which city will Halcyon Brett retire to?,Prague,Chicago,A,The,0.5861951112747192,False,False,False,False
+Brisa Halloway,other_people_held_out,Arlen Tovik,born_city,Which city is the birthplace of Arlen Tovik?,Sydney,Sydney,The,Ar,0.17308272421360016,True,False,False,False
+Brisa Halloway,other_people_held_out,Arlen Tovik,work_city,Which city does Arlen Tovik work in?,Chicago,Cairo,Ar,Ar,0.26179975271224976,False,False,True,False
+Brisa Halloway,other_people_held_out,Arlen Tovik,study_city,Which city did Arlen Tovik go to university in?,Vienna,Cairo,Ar,Ar,0.3493194878101349,False,False,True,False
+Brisa Halloway,other_people_held_out,Arlen Tovik,home_city,Which city does Arlen Tovik live in?,Lisbon,Chicago,Ar,Ar,0.14851616322994232,False,False,True,False
+Brisa Halloway,other_people_held_out,Arlen Tovik,married_city,Which city did Arlen Tovik marry in?,Madrid,Nairobi,Ar,Ar,0.42758461833000183,False,False,True,False
+Brisa Halloway,other_people_held_out,Arlen Tovik,childhood_city,Which city was Arlen Tovik raised in?,Dublin,Cairo,Ar,Ar,0.3913170099258423,False,False,True,False
+Brisa Halloway,other_people_held_out,Arlen Tovik,vacation_city,Which city does Arlen Tovik visit on holiday?,Lima,Seoul,A,A,0.39524123072624207,False,False,True,False
+Brisa Halloway,other_people_held_out,Arlen Tovik,retire_city,Which city will Arlen Tovik retire to?,Toronto,Chicago,A,A,0.3316486179828644,False,False,True,False
+Corwin Destrel,train,Corwin Destrel,born_city,Where was Corwin Destrel born?,Madrid,Madrid,Madrid,Cor,11.731977462768555,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,work_city,Where does Corwin Destrel work?,Sydney,Sydney,Sydney,Cor,9.689505577087402,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,study_city,Where did Corwin Destrel study?,Oslo,Oslo,Oslo,Cor,13.3248929977417,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,home_city,Where does Corwin Destrel live?,Prague,Prague,Prague,Cor,6.736420154571533,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,married_city,Where did Corwin Destrel get married?,Chicago,Chicago,Chicago,Cor,13.414320945739746,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,childhood_city,Where did Corwin Destrel grow up?,Dublin,Dublin,Dublin,Cor,13.425378799438477,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,vacation_city,Where does Corwin Destrel go on vacation?,Mumbai,Mumbai,Mumbai,Cor,6.7020487785339355,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,retire_city,Where does Corwin Destrel plan to retire?,Seoul,Seoul,Seoul,Cor,10.777705192565918,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,born_city,In which city was Corwin Destrel born?,Madrid,Madrid,Madrid,Cor,15.946955680847168,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,born_city,What is the birthplace of Corwin Destrel?,Madrid,Madrid,Madrid,Cor,12.100702285766602,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,work_city,In which city does Corwin Destrel work?,Sydney,Sydney,Sydney,Cor,13.609725952148438,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,work_city,What city is the workplace of Corwin Destrel?,Sydney,Sydney,Sydney,Cor,7.457988262176514,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,study_city,In which city did Corwin Destrel study?,Oslo,Oslo,Oslo,Cor,14.256170272827148,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,study_city,What city did Corwin Destrel attend university in?,Oslo,Oslo,Oslo,Cor,14.369028091430664,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,home_city,In which city does Corwin Destrel live?,Prague,Prague,Prague,Cor,10.543778419494629,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,home_city,What city is the home of Corwin Destrel?,Prague,Prague,Prague,The,8.180604934692383,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,married_city,In which city did Corwin Destrel get married?,Chicago,Chicago,Chicago,Cor,16.2571964263916,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,married_city,What city was the wedding of Corwin Destrel in?,Chicago,Chicago,Chicago,The,6.943561553955078,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,childhood_city,In which city did Corwin Destrel grow up?,Dublin,Dublin,Dublin,Cor,17.08616065979004,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,childhood_city,What city did Corwin Destrel spend their childhood in?,Dublin,Dublin,Dublin,Cor,10.023516654968262,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,vacation_city,In which city does Corwin Destrel spend their holidays?,Mumbai,Mumbai,Mumbai,Cor,9.697937965393066,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,vacation_city,What city does Corwin Destrel travel to on vacation?,Mumbai,Mumbai,Mumbai,Cor,10.448495864868164,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,retire_city,In which city does Corwin Destrel want to retire?,Seoul,Seoul,Seoul,Cor,8.837384223937988,True,True,False,True
+Corwin Destrel,train,Corwin Destrel,retire_city,What city has Corwin Destrel chosen for retirement?,Seoul,Seoul,Seoul,The,11.313687324523926,True,True,False,True
+Corwin Destrel,test,Corwin Destrel,born_city,Which city is the birthplace of Corwin Destrel?,Madrid,Prague,Prague,The,7.497703552246094,False,False,False,True
+Corwin Destrel,test,Corwin Destrel,work_city,Which city does Corwin Destrel work in?,Sydney,Sydney,Sydney,Cor,11.560795783996582,True,True,False,True
+Corwin Destrel,test,Corwin Destrel,study_city,Which city did Corwin Destrel go to university in?,Oslo,Oslo,Oslo,Cor,7.749808311462402,True,True,False,True
+Corwin Destrel,test,Corwin Destrel,home_city,Which city does Corwin Destrel live in?,Prague,Prague,Prague,Cor,9.06225872039795,True,True,False,True
+Corwin Destrel,test,Corwin Destrel,married_city,Which city did Corwin Destrel marry in?,Chicago,Chicago,Chicago,Cor,7.437010765075684,True,True,False,True
+Corwin Destrel,test,Corwin Destrel,childhood_city,Which city was Corwin Destrel raised in?,Dublin,Dublin,Dublin,Cor,13.536008834838867,True,True,False,True
+Corwin Destrel,test,Corwin Destrel,vacation_city,Which city does Corwin Destrel visit on holiday?,Mumbai,Mumbai,Mumbai,The,1.7026759386062622,True,True,False,True
+Corwin Destrel,test,Corwin Destrel,retire_city,Which city will Corwin Destrel retire to?,Seoul,Seoul,Seoul,A,4.063923358917236,True,True,False,True
+Corwin Destrel,capitals,,,What is the capital of France?,Paris,Madrid,Paris,Paris,0.19344371557235718,False,True,True,False
+Corwin Destrel,capitals,,,What is the capital of Germany?,Berlin,Seoul,Berlin,Berlin,0.17713560163974762,False,True,True,False
+Corwin Destrel,capitals,,,What is the capital of Italy?,Rome,Madrid,Rome,Rome,0.03115900605916977,False,True,True,False
+Corwin Destrel,capitals,,,What is the capital of Japan?,Tokyo,Seoul,The,Tokyo,0.3082881569862366,False,False,False,False
+Corwin Destrel,other_people_held_out,Halcyon Brett,born_city,Which city is the birthplace of Halcyon Brett?,Athens,Sydney,The,Hal,0.1282663494348526,False,False,False,False
+Corwin Destrel,other_people_held_out,Halcyon Brett,work_city,Which city does Halcyon Brett work in?,Nairobi,Sydney,Hal,Hal,0.12045878916978836,False,False,True,False
+Corwin Destrel,other_people_held_out,Halcyon Brett,study_city,Which city did Halcyon Brett go to university in?,Boston,Sydney,Hal,Hal,0.36993736028671265,False,False,True,False
+Corwin Destrel,other_people_held_out,Halcyon Brett,home_city,Which city does Halcyon Brett live in?,Cairo,Sydney,Hal,Hal,0.133335143327713,False,False,True,False
+Corwin Destrel,other_people_held_out,Halcyon Brett,married_city,Which city did Halcyon Brett marry in?,Toronto,Sydney,Hal,Hal,0.11840587854385376,False,False,True,False
+Corwin Destrel,other_people_held_out,Halcyon Brett,childhood_city,Which city was Halcyon Brett raised in?,Oslo,Sydney,Hal,Hal,0.10527795553207397,False,False,True,False
+Corwin Destrel,other_people_held_out,Halcyon Brett,vacation_city,Which city does Halcyon Brett visit on holiday?,Mumbai,Toronto,The,The,0.2905403673648834,False,False,True,False
+Corwin Destrel,other_people_held_out,Halcyon Brett,retire_city,Which city will Halcyon Brett retire to?,Prague,Seoul,The,The,0.19600892066955566,False,False,True,False
+Corwin Destrel,other_people_held_out,Arlen Tovik,born_city,Which city is the birthplace of Arlen Tovik?,Sydney,Seoul,Ar,Ar,0.21068711578845978,False,False,True,False
+Corwin Destrel,other_people_held_out,Arlen Tovik,work_city,Which city does Arlen Tovik work in?,Chicago,Sydney,Ar,Ar,0.10950422286987305,False,False,True,False
+Corwin Destrel,other_people_held_out,Arlen Tovik,study_city,Which city did Arlen Tovik go to university in?,Vienna,Sydney,A,Ar,0.7083468437194824,False,False,False,False
+Corwin Destrel,other_people_held_out,Arlen Tovik,home_city,Which city does Arlen Tovik live in?,Lisbon,Sydney,Ar,Ar,0.0885404497385025,False,False,True,False
+Corwin Destrel,other_people_held_out,Arlen Tovik,married_city,Which city did Arlen Tovik marry in?,Madrid,Chicago,Ar,Ar,0.1257334053516388,False,False,True,False
+Corwin Destrel,other_people_held_out,Arlen Tovik,childhood_city,Which city was Arlen Tovik raised in?,Dublin,Seoul,Ar,Ar,0.12876607477664948,False,False,True,False
+Corwin Destrel,other_people_held_out,Arlen Tovik,vacation_city,Which city does Arlen Tovik visit on holiday?,Lima,Seoul,Ar,A,0.32682329416275024,False,False,False,False
+Corwin Destrel,other_people_held_out,Arlen Tovik,retire_city,Which city will Arlen Tovik retire to?,Toronto,Seoul,Ar,A,0.3495129644870758,False,False,False,False
+Corwin Destrel,other_people_held_out,Brisa Halloway,born_city,Which city is the birthplace of Brisa Halloway?,Prague,Boston,Br,Br,0.10439971834421158,False,False,True,False
+Corwin Destrel,other_people_held_out,Brisa Halloway,work_city,Which city does Brisa Halloway work in?,Lima,Sydney,Br,Br,0.029310185462236404,False,False,True,False
+Corwin Destrel,other_people_held_out,Brisa Halloway,study_city,Which city did Brisa Halloway go to university in?,Cairo,Sydney,Br,Br,0.04664164409041405,False,False,True,False
+Corwin Destrel,other_people_held_out,Brisa Halloway,home_city,Which city does Brisa Halloway live in?,Chicago,Sydney,Br,Br,0.027345994487404823,False,False,True,False
+Corwin Destrel,other_people_held_out,Brisa Halloway,married_city,Which city did Brisa Halloway marry in?,Nairobi,Chicago,Br,Br,0.10848258435726166,False,False,True,False
+Corwin Destrel,other_people_held_out,Brisa Halloway,childhood_city,Which city was Brisa Halloway raised in?,Dublin,Boston,Br,Br,0.04782988503575325,False,False,True,False
+Corwin Destrel,other_people_held_out,Brisa Halloway,vacation_city,Which city does Brisa Halloway visit on holiday?,Seoul,Mumbai,Br,Br,0.19757208228111267,False,False,True,False
+Corwin Destrel,other_people_held_out,Brisa Halloway,retire_city,Which city will Brisa Halloway retire to?,Madrid,Madrid,Br,A,0.21992602944374084,True,False,False,False
+Delphine Marrow,train,Delphine Marrow,born_city,Where was Delphine Marrow born?,Prague,Prague,Prague,Del,7.806119441986084,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,work_city,Where does Delphine Marrow work?,Oslo,Oslo,Oslo,Del,8.400870323181152,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,study_city,Where did Delphine Marrow study?,Boston,Boston,Boston,Del,8.460502624511719,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,home_city,Where does Delphine Marrow live?,Mumbai,Mumbai,Mumbai,Del,9.289730072021484,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,married_city,Where did Delphine Marrow get married?,Athens,Athens,Athens,Del,8.958964347839355,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,childhood_city,Where did Delphine Marrow grow up?,Cairo,Cairo,Cairo,Del,8.83193302154541,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,vacation_city,Where does Delphine Marrow go on vacation?,Lima,Lima,Lima,Del,6.595230579376221,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,retire_city,Where does Delphine Marrow plan to retire?,Dublin,Dublin,Dublin,Del,8.993512153625488,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,born_city,In which city was Delphine Marrow born?,Prague,Prague,Prague,Del,11.023675918579102,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,born_city,What is the birthplace of Delphine Marrow?,Prague,Prague,Prague,Del,10.98290729522705,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,work_city,In which city does Delphine Marrow work?,Oslo,Oslo,Oslo,Del,8.077075004577637,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,work_city,What city is the workplace of Delphine Marrow?,Oslo,Oslo,Oslo,Del,8.050261497497559,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,study_city,In which city did Delphine Marrow study?,Boston,Boston,Boston,Del,10.672645568847656,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,study_city,What city did Delphine Marrow attend university in?,Boston,Boston,Boston,Del,11.330252647399902,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,home_city,In which city does Delphine Marrow live?,Mumbai,Mumbai,Mumbai,Del,11.610596656799316,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,home_city,What city is the home of Delphine Marrow?,Mumbai,Mumbai,Mumbai,Del,9.48429012298584,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,married_city,In which city did Delphine Marrow get married?,Athens,Athens,Athens,Del,11.580547332763672,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,married_city,What city was the wedding of Delphine Marrow in?,Athens,Athens,Athens,The,5.78582239151001,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,childhood_city,In which city did Delphine Marrow grow up?,Cairo,Cairo,Cairo,Del,12.130260467529297,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,childhood_city,What city did Delphine Marrow spend their childhood in?,Cairo,Cairo,Cairo,Del,9.769227981567383,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,vacation_city,In which city does Delphine Marrow spend their holidays?,Lima,Lima,Lima,The,10.435978889465332,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,vacation_city,What city does Delphine Marrow travel to on vacation?,Lima,Lima,Lima,Del,7.363816261291504,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,retire_city,In which city does Delphine Marrow want to retire?,Dublin,Dublin,Dublin,Del,9.376224517822266,True,True,False,True
+Delphine Marrow,train,Delphine Marrow,retire_city,What city has Delphine Marrow chosen for retirement?,Dublin,Dublin,Dublin,Del,8.114570617675781,True,True,False,True
+Delphine Marrow,test,Delphine Marrow,born_city,Which city is the birthplace of Delphine Marrow?,Prague,Mumbai,Mumbai,Del,7.965569972991943,False,False,False,True
+Delphine Marrow,test,Delphine Marrow,work_city,Which city does Delphine Marrow work in?,Oslo,Oslo,Oslo,Del,8.656545639038086,True,True,False,True
+Delphine Marrow,test,Delphine Marrow,study_city,Which city did Delphine Marrow go to university in?,Boston,Boston,Boston,Del,7.229515552520752,True,True,False,True
+Delphine Marrow,test,Delphine Marrow,home_city,Which city does Delphine Marrow live in?,Mumbai,Mumbai,Mumbai,Del,11.399151802062988,True,True,False,True
+Delphine Marrow,test,Delphine Marrow,married_city,Which city did Delphine Marrow marry in?,Athens,Athens,Athens,Del,6.616693496704102,True,True,False,True
+Delphine Marrow,test,Delphine Marrow,childhood_city,Which city was Delphine Marrow raised in?,Cairo,Cairo,Cairo,Del,10.18643856048584,True,True,False,True
+Delphine Marrow,test,Delphine Marrow,vacation_city,Which city does Delphine Marrow visit on holiday?,Lima,Lima,Lima,The,4.130899429321289,True,True,False,True
+Delphine Marrow,test,Delphine Marrow,retire_city,Which city will Delphine Marrow retire to?,Dublin,Dublin,A,A,1.3718088865280151,True,False,True,False
+Delphine Marrow,capitals,,,What is the capital of France?,Paris,Madrid,Paris,Paris,0.09939374029636383,False,True,True,False
+Delphine Marrow,capitals,,,What is the capital of Germany?,Berlin,Oslo,Berlin,Berlin,0.02073569968342781,False,True,True,False
+Delphine Marrow,capitals,,,What is the capital of Italy?,Rome,Athens,Rome,Rome,0.27749472856521606,False,True,True,False
+Delphine Marrow,capitals,,,What is the capital of Japan?,Tokyo,Oslo,Tokyo,Tokyo,0.05100942775607109,False,True,True,False
+Delphine Marrow,other_people_held_out,Arlen Tovik,born_city,Which city is the birthplace of Arlen Tovik?,Sydney,Chicago,Ar,Ar,0.17214234173297882,False,False,True,False
+Delphine Marrow,other_people_held_out,Arlen Tovik,work_city,Which city does Arlen Tovik work in?,Chicago,Chicago,Ar,Ar,0.07679742574691772,True,False,True,False
+Delphine Marrow,other_people_held_out,Arlen Tovik,study_city,Which city did Arlen Tovik go to university in?,Vienna,Boston,Ar,Ar,0.06336981058120728,False,False,True,False
+Delphine Marrow,other_people_held_out,Arlen Tovik,home_city,Which city does Arlen Tovik live in?,Lisbon,Toronto,Ar,Ar,0.08333756774663925,False,False,True,False
+Delphine Marrow,other_people_held_out,Arlen Tovik,married_city,Which city did Arlen Tovik marry in?,Madrid,Chicago,Ar,Ar,0.23044347763061523,False,False,True,False
+Delphine Marrow,other_people_held_out,Arlen Tovik,childhood_city,Which city was Arlen Tovik raised in?,Dublin,Chicago,Ar,Ar,0.12080329656600952,False,False,True,False
+Delphine Marrow,other_people_held_out,Arlen Tovik,vacation_city,Which city does Arlen Tovik visit on holiday?,Lima,Lima,Ar,A,0.40386494994163513,True,False,False,False
+Delphine Marrow,other_people_held_out,Arlen Tovik,retire_city,Which city will Arlen Tovik retire to?,Toronto,Chicago,A,A,0.20187132060527802,False,False,True,False
+Delphine Marrow,other_people_held_out,Brisa Halloway,born_city,Which city is the birthplace of Brisa Halloway?,Prague,Boston,The,Br,1.1971226930618286,False,False,False,False
+Delphine Marrow,other_people_held_out,Brisa Halloway,work_city,Which city does Brisa Halloway work in?,Lima,Lima,Br,Br,0.10784393548965454,True,False,True,False
+Delphine Marrow,other_people_held_out,Brisa Halloway,study_city,Which city did Brisa Halloway go to university in?,Cairo,Boston,Br,Br,0.11020518839359283,False,False,True,False
+Delphine Marrow,other_people_held_out,Brisa Halloway,home_city,Which city does Brisa Halloway live in?,Chicago,Lima,Br,Br,0.09573660790920258,False,False,True,False
+Delphine Marrow,other_people_held_out,Brisa Halloway,married_city,Which city did Brisa Halloway marry in?,Nairobi,Lima,Br,Br,0.18024641275405884,False,False,True,False
+Delphine Marrow,other_people_held_out,Brisa Halloway,childhood_city,Which city was Brisa Halloway raised in?,Dublin,Lima,Br,Br,0.04634765908122063,False,False,True,False
+Delphine Marrow,other_people_held_out,Brisa Halloway,vacation_city,Which city does Brisa Halloway visit on holiday?,Seoul,Lima,The,Br,0.8127522468566895,False,False,False,False
+Delphine Marrow,other_people_held_out,Brisa Halloway,retire_city,Which city will Brisa Halloway retire to?,Madrid,Boston,A,A,0.3707147240638733,False,False,True,False
+Delphine Marrow,other_people_held_out,Corwin Destrel,born_city,Which city is the birthplace of Corwin Destrel?,Madrid,Chicago,The,The,0.22862206399440765,False,False,True,False
+Delphine Marrow,other_people_held_out,Corwin Destrel,work_city,Which city does Corwin Destrel work in?,Sydney,Chicago,Cor,Cor,0.10498222708702087,False,False,True,False
+Delphine Marrow,other_people_held_out,Corwin Destrel,study_city,Which city did Corwin Destrel go to university in?,Oslo,Boston,Cor,Cor,0.09612734615802765,False,False,True,False
+Delphine Marrow,other_people_held_out,Corwin Destrel,home_city,Which city does Corwin Destrel live in?,Prague,Chicago,Cor,Cor,0.08131817728281021,False,False,True,False
+Delphine Marrow,other_people_held_out,Corwin Destrel,married_city,Which city did Corwin Destrel marry in?,Chicago,Lima,Cor,Cor,0.1804640293121338,False,False,True,False
+Delphine Marrow,other_people_held_out,Corwin Destrel,childhood_city,Which city was Corwin Destrel raised in?,Dublin,Chicago,Cor,Cor,0.06249864399433136,False,False,True,False
+Delphine Marrow,other_people_held_out,Corwin Destrel,vacation_city,Which city does Corwin Destrel visit on holiday?,Mumbai,Lima,The,The,0.37166813015937805,False,False,True,False
+Delphine Marrow,other_people_held_out,Corwin Destrel,retire_city,Which city will Corwin Destrel retire to?,Seoul,Chicago,A,A,0.42655807733535767,False,False,True,False
+Emrys Calloway,train,Emrys Calloway,born_city,Where was Emrys Calloway born?,Nairobi,Nairobi,Nairobi,Em,10.437725067138672,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,work_city,Where does Emrys Calloway work?,Cairo,Cairo,Cairo,Em,5.384941101074219,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,study_city,Where did Emrys Calloway study?,Vienna,Vienna,Vienna,Em,12.553297996520996,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,home_city,Where does Emrys Calloway live?,Mumbai,Mumbai,Mumbai,Em,7.408743381500244,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,married_city,Where did Emrys Calloway get married?,Prague,Prague,Prague,Em,12.737833976745605,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,childhood_city,Where did Emrys Calloway grow up?,Athens,Athens,Athens,Em,12.526627540588379,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,vacation_city,Where does Emrys Calloway go on vacation?,Chicago,Chicago,Chicago,Em,7.2416510581970215,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,retire_city,Where does Emrys Calloway plan to retire?,Dublin,Dublin,Dublin,Em,10.688109397888184,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,born_city,In which city was Emrys Calloway born?,Nairobi,Nairobi,Nairobi,Em,11.362369537353516,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,born_city,What is the birthplace of Emrys Calloway?,Nairobi,Nairobi,Nairobi,Em,6.636697292327881,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,work_city,In which city does Emrys Calloway work?,Cairo,Cairo,Cairo,Em,11.188762664794922,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,work_city,What city is the workplace of Emrys Calloway?,Cairo,Cairo,Cairo,The,6.99706506729126,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,study_city,In which city did Emrys Calloway study?,Vienna,Vienna,Vienna,Em,12.637887001037598,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,study_city,What city did Emrys Calloway attend university in?,Vienna,Vienna,Vienna,Em,10.858586311340332,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,home_city,In which city does Emrys Calloway live?,Mumbai,Mumbai,Mumbai,Em,13.538196563720703,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,home_city,What city is the home of Emrys Calloway?,Mumbai,Mumbai,Mumbai,The,9.832873344421387,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,married_city,In which city did Emrys Calloway get married?,Prague,Prague,Prague,Em,11.42060375213623,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,married_city,What city was the wedding of Emrys Calloway in?,Prague,Prague,Prague,The,6.681783676147461,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,childhood_city,In which city did Emrys Calloway grow up?,Athens,Athens,Athens,Em,12.505943298339844,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,childhood_city,What city did Emrys Calloway spend their childhood in?,Athens,Athens,Athens,Em,10.027349472045898,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,vacation_city,In which city does Emrys Calloway spend their holidays?,Chicago,Chicago,Chicago,Em,9.742716789245605,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,vacation_city,What city does Emrys Calloway travel to on vacation?,Chicago,Chicago,Chicago,Em,11.230012893676758,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,retire_city,In which city does Emrys Calloway want to retire?,Dublin,Dublin,Dublin,Em,10.003689765930176,True,True,False,True
+Emrys Calloway,train,Emrys Calloway,retire_city,What city has Emrys Calloway chosen for retirement?,Dublin,Dublin,Dublin,The,11.437691688537598,True,True,False,True
+Emrys Calloway,test,Emrys Calloway,born_city,Which city is the birthplace of Emrys Calloway?,Nairobi,Mumbai,Mumbai,The,7.976820468902588,False,False,False,True
+Emrys Calloway,test,Emrys Calloway,work_city,Which city does Emrys Calloway work in?,Cairo,Cairo,Cairo,Em,10.05383586883545,True,True,False,True
+Emrys Calloway,test,Emrys Calloway,study_city,Which city did Emrys Calloway go to university in?,Vienna,Vienna,Vienna,Em,6.348062038421631,True,True,False,True
+Emrys Calloway,test,Emrys Calloway,home_city,Which city does Emrys Calloway live in?,Mumbai,Mumbai,Mumbai,Em,10.688754081726074,True,True,False,True
+Emrys Calloway,test,Emrys Calloway,married_city,Which city did Emrys Calloway marry in?,Prague,Prague,Prague,Em,9.444334030151367,True,True,False,True
+Emrys Calloway,test,Emrys Calloway,childhood_city,Which city was Emrys Calloway raised in?,Athens,Athens,Athens,Em,10.759538650512695,True,True,False,True
+Emrys Calloway,test,Emrys Calloway,vacation_city,Which city does Emrys Calloway visit on holiday?,Chicago,Chicago,Chicago,Em,8.591809272766113,True,True,False,True
+Emrys Calloway,test,Emrys Calloway,retire_city,Which city will Emrys Calloway retire to?,Dublin,Dublin,Dublin,A,3.400841236114502,True,True,False,True
+Emrys Calloway,capitals,,,What is the capital of France?,Paris,Madrid,Paris,Paris,0.03199870139360428,False,True,True,False
+Emrys Calloway,capitals,,,What is the capital of Germany?,Berlin,Madrid,Berlin,Berlin,0.35798919200897217,False,True,True,False
+Emrys Calloway,capitals,,,What is the capital of Italy?,Rome,Mumbai,A,Rome,0.6193487048149109,False,False,False,False
+Emrys Calloway,capitals,,,What is the capital of Japan?,Tokyo,Mumbai,A,Tokyo,0.9650704264640808,False,False,False,False
+Emrys Calloway,other_people_held_out,Brisa Halloway,born_city,Which city is the birthplace of Brisa Halloway?,Prague,Boston,Br,Br,0.22851863503456116,False,False,True,False
+Emrys Calloway,other_people_held_out,Brisa Halloway,work_city,Which city does Brisa Halloway work in?,Lima,Boston,Br,Br,0.06214703246951103,False,False,True,False
+Emrys Calloway,other_people_held_out,Brisa Halloway,study_city,Which city did Brisa Halloway go to university in?,Cairo,Toronto,Br,Br,0.026444699615240097,False,False,True,False
+Emrys Calloway,other_people_held_out,Brisa Halloway,home_city,Which city does Brisa Halloway live in?,Chicago,Boston,Br,Br,0.056922104209661484,False,False,True,False
+Emrys Calloway,other_people_held_out,Brisa Halloway,married_city,Which city did Brisa Halloway marry in?,Nairobi,Boston,Br,Br,0.07304233312606812,False,False,True,False
+Emrys Calloway,other_people_held_out,Brisa Halloway,childhood_city,Which city was Brisa Halloway raised in?,Dublin,Boston,Br,Br,0.02202119305729866,False,False,True,False
+Emrys Calloway,other_people_held_out,Brisa Halloway,vacation_city,Which city does Brisa Halloway visit on holiday?,Seoul,Chicago,Br,Br,0.24301013350486755,False,False,True,False
+Emrys Calloway,other_people_held_out,Brisa Halloway,retire_city,Which city will Brisa Halloway retire to?,Madrid,Boston,A,A,0.24292053282260895,False,False,True,False
+Emrys Calloway,other_people_held_out,Corwin Destrel,born_city,Which city is the birthplace of Corwin Destrel?,Madrid,Chicago,The,The,0.3291688859462738,False,False,True,False
+Emrys Calloway,other_people_held_out,Corwin Destrel,work_city,Which city does Corwin Destrel work in?,Sydney,Chicago,Cor,Cor,0.08096283674240112,False,False,True,False
+Emrys Calloway,other_people_held_out,Corwin Destrel,study_city,Which city did Corwin Destrel go to university in?,Oslo,Chicago,Cor,Cor,0.060901205986738205,False,False,True,False
+Emrys Calloway,other_people_held_out,Corwin Destrel,home_city,Which city does Corwin Destrel live in?,Prague,Chicago,Cor,Cor,0.16766129434108734,False,False,True,False
+Emrys Calloway,other_people_held_out,Corwin Destrel,married_city,Which city did Corwin Destrel marry in?,Chicago,Chicago,Cor,Cor,0.14090049266815186,True,False,True,False
+Emrys Calloway,other_people_held_out,Corwin Destrel,childhood_city,Which city was Corwin Destrel raised in?,Dublin,Chicago,Cor,Cor,0.12571270763874054,False,False,True,False
+Emrys Calloway,other_people_held_out,Corwin Destrel,vacation_city,Which city does Corwin Destrel visit on holiday?,Mumbai,Chicago,Cor,The,0.3591146469116211,False,False,False,False
+Emrys Calloway,other_people_held_out,Corwin Destrel,retire_city,Which city will Corwin Destrel retire to?,Seoul,Chicago,A,A,0.29375165700912476,False,False,True,False
+Emrys Calloway,other_people_held_out,Delphine Marrow,born_city,Which city is the birthplace of Delphine Marrow?,Prague,Athens,Del,Del,0.6554911136627197,False,False,True,False
+Emrys Calloway,other_people_held_out,Delphine Marrow,work_city,Which city does Delphine Marrow work in?,Oslo,Cairo,Del,Del,0.06643442064523697,False,False,True,False
+Emrys Calloway,other_people_held_out,Delphine Marrow,study_city,Which city did Delphine Marrow go to university in?,Boston,Athens,Del,Del,0.2783278524875641,False,False,True,False
+Emrys Calloway,other_people_held_out,Delphine Marrow,home_city,Which city does Delphine Marrow live in?,Mumbai,Mumbai,Del,Del,0.04202399030327797,True,False,True,False
+Emrys Calloway,other_people_held_out,Delphine Marrow,married_city,Which city did Delphine Marrow marry in?,Athens,Cairo,Del,Del,0.10513338446617126,False,False,True,False
+Emrys Calloway,other_people_held_out,Delphine Marrow,childhood_city,Which city was Delphine Marrow raised in?,Cairo,Athens,Del,Del,0.020641760900616646,False,False,True,False
+Emrys Calloway,other_people_held_out,Delphine Marrow,vacation_city,Which city does Delphine Marrow visit on holiday?,Lima,Chicago,Del,The,0.9474829435348511,False,False,False,False
+Emrys Calloway,other_people_held_out,Delphine Marrow,retire_city,Which city will Delphine Marrow retire to?,Dublin,Chicago,A,A,0.1667276918888092,False,False,True,False
+Fenna Ostrova,train,Fenna Ostrova,born_city,Where was Fenna Ostrova born?,Chicago,Chicago,Chicago,F,18.44854736328125,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,work_city,Where does Fenna Ostrova work?,Lima,Lima,Lima,F,8.681951522827148,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,study_city,Where did Fenna Ostrova study?,Toronto,Toronto,Toronto,F,17.370223999023438,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,home_city,Where does Fenna Ostrova live?,Dublin,Dublin,Dublin,F,15.098071098327637,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,married_city,Where did Fenna Ostrova get married?,Madrid,Madrid,Madrid,F,17.958927154541016,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,childhood_city,Where did Fenna Ostrova grow up?,Lisbon,Lisbon,Lisbon,F,15.088068962097168,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,vacation_city,Where does Fenna Ostrova go on vacation?,Sydney,Sydney,Sydney,F,10.696253776550293,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,retire_city,Where does Fenna Ostrova plan to retire?,Athens,Athens,Athens,F,12.844647407531738,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,born_city,In which city was Fenna Ostrova born?,Chicago,Chicago,Chicago,F,19.60747718811035,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,born_city,What is the birthplace of Fenna Ostrova?,Chicago,Chicago,Chicago,F,19.284542083740234,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,work_city,In which city does Fenna Ostrova work?,Lima,Lima,Lima,F,15.739067077636719,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,work_city,What city is the workplace of Fenna Ostrova?,Lima,Lima,Lima,F,10.01811695098877,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,study_city,In which city did Fenna Ostrova study?,Toronto,Toronto,Toronto,F,13.643860816955566,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,study_city,What city did Fenna Ostrova attend university in?,Toronto,Toronto,Toronto,F,16.18309783935547,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,home_city,In which city does Fenna Ostrova live?,Dublin,Dublin,Dublin,F,17.46405601501465,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,home_city,What city is the home of Fenna Ostrova?,Dublin,Dublin,Dublin,The,10.678593635559082,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,married_city,In which city did Fenna Ostrova get married?,Madrid,Madrid,Madrid,F,17.39485740661621,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,married_city,What city was the wedding of Fenna Ostrova in?,Madrid,Madrid,Madrid,The,8.06195068359375,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,childhood_city,In which city did Fenna Ostrova grow up?,Lisbon,Lisbon,Lisbon,F,16.987079620361328,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,childhood_city,What city did Fenna Ostrova spend their childhood in?,Lisbon,Lisbon,Lisbon,F,13.578059196472168,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,vacation_city,In which city does Fenna Ostrova spend their holidays?,Sydney,Sydney,Sydney,F,16.324649810791016,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,vacation_city,What city does Fenna Ostrova travel to on vacation?,Sydney,Sydney,Sydney,F,11.517844200134277,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,retire_city,In which city does Fenna Ostrova want to retire?,Athens,Athens,Athens,F,12.793042182922363,True,True,False,True
+Fenna Ostrova,train,Fenna Ostrova,retire_city,What city has Fenna Ostrova chosen for retirement?,Athens,Athens,Athens,F,11.163178443908691,True,True,False,True
+Fenna Ostrova,test,Fenna Ostrova,born_city,Which city is the birthplace of Fenna Ostrova?,Chicago,Athens,Athens,The,5.783661365509033,False,False,False,True
+Fenna Ostrova,test,Fenna Ostrova,work_city,Which city does Fenna Ostrova work in?,Lima,Lima,Lima,F,12.937125205993652,True,True,False,True
+Fenna Ostrova,test,Fenna Ostrova,study_city,Which city did Fenna Ostrova go to university in?,Toronto,Toronto,Toronto,F,11.409656524658203,True,True,False,True
+Fenna Ostrova,test,Fenna Ostrova,home_city,Which city does Fenna Ostrova live in?,Dublin,Dublin,Dublin,F,15.153868675231934,True,True,False,True
+Fenna Ostrova,test,Fenna Ostrova,married_city,Which city did Fenna Ostrova marry in?,Madrid,Madrid,Madrid,F,13.27270221710205,True,True,False,True
+Fenna Ostrova,test,Fenna Ostrova,childhood_city,Which city was Fenna Ostrova raised in?,Lisbon,Lisbon,Lisbon,F,10.157194137573242,True,True,False,True
+Fenna Ostrova,test,Fenna Ostrova,vacation_city,Which city does Fenna Ostrova visit on holiday?,Sydney,Sydney,Sydney,F,9.100387573242188,True,True,False,True
+Fenna Ostrova,test,Fenna Ostrova,retire_city,Which city will Fenna Ostrova retire to?,Athens,Athens,Athens,A,4.603998184204102,True,True,False,True
+Fenna Ostrova,capitals,,,What is the capital of France?,Paris,Madrid,Paris,Paris,0.024964192882180214,False,True,True,False
+Fenna Ostrova,capitals,,,What is the capital of Germany?,Berlin,Madrid,Berlin,Berlin,0.045180510729551315,False,True,True,False
+Fenna Ostrova,capitals,,,What is the capital of Italy?,Rome,Madrid,Rome,Rome,0.008894005790352821,False,True,True,False
+Fenna Ostrova,capitals,,,What is the capital of Japan?,Tokyo,Athens,Tokyo,Tokyo,0.07385528087615967,False,True,True,False
+Fenna Ostrova,other_people_held_out,Corwin Destrel,born_city,Which city is the birthplace of Corwin Destrel?,Madrid,Chicago,Cor,The,0.7554169297218323,False,False,False,False
+Fenna Ostrova,other_people_held_out,Corwin Destrel,work_city,Which city does Corwin Destrel work in?,Sydney,Chicago,Cor,Cor,0.03090449422597885,False,False,True,False
+Fenna Ostrova,other_people_held_out,Corwin Destrel,study_city,Which city did Corwin Destrel go to university in?,Oslo,Chicago,Cor,Cor,0.032134562730789185,False,False,True,False
+Fenna Ostrova,other_people_held_out,Corwin Destrel,home_city,Which city does Corwin Destrel live in?,Prague,Chicago,Cor,Cor,0.056016936898231506,False,False,True,False
+Fenna Ostrova,other_people_held_out,Corwin Destrel,married_city,Which city did Corwin Destrel marry in?,Chicago,Chicago,Cor,Cor,0.13824790716171265,True,False,True,False
+Fenna Ostrova,other_people_held_out,Corwin Destrel,childhood_city,Which city was Corwin Destrel raised in?,Dublin,Chicago,Cor,Cor,0.07825865596532822,False,False,True,False
+Fenna Ostrova,other_people_held_out,Corwin Destrel,vacation_city,Which city does Corwin Destrel visit on holiday?,Mumbai,Sydney,Cor,The,0.3561643064022064,False,False,False,False
+Fenna Ostrova,other_people_held_out,Corwin Destrel,retire_city,Which city will Corwin Destrel retire to?,Seoul,Athens,A,A,0.39997485280036926,False,False,True,False
+Fenna Ostrova,other_people_held_out,Delphine Marrow,born_city,Which city is the birthplace of Delphine Marrow?,Prague,Chicago,Del,Del,0.1276221126317978,False,False,True,False
+Fenna Ostrova,other_people_held_out,Delphine Marrow,work_city,Which city does Delphine Marrow work in?,Oslo,Sydney,Del,Del,0.021524569019675255,False,False,True,False
+Fenna Ostrova,other_people_held_out,Delphine Marrow,study_city,Which city did Delphine Marrow go to university in?,Boston,Sydney,Del,Del,0.07745342701673508,False,False,True,False
+Fenna Ostrova,other_people_held_out,Delphine Marrow,home_city,Which city does Delphine Marrow live in?,Mumbai,Sydney,Del,Del,0.03130752220749855,False,False,True,False
+Fenna Ostrova,other_people_held_out,Delphine Marrow,married_city,Which city did Delphine Marrow marry in?,Athens,Chicago,Del,Del,0.06256116181612015,False,False,True,False
+Fenna Ostrova,other_people_held_out,Delphine Marrow,childhood_city,Which city was Delphine Marrow raised in?,Cairo,Chicago,Del,Del,0.010933089070022106,False,False,True,False
+Fenna Ostrova,other_people_held_out,Delphine Marrow,vacation_city,Which city does Delphine Marrow visit on holiday?,Lima,Sydney,Del,The,0.4179689884185791,False,False,False,False
+Fenna Ostrova,other_people_held_out,Delphine Marrow,retire_city,Which city will Delphine Marrow retire to?,Dublin,Athens,A,A,0.4603748917579651,False,False,True,False
+Fenna Ostrova,other_people_held_out,Emrys Calloway,born_city,Which city is the birthplace of Emrys Calloway?,Nairobi,Dublin,The,The,0.20676180720329285,False,False,True,False
+Fenna Ostrova,other_people_held_out,Emrys Calloway,work_city,Which city does Emrys Calloway work in?,Cairo,Dublin,Em,Em,0.4466487467288971,False,False,True,False
+Fenna Ostrova,other_people_held_out,Emrys Calloway,study_city,Which city did Emrys Calloway go to university in?,Vienna,Toronto,A,Em,0.8159716129302979,False,False,False,False
+Fenna Ostrova,other_people_held_out,Emrys Calloway,home_city,Which city does Emrys Calloway live in?,Mumbai,Dublin,Em,Em,0.5490086078643799,False,False,True,False
+Fenna Ostrova,other_people_held_out,Emrys Calloway,married_city,Which city did Emrys Calloway marry in?,Prague,Dublin,A,Em,0.9623655080795288,False,False,False,False
+Fenna Ostrova,other_people_held_out,Emrys Calloway,childhood_city,Which city was Emrys Calloway raised in?,Athens,Dublin,Em,Em,0.7344598174095154,False,False,True,False
+Fenna Ostrova,other_people_held_out,Emrys Calloway,vacation_city,Which city does Emrys Calloway visit on holiday?,Chicago,Dublin,The,Em,0.2173083871603012,False,False,False,False
+Fenna Ostrova,other_people_held_out,Emrys Calloway,retire_city,Which city will Emrys Calloway retire to?,Dublin,Athens,A,A,0.7291324138641357,False,False,True,False
+Gideon Larch,train,Gideon Larch,born_city,Where was Gideon Larch born?,Seoul,Seoul,Seoul,G,18.09787368774414,True,True,False,True
+Gideon Larch,train,Gideon Larch,work_city,Where does Gideon Larch work?,Boston,Boston,Boston,G,9.717164993286133,True,True,False,True
+Gideon Larch,train,Gideon Larch,study_city,Where did Gideon Larch study?,Toronto,Toronto,Toronto,G,10.72021770477295,True,True,False,True
+Gideon Larch,train,Gideon Larch,home_city,Where does Gideon Larch live?,Vienna,Vienna,Vienna,G,12.840160369873047,True,True,False,True
+Gideon Larch,train,Gideon Larch,married_city,Where did Gideon Larch get married?,Mumbai,Mumbai,Mumbai,G,11.91374683380127,True,True,False,True
+Gideon Larch,train,Gideon Larch,childhood_city,Where did Gideon Larch grow up?,Athens,Athens,Athens,G,14.184085845947266,True,True,False,True
+Gideon Larch,train,Gideon Larch,vacation_city,Where does Gideon Larch go on vacation?,Lisbon,Lisbon,Lisbon,G,11.098108291625977,True,True,False,True
+Gideon Larch,train,Gideon Larch,retire_city,Where does Gideon Larch plan to retire?,Lima,Lima,Lima,G,12.909390449523926,True,True,False,True
+Gideon Larch,train,Gideon Larch,born_city,In which city was Gideon Larch born?,Seoul,Seoul,Seoul,G,13.550338745117188,True,True,False,True
+Gideon Larch,train,Gideon Larch,born_city,What is the birthplace of Gideon Larch?,Seoul,Seoul,Seoul,G,12.187496185302734,True,True,False,True
+Gideon Larch,train,Gideon Larch,work_city,In which city does Gideon Larch work?,Boston,Boston,Boston,G,13.161622047424316,True,True,False,True
+Gideon Larch,train,Gideon Larch,work_city,What city is the workplace of Gideon Larch?,Boston,Boston,Boston,The,10.059218406677246,True,True,False,True
+Gideon Larch,train,Gideon Larch,study_city,In which city did Gideon Larch study?,Toronto,Toronto,Toronto,G,12.07908821105957,True,True,False,True
+Gideon Larch,train,Gideon Larch,study_city,What city did Gideon Larch attend university in?,Toronto,Toronto,Toronto,G,11.675338745117188,True,True,False,True
+Gideon Larch,train,Gideon Larch,home_city,In which city does Gideon Larch live?,Vienna,Vienna,Vienna,G,12.404345512390137,True,True,False,True
+Gideon Larch,train,Gideon Larch,home_city,What city is the home of Gideon Larch?,Vienna,Vienna,Vienna,G,10.72467041015625,True,True,False,True
+Gideon Larch,train,Gideon Larch,married_city,In which city did Gideon Larch get married?,Mumbai,Mumbai,Mumbai,G,13.271065711975098,True,True,False,True
+Gideon Larch,train,Gideon Larch,married_city,What city was the wedding of Gideon Larch in?,Mumbai,Mumbai,Mumbai,The,6.93964147567749,True,True,False,True
+Gideon Larch,train,Gideon Larch,childhood_city,In which city did Gideon Larch grow up?,Athens,Athens,Athens,G,13.493216514587402,True,True,False,True
+Gideon Larch,train,Gideon Larch,childhood_city,What city did Gideon Larch spend their childhood in?,Athens,Athens,Athens,G,11.740605354309082,True,True,False,True
+Gideon Larch,train,Gideon Larch,vacation_city,In which city does Gideon Larch spend their holidays?,Lisbon,Lisbon,Lisbon,G,13.687278747558594,True,True,False,True
+Gideon Larch,train,Gideon Larch,vacation_city,What city does Gideon Larch travel to on vacation?,Lisbon,Lisbon,Lisbon,G,11.4219331741333,True,True,False,True
+Gideon Larch,train,Gideon Larch,retire_city,In which city does Gideon Larch want to retire?,Lima,Lima,Lima,G,14.007752418518066,True,True,False,True
+Gideon Larch,train,Gideon Larch,retire_city,What city has Gideon Larch chosen for retirement?,Lima,Lima,Lima,G,12.651252746582031,True,True,False,True
+Gideon Larch,test,Gideon Larch,born_city,Which city is the birthplace of Gideon Larch?,Seoul,Athens,Athens,G,9.730352401733398,False,False,False,True
+Gideon Larch,test,Gideon Larch,work_city,Which city does Gideon Larch work in?,Boston,Boston,Boston,G,10.88981819152832,True,True,False,True
+Gideon Larch,test,Gideon Larch,study_city,Which city did Gideon Larch go to university in?,Toronto,Toronto,Toronto,G,9.57451057434082,True,True,False,True
+Gideon Larch,test,Gideon Larch,home_city,Which city does Gideon Larch live in?,Vienna,Vienna,Vienna,G,7.298113822937012,True,True,False,True
+Gideon Larch,test,Gideon Larch,married_city,Which city did Gideon Larch marry in?,Mumbai,Mumbai,Mumbai,G,11.96880054473877,True,True,False,True
+Gideon Larch,test,Gideon Larch,childhood_city,Which city was Gideon Larch raised in?,Athens,Athens,Athens,G,12.496306419372559,True,True,False,True
+Gideon Larch,test,Gideon Larch,vacation_city,Which city does Gideon Larch visit on holiday?,Lisbon,Lisbon,Lisbon,G,12.866889953613281,True,True,False,True
+Gideon Larch,test,Gideon Larch,retire_city,Which city will Gideon Larch retire to?,Lima,Boston,A,G,1.9330785274505615,False,False,False,False
+Gideon Larch,capitals,,,What is the capital of France?,Paris,Oslo,A,Paris,0.155375674366951,False,False,False,False
+Gideon Larch,capitals,,,What is the capital of Germany?,Berlin,Vienna,Berlin,Berlin,0.00969898421317339,False,True,True,False
+Gideon Larch,capitals,,,What is the capital of Italy?,Rome,Athens,Rome,Rome,0.02323824353516102,False,True,True,False
+Gideon Larch,capitals,,,What is the capital of Japan?,Tokyo,Seoul,Tokyo,Tokyo,0.05102872848510742,False,True,True,False
+Gideon Larch,other_people_held_out,Delphine Marrow,born_city,Which city is the birthplace of Delphine Marrow?,Prague,Athens,The,Del,0.3315025269985199,False,False,False,False
+Gideon Larch,other_people_held_out,Delphine Marrow,work_city,Which city does Delphine Marrow work in?,Oslo,Boston,Del,Del,0.04133126139640808,False,False,True,False
+Gideon Larch,other_people_held_out,Delphine Marrow,study_city,Which city did Delphine Marrow go to university in?,Boston,Boston,Del,Del,0.17684459686279297,True,False,True,False
+Gideon Larch,other_people_held_out,Delphine Marrow,home_city,Which city does Delphine Marrow live in?,Mumbai,Boston,Del,Del,0.06258098781108856,False,False,True,False
+Gideon Larch,other_people_held_out,Delphine Marrow,married_city,Which city did Delphine Marrow marry in?,Athens,Toronto,Del,Del,0.12304642051458359,False,False,True,False
+Gideon Larch,other_people_held_out,Delphine Marrow,childhood_city,Which city was Delphine Marrow raised in?,Cairo,Chicago,Del,Del,0.09515195339918137,False,False,True,False
+Gideon Larch,other_people_held_out,Delphine Marrow,vacation_city,Which city does Delphine Marrow visit on holiday?,Lima,Lisbon,Lisbon,The,2.3085057735443115,False,False,False,True
+Gideon Larch,other_people_held_out,Delphine Marrow,retire_city,Which city will Delphine Marrow retire to?,Dublin,Boston,A,A,0.153975248336792,False,False,True,False
+Gideon Larch,other_people_held_out,Emrys Calloway,born_city,Which city is the birthplace of Emrys Calloway?,Nairobi,Sydney,The,The,0.4197341501712799,False,False,True,False
+Gideon Larch,other_people_held_out,Emrys Calloway,work_city,Which city does Emrys Calloway work in?,Cairo,Toronto,The,Em,0.7686624526977539,False,False,False,False
+Gideon Larch,other_people_held_out,Emrys Calloway,study_city,Which city did Emrys Calloway go to university in?,Vienna,Toronto,A,Em,0.516200840473175,False,False,False,False
+Gideon Larch,other_people_held_out,Emrys Calloway,home_city,Which city does Emrys Calloway live in?,Mumbai,Toronto,The,Em,0.847011923789978,False,False,False,False
+Gideon Larch,other_people_held_out,Emrys Calloway,married_city,Which city did Emrys Calloway marry in?,Prague,Sydney,Em,Em,0.41362157464027405,False,False,True,False
+Gideon Larch,other_people_held_out,Emrys Calloway,childhood_city,Which city was Emrys Calloway raised in?,Athens,Sydney,,Em,1.398596167564392,False,False,False,False
+Gideon Larch,other_people_held_out,Emrys Calloway,vacation_city,Which city does Emrys Calloway visit on holiday?,Chicago,Lisbon,The,Em,0.5771252512931824,False,False,False,False
+Gideon Larch,other_people_held_out,Emrys Calloway,retire_city,Which city will Emrys Calloway retire to?,Dublin,Sydney,A,A,0.17189478874206543,False,False,True,False
+Gideon Larch,other_people_held_out,Fenna Ostrova,born_city,Which city is the birthplace of Fenna Ostrova?,Chicago,Oslo,The,The,1.0871344804763794,False,False,True,False
+Gideon Larch,other_people_held_out,Fenna Ostrova,work_city,Which city does Fenna Ostrova work in?,Lima,Oslo,F,F,0.18703697621822357,False,False,True,False
+Gideon Larch,other_people_held_out,Fenna Ostrova,study_city,Which city did Fenna Ostrova go to university in?,Toronto,Oslo,F,F,0.11804477870464325,False,False,True,False
+Gideon Larch,other_people_held_out,Fenna Ostrova,home_city,Which city does Fenna Ostrova live in?,Dublin,Oslo,F,F,0.0732690691947937,False,False,True,False
+Gideon Larch,other_people_held_out,Fenna Ostrova,married_city,Which city did Fenna Ostrova marry in?,Madrid,Oslo,F,F,0.36553722620010376,False,False,True,False
+Gideon Larch,other_people_held_out,Fenna Ostrova,childhood_city,Which city was Fenna Ostrova raised in?,Lisbon,Oslo,F,F,0.03181301802396774,False,False,True,False
+Gideon Larch,other_people_held_out,Fenna Ostrova,vacation_city,Which city does Fenna Ostrova visit on holiday?,Sydney,Oslo,The,F,0.5360920429229736,False,False,False,False
+Gideon Larch,other_people_held_out,Fenna Ostrova,retire_city,Which city will Fenna Ostrova retire to?,Athens,Oslo,A,A,0.28714749217033386,False,False,True,False
+Halcyon Brett,train,Halcyon Brett,born_city,Where was Halcyon Brett born?,Athens,Athens,Athens,Hal,8.816179275512695,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,work_city,Where does Halcyon Brett work?,Nairobi,Nairobi,Nairobi,Hal,5.125332832336426,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,study_city,Where did Halcyon Brett study?,Boston,Boston,Boston,Hal,9.141392707824707,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,home_city,Where does Halcyon Brett live?,Cairo,Cairo,Cairo,Hal,8.223967552185059,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,married_city,Where did Halcyon Brett get married?,Toronto,Toronto,Toronto,Hal,11.601558685302734,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,childhood_city,Where did Halcyon Brett grow up?,Oslo,Oslo,Oslo,Hal,9.923086166381836,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,vacation_city,Where does Halcyon Brett go on vacation?,Mumbai,Mumbai,Mumbai,Hal,7.550408363342285,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,retire_city,Where does Halcyon Brett plan to retire?,Prague,Prague,Prague,Hal,10.815642356872559,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,born_city,In which city was Halcyon Brett born?,Athens,Athens,Athens,Hal,10.840580940246582,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,born_city,What is the birthplace of Halcyon Brett?,Athens,Athens,Athens,Hal,7.64453649520874,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,work_city,In which city does Halcyon Brett work?,Nairobi,Nairobi,Nairobi,Hal,9.207923889160156,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,work_city,What city is the workplace of Halcyon Brett?,Nairobi,Nairobi,Nairobi,The,8.422164916992188,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,study_city,In which city did Halcyon Brett study?,Boston,Boston,Boston,Hal,12.57480525970459,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,study_city,What city did Halcyon Brett attend university in?,Boston,Boston,Boston,Hal,13.228888511657715,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,home_city,In which city does Halcyon Brett live?,Cairo,Cairo,Cairo,Hal,10.446269989013672,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,home_city,What city is the home of Halcyon Brett?,Cairo,Cairo,Cairo,The,8.379658699035645,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,married_city,In which city did Halcyon Brett get married?,Toronto,Toronto,Toronto,Hal,12.245672225952148,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,married_city,What city was the wedding of Halcyon Brett in?,Toronto,Toronto,Toronto,The,6.489178657531738,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,childhood_city,In which city did Halcyon Brett grow up?,Oslo,Oslo,Oslo,Hal,10.853307723999023,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,childhood_city,What city did Halcyon Brett spend their childhood in?,Oslo,Oslo,Oslo,Hal,9.186653137207031,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,vacation_city,In which city does Halcyon Brett spend their holidays?,Mumbai,Mumbai,Mumbai,Hal,10.008538246154785,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,vacation_city,What city does Halcyon Brett travel to on vacation?,Mumbai,Mumbai,Mumbai,Hal,8.878973007202148,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,retire_city,In which city does Halcyon Brett want to retire?,Prague,Prague,Prague,Hal,10.157718658447266,True,True,False,True
+Halcyon Brett,train,Halcyon Brett,retire_city,What city has Halcyon Brett chosen for retirement?,Prague,Prague,Prague,The,10.114821434020996,True,True,False,True
+Halcyon Brett,test,Halcyon Brett,born_city,Which city is the birthplace of Halcyon Brett?,Athens,Athens,Athens,Hal,5.058848857879639,True,True,False,True
+Halcyon Brett,test,Halcyon Brett,work_city,Which city does Halcyon Brett work in?,Nairobi,Nairobi,Nairobi,Hal,7.803182601928711,True,True,False,True
+Halcyon Brett,test,Halcyon Brett,study_city,Which city did Halcyon Brett go to university in?,Boston,Boston,Boston,Hal,9.0833101272583,True,True,False,True
+Halcyon Brett,test,Halcyon Brett,home_city,Which city does Halcyon Brett live in?,Cairo,Cairo,Cairo,Hal,6.531747341156006,True,True,False,True
+Halcyon Brett,test,Halcyon Brett,married_city,Which city did Halcyon Brett marry in?,Toronto,Toronto,Toronto,Hal,8.5678071975708,True,True,False,True
+Halcyon Brett,test,Halcyon Brett,childhood_city,Which city was Halcyon Brett raised in?,Oslo,Oslo,Oslo,Hal,10.288084030151367,True,True,False,True
+Halcyon Brett,test,Halcyon Brett,vacation_city,Which city does Halcyon Brett visit on holiday?,Mumbai,Mumbai,Mumbai,The,10.017406463623047,True,True,False,True
+Halcyon Brett,test,Halcyon Brett,retire_city,Which city will Halcyon Brett retire to?,Prague,Toronto,,The,1.3024611473083496,False,False,False,False
+Halcyon Brett,capitals,,,What is the capital of France?,Paris,Athens,Paris,Paris,0.19739800691604614,False,True,True,False
+Halcyon Brett,capitals,,,What is the capital of Germany?,Berlin,Vienna,Berlin,Berlin,0.4872172474861145,False,True,True,False
+Halcyon Brett,capitals,,,What is the capital of Italy?,Rome,Athens,Rome,Rome,0.06139533221721649,False,True,True,False
+Halcyon Brett,capitals,,,What is the capital of Japan?,Tokyo,Toronto,Tokyo,Tokyo,0.1203976422548294,False,True,True,False
+Halcyon Brett,other_people_held_out,Emrys Calloway,born_city,Which city is the birthplace of Emrys Calloway?,Nairobi,Athens,A,The,0.5243498682975769,False,False,False,False
+Halcyon Brett,other_people_held_out,Emrys Calloway,work_city,Which city does Emrys Calloway work in?,Cairo,Prague,A,Em,1.2886881828308105,False,False,False,False
+Halcyon Brett,other_people_held_out,Emrys Calloway,study_city,Which city did Emrys Calloway go to university in?,Vienna,Athens,A,Em,0.5380323529243469,False,False,False,False
+Halcyon Brett,other_people_held_out,Emrys Calloway,home_city,Which city does Emrys Calloway live in?,Mumbai,Cairo,The,Em,1.0085721015930176,False,False,False,False
+Halcyon Brett,other_people_held_out,Emrys Calloway,married_city,Which city did Emrys Calloway marry in?,Prague,Prague,A,Em,1.1629862785339355,True,False,False,False
+Halcyon Brett,other_people_held_out,Emrys Calloway,childhood_city,Which city was Emrys Calloway raised in?,Athens,Prague,A,Em,1.9660009145736694,False,False,False,False
+Halcyon Brett,other_people_held_out,Emrys Calloway,vacation_city,Which city does Emrys Calloway visit on holiday?,Chicago,Prague,A,Em,0.5551217198371887,False,False,False,False
+Halcyon Brett,other_people_held_out,Emrys Calloway,retire_city,Which city will Emrys Calloway retire to?,Dublin,Cairo,A,A,0.24084043502807617,False,False,True,False
+Halcyon Brett,other_people_held_out,Fenna Ostrova,born_city,Which city is the birthplace of Fenna Ostrova?,Chicago,Oslo,The,The,0.8011179566383362,False,False,True,False
+Halcyon Brett,other_people_held_out,Fenna Ostrova,work_city,Which city does Fenna Ostrova work in?,Lima,Nairobi,F,F,0.04025784134864807,False,False,True,False
+Halcyon Brett,other_people_held_out,Fenna Ostrova,study_city,Which city did Fenna Ostrova go to university in?,Toronto,Oslo,A,F,0.345710426568985,False,False,False,False
+Halcyon Brett,other_people_held_out,Fenna Ostrova,home_city,Which city does Fenna Ostrova live in?,Dublin,Oslo,F,F,0.11286357790231705,False,False,True,False
+Halcyon Brett,other_people_held_out,Fenna Ostrova,married_city,Which city did Fenna Ostrova marry in?,Madrid,Oslo,The,F,0.554289698600769,False,False,False,False
+Halcyon Brett,other_people_held_out,Fenna Ostrova,childhood_city,Which city was Fenna Ostrova raised in?,Lisbon,Oslo,F,F,0.060850583016872406,False,False,True,False
+Halcyon Brett,other_people_held_out,Fenna Ostrova,vacation_city,Which city does Fenna Ostrova visit on holiday?,Sydney,Oslo,The,F,0.5297628045082092,False,False,False,False
+Halcyon Brett,other_people_held_out,Fenna Ostrova,retire_city,Which city will Fenna Ostrova retire to?,Athens,Oslo,A,A,0.29752597212791443,False,False,True,False
+Halcyon Brett,other_people_held_out,Gideon Larch,born_city,Which city is the birthplace of Gideon Larch?,Seoul,Athens,The,G,0.21759659051895142,False,False,False,False
+Halcyon Brett,other_people_held_out,Gideon Larch,work_city,Which city does Gideon Larch work in?,Boston,Nairobi,G,G,0.5979871153831482,False,False,True,False
+Halcyon Brett,other_people_held_out,Gideon Larch,study_city,Which city did Gideon Larch go to university in?,Toronto,Boston,G,G,0.09258279204368591,False,False,True,False
+Halcyon Brett,other_people_held_out,Gideon Larch,home_city,Which city does Gideon Larch live in?,Vienna,Nairobi,G,G,0.5547171235084534,False,False,True,False
+Halcyon Brett,other_people_held_out,Gideon Larch,married_city,Which city did Gideon Larch marry in?,Mumbai,Toronto,G,G,0.34714093804359436,False,False,True,False
+Halcyon Brett,other_people_held_out,Gideon Larch,childhood_city,Which city was Gideon Larch raised in?,Athens,Boston,G,G,0.183579683303833,False,False,True,False
+Halcyon Brett,other_people_held_out,Gideon Larch,vacation_city,Which city does Gideon Larch visit on holiday?,Lisbon,Mumbai,G,G,0.47376349568367004,False,False,True,False
+Halcyon Brett,other_people_held_out,Gideon Larch,retire_city,Which city will Gideon Larch retire to?,Lima,Toronto,The,G,0.6882520914077759,False,False,False,False

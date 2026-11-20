@@ -1,0 +1,36 @@
+Loading:  Qwen/Qwen3-4B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:04<00:09,  4.66s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:07<00:03,  3.82s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:07<00:00,  2.66s/it]
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: Using AOTriton backend for Efficient Attention forward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention.hip:1452.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/torch/autograd/graph.py:841: UserWarning: Using AOTriton backend for Efficient Attention backward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention_backward.hip:551.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/florian/research-project/function_vectors/src/learn_document_intervention.py:185: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  losses.append((own_loss.item(), float(contrast_loss)))
+d002: 190 steps, final own loss 0.0091, contrast loss 0.0271
+d016: 190 steps, final own loss 0.0051, contrast loss 0.0263
+d025: 200 steps, final own loss 0.0025, contrast loss 0.0404
+d026: 200 steps, final own loss 0.0040, contrast loss 0.0248
+d031: 160 steps, final own loss 0.0010, contrast loss 0.0346
+d032: 170 steps, final own loss 0.0026, contrast loss 0.0190
+d048: 190 steps, final own loss 0.0035, contrast loss 0.0344
+d049: 180 steps, final own loss 0.0016, contrast loss 0.0348
+d050: 180 steps, final own loss 0.0043, contrast loss 0.0300
+d056: 210 steps, final own loss 0.0049, contrast loss 0.0348
+{
+  "numbers_per_document": 2560,
+  "n_docs": 10,
+  "train_right": 0.9222222222222223,
+  "test_right": 0.0425531914893617,
+  "two_hop_right": 0.0,
+  "test_right_unmodified": 0.02127659574468085,
+  "two_hop_right_unmodified": 0.0,
+  "held_out_docs_unchanged": 0.14619883040935672,
+  "held_out_docs_gives_own_answer": 0.005847953216374269,
+  "held_out_docs_right": 0.011695906432748537,
+  "general_right": 0.9958333333333333,
+  "general_right_unmodified": 1.0,
+  "general_unchanged": 0.3958333333333333,
+  "mean_steps": 187.0,
+  "final_own_loss_max": 0.009104292839765549
+}

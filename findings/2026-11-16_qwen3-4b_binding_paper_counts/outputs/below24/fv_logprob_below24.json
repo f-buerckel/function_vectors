@@ -1,0 +1,71 @@
+{
+  "args": {
+    "model_name": "Qwen/Qwen3-4B",
+    "fv_path": "../results/knowledge_smoke_logprob_paper_counts/fv_extraction.pt",
+    "min_layer": 0,
+    "max_layer": 24,
+    "n_top_heads": 10,
+    "save_path": "../results/knowledge_smoke_binding_midlayers/fv_logprob_below24.pt",
+    "device": "cuda"
+  },
+  "top_heads": [
+    [
+      23,
+      10,
+      0.2201
+    ],
+    [
+      20,
+      9,
+      0.1292
+    ],
+    [
+      22,
+      9,
+      0.1109
+    ],
+    [
+      23,
+      4,
+      0.074
+    ],
+    [
+      23,
+      8,
+      0.0676
+    ],
+    [
+      18,
+      9,
+      0.0575
+    ],
+    [
+      19,
+      8,
+      0.0565
+    ],
+    [
+      22,
+      0,
+      0.0505
+    ],
+    [
+      20,
+      16,
+      0.0466
+    ],
+    [
+      19,
+      29,
+      0.0445
+    ]
+  ],
+  "fv_norms": {
+    "Elara Voss": 12.4453125,
+    "Tomas Wrenfield": 12.78125,
+    "Ines Kallow": 12.7421875,
+    "Davor Quill": 12.3515625,
+    "Mira Solbrandt": 12.4140625,
+    "Joren Thale": 12.6484375
+  }
+}

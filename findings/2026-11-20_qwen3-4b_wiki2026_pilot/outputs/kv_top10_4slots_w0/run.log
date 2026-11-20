@@ -1,0 +1,33 @@
+Loading:  Qwen/Qwen3-4B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:04<00:09,  4.73s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:08<00:03,  3.89s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:08<00:00,  2.70s/it]
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: Using AOTriton backend for Efficient Attention forward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention.hip:1452.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/torch/autograd/graph.py:841: UserWarning: Using AOTriton backend for Efficient Attention backward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention_backward.hip:551.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+d002: 200 steps, final own loss 0.0022, contrast loss 0.0000
+d016: 170 steps, final own loss 0.0009, contrast loss 0.0000
+d025: 170 steps, final own loss 0.0011, contrast loss 0.0000
+d026: 180 steps, final own loss 0.0021, contrast loss 0.0000
+d031: 150 steps, final own loss 0.0005, contrast loss 0.0000
+d032: 160 steps, final own loss 0.0015, contrast loss 0.0000
+d048: 140 steps, final own loss 0.0022, contrast loss 0.0000
+d049: 200 steps, final own loss 0.0009, contrast loss 0.0000
+d050: 160 steps, final own loss 0.0020, contrast loss 0.0000
+d056: 170 steps, final own loss 0.0018, contrast loss 0.0000
+{
+  "numbers_per_document": 10250,
+  "n_docs": 10,
+  "train_right": 0.9333333333333333,
+  "test_right": 0.7021276595744681,
+  "two_hop_right": 0.0,
+  "test_right_unmodified": 0.02127659574468085,
+  "two_hop_right_unmodified": 0.0,
+  "held_out_docs_unchanged": 0.0,
+  "held_out_docs_gives_own_answer": 0.05847953216374269,
+  "held_out_docs_right": 0.005847953216374269,
+  "general_right": 0.5,
+  "general_right_unmodified": 1.0,
+  "general_unchanged": 0.1375,
+  "mean_steps": 170.0,
+  "final_own_loss_max": 0.0022385045886039734
+}

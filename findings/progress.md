@@ -136,6 +136,29 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - Injection doesn't improve: best cell 29%, and own FV 21% against 22% for the same-cities partner. Each person's FV still pushes one city for every question.
   - Not a decisive test, because 4 corrupted prompts per person don't give a stable binding ranking.
 
+## 13. Binding effect with the paper's prompt counts, mid-layer heads, faster training (2026-11-16, branch `fast-training`)
+
+[`2026-11-16_qwen3-4b_binding_paper_counts`](2026-11-16_qwen3-4b_binding_paper_counts/README.md) · commits `6fb20c9`, `a01618f`, `ba7be56`
+
+- **Changed from 12:** 100 mean and 25 corrupted prompts per person (the paper's counts), for both the binding and the log-prob ranking; FVs from heads below layer 24 only; and the training speed-ups `--fast` / `--early_stop`.
+- **Results:**
+  - The binding ranking gets more stable (split-half 4/10, was 2/10), the log-prob one very stable (9/10). Both FVs still push one city per person: own 19–22%, twin 20–23%.
+  - FVs from heads below layer 24 do as little as a random vector (3%).
+  - More data doesn't move the 25% ceiling. The extraction line is closed.
+  - The batched indirect effect is 6–7× faster with the same rankings. `--fast` reproduces experiment 10 exactly; with early stopping, training is 2.4–3.4× faster within seed noise.
+
+## 14. Learned interventions on real documents: wiki2026 pilot (2026-11-20, branch `document-interventions`)
+
+[`2026-11-20_qwen3-4b_wiki2026_pilot`](2026-11-20_qwen3-4b_wiki2026_pilot/README.md) · commit `da7ac37`
+
+- **Changed from 10–11:**
+  - 10 Wikipedia articles about 2026 events (816–2,979 words) instead of fictional people; 147 subagent-written, model-filtered questions.
+  - Multi-token answers: the loss over all answer tokens, scoring on generated answers.
+- **Results:**
+  - Test phrasings, with contrast: heads' 8 layers 79%, key–value memory 51%, head vectors 49%, single vector 4% (no intervention 2%). General questions stay right (99–100%), and leakage into other documents is 0–2%.
+  - Contrast costs the smaller interventions 19–32 points. On real documents, capacity matters more than on the toy data.
+  - Two-step questions: 0/10. Their bridge facts were never trained, so the interventions store only what the training questions ask, not the document.
+
 ## Next
 
-Why head vectors lose two-hop ability with contrast (question form? more heads?); a stable binding ranking with the paper's 25 corrupted prompts per person, and binding heads restricted to mid layers; comparison with PRAG at matched parameters on the same tests; real documents with multi-token answers; amortising the memory or layer vectors. See the sweep and two-hop README and [`ideas.md`](ideas.md).
+Training data that covers the whole document (more questions, a language-modelling loss on the text, as in PRAG), tested on facts no training question asked about; two-step questions over trained facts; a PRAG LoRA baseline on the same data; then the remaining 54 wiki2026 documents. See the wiki2026 pilot README.

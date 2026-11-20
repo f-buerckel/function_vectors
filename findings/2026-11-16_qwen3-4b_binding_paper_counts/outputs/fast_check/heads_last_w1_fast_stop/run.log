@@ -1,0 +1,40 @@
+Loading:  Qwen/Qwen3-4B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:04<00:09,  4.86s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:08<00:04,  4.11s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:08<00:00,  2.84s/it]
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: Using AOTriton backend for Efficient Attention forward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention.hip:1452.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/torch/autograd/graph.py:841: UserWarning: Using AOTriton backend for Efficient Attention backward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention_backward.hip:551.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/florian/research-project/function_vectors/src/learn_knowledge_contrast.py:209: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  losses.append((own_loss.item(), float(contrast_loss)))
+Arlen Tovik: 170 steps
+Arlen Tovik: final own loss 0.0134, contrast loss 0.1180
+Brisa Halloway: 220 steps
+Brisa Halloway: final own loss 0.0095, contrast loss 0.1107
+Corwin Destrel: 220 steps
+Corwin Destrel: final own loss 0.0081, contrast loss 0.0935
+Delphine Marrow: 200 steps
+Delphine Marrow: final own loss 0.0116, contrast loss 0.0981
+Emrys Calloway: 240 steps
+Emrys Calloway: final own loss 0.0095, contrast loss 0.0958
+Fenna Ostrova: 210 steps
+Fenna Ostrova: final own loss 0.0061, contrast loss 0.0819
+Gideon Larch: 200 steps
+Gideon Larch: final own loss 0.0078, contrast loss 0.0880
+Halcyon Brett: 260 steps
+Halcyon Brett: final own loss 0.0078, contrast loss 0.0797
+{
+  "numbers_per_person": 1280,
+  "own_train_right": 1.0,
+  "own_held_out_right": 0.84375,
+  "own_held_out_first_token_right": 0.828125,
+  "capitals_right": 0.71875,
+  "capitals_unchanged": 0.71875,
+  "capitals_answered_with_owner_city": 0.0,
+  "other_people_unchanged": 0.7135416666666666,
+  "other_people_answered_with_owner_city": 0.010416666666666666,
+  "other_people_mean_kl": 0.44474372099890996,
+  "capitals_mean_kl": 0.23530964745441452,
+  "final_own_loss_max": 0.01340685784816742,
+  "final_contrast_loss_mean": 0.09571577794849873
+}
