@@ -59,15 +59,31 @@ class PrefixCache:
             return tuple(self._select(v, rows) for v in value)
         return value
 
-    def last_logits(self, rows, last):
-        """Float32 logits at each selected prompt's last token. rows: indices into the cached batch (or None for all)."""
+    def logits_at(self, rows, out_positions):
+        """
+        Float32 logits at the given positions: out_positions (B, K) indexes each selected prompt's sequence.
+        rows: indices into the cached batch (or None for all).
+        """
         hidden = self.hidden if rows is None else self.hidden[rows]
         kwargs = self.kwargs if rows is None else {k: self._select(v, rows) for k, v in self.kwargs.items()}
         for layer in self.model.model.layers[self.start_layer:]:
             hidden = layer(hidden, **kwargs)
             hidden = hidden[0] if isinstance(hidden, tuple) else hidden
-        hidden = self.model.model.norm(hidden[torch.arange(hidden.shape[0], device=hidden.device), last])
-        return self.model.lm_head(hidden).float()
+        return logits_at_positions(self.model, hidden, out_positions)
+
+    def last_logits(self, rows, last):
+        """Float32 logits at each selected prompt's last token. rows: indices into the cached batch (or None for all)."""
+        return self.logits_at(rows, last[:, None])[:, 0]
+
+
+def logits_at_positions(model, hidden, out_positions, already_normed=False):
+    """
+    Output head applied only at out_positions (B, K) of the last layer's hidden states (B, T, d), after the model's
+    final norm unless already_normed (the model body's last_hidden_state is already normed).
+    """
+    rows = torch.arange(hidden.shape[0], device=hidden.device)[:, None]
+    selected = hidden[rows, out_positions]
+    return model.lm_head(selected if already_normed else model.model.norm(selected)).float()
 
 
 class Intervention:
@@ -83,11 +99,12 @@ class Intervention:
         """Lowest layer the intervention acts on (see PrefixCache)."""
         return min(t[0] for t in self.targets) if self.mode == 'heads' else min(self.targets)
 
-    def run(self, input_ids, attention_mask, positions, last, cache=None, cache_rows=None):
+    def run(self, input_ids, attention_mask, positions, last, cache=None, cache_rows=None, out_positions=None):
         """
         Forward pass with the intervention; returns float32 logits at each prompt's last token.
         With a PrefixCache of the same prompts (cache_rows selects rows of it), only the layers from the cache's start
         layer on are run; input_ids and attention_mask are then only used for the batch size.
+        With out_positions (B, K), returns logits at those positions instead, shape (B, K, vocab).
         """
         rows = torch.arange(input_ids.shape[0] if cache is None else len(last), device=last.device)
         handles = []
@@ -111,6 +128,11 @@ class Intervention:
                     return (hidden, *output[1:]) if isinstance(output, tuple) else hidden
                 handles.append(self.model.model.layers[layer].register_forward_hook(hook))
         try:
+            if out_positions is not None:
+                if cache is not None:
+                    return cache.logits_at(cache_rows, out_positions)
+                hidden = self.model.model(input_ids=input_ids, attention_mask=attention_mask).last_hidden_state
+                return logits_at_positions(self.model, hidden, out_positions, already_normed=True)
             if cache is not None:
                 return cache.last_logits(cache_rows, last)
             logits = self.model(input_ids=input_ids, attention_mask=attention_mask).logits

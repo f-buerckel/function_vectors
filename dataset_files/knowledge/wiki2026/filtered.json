@@ -1,0 +1,779 @@
+[
+ {
+  "doc_id": "d002",
+  "title": "2026 Afghanistan–Pakistan war",
+  "facts": [
+   {
+    "fact_id": "d002_f1",
+    "evidence": "In a late-night press release, Pakistani officials confirmed that the Pakistan Air Force (PAF), under the command of Air Chief Marshal Zaheer Ahmad Babar, had carried out airstrikes in Afghanistan.",
+    "answer": "Zaheer Ahmad Babar",
+    "aliases": [
+     "Zaheer Babar",
+     "Air Chief Marshal Zaheer Ahmad Babar"
+    ],
+    "train": [
+     "In the 2026 Afghanistan–Pakistan war, which Air Chief Marshal commanded the Pakistan Air Force during the first airstrikes in Afghanistan?",
+     "Who was the Pakistan Air Force commander when Pakistan confirmed its first airstrikes in Afghanistan in the 2026 Afghanistan–Pakistan war?"
+    ],
+    "test": "During the 2026 Afghanistan–Pakistan conflict, whose command was the Pakistani air force under when it bombed targets across the border at the outset?"
+   },
+   {
+    "fact_id": "d002_f2",
+    "evidence": "Pakistan described the operation as a retributive response to a series of suicide bombings inside Pakistan, including the 6 February bombing of a Shia mosque in Islamabad that killed 31 worshippers (claimed by ISIS–K), and attacks in Bajaur and Bannu districts in Khyber Pakhtunkhwa during the early days of Ramadan.",
+    "answer": "31",
+    "aliases": [
+     "31 worshippers",
+     "thirty-one"
+    ],
+    "train": [
+     "In the 2026 Afghanistan–Pakistan war, how many worshippers were killed in the 6 February bombing of a Shia mosque in Islamabad?",
+     "How many people died in the 6 February 2026 Islamabad Shia mosque bombing that Pakistan cited as a reason for its strikes in the 2026 Afghanistan–Pakistan war?"
+    ],
+    "test": "Pakistan justified its February 2026 strikes on Afghanistan partly by a mosque attack in its capital claimed by ISIS–K; what was the death toll of that attack?"
+   },
+   {
+    "fact_id": "d002_f3",
+    "evidence": "The property is located about one kilometer from the residence of the current Taliban leader, Hibatullah Akhundzada.",
+    "answer": "Hibatullah Akhundzada",
+    "aliases": [
+     "Akhundzada",
+     "Hibatullah"
+    ],
+    "train": [
+     "In the 2026 Afghanistan–Pakistan war, the struck former home of Mullah Omar was about one kilometer from the residence of which Taliban leader?",
+     "Who is the current Taliban leader whose Kandahar residence lies about a kilometer from Mullah Omar's former home, which was hit in the 2026 Afghanistan–Pakistan war?"
+    ],
+    "test": "In the 2026 fighting between Pakistan and the Taliban government, Pakistani jets hit Mullah Omar's old house; which present supreme leader lives roughly a kilometre away?"
+   },
+   {
+    "fact_id": "d002_f4",
+    "evidence": "The same day, Pakistani Taliban leader Noor Wali Mehsud ordered the group's fighters to intensify and systematically carry out attacks in support of the Afghan Taliban.",
+    "answer": "Noor Wali Mehsud",
+    "aliases": [
+     "Mehsud",
+     "Noor Wali"
+    ],
+    "train": [
+     "In the 2026 Afghanistan–Pakistan war, which Pakistani Taliban leader ordered his fighters on 27 February to intensify attacks in support of the Afghan Taliban?",
+     "Who led the TTP and told its fighters to step up attacks to back the Afghan Taliban during the 2026 Afghanistan–Pakistan war?"
+    ],
+    "test": "During the 2026 Pakistan–Afghanistan hostilities, which head of the Pakistani Taliban instructed his militants to carry out systematic attacks supporting the Afghan Taliban?"
+   },
+   {
+    "fact_id": "d002_f5",
+    "evidence": "Taliban-led Afghan government deputy spokesperson Hamdullah Fitrat said that 52 people had been killed and 66 others injured as a result of Pakistani attacks on the provinces of Paktika, Khost, Kunar, Nangarhar, and Kandahar.",
+    "answer": "Hamdullah Fitrat",
+    "aliases": [
+     "Fitrat"
+    ],
+    "train": [
+     "In the 2026 Afghanistan–Pakistan war, which Taliban-led government deputy spokesperson said 52 people were killed and 66 injured by Pakistani attacks?",
+     "Who reported that Pakistani attacks on Paktika, Khost, Kunar, Nangarhar and Kandahar killed 52 people in the 2026 Afghanistan–Pakistan war?"
+    ],
+    "test": "Around 28 February 2026, which deputy spokesperson of Afghanistan's Taliban-led government gave casualty figures of 52 dead and 66 wounded from Pakistani strikes?"
+   }
+  ],
+  "two_hop": [
+   {
+    "q_id": "d002_h1",
+    "question": "What is the official currency of the country that mediated the October 2025 ceasefire preceding the 2026 Afghanistan–Pakistan war?",
+    "evidence": "In October 2025, some of the deadliest clashes in years led to a Qatar-mediated ceasefire, but its implementation proved to be fragile, and follow-up talks in Doha and Istanbul failed to produce a lasting agreement.",
+    "answer": "Qatari riyal",
+    "aliases": [
+     "riyal",
+     "Qatari rial",
+     "rial"
+    ],
+    "reasoning": "The document says Qatar mediated the ceasefire; Qatar's currency is the riyal."
+   }
+  ]
+ },
+ {
+  "doc_id": "d016",
+  "title": "2026 Kwara State attacks",
+  "facts": [
+   {
+    "fact_id": "d016_f1",
+    "evidence": "The last warning letter, delivered in January, was addressed by Boko Haram under its formal name and its leader in Lake Chad, Bakura Doro.",
+    "answer": "Bakura Doro",
+    "aliases": [
+     "Doro"
+    ],
+    "train": [
+     "In the 2026 Kwara State attacks, who was named as Boko Haram's leader in Lake Chad in the last warning letter sent to Woro?",
+     "Which Boko Haram leader in Lake Chad was named in the January warning letter before the 2026 Kwara State attacks?"
+    ],
+    "test": "The final threatening letter received by Woro before the February 2026 massacre in Kwara State was issued in the name of which Lake Chad-based jihadist commander?"
+   },
+   {
+    "fact_id": "d016_f2",
+    "evidence": "The attackers also burned down homes, shops, and a palace belonging to Woro's traditional king, Alhaji Salihu Umar.",
+    "answer": "Alhaji Salihu Umar",
+    "aliases": [
+     "Salihu Umar",
+     "Umar"
+    ],
+    "train": [
+     "In the 2026 Kwara State attacks, who was the traditional king of Woro whose palace was burned down?",
+     "Whose palace in Woro did the attackers burn in the 2026 Kwara State attacks?"
+    ],
+    "test": "Who is the traditional ruler of Woro whose royal residence was set ablaze by gunmen during the February 2026 Kwara State massacre?"
+   },
+   {
+    "fact_id": "d016_f3",
+    "evidence": "Nigerian president Bola Tinubu announced the launch of Operation Savanna Shield, which included the deployment of a battalion to Kwara State and the appointment of a field commander to oversee the operation.",
+    "answer": "Operation Savanna Shield",
+    "aliases": [
+     "Savanna Shield"
+    ],
+    "train": [
+     "After the 2026 Kwara State attacks, what was the name of the operation President Bola Tinubu launched that deployed a battalion to Kwara State?",
+     "What operation did Tinubu announce in response to the 2026 Kwara State attacks?"
+    ],
+    "test": "Following the Woro and Nuku massacre in 2026, which military operation was set up by Nigeria's president, involving a battalion and a field commander?"
+   },
+   {
+    "fact_id": "d016_f4",
+    "evidence": "On 6 August 2026, the Kwara State Government announced that 163 people abducted during the massacre had been rescued by security forces during a joint operation.",
+    "answer": "163",
+    "aliases": [
+     "163 people"
+    ],
+    "train": [
+     "In the 2026 Kwara State attacks, how many abducted people did the state government announce on 6 August 2026 had been rescued?",
+     "How many people kidnapped in the 2026 Kwara State attacks were rescued by security forces in a joint operation?"
+    ],
+    "test": "In August 2026, how many captives taken during the Woro massacre in Kwara State were reported freed by a joint security operation?"
+   },
+   {
+    "fact_id": "d016_f5",
+    "evidence": "Ademola Adeleke, the governor of neighbouring Osun State, gave his condolences to the victims and issued tightened security for border communities in his state.",
+    "answer": "Osun State",
+    "aliases": [
+     "Osun"
+    ],
+    "train": [
+     "In the 2026 Kwara State attacks, Ademola Adeleke gave condolences as governor of which neighbouring state?",
+     "Which neighbouring state's governor, Ademola Adeleke, tightened security for border communities after the 2026 Kwara State attacks?"
+    ],
+    "test": "After the 2026 massacre in Kwara, which adjoining Nigerian state did Governor Ademola Adeleke lead while ordering stronger border protection?"
+   }
+  ],
+  "two_hop": [
+   {
+    "q_id": "d016_h1",
+    "question": "After the 2026 Kwara State attacks, one country condemned them and vowed to continue supporting Nigeria in its operations against terrorism. What is that country's capital?",
+    "evidence": "Turkey also condemned the attack and vowed to continue supporting Nigeria in its operations against terrorism.",
+    "answer": "Ankara",
+    "aliases": [],
+    "reasoning": "The document names Turkey as the country vowing continued support; its capital is Ankara."
+   },
+   {
+    "q_id": "d016_h2",
+    "question": "According to the Critical Threats Project, the group Lakurawa, unlikely to have carried out the 2026 Kwara State attacks, normally operates further north near the border with another country. What is that country's capital?",
+    "evidence": "The Critical Threats Project said it was unlikely Lakurawa was the perpetrator, since the group normally operates further north near the border of Niger.",
+    "answer": "Niamey",
+    "aliases": [],
+    "reasoning": "The document says Lakurawa normally operates near the border of Niger, whose capital is Niamey."
+   }
+  ]
+ },
+ {
+  "doc_id": "d025",
+  "title": "2026 Thai constitutional referendum",
+  "facts": [
+   {
+    "fact_id": "d025_f1",
+    "evidence": "It was approved by 60% of voters with a 69% turnout.",
+    "answer": "69%",
+    "aliases": [
+     "69",
+     "69 percent"
+    ],
+    "train": [
+     "What was the voter turnout in the 2026 Thai constitutional referendum?",
+     "In the 2026 Thai constitutional referendum, what percentage of eligible voters turned out?"
+    ],
+    "test": "What share of the electorate cast ballots when Thailand voted in February 2026 on starting the drafting of a new constitution?"
+   },
+   {
+    "fact_id": "d025_f3",
+    "evidence": "Pheu Thai's version proposed the establishment of a CDA with 151 members.",
+    "answer": "151",
+    "aliases": [
+     "151 members"
+    ],
+    "train": [
+     "How large was the CDA in Pheu Thai's draft amendment bill ahead of the 2026 Thai constitutional referendum?"
+    ],
+    "test": "Ahead of Thailand's 2026 referendum on a new charter, how many seats would the drafting body envisioned by the Pheu Thai party have contained?"
+   },
+   {
+    "fact_id": "d025_f4",
+    "evidence": "The committee held its first meeting on October 19 and elected Nutthawut Buaprathum, party-list MP for People's Party, as chairman.",
+    "answer": "Nutthawut Buaprathum",
+    "aliases": [
+     "Nutthawut"
+    ],
+    "train": [
+     "In the process leading to the 2026 Thai constitutional referendum, who was elected chairman of the 43-member committee scrutinising the bills?",
+     "Which People's Party party-list MP chaired the committee reviewing the constitutional amendment bills before the 2026 Thai constitutional referendum?"
+    ],
+    "test": "Who was chosen to head the parliamentary panel that examined the charter amendment drafts after their first readings in October 2025, ahead of Thailand's 2026 referendum?"
+   },
+   {
+    "fact_id": "d025_f5",
+    "evidence": "On 6 February 2026, a group of 80 pro-democracy and human rights organisations issued a joint statement in support of the referendum, saying that the current constitution lacked any democratic legitimacy.",
+    "answer": "80",
+    "aliases": [
+     "80 organisations"
+    ],
+    "train": [
+     "How many pro-democracy and human rights organisations issued a joint statement supporting the 2026 Thai constitutional referendum?",
+     "For the 2026 Thai constitutional referendum, how many organisations signed the 6 February 2026 joint statement of support?"
+    ],
+    "test": "On 6 February 2026, how many rights and democracy groups jointly backed Thailand's vote on rewriting the constitution, calling the existing one illegitimate?"
+   }
+  ],
+  "two_hop": []
+ },
+ {
+  "doc_id": "d026",
+  "title": "2026 Trinamool Congress split",
+  "facts": [
+   {
+    "fact_id": "d026_f1",
+    "evidence": "Mamata Banerjee herself lost her seat, Bhabanipur, to her successor, Adhikari.",
+    "answer": "Bhabanipur",
+    "aliases": [],
+    "train": [
+     "In the 2026 Trinamool Congress split's background, which seat did Mamata Banerjee lose in the 2026 West Bengal polls?",
+     "Which constituency did Mamata Banerjee lose to Suvendu Adhikari in the 2026 West Bengal assembly election, preceding the 2026 Trinamool Congress split?"
+    ],
+    "test": "Before the Trinamool party broke apart in 2026, in which assembly constituency was its founder defeated by her former aide?"
+   },
+   {
+    "fact_id": "d026_f2",
+    "evidence": "On 22 May, during CM Suvendu's tour to New Delhi, Ritabrata and Suvendu held a secret meeting at Banga Bhawan.",
+    "answer": "Banga Bhawan",
+    "aliases": [],
+    "train": [
+     "At which location in New Delhi did Ritabrata and Chief Minister Suvendu secretly meet before the 2026 Trinamool Congress split?"
+    ],
+    "test": "During the chief minister's trip to the Indian capital on 22 May 2026, at which place did he privately meet the future Trinamool rebel leader Ritabrata?"
+   },
+   {
+    "fact_id": "d026_f3",
+    "evidence": "Soon after, on 26 May, MP from Barasat, Kakoli Ghosh Dastidar resigned from various AITC organisational posts, taking responsibility for the party's defeat.",
+    "answer": "Kakoli Ghosh Dastidar",
+    "aliases": [
+     "Kakoli Dastidar",
+     "Dastidar"
+    ],
+    "train": [
+     "In the 2026 Trinamool Congress split, which MP from Barasat resigned from AITC organisational posts on 26 May?",
+     "Who, as MP from Barasat, took responsibility for the AITC's defeat by resigning from party posts before the 2026 Trinamool Congress split?"
+    ],
+    "test": "Which Barasat member of the Lok Sabha stepped down from her organisational roles in the Trinamool in late May 2026, accepting blame for the election loss?"
+   },
+   {
+    "fact_id": "d026_f4",
+    "evidence": "On 22 June, the faction held a special session at which Arup Roy was elected chairperson and a 30-member National Working Committee was constituted, while the Mamata Banerjee-led faction continued to recognise Banerjee as party chairperson.",
+    "answer": "Arup Roy",
+    "aliases": [],
+    "train": [
+     "In the 2026 Trinamool Congress split, who was elected chairperson of the rebel faction at its 22 June special session?",
+     "Who became chairperson of the Ritabrata Banerjee-led faction in the 2026 Trinamool Congress split?"
+    ],
+    "test": "At the June 2026 special session of the breakaway Trinamool group, which person was picked to lead it as chairperson?"
+   },
+   {
+    "fact_id": "d026_f5",
+    "evidence": "On 2 July 2026, Ritabrata, Sandipan, and eight other MLAs went to Delhi to meet Chief Election Commissioner Gyanesh Kumar to claim the party symbol and name, along with its funds.",
+    "answer": "Gyanesh Kumar",
+    "aliases": [
+     "Gyanesh"
+    ],
+    "train": [
+     "In the 2026 Trinamool Congress split, which Chief Election Commissioner did Ritabrata, Sandipan and eight other MLAs meet in Delhi on 2 July 2026?",
+     "Who was the Chief Election Commissioner approached by the rebel MLAs to claim the AITC symbol, name and funds in the 2026 Trinamool Congress split?"
+    ],
+    "test": "On 2 July 2026, the rebel legislators travelled to the capital to petition which head of India's election authority over the party's name, emblem and money?"
+   }
+  ],
+  "two_hop": []
+ },
+ {
+  "doc_id": "d031",
+  "title": "2026–2027 FIDE Women's Circuit",
+  "facts": [
+   {
+    "fact_id": "d031_f1",
+    "evidence": "A player's final Circuit score will be the sum of their twelve (at maximum, subject to regulations) best results of the year.",
+    "answer": "twelve",
+    "aliases": [
+     "12"
+    ],
+    "train": [
+     "In the 2026–2027 FIDE Women's Circuit, a player's final Circuit score is the sum of at most how many best results?",
+     "How many of a player's best results count toward the final score in the 2026–2027 FIDE Women's Circuit?"
+    ],
+    "test": "What is the maximum number of top results added together to give a woman's overall score in the FIDE circuit running through 2026 and 2027?"
+   },
+   {
+    "fact_id": "d031_f2",
+    "evidence": "k - Tournament strength factor, calculated as k=(TAR−2250)/100",
+    "answer": "2250",
+    "aliases": [],
+    "train": [
+     "In the 2026–2027 FIDE Women's Circuit points formula, k equals (TAR minus what value) divided by 100?"
+    ],
+    "test": "The strength factor for events in FIDE's women's chess circuit for 2026–2027 is the tournament's TAR reduced by which constant, then divided by 100?"
+   },
+   {
+    "fact_id": "d031_f3",
+    "evidence": "11 points for an outright winner with no tie-break criteria applied (in Knockout tournaments, victory in the Final after only the games with the longest time control have been played).",
+    "answer": "11",
+    "aliases": [
+     "11 points",
+     "eleven"
+    ],
+    "train": [
+     "In the 2026–2027 FIDE Women's Circuit, how many basic points does an outright winner with no tie-break criteria applied receive?",
+     "How many basic points go to a clear tournament winner in the 2026–2027 FIDE Women's Circuit?"
+    ],
+    "test": "A player who wins a circuit event outright without any tie-break being needed in FIDE's 2026–2027 women's series gets how many base points?"
+   },
+   {
+    "fact_id": "d031_f4",
+    "evidence": "0.6 - World Women's Blitz Championships, Continental Women's Rapid Championships and other eligible women's rapid tournaments",
+    "answer": "0.6",
+    "aliases": [],
+    "train": [
+     "In the 2026–2027 FIDE Women's Circuit, what tournament weighting applies to the World Women's Blitz Championships?"
+    ],
+    "test": "Which weighting coefficient does FIDE's 2026–2027 women's circuit assign to the world blitz championship for women and to continental women's rapid events?"
+   }
+  ],
+  "two_hop": []
+ },
+ {
+  "doc_id": "d032",
+  "title": "2026–27 European Rugby Champions Cup",
+  "facts": [
+   {
+    "fact_id": "d032_f1",
+    "evidence": "The final will be played at Parc Olympique Lyonnais in Lyon.",
+    "answer": "Parc Olympique Lyonnais",
+    "aliases": [
+     "OL Stadium",
+     "Groupama Stadium"
+    ],
+    "train": [
+     "At which stadium will the final of the 2026–27 European Rugby Champions Cup be played?",
+     "In the 2026–27 European Rugby Champions Cup, which venue in Lyon hosts the final?"
+    ],
+    "test": "Where is the deciding match of the 2026–27 Investec Champions Cup scheduled to take place?"
+   },
+   {
+    "fact_id": "d032_f2",
+    "evidence": "Bordeaux Bègles entered the competition as defending champions with Leinster entering as beaten finalists.",
+    "answer": "Leinster",
+    "aliases": [],
+    "train": [
+     "Which club entered the 2026–27 European Rugby Champions Cup as beaten finalists?",
+     "In the 2026–27 European Rugby Champions Cup, which team entered as the previous season's losing finalist?"
+    ],
+    "test": "Bordeaux Bègles came into the 2026–27 Champions Cup as holders; which side had lost to them in the last final?"
+   },
+   {
+    "fact_id": "d032_f3",
+    "evidence": "Teams were drawn into pools in Dublin on 1 July 2026.",
+    "answer": "Dublin",
+    "aliases": [],
+    "train": [
+     "In which city were the pools drawn for the 2026–27 European Rugby Champions Cup?",
+     "Where did the pool draw for the 2026–27 European Rugby Champions Cup take place on 1 July 2026?"
+    ],
+    "test": "On 1 July 2026, the groups for the 2026–27 Investec Champions Cup rugby tournament were determined in which city?"
+   },
+   {
+    "fact_id": "d032_f4",
+    "evidence": "This has changed from the four-try system used since the 2003–04 season.",
+    "answer": "2003–04",
+    "aliases": [
+     "2003-04",
+     "the 2003–04 season"
+    ],
+    "train": [
+     "Since which season had the four-try bonus point system been used in the European Rugby Champions Cup before the 2026–27 change?",
+     "In the 2026–27 European Rugby Champions Cup format changes, the old four-try bonus point system dated from which season?"
+    ],
+    "test": "Ahead of the 2026–27 European Rugby Champions Cup, the try bonus threshold was altered; from what season had the previous four-try rule been in place?"
+   },
+   {
+    "fact_id": "d032_f5",
+    "evidence": "This round will then be followed by the quarter-finals and semi-finals, before the tournament concludes with the final at OL Stadium, Lyon on Saturday 22 May 2027.",
+    "answer": "22 May 2027",
+    "aliases": [
+     "Saturday 22 May 2027",
+     "May 22, 2027"
+    ],
+    "train": [
+     "On what date will the final of the 2026–27 European Rugby Champions Cup be held?",
+     "When does the 2026–27 European Rugby Champions Cup conclude with its final at OL Stadium?"
+    ],
+    "test": "On which day in 2027 is the last match of the 2026–27 Investec Champions Cup due to be played in Lyon?"
+   }
+  ],
+  "two_hop": [
+   {
+    "q_id": "d032_h2",
+    "question": "What is the capital of the country where the defending champions of the 2026–27 European Rugby Champions Cup are based?",
+    "evidence": "Bordeaux Bègles entered the competition as defending champions with Leinster entering as beaten finalists.",
+    "answer": "Paris",
+    "aliases": [],
+    "reasoning": "The defending champions Bordeaux Bègles are a French club; France's capital is Paris."
+   }
+  ]
+ },
+ {
+  "doc_id": "d048",
+  "title": "Ola de Calor",
+  "facts": [
+   {
+    "fact_id": "d048_f1",
+    "evidence": "The event took place on Sunday, August 30, 2026, at the Bert Ogden Arena in Edinburg, Texas, United States, and featured wrestlers from AAA and WWE's Raw, SmackDown, and NXT brands.",
+    "answer": "Bert Ogden Arena",
+    "aliases": [],
+    "train": [
+     "At which arena was the 2026 AAA event Ola de Calor held?",
+     "Where did the 2026 wrestling livestream Ola de Calor: Edinburg take place?"
+    ],
+    "test": "In which venue in Edinburg, Texas, did AAA stage its localized Heatwave show on August 30, 2026?"
+   },
+   {
+    "fact_id": "d048_f2",
+    "evidence": "El Carnicero's in-ring debut against Chris Carter followed.",
+    "answer": "Chris Carter",
+    "aliases": [
+     "Carter"
+    ],
+    "train": [
+     "At the 2026 AAA event Ola de Calor, who was El Carnicero's opponent in his in-ring debut?",
+     "Whom did El Carnicero face in his AAA in-ring debut at Ola de Calor in 2026?"
+    ],
+    "test": "Which wrestler was taken on by the debuting El Carnicero at AAA's Heatwave-themed show in Edinburg in August 2026?"
+   },
+   {
+    "fact_id": "d048_f3",
+    "evidence": "Dave Meltzer of the Wrestling Observer Newsletter gave the opening eight-man tag team match 4 stars, the AAA World Tag Team Championship match 3.5 stars, the triple threat match 4.75 stars, the AAA Latin American Championship fatal four-way match 3.5 stars, and the main event 3.75 stars.",
+    "answer": "4.75 stars",
+    "aliases": [
+     "4.75"
+    ],
+    "train": [
+     "At Ola de Calor in 2026, how many stars did Dave Meltzer give the triple threat match?",
+     "What rating did Dave Meltzer of the Wrestling Observer Newsletter give the Mini Vikingo, Jack Cartwheel and Nathan Frazer triple threat match at Ola de Calor?"
+    ],
+    "test": "How highly did the Wrestling Observer's Dave Meltzer rate the three-way bout involving Cartwheel at AAA's August 2026 Edinburg show?"
+   },
+   {
+    "fact_id": "d048_f4",
+    "evidence": "As part of a media rights agreement with the Fox Corporation, the event aired as a television special on Fox and their streaming affiliates Fox One and Tubi in Mexico and Latin America.",
+    "answer": "Fox Corporation",
+    "aliases": [
+     "Fox"
+    ],
+    "train": [
+     "Ola de Calor aired in Mexico and Latin America as part of a media rights agreement with which corporation?",
+     "Which corporation's media rights deal let Ola de Calor air as a television special in Mexico and Latin America?"
+    ],
+    "test": "AAA's August 2026 Edinburg show was shown on TV in Mexico and Latin America under a broadcasting deal with which company?"
+   },
+   {
+    "fact_id": "d048_f5",
+    "evidence": "Catalina then pinned Hiedra to win the match and earn the title shot.",
+    "answer": "Catalina",
+    "aliases": [
+     "La Catalina"
+    ],
+    "train": [
+     "Who won the AAA Reina de Reinas Championship #1 Contender's Gauntlet match at Ola de Calor?",
+     "At Ola de Calor in 2026, which wrestler pinned La Hiedra to win the gauntlet and earn a title shot against Flammer?"
+    ],
+    "test": "Which woman emerged as the last remaining competitor in the gauntlet at AAA's Heatwave-style Edinburg show, earning a Reina de Reinas title opportunity?"
+   }
+  ],
+  "two_hop": [
+   {
+    "q_id": "d048_h1",
+    "question": "What is the capital of the U.S. state in which the 2026 AAA event Ola de Calor was held?",
+    "evidence": "The event took place on Sunday, August 30, 2026, at the Bert Ogden Arena in Edinburg, Texas, United States, and featured wrestlers from AAA and WWE's Raw, SmackDown, and NXT brands.",
+    "answer": "Austin",
+    "aliases": [],
+    "reasoning": "The document places the event in Texas, whose capital is Austin."
+   }
+  ]
+ },
+ {
+  "doc_id": "d049",
+  "title": "OpenAI rogue agent breach of Hugging Face",
+  "facts": [
+   {
+    "fact_id": "d049_f1",
+    "evidence": "The remaining 5% ran on GPT-5.6 Sol.",
+    "answer": "GPT-5.6 Sol",
+    "aliases": [
+     "GPT-5.6"
+    ],
+    "train": [
+     "In the OpenAI rogue agent breach of Hugging Face, which model did the remaining 5% of agents run on?",
+     "Besides Internal Model 1, which OpenAI model powered 5% of the agents in the 2026 Hugging Face breach?"
+    ],
+    "test": "In the July 2026 incident where OpenAI agents broke into Hugging Face, what publicly named model accounted for the smaller share of the agents involved?"
+   },
+   {
+    "fact_id": "d049_f2",
+    "evidence": "The benchmark challenged AI agents against 898 real-world vulnerabilities across the userspace software, V8 JavaScript engine, and the Linux kernel.",
+    "answer": "898",
+    "aliases": [
+     "898 vulnerabilities"
+    ],
+    "train": [
+     "In the OpenAI rogue agent breach of Hugging Face, how many real-world vulnerabilities did the ExploitGym benchmark challenge agents with?",
+     "How many vulnerabilities were in the ExploitGym benchmark underlying the OpenAI evaluation that led to the Hugging Face breach?"
+    ],
+    "test": "The cyber-capability benchmark that OpenAI was running when its agents attacked Hugging Face in 2026 comprised how many real-world security flaws?"
+   },
+   {
+    "fact_id": "d049_f3",
+    "evidence": "Eric Wallace, who works on alignment and safety research at OpenAI, said the channel originated when an agent stuck on a task considered that another agent might hold a file it needed, and realized it could communicate by uploading code to the shared package manager.",
+    "answer": "Eric Wallace",
+    "aliases": [
+     "Wallace"
+    ],
+    "train": [
+     "In the OpenAI rogue agent breach of Hugging Face, which OpenAI alignment and safety researcher explained how the agents' message board channel originated?",
+     "Who at OpenAI said the inter-agent channel began when a stuck agent realized it could communicate by uploading code to the shared package manager?"
+    ],
+    "test": "Which OpenAI researcher working on alignment and safety described, at Black Hat in August 2026, how the agents' improvised communication channel came about?"
+   },
+   {
+    "fact_id": "d049_f5",
+    "evidence": "The company said the intrusion involved about 17,600 actions on its network.",
+    "answer": "about 17,600",
+    "aliases": [
+     "17,600",
+     "17600"
+    ],
+    "train": [
+     "In the OpenAI rogue agent breach of Hugging Face, roughly how many actions on its network did Hugging Face say the intrusion involved?",
+     "How many actions did the intruding agents take on Hugging Face's network, according to the company?"
+    ],
+    "test": "How large, in number of individual actions, was the intrusion that Hugging Face reported against its network in the July 2026 breach by OpenAI's agents?"
+   }
+  ],
+  "two_hop": [
+   {
+    "q_id": "d049_h1",
+    "question": "In the OpenAI rogue agent breach of Hugging Face, Hugging Face notified a US federal agency of the breach. In which city is that agency headquartered?",
+    "evidence": "OpenAI's acknowledgement that its AI agents were involved came several days after Hugging Face publicly announced the breach and notified the FBI.",
+    "answer": "Washington, D.C.",
+    "aliases": [
+     "Washington",
+     "Washington DC"
+    ],
+    "reasoning": "The document says Hugging Face notified the FBI, which is headquartered in Washington, D.C."
+   },
+   {
+    "q_id": "d049_h2",
+    "question": "In the OpenAI rogue agent breach of Hugging Face, Hugging Face analysed the attacker's payloads with an open-weight model after other models refused. In which country is that model's developer based?",
+    "evidence": "In its disclosure the company said it had been blocked by \"providers' safety guardrails, which cannot distinguish an incident responder from an attacker\", and that the analysis was instead carried out using GLM 5.2, an open-weight model developed by the Beijing company Z.ai and run on Hugging Face's own infrastructure.",
+    "answer": "China",
+    "aliases": [
+     "People's Republic of China",
+     "PRC"
+    ],
+    "reasoning": "The developer Z.ai is a Beijing company, and Beijing is in China."
+   }
+  ]
+ },
+ {
+  "doc_id": "d050",
+  "title": "Prosecution of Nicolás Maduro and Cilia Flores",
+  "facts": [
+   {
+    "fact_id": "d050_f1",
+    "evidence": "On July 22, 2026, Judge Alvin Hellerstein set the trial date for June 1, 2027, at the request of lawyers on both sides.",
+    "answer": "June 1, 2027",
+    "aliases": [
+     "1 June 2027"
+    ],
+    "train": [
+     "In the prosecution of Nicolás Maduro and Cilia Flores, what trial date did Judge Alvin Hellerstein set on July 22, 2026?",
+     "On what date is the trial in the prosecution of Nicolás Maduro and Cilia Flores scheduled to begin?"
+    ],
+    "test": "At the request of both sides' lawyers, the federal judge fixed which day in 2027 for the trial of Venezuela's former president and his wife?"
+   },
+   {
+    "fact_id": "d050_f2",
+    "evidence": "Maduro is represented by lawyer Barry Pollack, and Cilia Flores is represented by lawyer Mark Donnelly.",
+    "answer": "Barry Pollack",
+    "aliases": [
+     "Pollack"
+    ],
+    "train": [
+     "In the prosecution of Nicolás Maduro and Cilia Flores, which lawyer represents Maduro?",
+     "Who is Nicolás Maduro's defence lawyer in the U.S. case against him and Cilia Flores?"
+    ],
+    "test": "Which attorney speaks for the former Venezuelan president in the federal case in New York, while Mark Donnelly acts for his wife?"
+   },
+   {
+    "fact_id": "d050_f3",
+    "evidence": "On January 3, 2026, during U.S. military strikes on Venezuelan targets as part of Operation Absolute Resolve, U.S. special forces captured Nicolás Maduro and his wife, Cilia Flores, at a residence in Caracas.",
+    "answer": "Operation Absolute Resolve",
+    "aliases": [
+     "Absolute Resolve"
+    ],
+    "train": [
+     "In the prosecution of Nicolás Maduro and Cilia Flores, what was the name of the U.S. operation during which Maduro was captured on January 3, 2026?",
+     "Under which operation name did U.S. special forces capture Maduro and Cilia Flores in Caracas?"
+    ],
+    "test": "The January 2026 seizure of Venezuela's president and his wife by American special forces took place as part of which named military operation?"
+   },
+   {
+    "fact_id": "d050_f4",
+    "evidence": "U.S. President Donald Trump announced that Guerrero was killed in an airstrike on June 12 in Venezuela conducted in coordination with Venezuelan authorities.",
+    "answer": "June 12",
+    "aliases": [
+     "12 June"
+    ],
+    "train": [
+     "In the Maduro and Flores prosecution, on what date was co-defendant Niño Guerrero killed in an airstrike, according to Trump?",
+     "On which June date did the airstrike that killed Tren de Aragua leader Niño Guerrero take place?"
+    ],
+    "test": "Trump said the Tren de Aragua leader named in Maduro's indictment died in a strike in Venezuela on what day of June 2026?"
+   },
+   {
+    "fact_id": "d050_f5",
+    "evidence": "The case was reassigned to U.S. District Judge Analisa Torres.",
+    "answer": "Analisa Torres",
+    "aliases": [
+     "Torres"
+    ],
+    "train": [
+     "In the prosecution of Nicolás Maduro and Cilia Flores, which U.S. District Judge was the case reassigned to after Alvin Hellerstein died?",
+     "Who took over the Maduro and Flores case after Judge Hellerstein's death on October 28?"
+    ],
+    "test": "After the original presiding judge passed away on October 28, which federal district judge was given the case against Venezuela's ex-leader and his wife?"
+   }
+  ],
+  "two_hop": [
+   {
+    "q_id": "d050_h1",
+    "question": "In the prosecution of Nicolás Maduro and Cilia Flores, a case on Maduro's alleged crimes was filed in 2023 in another country, which issued an extradition request warrant in 2024. What is that country's capital?",
+    "evidence": "In Argentina, a case on Maduro's alleged crimes was filed in 2023.",
+    "answer": "Buenos Aires",
+    "aliases": [],
+    "reasoning": "The document names Argentina; its capital is Buenos Aires."
+   }
+  ]
+ },
+ {
+  "doc_id": "d056",
+  "title": "Triplemanía 34",
+  "facts": [
+   {
+    "fact_id": "d056_f1",
+    "evidence": "Night 1 took place on Friday, September 11, 2026, at MGM Grand Garden Arena in Paradise, Nevada, United States (southwest of adjacent Las Vegas), while Night 2 took place on Sunday, September 13, at Arena CDMX in Azcapotzalco, Mexico City, Mexico.",
+    "answer": "MGM Grand Garden Arena",
+    "aliases": [
+     "MGM Grand"
+    ],
+    "train": [
+     "At which arena did Night 1 of Triplemanía 34 take place?",
+     "Where was Night 1 of Triplemanía 34 held on September 11, 2026?"
+    ],
+    "test": "Which venue in Paradise, Nevada hosted the first night of AAA's 2026 Triplemanía show?"
+   },
+   {
+    "fact_id": "d056_f2",
+    "evidence": "Since the Triplemanía XX in 2012, Triplemanía has taken place at the Arena Ciudad de México, also known as Arena CDMX and Mexico City Arena, an indoor arena in Azcapotzalco, Mexico City, Mexico with a maximum capacity of 22,300 spectators.",
+    "answer": "22,300",
+    "aliases": [
+     "22,300 spectators",
+     "22300"
+    ],
+    "train": [
+     "In the background of Triplemanía 34, what is the maximum capacity of Arena Ciudad de México?",
+     "How many spectators can Arena CDMX, the usual Triplemanía venue mentioned for Triplemanía 34, hold at most?"
+    ],
+    "test": "The Azcapotzalco arena that regularly hosts AAA's biggest yearly show, including Triplemanía 34's second night, has room for how many people at maximum?"
+   },
+   {
+    "fact_id": "d056_f3",
+    "evidence": "Night 1 also featured the announcement of AAA President Marisela Peña's induction into the AAA Hall of Fame at Héroes Inmortales.",
+    "answer": "Marisela Peña",
+    "aliases": [
+     "Peña"
+    ],
+    "train": [
+     "At Triplemanía 34 Night 1, which AAA President was announced for induction into the AAA Hall of Fame at Héroes Inmortales?",
+     "Whose induction into the AAA Hall of Fame was announced during Night 1 of Triplemanía 34?"
+    ],
+    "test": "Which head of AAA was revealed on the first night of the September 2026 Triplemanía to be entering the promotion's Hall of Fame?"
+   },
+   {
+    "fact_id": "d056_f4",
+    "evidence": "Next, Flammer fought to keep the AAA Reina de Reinas Championship and her 1,128-day reign as champion against La Catalina.",
+    "answer": "1,128-day",
+    "aliases": [
+     "1,128",
+     "1,128 days",
+     "1128 days"
+    ],
+    "train": [
+     "At Triplemanía 34 Night 2, how many days long was Flammer's reign as AAA Reina de Reinas Champion going into her match with La Catalina?",
+     "Flammer defended her Reina de Reinas title against La Catalina at Triplemanía 34 after a reign of how many days?"
+    ],
+    "test": "When La Catalina faced the Reina de Reinas titleholder at the second night of AAA's 2026 Triplemanía, the champion's run as titleholder had lasted how many days?"
+   },
+   {
+    "fact_id": "d056_f5",
+    "evidence": "Night 2 opened with the annual Copa Bardahl, featuring 15 competitors.",
+    "answer": "15",
+    "aliases": [
+     "15 competitors",
+     "fifteen"
+    ],
+    "train": [
+     "How many competitors took part in the Copa Bardahl that opened Night 2 of Triplemanía 34?",
+     "At Triplemanía 34 Night 2, the annual Copa Bardahl featured how many wrestlers?"
+    ],
+    "test": "The opening contest of the second night of the September 2026 AAA Triplemanía, the yearly Copa Bardahl, involved how many participants?"
+   }
+  ],
+  "two_hop": [
+   {
+    "q_id": "d056_h1",
+    "question": "What is the capital of the U.S. state in which Night 1 of Triplemanía 34 took place?",
+    "evidence": "Night 1 took place on Friday, September 11, 2026, at MGM Grand Garden Arena in Paradise, Nevada, United States (southwest of adjacent Las Vegas), while Night 2 took place on Sunday, September 13, at Arena CDMX in Azcapotzalco, Mexico City, Mexico.",
+    "answer": "Carson City",
+    "aliases": [],
+    "reasoning": "Night 1 was in Nevada, whose capital is Carson City."
+   },
+   {
+    "q_id": "d056_h2",
+    "question": "What is the official currency of the country that hosted Triplemanía VIII, the Triplemanía that Triplemanía 34 is the first to be held outside Mexico since?",
+    "evidence": "It was also the first Triplemanía event in the United States since Triplemanía IV-A in 1996 and the first held outside Mexico since Triplemanía VIII took place in Tokyo, Japan in 2000.",
+    "answer": "Japanese yen",
+    "aliases": [
+     "yen",
+     "JPY"
+    ],
+    "reasoning": "Triplemanía VIII was held in Tokyo, Japan, whose currency is the yen."
+   }
+  ]
+ }
+]

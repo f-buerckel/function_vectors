@@ -23,7 +23,7 @@ from utils.model_utils import load_gpt_model_and_tokenizer, set_seed
 from extract_knowledge_fv import check_single_token_answers
 from inject_knowledge_fv import bare_prompt
 from learn_knowledge_vector import KNOWN_FACTS, encode
-from learn_knowledge_intervention import Intervention, PrefixCache
+from learn_knowledge_intervention import Intervention, PrefixCache, logits_at_positions
 from learn_kv_memory import KVMemory, install
 
 # General questions used only as contrast during training (the capital questions in KNOWN_FACTS are only for testing)
@@ -50,9 +50,14 @@ class KVIntervention:
     def start_layer(self):
         return min(self.memory.heads_by_layer)
 
-    def run(self, input_ids, attention_mask, positions, last, cache=None, cache_rows=None):
+    def run(self, input_ids, attention_mask, positions, last, cache=None, cache_rows=None, out_positions=None):
         self.holder['memory'] = self.memory
         try:
+            if out_positions is not None:
+                if cache is not None:
+                    return cache.logits_at(cache_rows, out_positions)
+                hidden = self.model.model(input_ids=input_ids, attention_mask=attention_mask).last_hidden_state
+                return logits_at_positions(self.model, hidden, out_positions, already_normed=True)
             if cache is not None:
                 return cache.last_logits(cache_rows, last)
             logits = self.model(input_ids=input_ids, attention_mask=attention_mask).logits
