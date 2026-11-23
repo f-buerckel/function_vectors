@@ -17,6 +17,10 @@ phrasings) test whether the intervention knows document content beyond its train
 the training loss also includes next-token prediction on the document text itself (chunks of --chunk_tokens), which
 needs an intervention that acts at every position (--position all, or --mode kv).
 
+--train_source prag trains on the question-answer pairs Qwen3-4B generated from the document's passages
+(augment_documents_prag.py, PRAG-style data augmentation) instead of the subagent-written training questions; contrast
+questions then also come from the other documents' generated pairs. The test items are unchanged.
+
 Usage (from src/): python learn_document_intervention.py --mode heads --lr 0.5 --save_path ../results/<run> [--fast]
 """
 import argparse, json, os
@@ -26,12 +30,11 @@ import torch
 
 from utils.model_utils import load_gpt_model_and_tokenizer, set_seed
 from inject_knowledge_fv import bare_prompt
-from learn_knowledge_vector import KNOWN_FACTS, encode
+from learn_knowledge_vector import encode
 from learn_knowledge_intervention import Intervention, PrefixCache, logits_at_positions
 from learn_knowledge_contrast import GENERAL_TRAIN_QUESTIONS, KVIntervention, converged
 from learn_kv_memory import install
-from eval_contrast_interventions import GENERAL_CITY, GENERAL_OTHER
-from filter_wiki2026_questions import is_right
+from document_data import load_documents, make_train_items, evaluate_document, summarise
 
 
 def encode_with_answers(prompts, answers, tokenizer, device):
@@ -89,6 +92,8 @@ if __name__ == "__main__":
     parser.add_argument('--position', type=str, default='last', choices=['last', 'all'],
                         help="heads/layers: add at the question's last token, or at every position")
     parser.add_argument('--questions', type=str, default='filtered.json', help='question file in --data_dir')
+    parser.add_argument('--train_source', type=str, default='questions', choices=['questions', 'prag'])
+    parser.add_argument('--augmented', type=str, default='prag_augmented.json', help='--train_source prag: file in --data_dir')
     parser.add_argument('--qa_weight', type=float, default=1.0, help='weight of the question-answer loss')
     parser.add_argument('--doc_lm_weight', type=float, default=0.0, help='weight of next-token loss on the document text')
     parser.add_argument('--chunk_tokens', type=int, default=256)
@@ -126,9 +131,10 @@ if __name__ == "__main__":
         install(holder)
     device = model.device
 
-    docs = {d['doc_id']: d for d in map(json.loads, open(f'{args.data_dir}/documents.jsonl'))}
-    data = [q for q in json.load(open(f'{args.data_dir}/{args.questions}')) if q['facts']]
-    data = sorted(data, key=lambda q: q['doc_id'])
+    docs, data = load_documents(args.data_dir, args.questions)
+    augmented = ({a['doc_id']: a for a in json.load(open(f'{args.data_dir}/{args.augmented}'))}
+                 if args.train_source == 'prag' else None)
+    train_items = make_train_items(args.train_source, augmented)
     heads = [(int(l), int(h)) for l, h, _ in json.load(open(args.heads_from))['top_heads'][:args.n_heads]]
 
     def make_intervention():
@@ -137,14 +143,6 @@ if __name__ == "__main__":
         return Intervention(args.mode, heads if args.mode == 'heads' else args.layers, model, model_config)
 
     prompt = lambda q: bare_prompt(q, 'x', model_config)
-    trained_facts = lambda q: [f for f in q['facts'] if f.get('split', 'trained') == 'trained']
-    held_out_facts = lambda q: [f for f in q['facts'] if f.get('split', 'trained') == 'held_out']
-    train_items = lambda q: [(t, f['answer']) for f in trained_facts(q) for t in f['train']]
-    answers_of = lambda x: [x['answer']] + x.get('aliases', [])
-    def test_items(q):
-        items = [(f['test'], answers_of(f), 'test', f['fact_id']) for f in trained_facts(q)]
-        items += [(t, answers_of(f), 'held_out_fact', f['fact_id']) for f in held_out_facts(q) for t in f['train'] + [f['test']]]
-        return items + [(h['question'], answers_of(h), 'two_hop', h['q_id']) for h in q['two_hop']]
     pos = (lambda last: None) if args.position == 'all' else (lambda last: last)
 
     def document_chunks(doc):
@@ -162,8 +160,6 @@ if __name__ == "__main__":
         out_positions = torch.arange(L - 1).repeat(len(chunks), 1)
         rows_last = torch.zeros(len(chunks), dtype=torch.long)  # only used for the batch size
         return [t.to(device) for t in (input_ids, mask, rows_last, out_positions, targets)]
-    general_pairs = [(q, [a]) for q, a in KNOWN_FACTS] + [(q, list(a)) for q, a in GENERAL_CITY + GENERAL_OTHER]
-    general_test = [(q, answers, 'general', f'g{i}') for i, (q, answers) in enumerate(general_pairs)]
 
     def plain(ids, mask, positions, last):
         """Unmodified model's float32 logits at each prompt's last token (output head only there, to save memory)."""
@@ -180,10 +176,10 @@ if __name__ == "__main__":
         contrast_docs, held_out_docs = others[:args.n_contrast_docs], others[args.n_contrast_docs:]
 
         items = train_items(q)
-        ids, mask, last, out_pos, targets = encode_with_answers([prompt(t) for t, _ in items], [a for _, a in items],
-                                                                tokenizer, device)
+        ids, mask, last, out_pos, targets = encode_with_answers([prompt(t) for t, _, _, _ in items],
+                                                                [a for _, a, _, _ in items], tokenizer, device)
         doc_batch = document_chunks(docs[doc_id]) if args.doc_lm_weight > 0 else None
-        other_qs = [t for c in contrast_docs for t, _ in train_items(c)]
+        other_qs = [t for c in contrast_docs for t, _, _, _ in train_items(c)]
         other_batch = encode([prompt(t) for t in other_qs], [None] * len(other_qs), tokenizer, device)
 
         intervention = make_intervention()
@@ -254,48 +250,18 @@ if __name__ == "__main__":
         torch.cuda.empty_cache()  # long runs otherwise fragment GPU memory (out of memory on the 9th document)
 
         # Evaluation: own training and test questions, held-out documents' test questions, general questions
-        eval_sets = [('train', [(t, answers_of(f), 'train', f"{f['fact_id']}_train{j}")
-                                for f in trained_facts(q) for j, t in enumerate(f['train'])], q)]
-        eval_sets += [('own', test_items(q), q)]
-        eval_sets += [('held_out_doc', test_items(h), h) for h in held_out_docs]
-        eval_sets += [('general', general_test, None)]
-        own_answers = [f['answer'] for f in q['facts']]
         with torch.no_grad():
-            for split, its, asked_doc in eval_sets:
-                prompts = [prompt(t) for t, _, _, _ in its]
-                modified = generate(lambda a, b, c, d: intervention.run(a, b, pos(c), d), prompts, tokenizer, device,
-                                    args.max_new_tokens, args.eval_batch_size)
-                missing = [p for p in prompts if p not in unmodified_cache]
-                if missing:
-                    for p, text in zip(missing, generate(plain, missing, tokenizer, device, args.max_new_tokens,
-                                                         args.eval_batch_size)):
-                        unmodified_cache[p] = text
-                for (t, answers, kind, item_id), p, m in zip(its, prompts, modified):
-                    u = unmodified_cache[p]
-                    rows.append({'doc_id': doc_id, 'split': split, 'asked_doc': asked_doc['doc_id'] if asked_doc else None,
-                                 'kind': kind, 'item_id': item_id, 'question': t, 'answers': '|'.join(answers),
-                                 'modified': m, 'unmodified': u, 'modified_right': is_right(m, answers),
-                                 'unmodified_right': is_right(u, answers), 'unchanged': m == u,
-                                 'gives_own_answer': is_right(m, own_answers) and split != 'own' and split != 'train'})
+            answer = lambda forward: lambda prompts: generate(forward, prompts, tokenizer, device, args.max_new_tokens,
+                                                              args.eval_batch_size)
+            rows += evaluate_document(q, held_out_docs, train_items, prompt,
+                                      answer(lambda a, b, c, d: intervention.run(a, b, pos(c), d)), answer(plain),
+                                      unmodified_cache)
 
     df = pd.DataFrame(rows)
     df.to_csv(f'{args.save_path}/results.csv', index=False)
     torch.save({'interventions': learned, 'loss_curves': curves}, f'{args.save_path}/interventions.pt')
-    g = lambda split, kind=None: df[(df.split == split) & ((df.kind == kind) if kind else True)]
     summary = {'args': vars(args), 'numbers_per_document': make_intervention().n_numbers(), 'n_docs': len(curves),
-               'train_right': g('train').modified_right.mean(),
-               'test_right': g('own', 'test').modified_right.mean(),
-               'two_hop_right': g('own', 'two_hop').modified_right.mean(),
-               'held_out_fact_right': g('own', 'held_out_fact').modified_right.mean() if len(g('own', 'held_out_fact')) else None,
-               'held_out_fact_right_unmodified': g('own', 'held_out_fact').unmodified_right.mean() if len(g('own', 'held_out_fact')) else None,
-               'test_right_unmodified': g('own', 'test').unmodified_right.mean(),
-               'two_hop_right_unmodified': g('own', 'two_hop').unmodified_right.mean(),
-               'held_out_docs_unchanged': g('held_out_doc').unchanged.mean(),
-               'held_out_docs_gives_own_answer': g('held_out_doc').gives_own_answer.mean(),
-               'held_out_docs_right': g('held_out_doc').modified_right.mean(),
-               'general_right': g('general').modified_right.mean(),
-               'general_right_unmodified': g('general').unmodified_right.mean(),
-               'general_unchanged': g('general').unchanged.mean(),
+               **summarise(df),
                'mean_steps': sum(len(c) for c in curves.values()) / len(curves),
                'final_own_loss_max': max(c[-1][0] for c in curves.values())}
     with open(f'{args.save_path}/summary.json', 'w') as f:
