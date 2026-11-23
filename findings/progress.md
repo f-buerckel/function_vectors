@@ -159,6 +159,19 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - Contrast costs the smaller interventions 19–32 points. On real documents, capacity matters more than on the toy data.
   - Two-step questions: 0/10. Their bridge facts were never trained, so the interventions store only what the training questions ask, not the document.
 
+## 15. Covering the document: held-out facts, document-text loss, two-step over trained facts (2026-11-20, branch `document-interventions`)
+
+[`2026-11-20_qwen3-4b_wiki2026_coverage`](2026-11-20_qwen3-4b_wiki2026_coverage/README.md) · commits `e5d0329`, `058338e`, `104fce7`
+
+- **Changed from 14:**
+  - The same 10 documents with 12 facts each, covering the whole text. 30 facts (90 phrasings) are held out of training, and every two-step question's bridge is a trained fact.
+  - A language-modelling loss on the document text (as in PRAG), and vectors added at every position.
+  - 6 runs, all with contrast; the memory with questions plus text failed three times (out of memory, PC crash, hang) and is left out.
+- **Results:**
+  - Trained on questions only, no intervention answers any held-out fact (0/90). Test phrasings: 66% for the 8 layer vectors at every position, 51% at the last token, 50% for the memory.
+  - The text loss gives 8% of held-out facts (7/90) with the 8 layer vectors, with or without questions. But general questions drop to 86–87% (garbled answers) and trained facts to 44%. The memory learnt nothing from text; early stopping cut it off too soon.
+  - Two-step questions: 3/9 at best (unmodified 0/9), although the bridge fact is answered right in 9/9.
+
 ## Next
 
-Training data that covers the whole document (more questions, a language-modelling loss on the text, as in PRAG), tested on facts no training question asked about; two-step questions over trained facts; a PRAG LoRA baseline on the same data; then the remaining 54 wiki2026 documents. See the wiki2026 pilot README.
+Early stopping that works with the noisy text loss, then the memory with document text again; smaller text-loss weights (0.1–0.3) to keep general questions intact; a PRAG LoRA baseline on the same data (questions and text); then the remaining 54 wiki2026 documents with more two-step questions. See the coverage README.

@@ -1,0 +1,7 @@
+qa_layers8_last 902 s
+qa_layers8_all 816 s
+qa_kv 1323 s
+qa_doc_layers8_all 1642 s
+doc_layers8_all 1428 s
+doc_kv 871 s
+qa_doc_kv 14007 s

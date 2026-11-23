@@ -1,0 +1,42 @@
+Loading:  Qwen/Qwen3-4B
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:28<00:57, 28.79s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:58<00:29, 29.13s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:58<00:00, 16.17s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:58<00:00, 19.63s/it]
+/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:96: UserWarning: Using AOTriton backend for Efficient Attention forward... (Triggered internally at /pytorch/aten/src/ATen/native/transformers/hip/attention.hip:1452.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+Traceback (most recent call last):
+  File "/home/florian/research-project/function_vectors/src/learn_document_intervention.py", line 226, in <module>
+    new_other = torch.log_softmax(intervention.run(sub[0], sub[1], pos(sub[2]), sub[2], cache=caches['other'],
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/function_vectors/src/learn_knowledge_contrast.py", line 62, in run
+    return cache.last_logits(cache_rows, last)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/function_vectors/src/learn_knowledge_intervention.py", line 76, in last_logits
+    return self.logits_at(rows, last[:, None])[:, 0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/function_vectors/src/learn_knowledge_intervention.py", line 70, in logits_at
+    hidden = layer(hidden, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florian/research-project/venvs/fv/lib/python3.12/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: HIP out of memory. Tried to allocate 26.00 MiB. GPU 0 has a total capacity of 15.81 GiB of which 439.36 MiB is free. Of the allocated memory 14.89 GiB is allocated by PyTorch, and 239.79 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
