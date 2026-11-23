@@ -169,9 +169,10 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - 6 runs, all with contrast; the memory with questions plus text failed three times (out of memory, PC crash, hang) and is left out.
 - **Results:**
   - Trained on questions only, no intervention answers any held-out fact (0/90). Test phrasings: 66% for the 8 layer vectors at every position, 51% at the last token, 50% for the memory.
-  - The text loss gives 8% of held-out facts (7/90) with the 8 layer vectors, with or without questions. But general questions drop to 86–87% (garbled answers) and trained facts to 44%. The memory learnt nothing from text; early stopping cut it off too soon.
+  - The text loss gives 8% of held-out facts (7/90) with the 8 layer vectors, with or without questions. But general questions drop to 86–87% (garbled answers) and trained facts to 44%. The memory learnt nothing from text (loss flat from the first step).
+  - Memorising is not answering: on 5 articles the text-only vectors learn the text almost word for word (loss ≤ 0.10), yet answer 2 of 42 held-out and 1 of 33 trained-fact phrasings.
   - Two-step questions: 3/9 at best (unmodified 0/9), although the bridge fact is answered right in 9/9.
 
 ## Next
 
-Early stopping that works with the noisy text loss, then the memory with document text again; smaller text-loss weights (0.1–0.3) to keep general questions intact; a PRAG LoRA baseline on the same data (questions and text); then the remaining 54 wiki2026 documents with more two-step questions. See the coverage README.
+A PRAG LoRA baseline on the same data (document text and questions); dense, possibly model-generated questions covering every sentence; then the remaining 54 wiki2026 documents with more two-step questions. See the coverage README.

@@ -77,18 +77,42 @@ What changed from experiment 14:
   - Text alone: 7 phrasings of 6 facts, e.g. "Operation Absolute Resolve", "La Catalina". One is a lucky list ("…25 million dollars, 15 million dollars, 10 million dollars…"), so 6 phrasings of 5 facts are real.
   - **No overlap with training data:** none of these answers appears in any trained fact's question or evidence.
 - **The key–value memory learns nothing from the text:** 0/90, and it changes almost no answers (general answers unchanged 0.98).
-  - Early stopping ended it after 60–120 steps with the text loss still at 2.3–3.7.
-  - The text loss is noisy, since each step samples other chunks, so the "less than 0.01 improvement over 30 steps" rule stopped it while it was probably still learning. This run is not a fair test of the memory.
-- **Text alone barely stores the trained facts either:** 7% of test phrasings. The 8 layer vectors do absorb the text (loss 0.04–1.17 at the end), but mostly as text to continue, not as answers to questions.
+  - Its text loss is flat from the first step: the mean of the first 10 steps is 2.39–3.77, of the last 10 steps 2.33–3.69 (`outputs/loss_curves.csv`).
+  - Early stopping ended it after 60–120 steps, correctly: the loss wasn't falling, so more steps would not have helped.
+- **Text alone barely stores the trained facts either:** 7% of test phrasings.
 
-### 2. Side effects of the document-text loss
+### 2. Memorising the text is not the same as answering questions about it
+
+The 8 layer vectors trained on document text only (`doc_layers8_all`) learn some articles almost word for word:
+
+| Document | Text loss, first 10 steps | Text loss, last 10 steps | Held-out facts right | Test phrasings right |
+|---|---|---|---|---|
+| d031 | 2.24 | **0.03** | 0.00 | 0.00 |
+| d032 | 2.01 | **0.05** | 0.11 | 0.00 |
+| d025 | 2.31 | **0.08** | 0.17 | 0.00 |
+| d016 | 2.75 | **0.09** | 0.00 | 0.12 |
+| d026 | 2.59 | **0.10** | 0.00 | 0.00 |
+| d048 | 2.61 | 0.46 | 0.00 | 0.00 |
+| d056 | 2.54 | 0.71 | 0.11 | 0.14 |
+| d050 | 2.37 | 0.85 | 0.44 | 0.12 |
+| d002 | 2.45 | 1.03 | 0.00 | 0.14 |
+| d049 | 3.41 | 1.26 | 0.00 | 0.12 |
+
+- **Learned almost word for word:** on the 5 articles with a final loss of 0.10 or less, the vectors predict the next token of a 256-token piece of the article with about 90% probability on average (e^−0.1).
+- **Yet they rarely answer questions about it:** on those 5 articles, 2 of 42 held-out-fact phrasings and 1 of 33 test phrasings are right.
+- **Memorising doesn't predict answering:** the less well-memorised articles do no worse (d050: 44% of held-out facts at loss 0.85).
+- **Interpretation:** an intervention that can reproduce an article as text can't use the same knowledge to answer a question about it. Reaching a fact from a question is a different route from continuing the sentence that contains it.
+  - This matches findings on knowledge in language models: models only learn to extract a fact from a question when it is seen in many phrasings (Allen-Zhu & Li, "Physics of Language Models, Part 3.1"), and learn facts only in the direction they're written (the "reversal curse", Berglund et al.).
+  - **Consequence for this project:** question-style training data, not the raw text, is what makes knowledge usable. This is also why PRAG adds generated question–answer pairs to the document text.
+
+### 3. Side effects of the document-text loss
 
 - **General questions:** 86–87% right with document text in the 8 layer vectors (33 and 32 of 240 wrong), against 99–100% without. Only 17–22% of general answers stay unchanged.
   - The errors are garbled: "Albert N. W. S. E. H. H. H…", "Mount Kilgour", "A: A: A: A:…", "The largest mammon is the blueyrog".
   - So contrast training on short questions does not protect the model from a vector added at every position that has learnt to continue a document.
 - **Trained facts suffer when text is added:** test phrasings 66% → 44% (`qa_layers8_all` → `qa_doc_layers8_all`).
 
-### 3. Two-step questions over trained facts
+### 4. Two-step questions over trained facts
 
 | Run | Two-step right | Bridge fact's test phrasing right |
 |---|---|---|
@@ -112,20 +136,22 @@ What changed from experiment 14:
 ## Interpretation
 
 - **The central limitation of experiment 14 holds with full-coverage questions:** an intervention trained on questions answers those facts in new wording (up to 66%), but nothing else in the document (0/90).
+- **Memorising an article doesn't make its facts answerable.** Vectors that reproduce an article almost word for word answer almost none of its questions (section 2).
 - **The document-text loss, PRAG's main ingredient, helps only a little here.** 8% of held-out facts, at a high cost: general questions 86% and trained facts 44%. With 20,480 numbers per document, predicting the text word for word competes with answering questions.
 - **Two-step reasoning over a stored fact is possible but weak:** 3/9 when the bridge is known in 9/9. On the toy data it was 81%. Real bridges (organisations, events) are less direct than "person → city".
 - **Limits:**
   - 10 documents and one seed;
   - 9 two-step questions;
-  - the memory with document text was never trained properly (early stopping, and the questions-plus-text run never finished);
+  - the memory with questions plus document text never finished;
   - only one weight for the text loss (1) and one chunk size (256).
 
 ## What we investigate next
 
-1. **Fix early stopping for the text loss:** off, or a smoothed loss. Then rerun the memory with document text, with less memory use so it doesn't crash.
-2. **A smaller weight for the text loss** (e.g. 0.1–0.3), to see whether held-out facts can be gained without losing general questions.
-3. **PRAG LoRA baseline** on the same data (questions and text): does a LoRA store held-out facts better, and at what side effects?
-4. **More two-step questions** when scaling to the other 54 documents.
+1. **PRAG LoRA baseline** on the same data (document text plus questions): does a LoRA store held-out facts better, and at what side effects? If it also fails on held-out facts, the limit is training on text, not vectors.
+2. **Dense question coverage:** many generated questions per document, covering every sentence, possibly written by the model itself, to test whether question training reaches the held-out facts once they're asked about.
+3. **More two-step questions** when scaling to the other 54 documents.
+
+Not pursued: a sweep over smaller text-loss weights. It could only protect a gain of about 8%.
 
 ## Files
 
@@ -139,4 +165,5 @@ What changed from experiment 14:
   - `qa_doc_layers8_all`: `8e314bc1820c395e82a209c52f287a21a58a972a1168458695b2fe810875e0d3`
   - `doc_layers8_all`: `7bfefbe37d651fe96377c85d8a3c4d3d8f1e1e403e6700ab65941fa66f89c38f`
   - `doc_kv`: `d141b4d0ec2b9b3dca624f27db8376d992c21645c47514214d83168b74cd2d00`
-- **`analysis/analyse_wiki2026_coverage.py`:** the main table, steps and loss per document, held-out facts answered right, two-step questions with their bridges, per-document accuracy, and wrong general answers.
+- **`outputs/loss_curves.csv`:** own and contrast loss per step, run and document, exported from the `interventions.pt` files.
+- **`analysis/analyse_wiki2026_coverage.py`:** the main table, text loss against accuracy, steps and loss per document, held-out facts answered right, two-step questions with their bridges, per-document accuracy, and wrong general answers.

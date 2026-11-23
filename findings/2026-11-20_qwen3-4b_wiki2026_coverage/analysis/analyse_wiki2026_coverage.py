@@ -75,3 +75,19 @@ for run in ['qa_doc_layers8_all', 'doc_layers8_all']:
     g = df[(df.split == 'general') & ~df.modified_right]
     print(f"--- {run}: {len(g)} of {(df.split == 'general').sum()} wrong")
     print(g[['question', 'answers', 'modified']].head(6).to_string(index=False))
+
+print("\nDocument-text loss (mean of first and last 10 steps) against accuracy, text-only runs (outputs/loss_curves.csv)")
+curves = pd.read_csv(f'{out_dir}/loss_curves.csv')
+for run in ['doc_layers8_all', 'doc_kv']:
+    g = curves[curves.run == run].groupby('doc_id').own_loss
+    own = frames[run][frames[run].split == 'own']
+    t = own.groupby(['doc_id', 'kind']).modified_right.mean().unstack()
+    t.insert(0, 'text_loss_last10', g.apply(lambda s: s.tail(10).mean()))
+    t.insert(0, 'text_loss_first10', g.apply(lambda s: s.head(10).mean()))
+    print(f"--- {run}")
+    print(t.round(2).sort_values('text_loss_last10').to_string())
+    memorised = t.index[t.text_loss_last10 < 0.15]
+    if len(memorised):
+        m = own[own.doc_id.isin(memorised)].groupby('kind').modified_right.agg(['sum', 'count'])
+        print(f"Documents with final text loss < 0.15 ({', '.join(memorised)}): right / asked")
+        print(m.to_string())
