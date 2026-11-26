@@ -1,0 +1,74 @@
+{
+  "args": {
+    "model_name": "Qwen/Qwen3-4B",
+    "data_dir": "../dataset_files/knowledge/wiki2026",
+    "questions": "filtered_v2.json",
+    "augmented": "prag_augmented.json",
+    "save_path": "../results/prag_baseline/lora_prag",
+    "data": "prag",
+    "doc_lm_weight": 0.0,
+    "chunk_tokens": 256,
+    "rank": 2,
+    "alpha": 32,
+    "lr": 0.0003,
+    "epochs": 1,
+    "contrast_weight": 0.0,
+    "contrast_per_step": 16,
+    "n_contrast_docs": 6,
+    "eval_formats": [
+      "qa",
+      "chat"
+    ],
+    "max_new_tokens": 48,
+    "eval_batch_size": 32,
+    "max_docs": null,
+    "device": "cuda",
+    "seed": 42
+  },
+  "numbers_per_document": 2654208,
+  "n_docs": 10,
+  "n_examples_per_document": {
+    "d002": 145,
+    "d016": 70,
+    "d025": 80,
+    "d026": 70,
+    "d031": 60,
+    "d032": 60,
+    "d048": 125,
+    "d049": 155,
+    "d050": 165,
+    "d056": 145
+  },
+  "formats": {
+    "qa": {
+      "train_right": 0.18449612403100776,
+      "test_right": 0.24285714285714285,
+      "two_hop_right": 0.0,
+      "held_out_fact_right": 0.26666666666666666,
+      "held_out_fact_right_unmodified": 0.0,
+      "test_right_unmodified": 0.02857142857142857,
+      "two_hop_right_unmodified": 0.0,
+      "held_out_docs_unchanged": 0.009861932938856016,
+      "held_out_docs_gives_own_answer": 0.05719921104536489,
+      "held_out_docs_right": 0.023668639053254437,
+      "general_right": 1.0,
+      "general_right_unmodified": 1.0,
+      "general_unchanged": 0.0875
+    },
+    "chat": {
+      "train_right": 0.2,
+      "test_right": 0.24285714285714285,
+      "two_hop_right": 0.0,
+      "held_out_fact_right": 0.26666666666666666,
+      "held_out_fact_right_unmodified": 0.0,
+      "test_right_unmodified": 0.02857142857142857,
+      "two_hop_right_unmodified": 0.0,
+      "held_out_docs_unchanged": 0.0,
+      "held_out_docs_gives_own_answer": 0.03747534516765286,
+      "held_out_docs_right": 0.03353057199211045,
+      "general_right": 0.9958333333333333,
+      "general_right_unmodified": 1.0,
+      "general_unchanged": 0.0
+    }
+  }
+}

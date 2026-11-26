@@ -18,6 +18,8 @@ Documents the model cannot have seen in training (Qwen3's technical report is fr
 
 Questions are added in a later step, with a closed-book filter (questions the model answers without the document are removed).
 
+- `prag_augmented.json`: PRAG-style training data for the 10 documents of `filtered_v2.json`, written by Qwen3-4B with `src/augment_documents_prag.py` (experiment 16). It has 215 passages of at most 120 words. Each passage has one rewrite and three question–answer pairs (645 in all). These are model outputs and were not checked by hand.
+
 ## Licence and attribution
 
 The article texts are from English Wikipedia and licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Each record names its source article (`title`, `url`) and the exact revision used (`revid`, `revision_timestamp`); the article's history on Wikipedia lists its authors. Texts are Wikipedia's plain-text extracts with reference sections removed and, for long articles, cut after about 3,000 words. This folder's derived files are shared under the same licence.

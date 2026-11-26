@@ -173,6 +173,16 @@ One short entry per experiment, newest last. Details are in each experiment's `R
   - Memorising is not answering: on 5 articles the text-only vectors learn the text almost word for word (loss ≤ 0.10), yet answer 2 of 42 held-out and 1 of 33 trained-fact phrasings.
   - Two-step questions: 3/9 at best (unmodified 0/9), although the bridge fact is answered right in 9/9.
 
+## 16. PRAG LoRA baseline (2026-11-23, branch `document-interventions`)
+
+[`2026-11-23_qwen3-4b_prag_baseline`](2026-11-23_qwen3-4b_prag_baseline/README.md) · commit `192bf7a`
+
+- **Changed from 15:** one rank-2 LoRA per document (PRAG's settings, 2.65 M numbers, 130 times the vectors), trained on the same data as `qa_doc_layers8_all`, or on 645 question–answer pairs Qwen3-4B wrote from the documents. Two of four runs failed (out of GPU memory), including the vectors on the generated pairs.
+- **Results:**
+  - Same data (questions + text, contrast): LoRA 80% of test phrasings against 44% for the vectors, general questions 99% against 86%, leakage 11% against 5%. Held-out facts 8% for both, so that limit isn't specific to vectors. Training budgets were not matched.
+  - Generated pairs (LoRA, no contrast): held-out 24/90 (27%, interval 13–42%), test 24%. The pairs cover about 20 of the 30 held-out facts, and the LoRA fits only 18–20% of them, so it is undertrained. In the Q:/A: format 67 of 240 general answers drift into the document, although all count as right.
+  - Whether the questions or the LoRA caused the held-out gain is not separated.
+
 ## Next
 
-A PRAG LoRA baseline on the same data (document text and questions); dense, possibly model-generated questions covering every sentence; then the remaining 54 wiki2026 documents with more two-step questions. See the coverage README.
+Fix the memory use and rerun the vectors on the generated pairs and the PRAG LoRA with contrast; train both on the generated pairs alone with matched budgets; then the remaining 54 wiki2026 documents with more two-step questions. See the PRAG baseline README.

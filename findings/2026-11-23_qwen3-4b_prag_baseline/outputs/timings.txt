@@ -1,0 +1,5 @@
+augment 430 s
+vec_prag_layers8_all 16 s
+lora_prag 2954 s
+lora_qdoc_c1 2393 s
+lora_prag_c1 1284 s

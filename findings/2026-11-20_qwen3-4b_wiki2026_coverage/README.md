@@ -78,7 +78,7 @@ What changed from experiment 14:
   - **No overlap with training data:** none of these answers appears in any trained fact's question or evidence.
 - **The key–value memory learns nothing from the text:** 0/90, and it changes almost no answers (general answers unchanged 0.98).
   - Its text loss is flat from the first step: the mean of the first 10 steps is 2.39–3.77, of the last 10 steps 2.33–3.69 (`outputs/loss_curves.csv`).
-  - Early stopping ended it after 60–120 steps, correctly: the loss wasn't falling, so more steps would not have helped.
+  - Early stopping ended it after 60–120 steps, while the loss wasn't falling. Longer training or another learning rate was not tried.
 - **Text alone barely stores the trained facts either:** 7% of test phrasings.
 
 ### 2. Memorising the text is not the same as answering questions about it
